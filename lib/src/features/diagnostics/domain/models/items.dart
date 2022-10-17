@@ -10,14 +10,13 @@ class PicklisteDiagnosticsItems extends Equatable {
   final serial = PicklisteDiagnosticsItem('serial');
   final ip = PicklisteDiagnosticsItem('ip');
   final wifiName = PicklisteDiagnosticsItem('wifiName');
-  final wifiSignalStrength = PicklisteDiagnosticsItem('wifiSignalStrength');
-  final dns1 = PicklisteDiagnosticsItem('dns1');
-  final dns2 = PicklisteDiagnosticsItem('dns2');
-  final routes = PicklisteDiagnosticsItem('routes');
+//   final wifiSignalStrength = PicklisteDiagnosticsItem('wifiSignalStrength');
   final defaultGateway = PicklisteDiagnosticsItem('defaultGateway');
   final httpPuC = PicklisteDiagnosticsItem('httpPuC');
   final httpHousePic = PicklisteDiagnosticsItem('httpHousePic');
   final httpHouse = PicklisteDiagnosticsItem('httpHouse');
+
+  bool get isFinished => props.every((item) => item.state != PicklisteDiagnosticsItemState.pending);
 
   @override
   List<PicklisteDiagnosticsItem> get props => [
@@ -28,10 +27,7 @@ class PicklisteDiagnosticsItems extends Equatable {
         serial,
         ip,
         wifiName,
-        wifiSignalStrength,
-        dns1,
-        dns2,
-        routes,
+        // wifiSignalStrength,
         defaultGateway,
         httpPuC,
         httpHousePic,

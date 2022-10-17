@@ -2,11 +2,17 @@ import '../domain/models/item.dart';
 import '../domain/models/items.dart';
 
 class PicklisteDiagnosticsRepository {
-  final _items = PicklisteDiagnosticsItems();
-
-  PicklisteDiagnosticsItems fetchAll() {
-    return _items;
+  static PicklisteDiagnosticsRepository _instance = PicklisteDiagnosticsRepository._internal();
+  factory PicklisteDiagnosticsRepository() => _instance;
+  PicklisteDiagnosticsRepository._internal() {
+    _instance = this;
   }
+
+  late final PicklisteDiagnosticsItems _items;
+
+  void setItems(PicklisteDiagnosticsItems items) => _items = items;
+
+  PicklisteDiagnosticsItems fetchAll() => _items;
 
   void updateItem(PicklisteDiagnosticsItem item, {PicklisteDiagnosticsItemState? state, String? value}) {
     item.state = state ?? item.state;

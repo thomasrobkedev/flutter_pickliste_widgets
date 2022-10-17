@@ -9,12 +9,15 @@ environment:
 
 dependencies:
   flutter_pickliste_widgets:
-    path: ../
+    path: ..
 
   flutter:
     sdk: flutter
 
   cupertino_icons: ^1.0.2
+  network_info_plus: ^2.3.2
+  package_info_plus: ^2.0.0
+  path_provider: ^2.0.11
 
 dev_dependencies:
   flutter_test:

@@ -4,15 +4,20 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../domain/models/item.dart';
 import '../../domain/models/items.dart';
-import '../../domain/use_cases.dart';
+import '../../domain/use_cases/add_callbacks.dart';
+import '../../domain/use_cases/get_items.dart';
+import '../../domain/use_cases/is_finished.dart';
+import '../../domain/use_cases/set_items.dart';
+import '../../domain/use_cases/update_item.dart';
 
 part 'events.dart';
 part 'state.dart';
 
 class PicklisteDiagnosticsBloc extends Bloc<PicklisteDiagnosticsEvent, PicklisteDiagnosticsState> {
-  late final PicklisteDiagnosticsUseCases _useCases;
+  final PicklisteDiagnosticsItems items;
+  final String houseNumberURL;
 
-  PicklisteDiagnosticsBloc() : super(PicklisteDiagnosticsState()) {
+  PicklisteDiagnosticsBloc(this.items, this.houseNumberURL) : super(PicklisteDiagnosticsState()) {
     on<PicklisteDiagnosticsInitialized>(_onPicklisteDiagnosticsInitialized);
     on<PicklisteDiagnosticsItemUpdated>(_onPicklisteDiagnosticsItemUpdated);
 
@@ -20,7 +25,7 @@ class PicklisteDiagnosticsBloc extends Bloc<PicklisteDiagnosticsEvent, Pickliste
   }
 
   void _initialize() async {
-    _useCases = PicklisteDiagnosticsUseCases(this);
+    PicklisteDiagnosticsUseCaseSetItems().call(items);
     add(PicklisteDiagnosticsInitialized());
   }
 
@@ -28,22 +33,20 @@ class PicklisteDiagnosticsBloc extends Bloc<PicklisteDiagnosticsEvent, Pickliste
     emit(
       state.copyWith(
         status: _Status.initialized,
-        items: _useCases.getItems(),
-        houseNumberURL: await _useCases.getHouseNumberURL(withPic: true),
+        items: PicklisteDiagnosticsUseCaseGetItems().call(),
       ),
     );
 
-    _useCases.setItemsSync();
-    _useCases.setItemsAsync();
+    PicklisteDiagnosticsUseCaseAddCallbacks(this).call();
   }
 
   Future<void> _onPicklisteDiagnosticsItemUpdated(PicklisteDiagnosticsItemUpdated event, Emitter<PicklisteDiagnosticsState> emit) async {
-    _useCases.updateItem(event.item, event.state, event.value);
+    PicklisteDiagnosticsUseCaseUpdateItem().call(event.item, event.state, event.value);
 
     emit(
       state.copyWith(
-        items: _useCases.getItems(),
-        status: _useCases.isFinished ? _Status.finished : null,
+        items: PicklisteDiagnosticsUseCaseGetItems().call(),
+        status: PicklisteDiagnosticsUseCaseIsFinished().call() ? _Status.finished : null,
       ),
     );
   }

@@ -2,7 +2,8 @@ enum PicklisteDiagnosticsItemState { none, success, fail, pending }
 
 class PicklisteDiagnosticsItem {
   final String keyname;
-  PicklisteDiagnosticsItemState state = PicklisteDiagnosticsItemState.none;
+  late final Future<String?> Function() getValue;
+  PicklisteDiagnosticsItemState state = PicklisteDiagnosticsItemState.pending;
   String value = '';
 
   PicklisteDiagnosticsItem(this.keyname);

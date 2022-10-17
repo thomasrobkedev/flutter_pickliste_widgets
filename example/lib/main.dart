@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 
+import 'features/diagnostics/domain/use_cases/get_house_number_url.dart';
+import 'features/diagnostics/domain/use_cases/get_items.dart';
+
 void main() {
   runApp(const MyApp());
 }
@@ -14,7 +17,10 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: const PicklisteDiagnosticsPage(),
+      home: PicklisteDiagnosticsPage(
+        items: DiagnosticsUseCaseGetItems().call(),
+        houseNumberURL: DiagnosticsUseCaseGetHouseNumberURL().call(withPic: true),
+      ),
     );
   }
 }

@@ -7,17 +7,22 @@ class DiagnosticsUseCaseGetItems {
   PicklisteDiagnosticsItems call() {
     final items = PicklisteDiagnosticsItems();
 
-    items.dateTime.getValue = () async => PicklisteDiagnosticsUseCaseGetDateTime().call();
-    items.versionBuild.getValue = _getVersionBuild;
-    items.houseDevice.getValue = () async => '471 / 1';
-    items.mac.getValue = () async => '00:11:22:33:44:55';
-    items.serial.getValue = () async => '1234567890';
-    items.ip.getValue = NetworkInfo().getWifiIP;
-    items.defaultGateway.getValue = NetworkInfo().getWifiGatewayIP;
-    items.wifiName.getValue = NetworkInfo().getWifiName;
-    items.httpPuC.getValue = () async => PicklisteDiagnosticsUseCaseGetHttp().call('http://www.peek-cloppenburg.de');
-    items.httpHousePic.getValue = () async => PicklisteDiagnosticsUseCaseGetHttp().call(DiagnosticsUseCaseGetHouseNumberURL().call(withPic: true));
-    items.httpHouse.getValue = () async => PicklisteDiagnosticsUseCaseGetHttp().call(DiagnosticsUseCaseGetHouseNumberURL().call(withPic: false));
+    items.dateTime.getValue = PicklisteDiagnosticsUseCaseGetDateTime().call();
+    items.versionBuild.getValue = _getVersionBuild();
+    items.house.getValue = Future.value('471');
+    items.houseDevice.getValue = Future.value('471 / 1');
+    items.mac.getValue = Future.value('00:11:22:33:44:55');
+    items.serial.getValue = Future.value('1234567890');
+    items.ip.getValue = NetworkInfo().getWifiIP();
+    items.wifiName.getValue = NetworkInfo().getWifiName();
+    items.wifiSignalStrength.getValue = Future.value('85 %');
+    items.defaultGateway.getValue = NetworkInfo().getWifiGatewayIP();
+    items.dns1.getValue = Future.value('192.168.1.1');
+    items.dns2.getValue = Future.value('192.168.1.2');
+    items.routes.getValue = Future.value('Destination -> Gateway\nfe80:: -> ::\n:: -> fe80::2\n');
+    items.httpPuC.getValue = PicklisteDiagnosticsUseCaseGetHttp().call('http://www.peek-cloppenburg.de');
+    items.httpHousePic.getValue = PicklisteDiagnosticsUseCaseGetHttp().call(DiagnosticsUseCaseGetHouseNumberURL().call(withPic: true));
+    items.httpHouse.getValue = PicklisteDiagnosticsUseCaseGetHttp().call(DiagnosticsUseCaseGetHouseNumberURL().call(withPic: false));
 
     return items;
   }

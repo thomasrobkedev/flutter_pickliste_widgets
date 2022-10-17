@@ -26,9 +26,8 @@ class PicklisteDiagnosticsViewItem extends StatelessWidget {
           Row(
             children: [
               PicklisteDiagnosticsViewItemIcon(item: item),
-              Expanded(
-                child: PicklisteDiagnosticsViewItemLabel(item: item, label: label),
-              ),
+              PicklisteDiagnosticsViewItemLabel(item: item, label: label),
+              const Spacer(),
               Visibility(
                 visible: item.state != PicklisteDiagnosticsItemState.fail && item.value.isNotEmpty,
                 child: PicklisteDiagnosticsViewItemValue(item: item),

@@ -4,7 +4,9 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import '../../../../core/enums/testkey.dart';
 import '../../../../core/extensions/list_divided.dart';
 import '../../../../core/widgets/loading_spinner.dart';
+import '../../../../core/widgets/misc/intro_container.dart';
 import '../../../../core/widgets/toast/toast.dart';
+import '../../domain/models/item.dart';
 import '../../domain/models/items.dart';
 import '../bloc/bloc.dart';
 import 'widgets/view_item.dart';
@@ -30,7 +32,7 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
             onWillPop: () async => state.isFinished,
             child: Scaffold(
               key: ValueKey(Testkey.diagnostics_page.toString()),
-              appBar: AppBar(title: const Text('Diagnose')), // TODO: Übersetzung
+              appBar: AppBar(title: const Text('Diagnose')), // AppLocalizations.of(context)!.menu__app_settings_diagnostics
               body: _body(context, state),
               backgroundColor: Colors.white,
             ),
@@ -45,6 +47,25 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
       return const LoadingSpinner();
     }
 
+    final labels = <PicklisteDiagnosticsItem, String>{
+      state.items.dateTime: 'Datum/Zeit',
+      state.items.versionBuild: 'Version',
+      state.items.house: 'Haus',
+      state.items.houseDevice: 'Haus / Gerät',
+      state.items.mac: 'MAC-Adresse',
+      state.items.serial: 'Seriennummer',
+      state.items.ip: 'IP-Adresse',
+      state.items.defaultGateway: 'Standard Gateway',
+      state.items.wifiName: 'WLAN Name',
+      state.items.wifiSignalStrength: 'WLAN Signalstärke',
+      state.items.dns1: 'DNS Server 1',
+      state.items.dns2: 'DNS Server 2',
+      state.items.httpPuC: 'http://www.peek-cloppenburg.de',
+      state.items.httpHousePic: houseNumberURL,
+      state.items.httpHouse: houseNumberURL.replaceAll('_pic', ''),
+      state.items.routes: 'Routes',
+    };
+
     return SingleChildScrollView(
       child: InteractiveViewer(
         panEnabled: false,
@@ -54,33 +75,23 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
         child: Column(
           children: [
             PicklisteToast(
-              textLarge: 'Bitte warten', // TODO: Übersetzung
+              textLarge: 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait,
               color: const Color.fromARGB(255, 255, 175, 0),
               active: true,
               autoTimeout: state.isFinished ? 1000 : null,
               animationDuration: 0,
               testKey: ValueKey(Testkey.diagnostics_toast.toString()),
             ),
+            PicklisteIntroContainer.withTextOnly(
+              text: 'Bitte machen Sie ein Foto von den unten aufgeführten Punkten und schicken Sie dies an Ihren IT-Ansprechpartner.', // AppLocalizations.of(context)!.diagnostic__instructions,
+            ),
             Container(
               padding: const EdgeInsets.fromLTRB(12, 8, 0, 8),
               child: Column(
-                children: [
-                  PicklisteDiagnosticsViewItem(label: 'Datum/Zeit', item: state.items.dateTime),
-                  PicklisteDiagnosticsViewItem(label: 'Version', item: state.items.versionBuild),
-                  PicklisteDiagnosticsViewItem(label: 'Haus / Gerät', item: state.items.houseDevice),
-                  PicklisteDiagnosticsViewItem(label: 'MAC-Adresse', item: state.items.mac),
-                  PicklisteDiagnosticsViewItem(label: 'Seriennummer', item: state.items.serial),
-                  PicklisteDiagnosticsViewItem(label: 'IP-Adresse', item: state.items.ip),
-                  PicklisteDiagnosticsViewItem(label: 'Standard Gateway', item: state.items.defaultGateway),
-                  PicklisteDiagnosticsViewItem(label: 'WLAN Name', item: state.items.wifiName),
-
-                  // TODO: WLAN Signalstärke, @see: https://jira.puc.services/browse/WEBPICK-805
-                  // PicklisteDiagnosticsViewItem(label: 'WLAN Signalstärke', item: state.items.wifiSignalStrength),
-
-                  PicklisteDiagnosticsViewItem(label: 'http://www.peek-cloppenburg.de', item: state.items.httpPuC),
-                  PicklisteDiagnosticsViewItem(label: houseNumberURL, item: state.items.httpHousePic),
-                  PicklisteDiagnosticsViewItem(label: houseNumberURL.replaceAll('_pic', ''), item: state.items.httpHouse),
-                ].toListDivided(),
+                children: state.items.props //
+                    .where((item) => item.getValue != null)
+                    .map((item) => PicklisteDiagnosticsViewItem(label: labels[item]!, item: item))
+                    .toListDivided(),
               ),
             ),
           ],

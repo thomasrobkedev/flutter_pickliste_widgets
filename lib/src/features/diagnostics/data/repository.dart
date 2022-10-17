@@ -8,7 +8,7 @@ class PicklisteDiagnosticsRepository {
     _instance = this;
   }
 
-  late final PicklisteDiagnosticsItems _items;
+  late PicklisteDiagnosticsItems _items;
 
   void setItems(PicklisteDiagnosticsItems items) => _items = items;
 

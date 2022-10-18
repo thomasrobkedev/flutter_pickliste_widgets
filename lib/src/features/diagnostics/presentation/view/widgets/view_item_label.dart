@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/widgets/theme_const.dart';
+import '../../../../../core/theme/theme_const.dart';
 import '../../../domain/models/item.dart';
 
 class PicklisteDiagnosticsViewItemLabel extends StatelessWidget {

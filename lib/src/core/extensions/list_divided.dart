@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../widgets/theme_const.dart';
+import '../theme/theme_const.dart';
 
 extension ListDivided on Iterable {
   List<Widget> toListDivided({bool withLastLine = false}) {

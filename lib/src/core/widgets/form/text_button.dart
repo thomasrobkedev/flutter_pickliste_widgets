@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
-import '../theme_const.dart';
+import '../../theme/global_theme.dart';
+import '../../theme/theme_const.dart';
 import 'field.dart';
 
 class PicklisteTextButton extends StatelessWidget {
@@ -33,7 +34,7 @@ class PicklisteTextButton extends StatelessWidget {
       enabled: enabled,
       loading: loading,
       child: Theme(
-        data: Theme.of(context).copyWith(visualDensity: const VisualDensity(vertical: -2)),
+        data: PicklisteThemeCreator.create().copyWith(visualDensity: const VisualDensity(vertical: -2)),
         child: TextButton(
           key: testKey,
           onPressed: enabled ? onPressed : null,
@@ -73,7 +74,7 @@ class PicklisteTextButton extends StatelessWidget {
 
   Color _getBackgroundColor(BuildContext context) {
     if (primary) {
-      return enabled ? Theme.of(context).primaryColor : Theme.of(context).primaryColor.withOpacity(0.5);
+      return const Color(kThemePrimaryColor).withOpacity(enabled ? 1 : 0.5);
     }
 
     if (danger) {

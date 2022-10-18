@@ -1,7 +1,8 @@
-import 'package:example/features/diagnostics/domain/use_cases/get_house_number_url.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:network_info_plus/network_info_plus.dart';
 import 'package:package_info_plus/package_info_plus.dart';
+
+import 'get_house_number_url.dart';
 
 class DiagnosticsUseCaseGetItems {
   PicklisteDiagnosticsItems call() {

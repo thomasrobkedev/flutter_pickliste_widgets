@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class PicklisteCounterPage extends StatefulWidget {
   static const routeName = '/home';
 
-  const HomePage({super.key, required this.title});
+  const PicklisteCounterPage({super.key, required this.title});
 
   final String title;
 
   @override
-  State<HomePage> createState() => _HomePageState();
+  State<PicklisteCounterPage> createState() => _PicklisteCounterPageState();
 }
 
-class _HomePageState extends State<HomePage> {
+class _PicklisteCounterPageState extends State<PicklisteCounterPage> {
   int _counter = 0;
 
   void _incrementCounter() {

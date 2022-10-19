@@ -17,6 +17,8 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
   final textEditingController = TextEditingController();
   final focusNode = FocusNode();
 
+  bool get isReset => isEnabled && !isLoading && dropdownValue == 1 && textEditingController.text == '';
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,6 +51,7 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
                   testKey: const ValueKey('playground-textbutton-primary'),
                   caption: 'Reset Playground',
                   primary: true,
+                  enabled: !isReset,
                   icon: Icons.restore,
                   onPressed: () => setState(
                     () {

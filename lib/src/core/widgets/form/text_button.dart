@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/global_theme.dart';
 import '../../theme/theme_const.dart';
 import 'field.dart';
 
@@ -34,13 +33,14 @@ class PicklisteTextButton extends StatelessWidget {
       enabled: enabled,
       loading: loading,
       child: Theme(
-        data: PicklisteThemeCreator.create().copyWith(visualDensity: const VisualDensity(vertical: -2)),
+        data: Theme.of(context).copyWith(visualDensity: const VisualDensity(vertical: -2)),
         child: TextButton(
           key: testKey,
           onPressed: enabled ? onPressed : null,
           style: TextButton.styleFrom(
             padding: EdgeInsets.fromLTRB(number == null ? 8 : 0, 0, 8, 0),
             backgroundColor: _getBackgroundColor(context),
+            // shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
           ),
           child: Row(
             children: [

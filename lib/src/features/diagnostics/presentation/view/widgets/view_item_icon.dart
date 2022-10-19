@@ -24,8 +24,6 @@ class PicklisteDiagnosticsViewItemIcon extends StatelessWidget {
     final testKey = ValueKey('${item.testKexPrefix}_icon--${item.testKeyState}');
 
     switch (item.state) {
-      case PicklisteDiagnosticsItemState.none:
-        return Container(key: testKey);
       case PicklisteDiagnosticsItemState.pending:
         return SizedBox(
           width: 16,

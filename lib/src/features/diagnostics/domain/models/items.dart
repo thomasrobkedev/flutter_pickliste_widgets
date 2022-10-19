@@ -20,7 +20,9 @@ class PicklisteDiagnosticsItems extends Equatable {
   final httpHousePic = PicklisteDiagnosticsItem('httpHousePic');
   final httpHouse = PicklisteDiagnosticsItem('httpHouse');
 
-  bool get isFinished => props.every((item) => item.state != PicklisteDiagnosticsItemState.pending);
+  bool get isFinished => props //
+      .where((item) => item.getValue != null)
+      .every((item) => item.state != PicklisteDiagnosticsItemState.pending);
 
   @override
   List<PicklisteDiagnosticsItem> get props => [

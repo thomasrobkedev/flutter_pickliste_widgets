@@ -1,0 +1,40 @@
+import 'package:flutter/material.dart';
+
+import '../../theme/theme_const.dart';
+import 'field.dart';
+
+class PicklisteCheckbox extends StatelessWidget {
+  final ValueKey<String>? testKey;
+  final String title;
+  final bool value;
+  final Function(bool?) onChanged;
+  final bool enabled;
+
+  const PicklisteCheckbox({
+    Key? key,
+    this.testKey,
+    required this.title,
+    required this.value,
+    required this.onChanged,
+    this.enabled = true,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return PicklisteField(
+      enabled: enabled,
+      child: Theme(
+        data: Theme.of(context).copyWith(visualDensity: const VisualDensity(vertical: -3)),
+        child: CheckboxListTile(
+          key: testKey,
+          contentPadding: const EdgeInsets.only(left: 8),
+          title: Text(title, style: TextStyle(color: enabled ? Colors.black : const Color(kLabelColor), fontSize: kFontSizeDefault)),
+          value: value,
+          onChanged: enabled ? onChanged : null,
+          dense: true,
+          tileColor: Colors.transparent,
+        ),
+      ),
+    );
+  }
+}

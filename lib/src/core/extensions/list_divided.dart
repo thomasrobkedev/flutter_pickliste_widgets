@@ -3,14 +3,23 @@ import 'package:flutter/material.dart';
 import '../theme/theme_const.dart';
 
 extension ListDivided on Iterable {
-  List<Widget> toListDivided({bool withLastLine = false}) {
-    return toList()
-        .asMap()
-        .entries
+  List<Widget> toListDivided({double indent = 0.0, double endIndent = 0.0, bool withLastLine = false}) {
+    final entries = toList().asMap().entries;
+
+    return entries
         .expand<Widget>(
           (entry) => [
-            ...entry.key == 0 && !withLastLine ? [] : [const Divider(height: 0, color: Color(kDividerColor), indent: 0, thickness: 0.5)],
             entry.value,
+            Visibility(
+              visible: entry.key < entries.length - (withLastLine ? 0 : 1),
+              child: Divider(
+                height: 0,
+                color: const Color(kDividerColor),
+                indent: indent,
+                endIndent: endIndent,
+                thickness: 0.5,
+              ),
+            ),
           ],
         )
         .toList();

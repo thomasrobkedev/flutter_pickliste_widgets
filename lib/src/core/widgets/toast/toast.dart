@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 
 import '../../theme/theme_const.dart';
@@ -12,6 +14,8 @@ class PicklisteToast extends StatefulWidget {
   final int animationDuration;
   final int animationReverseDuration;
   final int? autoTimeout;
+  final bool scrollView;
+  final Widget child;
 
   const PicklisteToast({
     Key? key,
@@ -24,63 +28,88 @@ class PicklisteToast extends StatefulWidget {
     this.animationReverseDuration = 350,
     this.autoTimeout,
     this.testKey,
+    this.scrollView = true,
+    required this.child,
   }) : super(key: key);
 
   @override
   State<PicklisteToast> createState() => _PicklisteToastState();
 }
 
-class _PicklisteToastState extends State<PicklisteToast> with SingleTickerProviderStateMixin {
-  late final AnimationController _animationController;
+class _PicklisteToastState extends State<PicklisteToast> {
   bool _hideByTimeout = false;
+  Timer? timer;
 
   @override
-  void initState() {
-    _animationController = AnimationController(
-      vsync: this,
-      duration: Duration(milliseconds: widget.animationDuration),
-      reverseDuration: Duration(milliseconds: widget.animationReverseDuration),
-    );
-
-    super.initState();
+  void dispose() {
+    timer?.cancel();
+    super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    final isActive = widget.active && !_hideByTimeout;
+    final isVisible = widget.active && !_hideByTimeout;
 
     if (widget.autoTimeout != null && !_hideByTimeout) {
-      Future.delayed(Duration(milliseconds: widget.autoTimeout!), () {
-        setState(() => _hideByTimeout = true);
-      });
+      timer = Timer(Duration(milliseconds: widget.autoTimeout!), () => setState(() => _hideByTimeout = true));
     }
 
-    isActive ? _animationController.forward() : _animationController.reverse();
-
-    return SizeTransition(
-      sizeFactor: _animationController,
-      child: Container(
-        key: widget.testKey == null ? null : ValueKey(widget.testKey!.value + (isActive ? '--active' : '--inactive')),
-        width: double.infinity,
-        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
-        decoration: BoxDecoration(
-          color: widget.color,
-          border: const Border(bottom: BorderSide(color: Color(kContainerBorderColor))),
+    return Stack(
+      alignment: Alignment.topCenter,
+      children: [
+        Positioned.fill(
+          child: widget.scrollView //
+              ? SingleChildScrollView(child: _content())
+              : _content(),
         ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          crossAxisAlignment: CrossAxisAlignment.stretch,
+        Column(
           children: [
-            _buildText(context, widget.textLarge, kFontSizeLarge, '_large'),
-            _buildText(context, widget.textMedium, kFontSizeMedium, '_medium'),
-            _buildText(context, widget.textDefault, kFontSizeDefault, '_default'),
+            AnimatedSlide(
+              offset: isVisible ? Offset.zero : const Offset(0, -1),
+              duration: Duration(milliseconds: widget.animationReverseDuration),
+              child: _container(testKey: widget.testKey == null ? null : ValueKey(widget.testKey!.value + (isVisible ? '--active' : '--inactive'))),
+            ),
           ],
         ),
+      ],
+    );
+  }
+
+  Widget _content() {
+    return Column(
+      children: [
+        AnimatedSize(
+          duration: Duration(milliseconds: widget.animationReverseDuration),
+          child: _container(height: widget.active && !_hideByTimeout ? null : 0),
+        ),
+        widget.child,
+      ],
+    );
+  }
+
+  Container _container({double? height, ValueKey<String>? testKey}) {
+    return Container(
+      key: testKey,
+      width: double.infinity,
+      height: height,
+      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
+      decoration: BoxDecoration(
+        color: widget.color,
+        border: const Border(bottom: BorderSide(color: Color(kContainerBorderColor))),
+      ),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.stretch,
+        children: [
+          _text(widget.textLarge, kFontSizeLarge, '_large'),
+          _text(widget.textMedium, kFontSizeMedium, '_medium'),
+          _text(widget.textDefault, kFontSizeDefault, '_default'),
+        ],
       ),
     );
   }
 
-  Widget _buildText(BuildContext context, String? text, double fontSize, String size) {
+  Widget _text(String? text, double fontSize, String size) {
     return Visibility(
       visible: text != null,
       child: Padding(

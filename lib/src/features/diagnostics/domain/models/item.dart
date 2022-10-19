@@ -1,9 +1,9 @@
-enum PicklisteDiagnosticsItemState { none, success, fail, pending }
+enum PicklisteDiagnosticsItemState { success, fail, pending }
 
 class PicklisteDiagnosticsItem {
   final String keyname;
-  Future<String?>? getValue;
-  PicklisteDiagnosticsItemState state = PicklisteDiagnosticsItemState.none;
+  Future<String?> Function()? getValue;
+  PicklisteDiagnosticsItemState state = PicklisteDiagnosticsItemState.pending;
   String value = '';
 
   PicklisteDiagnosticsItem(this.keyname);

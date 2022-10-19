@@ -2,26 +2,26 @@ import '../../data/repository.dart';
 import '../../presentation/bloc/bloc.dart';
 import '../models/item.dart';
 
-class PicklisteDiagnosticsUseCaseAddCallbacks {
+class PicklisteDiagnosticsUseCaseGetValues {
   final PicklisteDiagnosticsBloc bloc;
 
-  PicklisteDiagnosticsUseCaseAddCallbacks(this.bloc);
+  PicklisteDiagnosticsUseCaseGetValues(this.bloc);
 
   void call() {
     final items = PicklisteDiagnosticsRepository().fetchAll();
 
     for (var item in items.props) {
       if (item.getValue != null) {
-        _addCallback(item, item.getValue!);
+        _getValue(item, item.getValue!);
       }
     }
   }
 
-  Future<void> _addCallback(PicklisteDiagnosticsItem item, Future<String?> getValue) async {
-    PicklisteDiagnosticsRepository().updateItem(item, state: PicklisteDiagnosticsItemState.pending);
+  Future<void> _getValue(PicklisteDiagnosticsItem item, Future<String?> Function() getValue) async {
+    // PicklisteDiagnosticsRepository().updateItem(item, state: PicklisteDiagnosticsItemState.pending);
 
     try {
-      final value = await getValue.timeout(const Duration(seconds: 10));
+      final value = await getValue().timeout(const Duration(seconds: 10));
       bloc.add(PicklisteDiagnosticsItemUpdated(item, PicklisteDiagnosticsItemState.success, value.toString()));
     } catch (e) {
       bloc.add(PicklisteDiagnosticsItemUpdated(item, PicklisteDiagnosticsItemState.fail, e.toString()));

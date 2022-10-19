@@ -7,6 +7,7 @@ class PicklisteDiagnosticsUseCaseGetHttp {
 
     try {
       await dio.request(url, cancelToken: token);
+      token.cancel();
       return '';
     } on DioError catch (e) {
       token.cancel();

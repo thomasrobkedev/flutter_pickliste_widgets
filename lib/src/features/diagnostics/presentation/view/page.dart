@@ -13,19 +13,19 @@ import 'widgets/view_item.dart';
 
 class PicklisteDiagnosticsPage extends StatelessWidget {
   static const routeName = '/pickliste/diagnostics';
-  final PicklisteDiagnosticsItems items;
+  final PicklisteDiagnosticsItems Function() getItems;
   final String houseNumberURL;
 
   const PicklisteDiagnosticsPage({
     Key? key,
-    required this.items,
+    required this.getItems,
     required this.houseNumberURL,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => PicklisteDiagnosticsBloc(items, houseNumberURL),
+      create: (context) => PicklisteDiagnosticsBloc(getItems, houseNumberURL),
       child: BlocBuilder<PicklisteDiagnosticsBloc, PicklisteDiagnosticsState>(
         builder: (context, state) {
           return WillPopScope(
@@ -60,13 +60,17 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
       state.items.wifiSignalStrength: 'WLAN Signalstärke',
       state.items.dns1: 'DNS Server 1',
       state.items.dns2: 'DNS Server 2',
-      state.items.httpPuC: 'http://www.peek-cloppenburg.de',
+      state.items.httpPuC: 'https://www.peek-cloppenburg.de',
       state.items.httpHousePic: houseNumberURL,
       state.items.httpHouse: houseNumberURL.replaceAll('_pic', ''),
       state.items.routes: 'Routes',
     };
 
-    return SingleChildScrollView(
+    return PicklisteToast(
+      textLarge: 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait,
+      color: const Color.fromARGB(255, 255, 175, 0),
+      autoTimeout: state.isFinished ? 1000 : null,
+      testKey: ValueKey(Testkey.diagnostics_toast.toString()),
       child: InteractiveViewer(
         panEnabled: false,
         minScale: 0.5,
@@ -74,14 +78,6 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
         boundaryMargin: const EdgeInsets.all(double.infinity),
         child: Column(
           children: [
-            PicklisteToast(
-              textLarge: 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait,
-              color: const Color.fromARGB(255, 255, 175, 0),
-              active: true,
-              autoTimeout: state.isFinished ? 1000 : null,
-              animationDuration: 0,
-              testKey: ValueKey(Testkey.diagnostics_toast.toString()),
-            ),
             PicklisteIntroContainer.withTextOnly(
               text: 'Bitte machen Sie ein Foto von den unten aufgeführten Punkten und schicken Sie dies an Ihren IT-Ansprechpartner.', // AppLocalizations.of(context)!.diagnostic__instructions,
             ),

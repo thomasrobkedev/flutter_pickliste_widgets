@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/global_theme.dart';
 import '../../theme/theme_const.dart';
 
 class PicklisteField extends StatelessWidget {
@@ -32,12 +31,7 @@ class PicklisteField extends StatelessWidget {
           child,
           SizedBox(
             height: 3,
-            child: loading
-                ? Theme(
-                    data: PicklisteThemeCreator.create(),
-                    child: const LinearProgressIndicator(),
-                  )
-                : null,
+            child: loading ? const LinearProgressIndicator() : null,
           ),
         ],
       ),

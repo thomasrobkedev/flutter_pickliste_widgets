@@ -18,8 +18,6 @@ class PicklisteDiagnosticsUseCaseGetValues {
   }
 
   Future<void> _getValue(PicklisteDiagnosticsItem item, Future<String?> Function() getValue) async {
-    // PicklisteDiagnosticsRepository().updateItem(item, state: PicklisteDiagnosticsItemState.pending);
-
     try {
       final value = await getValue().timeout(const Duration(seconds: 10));
       bloc.add(PicklisteDiagnosticsItemUpdated(item, PicklisteDiagnosticsItemState.success, value.toString()));

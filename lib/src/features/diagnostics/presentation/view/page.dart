@@ -12,16 +12,19 @@ import '../bloc/bloc.dart';
 import 'widgets/view_item.dart';
 
 class PicklisteDiagnosticsPage extends StatelessWidget {
-  static const routeName = '/pickliste/diagnostics';
+  final String title;
+  final String toastText;
+  final String infoText;
   final PicklisteDiagnosticsItems Function() getItems;
   final String houseNumberURL;
-  final String toastText;
 
   const PicklisteDiagnosticsPage({
     Key? key,
+    required this.title,
+    required this.toastText,
+    required this.infoText,
     required this.getItems,
     required this.houseNumberURL,
-    required this.toastText,
   }) : super(key: key);
 
   @override
@@ -34,7 +37,7 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
             onWillPop: () async => state.isFinished,
             child: Scaffold(
               key: ValueKey(PicklisteTestkey.diagnostics_page.toString()),
-              appBar: AppBar(title: const Text('Diagnose')), // AppLocalizations.of(context)!.menu__app_settings_diagnostics
+              appBar: AppBar(title: Text(title)),
               body: _body(context, state),
               backgroundColor: Colors.white,
             ),
@@ -69,7 +72,7 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
     };
 
     return PicklisteToast(
-      textLarge: toastText, // 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait,
+      textLarge: toastText,
       color: const Color.fromARGB(255, 255, 175, 0),
       autoTimeout: state.isFinished ? 1000 : null,
       testKey: ValueKey(PicklisteTestkey.diagnostics_toast.toString()),
@@ -81,7 +84,7 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
         child: Column(
           children: [
             PicklisteIntroContainer.withTextOnly(
-              text: 'Bitte machen Sie ein Foto von den unten aufgeführten Punkten und schicken Sie dies an Ihren IT-Ansprechpartner.', // AppLocalizations.of(context)!.diagnostic__instructions,
+              text: infoText,
             ),
             Container(
               padding: const EdgeInsets.fromLTRB(12, 8, 0, 8),

@@ -51,9 +51,11 @@ final router = GoRouter(
         return CupertinoPage<void>(
           key: state.pageKey,
           child: PicklisteDiagnosticsPage(
+            title: 'Diagnose',
+            toastText: 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait
+            infoText: 'Bitte machen Sie ein Foto von den unten aufgeführten Punkten und schicken Sie dies an Ihren IT-Ansprechpartner.', // AppLocalizations.of(context)!.diagnostic__instructions,
             getItems: () => getItems(),
             houseNumberURL: getHouseNumberURL(withPic: true),
-            toastText: 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait
           ),
         );
       },

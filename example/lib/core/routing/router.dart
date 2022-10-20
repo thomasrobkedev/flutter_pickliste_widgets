@@ -5,8 +5,9 @@ import 'package:go_router/go_router.dart';
 import '../../features/counter/presentation/view/page.dart';
 import '../../features/diagnostics/domain/use_cases/get_house_number_url.dart';
 import '../../features/diagnostics/domain/use_cases/get_items.dart';
+import '../../features/flush/presentation/view/page.dart';
+import '../../features/form/presentation/view/page.dart';
 import '../../features/home/presentation/view/page.dart';
-import '../../features/playground/presentation/view/page.dart';
 
 final router = GoRouter(
   debugLogDiagnostics: true,
@@ -27,10 +28,17 @@ final router = GoRouter(
       ),
     ),
     GoRoute(
-      path: '/playground',
+      path: '/form',
       pageBuilder: (context, state) => CupertinoPage<void>(
         key: state.pageKey,
-        child: const PlaygroundPage(),
+        child: const FormPage(),
+      ),
+    ),
+    GoRoute(
+      path: '/flush',
+      pageBuilder: (context, state) => CupertinoPage<void>(
+        key: state.pageKey,
+        child: const FlushPage(),
       ),
     ),
     GoRoute(

@@ -3,6 +3,12 @@
 enum Testkey {
   diagnostics_page,
   diagnostics_toast,
+
+  flushForm,
+  flushForm_ok,
+  flushForm_cancel,
+  flushForm_input,
+  flushForm_error,
 }
 
 extension TestkeyExtension on Testkey {

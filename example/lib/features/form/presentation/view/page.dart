@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 
-class PlaygroundPage extends StatefulWidget {
-  static const routeName = '/';
-
-  const PlaygroundPage({super.key});
+class FormPage extends StatefulWidget {
+  const FormPage({super.key});
 
   @override
-  State<PlaygroundPage> createState() => _PlaygroundPageState();
+  State<FormPage> createState() => _FormPageState();
 }
 
-class _PlaygroundPageState extends State<PlaygroundPage> {
+class _FormPageState extends State<FormPage> {
   bool isEnabled = true;
   bool isLoading = false;
   int dropdownValue = 1;
@@ -22,9 +20,8 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Playground'),
-      ),
+      appBar: AppBar(title: const Text('Playground')),
+      backgroundColor: const Color(kMenuBackgroundColor),
       body: GestureDetector(
         onTap: (() {
           focusNode.unfocus();

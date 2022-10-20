@@ -14,7 +14,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Home'),
+        title: const Text('Flutter Pickliste Widgets'),
       ),
       body: SingleChildScrollView(
         child: Column(
@@ -26,10 +26,16 @@ class _HomePageState extends State<HomePage> {
               onTap: () => context.push('/counter'),
             ),
             ListTile(
-              title: const Text('Playground'),
-              leading: const Icon(Icons.sentiment_satisfied_alt),
+              title: const Text('FlushForm'),
+              leading: const Icon(Icons.output),
               trailing: const Icon(Icons.chevron_right),
-              onTap: () => context.push('/playground'),
+              onTap: () => context.push('/flush'),
+            ),
+            ListTile(
+              title: const Text('Formular Elemente'),
+              leading: const Icon(Icons.output),
+              trailing: const Icon(Icons.chevron_right),
+              onTap: () => context.push('/form'),
             ),
             ListTile(
               title: const Text('Diagnose'),

@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/extensions/build_context.dart';
 import '../../features/counter/presentation/view/page.dart';
 import '../../features/diagnostics/domain/use_cases/get_house_number_url.dart';
 import '../../features/diagnostics/domain/use_cases/get_items.dart';
@@ -52,8 +53,8 @@ final router = GoRouter(
           key: state.pageKey,
           child: PicklisteDiagnosticsPage(
             title: 'Diagnose',
-            toastText: 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait
-            infoText: 'Bitte machen Sie ein Foto von den unten aufgeführten Punkten und schicken Sie dies an Ihren IT-Ansprechpartner.', // AppLocalizations.of(context)!.diagnostic__instructions,
+            toastText: context.loc.general__please_wait,
+            infoText: context.loc.diagnostic__instructions,
             getItems: () => getItems(),
             houseNumberURL: getHouseNumberURL(withPic: true),
           ),

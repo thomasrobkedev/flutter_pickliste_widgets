@@ -13,6 +13,9 @@ dependencies:
 
   flutter:
     sdk: flutter
+  flutter_localizations:
+    sdk: flutter
+  intl: ^0.17.0
 
   cupertino_icons: ^1.0.2
   network_info_plus: ^2.3.2
@@ -27,6 +30,7 @@ dev_dependencies:
 
 flutter:
   uses-material-design: true
+  generate: true
 
   # Obwohl das package custom font Dateien bereit stellt, müssen diese - falls benötigt - manuell eingebunden werden.
   # fonts:

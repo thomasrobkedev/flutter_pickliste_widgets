@@ -1,0 +1,31 @@
+{
+  "@@locale": "sr",
+  "datatransfer__device_could_not_be_registered": "Уређај није могао да се региструје!",
+  "@datatransfer__device_could_not_be_registered": {
+    "type": "text"
+  },
+  "datatransfer__device_has_been_registered": "Уређај је регистрован!",
+  "@datatransfer__device_has_been_registered": {
+    "type": "text"
+  },
+  "menu__app_data_transfer": "Пренос података",
+  "@menu__app_data_transfer": {
+    "type": "text"
+  },
+  "menu__app_duplicator": "Дупликатор",
+  "@menu__app_duplicator": {
+    "type": "text"
+  },
+  "menu__app_service_point": "Сервисна тачка",
+  "@menu__app_service_point": {
+    "type": "text"
+  },
+  "menu__settings": "Подешавања",
+  "@menu__settings": {
+    "type": "text"
+  },
+  "menu__stocktaking": "Инвентар",
+  "@menu__stocktaking": {
+    "type": "text"
+  }
+}

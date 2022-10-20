@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 
+import '../../../../core/extensions/build_context.dart';
+
 class FlushPage extends StatefulWidget {
   const FlushPage({super.key});
 
@@ -28,11 +30,11 @@ class _FlushPageState extends State<FlushPage> {
                 onPressed: () async {
                   final result = await PicklisteFlushForm<bool>(
                     context: context,
-                    introText: 'Bitte Passwort eingeben', // AppLocalizations.of(context)!.general__please_enter_password,
-                    labelText: 'Passwort', // AppLocalizations.of(context)!.general__password,
-                    okText: 'OK', // AppLocalizations.of(context)!.general__ok,
-                    cancelText: 'Abbrechen', // AppLocalizations.of(context)!.general__cancel,
-                    failText: 'Falsches Passwort', // AppLocalizations.of(context)!.general__wrong_password,
+                    introText: context.loc.general__please_enter_password,
+                    labelText: context.loc.general__password,
+                    okText: context.loc.general__ok,
+                    cancelText: context.loc.general__cancel,
+                    failText: context.loc.general__wrong_password,
                     password: true,
                     isValid: (String value) => value == 'dev',
                     getSuccessReturnValue: (String _) => true,
@@ -50,11 +52,11 @@ class _FlushPageState extends State<FlushPage> {
                 onPressed: () async {
                   final result = await PicklisteFlushForm<String>(
                     context: context,
-                    introText: 'Manuelle Eingabe der Auslagerungs-Nr.', // AppLocalizations.of(context)!.elbw_incoming__manual_input_of_outgoing_number,
-                    labelText: 'Auslagerungs-Nr.', // AppLocalizations.of(context)!.elbw_incoming__outgoing_number_short,
-                    okText: 'OK', // AppLocalizations.of(context)!.general__ok,
-                    cancelText: 'Abbrechen', // AppLocalizations.of(context)!.general__cancel,
-                    failText: 'Manuelle Eingabe stimmt nicht mit Barcode überein.', // AppLocalizations.of(context)!.elbw_incoming__manual_input_missmatch,
+                    introText: context.loc.elbw_incoming__manual_input_of_outgoing_number,
+                    labelText: context.loc.elbw_incoming__outgoing_number_short,
+                    okText: context.loc.general__ok,
+                    cancelText: context.loc.general__cancel,
+                    failText: context.loc.elbw_incoming__manual_input_missmatch,
                     isValid: (String value) => value == '79',
                     getSuccessReturnValue: (String value) => value,
                     keyboardType: TextInputType.number,

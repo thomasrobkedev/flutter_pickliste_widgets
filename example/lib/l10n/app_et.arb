@@ -1,0 +1,31 @@
+{
+  "@@locale": "et",
+  "datatransfer__device_could_not_be_registered": "Seadet ei õnnestunud registreerida!",
+  "@datatransfer__device_could_not_be_registered": {
+    "type": "text"
+  },
+  "datatransfer__device_has_been_registered": "Seade on registreeritud!",
+  "@datatransfer__device_has_been_registered": {
+    "type": "text"
+  },
+  "menu__app_data_transfer": "Andmete ülekanne",
+  "@menu__app_data_transfer": {
+    "type": "text"
+  },
+  "menu__app_duplicator": "Paljundusaparaat",
+  "@menu__app_duplicator": {
+    "type": "text"
+  },
+  "menu__app_service_point": "Teeninduspunkt",
+  "@menu__app_service_point": {
+    "type": "text"
+  },
+  "menu__settings": "Seaded",
+  "@menu__settings": {
+    "type": "text"
+  },
+  "menu__stocktaking": "Inventuur",
+  "@menu__stocktaking": {
+    "type": "text"
+  }
+}

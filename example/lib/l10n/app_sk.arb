@@ -1,0 +1,1510 @@
+{
+  "@@locale": "sk",
+  "datatransfer__device_could_not_be_registered": "Zariadenie sa nepodarilo zaregistrovať!",
+  "@datatransfer__device_could_not_be_registered": {
+    "type": "text"
+  },
+  "datatransfer__device_has_been_registered": "Zariadenie bolo zaregistrované!",
+  "@datatransfer__device_has_been_registered": {
+    "type": "text"
+  },
+  "dispohz__product_not_in_file": "Dispo nie je v zázname k dispozícii!",
+  "@dispohz__product_not_in_file": {
+    "type": "text"
+  },
+  "duplicator__please_scan_old_price": "Prosím, naskenujte starú cenu!",
+  "@duplicator__please_scan_old_price": {
+    "type": "text"
+  },
+  "duplicator__please_scan_red_price": "Prosím, naskenujte zníženú cenu!",
+  "@duplicator__please_scan_red_price": {
+    "type": "text"
+  },
+  "duplicator__red_price_too_high": "Znížená cena je príliš vysoká!",
+  "@duplicator__red_price_too_high": {
+    "type": "text"
+  },
+  "general__amount_short": "Poč.",
+  "@general__amount_short": {
+    "type": "text"
+  },
+  "general__invalid_barcode": "Neplatný čiarový kód",
+  "@general__invalid_barcode": {
+    "type": "text"
+  },
+  "general__invalid_barcode_scanned": "Naskenovaný nesprávny čiarový kód\n{value0}",
+  "@general__invalid_barcode_scanned": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "general__invalid_checkdigit": "Kontrolná číslica nesprávna",
+  "@general__invalid_checkdigit": {
+    "type": "text"
+  },
+  "general__invalid_country": "Nesprávna krajina",
+  "@general__invalid_country": {
+    "type": "text"
+  },
+  "general__invalid_ean13": "Neplatný EAN13",
+  "@general__invalid_ean13": {
+    "type": "text"
+  },
+  "general__invalid_ean8": "Neplatný EAN8",
+  "@general__invalid_ean8": {
+    "type": "text"
+  },
+  "general__invalid_employee_number": "Osobné číslo neplatné",
+  "@general__invalid_employee_number": {
+    "type": "text"
+  },
+  "general__invalid_input": "Neplatné zadanie",
+  "@general__invalid_input": {
+    "type": "text"
+  },
+  "general__invalid_item_number": "Neplatné číslo kusu",
+  "@general__invalid_item_number": {
+    "type": "text"
+  },
+  "general__item_number_short": "Č. kusu",
+  "@general__item_number_short": {
+    "type": "text"
+  },
+  "general__next": "Ďalej",
+  "@general__next": {
+    "type": "text"
+  },
+  "general__no": "Nie",
+  "@general__no": {
+    "type": "text"
+  },
+  "general__no_base_data": "Na zariadení nie sú k dispozícii žiadne dáta o zásobách!",
+  "@general__no_base_data": {
+    "type": "text"
+  },
+  "general__ok": "OK",
+  "@general__ok": {
+    "type": "text"
+  },
+  "general__order_number": "Obj. č.",
+  "@general__order_number": {
+    "type": "text"
+  },
+  "general__please_scan_label": "Prosím, naskenujte etiketu",
+  "@general__please_scan_label": {
+    "type": "text"
+  },
+  "general__product": "Artikel EH",
+  "@general__product": {
+    "type": "text"
+  },
+  "general__quantity": "Počet kusov",
+  "@general__quantity": {
+    "type": "text"
+  },
+  "general__red_price": "Znížená cena",
+  "@general__red_price": {
+    "type": "text"
+  },
+  "general__redprices_identically": "Znížené ceny identické",
+  "@general__redprices_identically": {
+    "type": "text"
+  },
+  "general__size": "Veľkosť",
+  "@general__size": {
+    "type": "text"
+  },
+  "general__storage_location": "Miesto",
+  "@general__storage_location": {
+    "type": "text"
+  },
+  "general__yes": "Áno",
+  "@general__yes": {
+    "type": "text"
+  },
+  "mbinfo__min_amount": "obj. M",
+  "@mbinfo__min_amount": {
+    "type": "text"
+  },
+  "mbinfo__no_product_info": "Artikel EH nie je k dispozícii",
+  "@mbinfo__no_product_info": {
+    "type": "text"
+  },
+  "mbinfo__on_selling": "vo VK",
+  "@mbinfo__on_selling": {
+    "type": "text"
+  },
+  "mbinfo__sum": "Spolu",
+  "@mbinfo__sum": {
+    "type": "text"
+  },
+  "menu__app_data_transfer": "Prenos dát",
+  "@menu__app_data_transfer": {
+    "type": "text"
+  },
+  "menu__app_duplicator": "Duplikátor",
+  "@menu__app_duplicator": {
+    "type": "text"
+  },
+  "menu__app_pl07_item_movement": "Naskladnenie/premiestnenie",
+  "@menu__app_pl07_item_movement": {
+    "type": "text"
+  },
+  "menu__app_pl07_missing_items": "Chýbajúce kusy",
+  "@menu__app_pl07_missing_items": {
+    "type": "text"
+  },
+  "menu__app_pl07_pick_instruction": "Vytriedenie",
+  "@menu__app_pl07_pick_instruction": {
+    "type": "text"
+  },
+  "menu__app_pl07_red_prices_old": "Znížené ceny",
+  "@menu__app_pl07_red_prices_old": {
+    "type": "text"
+  },
+  "menu__app_pl07_red_prices_selling_area": "Znížené ceny VK",
+  "@menu__app_pl07_red_prices_selling_area": {
+    "type": "text"
+  },
+  "menu__app_pl07_stock_arrival_mb_info_product_info": "Informácie o artikli EH",
+  "@menu__app_pl07_stock_arrival_mb_info_product_info": {
+    "type": "text"
+  },
+  "menu__app_pl07_ware_transfer": "Preprava tovaru",
+  "@menu__app_pl07_ware_transfer": {
+    "type": "text"
+  },
+  "menu__app_service_point": "Servisné miesto",
+  "@menu__app_service_point": {
+    "type": "text"
+  },
+  "menu__app_stocktaking_selling_area": "Inventúra VK",
+  "@menu__app_stocktaking_selling_area": {
+    "type": "text"
+  },
+  "menu__app_stocktaking_stock": "Inventúra skladu",
+  "@menu__app_stocktaking_stock": {
+    "type": "text"
+  },
+  "menu__pl07_stock_arrival": "Príjem tovaru",
+  "@menu__pl07_stock_arrival": {
+    "type": "text"
+  },
+  "menu__settings": "nastavenie",
+  "@menu__settings": {
+    "type": "text"
+  },
+  "menu__stocktaking": "Inventarizácia",
+  "@menu__stocktaking": {
+    "type": "text"
+  },
+  "missing_item__item_is_no_missing_item": "Kus nie je podľa systému chýbajúci kus",
+  "@missing_item__item_is_no_missing_item": {
+    "type": "text"
+  },
+  "missing_item__missing_item_dest_form": "Chýbajúce kusy cieľového miesta",
+  "@missing_item__missing_item_dest_form": {
+    "type": "text"
+  },
+  "missing_item__reason_1": "Prehliadnuť",
+  "@missing_item__reason_1": {
+    "type": "text"
+  },
+  "missing_item__reason_2": "Nesprávne kódovanie",
+  "@missing_item__reason_2": {
+    "type": "text"
+  },
+  "missing_item__reason_3": "Nesprávne miesto",
+  "@missing_item__reason_3": {
+    "type": "text"
+  },
+  "missing_item__reason_4": "V predaji",
+  "@missing_item__reason_4": {
+    "type": "text"
+  },
+  "missing_item__reason_5": "Iné",
+  "@missing_item__reason_5": {
+    "type": "text"
+  },
+  "missing_item__reason_form": "Dôvod pre chýbajúci diel",
+  "@missing_item__reason_form": {
+    "type": "text"
+  },
+  "missing_item__search_complete": "Vyhľadávanie chýbajúcich dielov je úplne ukončené. Prosím, preneste dáta na dátové miesto zásoby cez základné menu pokladne!",
+  "@missing_item__search_complete": {
+    "type": "text"
+  },
+  "missing_item__search_form": "Chýbajúce kusy ({value0})",
+  "@missing_item__search_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__ad_hoc": "ad hoc",
+  "@old__ad_hoc": {
+    "type": "text"
+  },
+  "old__all_delivery_notes_for_loading_list_scanned": "Boli naskenované všetky dodacie listy k tomuto nakladaciemu zoznamu.",
+  "@old__all_delivery_notes_for_loading_list_scanned": {
+    "type": "text"
+  },
+  "old__all_items_for_delivery_note_scanned": "Boli naskenované všetky kusy k tomuto dodaciemu listu",
+  "@old__all_items_for_delivery_note_scanned": {
+    "type": "text"
+  },
+  "old__all_loading_lists_scanned": "Boli naskenované všetky nakladacie zoznamy.",
+  "@old__all_loading_lists_scanned": {
+    "type": "text"
+  },
+  "old__all_loadng_lsts_for_ship_order_scanned": "Boli naskenované všetky nakladacie zoznamy k tejto zákazke na špedíciu.",
+  "@old__all_loadng_lsts_for_ship_order_scanned": {
+    "type": "text"
+  },
+  "old__all_shipping_orders_scanned": "Boli naskenované všetky zákazky na špedíciu.",
+  "@old__all_shipping_orders_scanned": {
+    "type": "text"
+  },
+  "old__amount_column": "Poč.",
+  "@old__amount_column": {
+    "type": "text"
+  },
+  "old__application_installing": "{value0} sa inštaluje ...",
+  "@old__application_installing": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__application_startup": "{value0} sa spúšťa ...",
+  "@old__application_startup": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__btn_back": "Späť",
+  "@old__btn_back": {
+    "type": "text"
+  },
+  "old__btn_details": "Podrobnosti",
+  "@old__btn_details": {
+    "type": "text"
+  },
+  "old__btn_product_info": "Informácie o artikli EH",
+  "@old__btn_product_info": {
+    "type": "text"
+  },
+  "old__button_next": "Ďalej",
+  "@old__button_next": {
+    "type": "text"
+  },
+  "old__cancel": "Prerušiť",
+  "@old__cancel": {
+    "type": "text"
+  },
+  "old__checking_database": "Skontrolovať databázu",
+  "@old__checking_database": {
+    "type": "text"
+  },
+  "old__checking_directories": "Skontrolovať zoznamy",
+  "@old__checking_directories": {
+    "type": "text"
+  },
+  "old__correction_delivery_1": "Korekčné dodacie listy obsahujú\nProsím, naskenujte na úrovni dodacieho listu",
+  "@old__correction_delivery_1": {
+    "type": "text"
+  },
+  "old__correction_delivery_2": "Korekčné dodacie listy obsahujú\nProsím, naskenujte na úrovni kusu",
+  "@old__correction_delivery_2": {
+    "type": "text"
+  },
+  "old__correction_delivery_3": "Korekčné dodacie listy obsahujú\nProsím, naskenujte na úrovni nakladacieho zoznamu",
+  "@old__correction_delivery_3": {
+    "type": "text"
+  },
+  "old__creating_database": "Vytvoriť databázu nanovo",
+  "@old__creating_database": {
+    "type": "text"
+  },
+  "old__current_storage_address": "Adr.:",
+  "@old__current_storage_address": {
+    "type": "text"
+  },
+  "old__datatransfer_active": "Dátový prenos aktívny",
+  "@old__datatransfer_active": {
+    "type": "text"
+  },
+  "old__date_column": "Dátum",
+  "@old__date_column": {
+    "type": "text"
+  },
+  "old__delete_old_zip_data": "Vymazať staré dáta zip",
+  "@old__delete_old_zip_data": {
+    "type": "text"
+  },
+  "old__delivery_note_column": "Č. LS",
+  "@old__delivery_note_column": {
+    "type": "text"
+  },
+  "old__delivery_note_scan_items": "K tomuto dodaciemu listu je potrebné naskenovať kusy samostatne.",
+  "@old__delivery_note_scan_items": {
+    "type": "text"
+  },
+  "old__delivery_note_unknown": "Tento dodací list už bol naskenovaný, je neznámy alebo patrí k inému nakladaciemu zoznamu",
+  "@old__delivery_note_unknown": {
+    "type": "text"
+  },
+  "old__destination_column": "Cieľ",
+  "@old__destination_column": {
+    "type": "text"
+  },
+  "old__destination_storage_address": "Cieľ:",
+  "@old__destination_storage_address": {
+    "type": "text"
+  },
+  "old__dispohz_error_counter": "Problémy s hodnotou počítadla z dát!",
+  "@old__dispohz_error_counter": {
+    "type": "text"
+  },
+  "old__dispohz_form": "HZ dispo",
+  "@old__dispohz_form": {
+    "type": "text"
+  },
+  "old__dispohz_invalid_barcode": "Neplatný čiarový kód",
+  "@old__dispohz_invalid_barcode": {
+    "type": "text"
+  },
+  "old__dispohz_product_not_in_file": "Dispo nie je v zázname k dispozícii!",
+  "@old__dispohz_product_not_in_file": {
+    "type": "text"
+  },
+  "old__dispohz_redprice_identically": "Znížené ceny identické!",
+  "@old__dispohz_redprice_identically": {
+    "type": "text"
+  },
+  "old__dispohz_scan_label": "Prosím, naskenujte etiketu",
+  "@old__dispohz_scan_label": {
+    "type": "text"
+  },
+  "old__dispohz_wrong_country": "Nesprávna krajina!",
+  "@old__dispohz_wrong_country": {
+    "type": "text"
+  },
+  "old__dupliz_form": "Duplicita",
+  "@old__dupliz_form": {
+    "type": "text"
+  },
+  "old__dupliz_please_scan_old_price": "Prosím, naskenujte starú cenu!",
+  "@old__dupliz_please_scan_old_price": {
+    "type": "text"
+  },
+  "old__dupliz_please_scan_red_price": "Prosím, naskenujte zníženú cenu!",
+  "@old__dupliz_please_scan_red_price": {
+    "type": "text"
+  },
+  "old__dupliz_red_price_to_high": "Znížená cena je príliš vysoká!",
+  "@old__dupliz_red_price_to_high": {
+    "type": "text"
+  },
+  "old__dupliz_wrong_country": "Nesprávna krajina!",
+  "@old__dupliz_wrong_country": {
+    "type": "text"
+  },
+  "old__employee_number": "Osobné číslo",
+  "@old__employee_number": {
+    "type": "text"
+  },
+  "old__enter_item_number": "Prosím, zadajte číslo kusu:",
+  "@old__enter_item_number": {
+    "type": "text"
+  },
+  "old__enter_item_number_form": "Zaznamenať číslo kusu",
+  "@old__enter_item_number_form": {
+    "type": "text"
+  },
+  "old__enter_password_to_close": "Prosím, zadajte heslo na ukončenie programu:",
+  "@old__enter_password_to_close": {
+    "type": "text"
+  },
+  "old__enter_password_to_switch_usb_mode": "Prosím, zadajte heslo na zmenu režimu USB:",
+  "@old__enter_password_to_switch_usb_mode": {
+    "type": "text"
+  },
+  "old__error_database_communication": "Chyba pri komunikácii s databázou\n{value0}",
+  "@old__error_database_communication": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__error_database_generic": "Chyba pri vytváraní databázy\n{value0}",
+  "@old__error_database_generic": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__error_database_no_script": "Chyba pri vytváraní databázy\nScript na vytvorenie databázy nie je k dispozícii!",
+  "@old__error_database_no_script": {
+    "type": "text"
+  },
+  "old__error_during_save": "Chyba pri ukladaní dát",
+  "@old__error_during_save": {
+    "type": "text"
+  },
+  "old__error_no_more_data": "Žiadne ďalšie dáta",
+  "@old__error_no_more_data": {
+    "type": "text"
+  },
+  "old__exporting_old_data": "Exportovať staré dáta",
+  "@old__exporting_old_data": {
+    "type": "text"
+  },
+  "old__extracting_zip_file": "Rozbaliť súbor zip",
+  "@old__extracting_zip_file": {
+    "type": "text"
+  },
+  "old__getting_data": "Zistiť dáta",
+  "@old__getting_data": {
+    "type": "text"
+  },
+  "old__getting_number_of_rows": "Zistiť počet riadkov",
+  "@old__getting_number_of_rows": {
+    "type": "text"
+  },
+  "old__hold_current_item": "Chcete skutočne zaparkovať aktuálnu položku?",
+  "@old__hold_current_item": {
+    "type": "text"
+  },
+  "old__hz_process_completed": "Vyhľadávanie záznamu je úplne ukončené. Prosím, preneste dáta na dátové miesto zásoby cez základné menu pokladne!",
+  "@old__hz_process_completed": {
+    "type": "text"
+  },
+  "old__image_loading": "Načítava sa obrázok ...",
+  "@old__image_loading": {
+    "type": "text"
+  },
+  "old__invalid_barcode_scanned": "Naskenovaný nesprávny čiarový kód\n{value0}",
+  "@old__invalid_barcode_scanned": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_2": "Zákazka na špedíciu \"{value0}\" nie je k dispozícii alebo už bola naskenovaná",
+  "@old__invalid_barcode_scanned_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_3": "Nakladací zoznam \"{value0}\" nie je k dispozícii alebo už bol naskenovaný",
+  "@old__invalid_barcode_scanned_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_4": "Dodací list \"{value0}\" nie je k dispozícii alebo už bol naskenovaný",
+  "@old__invalid_barcode_scanned_4": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_5": "Kus \"{value0}\" nie je k dispozícii alebo už bol naskenovaný",
+  "@old__invalid_barcode_scanned_5": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_6": "Balík \"{value0}\" nie je k dispozícii alebo už bol naskenovaný",
+  "@old__invalid_barcode_scanned_6": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_country": "Nesprávna krajina",
+  "@old__invalid_country": {
+    "type": "text"
+  },
+  "old__invalid_employee_number": "Neplatné osobné číslo",
+  "@old__invalid_employee_number": {
+    "type": "text"
+  },
+  "old__invalid_item_number": "Neplatné číslo kusu",
+  "@old__invalid_item_number": {
+    "type": "text"
+  },
+  "old__inventur_add_record": "AddRecord() udal neočakávanú hodnotu. Prosím, kontaktujte podporu.",
+  "@old__inventur_add_record": {
+    "type": "text"
+  },
+  "old__inventur_amount": "Počet kusov:",
+  "@old__inventur_amount": {
+    "type": "text"
+  },
+  "old__inventur_amount_not_reached": "Zadaný počet kusov nebol dosiahnutý!",
+  "@old__inventur_amount_not_reached": {
+    "type": "text"
+  },
+  "old__inventur_amount_of_items_and_stocks": "Poč. Kusy/miesta:",
+  "@old__inventur_amount_of_items_and_stocks": {
+    "type": "text"
+  },
+  "old__inventur_ask_force_closing": "Chcete skutočne uzavrieť definovaný kruh?",
+  "@old__inventur_ask_force_closing": {
+    "type": "text"
+  },
+  "old__inventur_ask_force_closing_caption": "Definovaný okruh",
+  "@old__inventur_ask_force_closing_caption": {
+    "type": "text"
+  },
+  "old__inventur_button_inventory": "{value0} - Inventúra VK",
+  "@old__inventur_button_inventory": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_button_inventory_stock": "{value0} - Inventúra skladu",
+  "@old__inventur_button_inventory_stock": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_button_settings": "{value0} - Nastavenia",
+  "@old__inventur_button_settings": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_collection_start_failed_1": "Otvorený definovaný kruh! Nový definovaný kruh nie je možné spustiť.",
+  "@old__inventur_collection_start_failed_1": {
+    "type": "text"
+  },
+  "old__inventur_collection_start_failed_2": "Informácie pre nový definovaný kruh nedostatočné: {value0}",
+  "@old__inventur_collection_start_failed_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_collection_start_failed_3": "Neplatné zadanie pre zadaný počet kusov: {value0}",
+  "@old__inventur_collection_start_failed_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_employee_number": "Osobné č.:",
+  "@old__inventur_employee_number": {
+    "type": "text"
+  },
+  "old__inventur_exit_impossible": "Definovaný kruh nie je uzavretý! Ukončenie nie je možné!",
+  "@old__inventur_exit_impossible": {
+    "type": "text"
+  },
+  "old__inventur_form": "Inventúra",
+  "@old__inventur_form": {
+    "type": "text"
+  },
+  "old__inventur_invalid_abstimmkreise_forecast": "Zadaný neplatný počet miest",
+  "@old__inventur_invalid_abstimmkreise_forecast": {
+    "type": "text"
+  },
+  "old__inventur_invalid_article_no": "Neplatné číslo kusu odovzdané!",
+  "@old__inventur_invalid_article_no": {
+    "type": "text"
+  },
+  "old__inventur_invalid_barcode": "Neplatný čiarový kód",
+  "@old__inventur_invalid_barcode": {
+    "type": "text"
+  },
+  "old__inventur_invalid_blackprice": "Neplatná štandardná cena odovzdaná!",
+  "@old__inventur_invalid_blackprice": {
+    "type": "text"
+  },
+  "old__inventur_invalid_checkdigit": "Kontrolná číslica nesprávna",
+  "@old__inventur_invalid_checkdigit": {
+    "type": "text"
+  },
+  "old__inventur_invalid_collection_id": "Neplatný definovaný kruh odovzdaný!",
+  "@old__inventur_invalid_collection_id": {
+    "type": "text"
+  },
+  "old__inventur_invalid_dispo_no": "Neplatné disponenčné číslo odovzdané!",
+  "@old__inventur_invalid_dispo_no": {
+    "type": "text"
+  },
+  "old__inventur_invalid_ean13": "Neplatný EAN13 !",
+  "@old__inventur_invalid_ean13": {
+    "type": "text"
+  },
+  "old__inventur_invalid_ean8": "Neplatný EAN8!",
+  "@old__inventur_invalid_ean8": {
+    "type": "text"
+  },
+  "old__inventur_invalid_employee_number": "Osobné číslo neplatné",
+  "@old__inventur_invalid_employee_number": {
+    "type": "text"
+  },
+  "old__inventur_invalid_input": "Neplatné zadanie",
+  "@old__inventur_invalid_input": {
+    "type": "text"
+  },
+  "old__inventur_invalid_label_code": "Neplatný riadok etikety odovzdaný: {value0}",
+  "@old__inventur_invalid_label_code": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_invalid_personal_id": "Neplatná osobné číslo odovzdané!",
+  "@old__inventur_invalid_personal_id": {
+    "type": "text"
+  },
+  "old__inventur_invalid_pick_stock": "Chybné miesto",
+  "@old__inventur_invalid_pick_stock": {
+    "type": "text"
+  },
+  "old__inventur_invalid_record_forecast": "Neplatné zadanie počtu kusov odovzdané!",
+  "@old__inventur_invalid_record_forecast": {
+    "type": "text"
+  },
+  "old__inventur_invalid_redprice": "Neplatná znížená cena odovzdaná!",
+  "@old__inventur_invalid_redprice": {
+    "type": "text"
+  },
+  "old__inventur_invalid_serial": "Neplatné sériové číslo MDE odovzdané!",
+  "@old__inventur_invalid_serial": {
+    "type": "text"
+  },
+  "old__inventur_invalid_ware_group_no": "Neplatná skupina tovaru odovzdaná!",
+  "@old__inventur_invalid_ware_group_no": {
+    "type": "text"
+  },
+  "old__inventur_inventory_area": "Definovaný okruh:",
+  "@old__inventur_inventory_area": {
+    "type": "text"
+  },
+  "old__inventur_inventory_complete": "Dosiahnutý zadaný počet kusov",
+  "@old__inventur_inventory_complete": {
+    "type": "text"
+  },
+  "old__inventur_inventory_sale_form": "Inventúra VK",
+  "@old__inventur_inventory_sale_form": {
+    "type": "text"
+  },
+  "old__inventur_inventory_stock_form": "Inventúra skladu",
+  "@old__inventur_inventory_stock_form": {
+    "type": "text"
+  },
+  "old__inventur_numeric_input_only": "Potrebné je numerické zadanie!",
+  "@old__inventur_numeric_input_only": {
+    "type": "text"
+  },
+  "old__inventur_pick_stock_amount_reached": "Zadaný počet kusov dosiahnutý",
+  "@old__inventur_pick_stock_amount_reached": {
+    "type": "text"
+  },
+  "old__inventur_red_price": "Znížená cena:",
+  "@old__inventur_red_price": {
+    "type": "text"
+  },
+  "old__inventur_storage_location": "Miesto:",
+  "@old__inventur_storage_location": {
+    "type": "text"
+  },
+  "old__inventur_updated_existing_record": "Artikel už bol k dispozícii. Starý záznam odstránený.",
+  "@old__inventur_updated_existing_record": {
+    "type": "text"
+  },
+  "old__is_stock_empty": "Je miesto\n{value0}\nteraz prázdne?",
+  "@old__is_stock_empty": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__item_already_picked": "Kus už bol vytriedený",
+  "@old__item_already_picked": {
+    "type": "text"
+  },
+  "old__item_doesnt_exists_in_system": "Kus nie je podľa systému k dispozícii",
+  "@old__item_doesnt_exists_in_system": {
+    "type": "text"
+  },
+  "old__item_has_wrong_size": "Kus má nesprávnu veľkosť",
+  "@old__item_has_wrong_size": {
+    "type": "text"
+  },
+  "old__item_invalid_place": "Tento kus nie je podľa systému na tomto mieste.\nChcete ho napriek tomu vytriediť?",
+  "@old__item_invalid_place": {
+    "type": "text"
+  },
+  "old__item_is_no_missing_item": "Kus nie je podľa systému chýbajúci kus",
+  "@old__item_is_no_missing_item": {
+    "type": "text"
+  },
+  "old__item_number_column": "Č. kusu",
+  "@old__item_number_column": {
+    "type": "text"
+  },
+  "old__loading_items": "Načítať kusy",
+  "@old__loading_items": {
+    "type": "text"
+  },
+  "old__loading_list_column": "Nakladací zoznam",
+  "@old__loading_list_column": {
+    "type": "text"
+  },
+  "old__loading_list_scan_delivery_note": "K tomuto nakladaciemu zoznamu je potrebné naskenovať dodacie listy samostatne.",
+  "@old__loading_list_scan_delivery_note": {
+    "type": "text"
+  },
+  "old__loading_list_unknown": "Tento nakladací zoznam je už naskenovaný alebo je neznámy.",
+  "@old__loading_list_unknown": {
+    "type": "text"
+  },
+  "old__loading_missing_items": "Načítať chýbajúce kusy",
+  "@old__loading_missing_items": {
+    "type": "text"
+  },
+  "old__loading_pick_instruction": "Načítať vytriedenia",
+  "@old__loading_pick_instruction": {
+    "type": "text"
+  },
+  "old__loading_redprice_items": "Načítať kusy so zníženou cenou VK",
+  "@old__loading_redprice_items": {
+    "type": "text"
+  },
+  "old__loading_redprices": "Načítať znížené ceny VK",
+  "@old__loading_redprices": {
+    "type": "text"
+  },
+  "old__loading_stock": "Načítať zásoby skladu",
+  "@old__loading_stock": {
+    "type": "text"
+  },
+  "old__loading_stock_arrival_data": "Dáta WE sa načítavajú",
+  "@old__loading_stock_arrival_data": {
+    "type": "text"
+  },
+  "old__memory_adjustment": "Úprava uloženia",
+  "@old__memory_adjustment": {
+    "type": "text"
+  },
+  "old__missing_item_reason_1": "{value0} - Prehliadnuť",
+  "@old__missing_item_reason_1": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_2": "{value0} - Nesprávne kódovanie",
+  "@old__missing_item_reason_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_3": "{value0} - Nesprávne miesto",
+  "@old__missing_item_reason_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_4": "{value0} - V predaji",
+  "@old__missing_item_reason_4": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_5": "{value0} – Iné",
+  "@old__missing_item_reason_5": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_form": "Dôvod pre chýbajúci diel",
+  "@old__missing_item_reason_form": {
+    "type": "text"
+  },
+  "old__missing_item_search_complete": "Vyhľadávanie chýbajúcich dielov je úplne ukončené. Prosím, preneste dáta na dátové miesto zásoby cez základné menu pokladne!",
+  "@old__missing_item_search_complete": {
+    "type": "text"
+  },
+  "old__missing_item_search_form": "Chýbajúce kusy ({value0})",
+  "@old__missing_item_search_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__no": "Nie",
+  "@old__no": {
+    "type": "text"
+  },
+  "old__no_applications_are_installed": "Nie sú nainštalované žiadne aplikácie. Prosím, prejdite na dátové miesto zásob a spustite inštaláciu načítaním súboru HZ.",
+  "@old__no_applications_are_installed": {
+    "type": "text"
+  },
+  "old__no_base_data": "Na zariadení nie sú k dispozícii žiadne dáta o zásobách!",
+  "@old__no_base_data": {
+    "type": "text"
+  },
+  "old__no_hz_info_for_scanned_item": "Žiadne informácie o HZ pre tento kus",
+  "@old__no_hz_info_for_scanned_item": {
+    "type": "text"
+  },
+  "old__no_image_available": "Obrázok nie je k dispozícii",
+  "@old__no_image_available": {
+    "type": "text"
+  },
+  "old__no_manual_input": "Nie je povolené žiadne manuálne zadanie ani sken baliaceho ústrižku. Je potrebná štandardná cena",
+  "@old__no_manual_input": {
+    "type": "text"
+  },
+  "old__no_more_items_hold": "Parkovanie nie je možné. Bol dosiahnutý maximálny počet.",
+  "@old__no_more_items_hold": {
+    "type": "text"
+  },
+  "old__no_pricecode_availalbe": "Kód ceny k novej zníženej cene nebolo možné zistiť.",
+  "@old__no_pricecode_availalbe": {
+    "type": "text"
+  },
+  "old__no_printer_choosen_continue": "Zatiaľ nebola vybraná žiadna tlačiareň. Chcete napriek tomu pokračovať?",
+  "@old__no_printer_choosen_continue": {
+    "type": "text"
+  },
+  "old__no_redprice_info_available": "K dispozícii nie sú žiadne informácie o zníženej cene",
+  "@old__no_redprice_info_available": {
+    "type": "text"
+  },
+  "old__no_storage_addresses": "Adresy skladu k vášmu obchodu sú neznáme. Prosím, na zariadení najprv načítajte dáta o zásobách.",
+  "@old__no_storage_addresses": {
+    "type": "text"
+  },
+  "old__ok": "OK",
+  "@old__ok": {
+    "type": "text"
+  },
+  "old__onyl_different_storage_addresses": "Preprava tovaru je možná len medzi dvoma rôznymi adresami skladu.",
+  "@old__onyl_different_storage_addresses": {
+    "type": "text"
+  },
+  "old__pick_stock_location_column": "Miesto",
+  "@old__pick_stock_location_column": {
+    "type": "text"
+  },
+  "old__picking_complete": "Vytriedenie je kompletne ukončené. Prosím, preneste dáta na dátové miesto zásoby cez základné menu pokladne.",
+  "@old__picking_complete": {
+    "type": "text"
+  },
+  "old__picklist_btn_load": "Načítať",
+  "@old__picklist_btn_load": {
+    "type": "text"
+  },
+  "old__picklist_exception_form": "Nevyriešená chyba ({value0}/{value1})",
+  "@old__picklist_exception_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {},
+      "value1": {}
+    }
+  },
+  "old__picklist_hold_items_form": "Zaparkovaná položka",
+  "@old__picklist_hold_items_form": {
+    "type": "text"
+  },
+  "old__picklist_hz_sale_form": "HZ VK ({value0})",
+  "@old__picklist_hz_sale_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_login_form": "Prihlásenie ({value0})",
+  "@old__picklist_login_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_maximum_amount_of_items_reached": "Bol dosiahnutá maximálny počet. Prosím, načítajte zariadenie.",
+  "@old__picklist_maximum_amount_of_items_reached": {
+    "type": "text"
+  },
+  "old__picklist_menu_form": "Výber ({value0})",
+  "@old__picklist_menu_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_menuitem_align_printer": "Príprava tlačiarne",
+  "@old__picklist_menuitem_align_printer": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_back": "Späť",
+  "@old__picklist_menuitem_back": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_choose_printer": "Vybrať tlačiareň",
+  "@old__picklist_menuitem_choose_printer": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_device_settings": "Nastavenia zariadenia",
+  "@old__picklist_menuitem_device_settings": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_exit": "Ukončiť",
+  "@old__picklist_menuitem_exit": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_item_movement": "Naskladnenie/premiestnenie",
+  "@old__picklist_menuitem_item_movement": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_missing_items": "Chýbajúce kusy",
+  "@old__picklist_menuitem_missing_items": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_pick_instruction": "Vytriedenie",
+  "@old__picklist_menuitem_pick_instruction": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_product_info": "Informácie o artikli EH",
+  "@old__picklist_menuitem_product_info": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_red_prices": "Znížené ceny",
+  "@old__picklist_menuitem_red_prices": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_red_prices_selling": "Znížené ceny VK",
+  "@old__picklist_menuitem_red_prices_selling": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_settings": "Nastavenia",
+  "@old__picklist_menuitem_settings": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_stock_arrival": "Príjem tovaru",
+  "@old__picklist_menuitem_stock_arrival": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_ware_transfer": "Preprava tovaru",
+  "@old__picklist_menuitem_ware_transfer": {
+    "type": "text"
+  },
+  "old__picklist_missing_item_dest_form": "Chýbajúce kusy cieľového miesta",
+  "@old__picklist_missing_item_dest_form": {
+    "type": "text"
+  },
+  "old__picklist_no_product_info": "Artikel EH nie je k dispozícii",
+  "@old__picklist_no_product_info": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_amount": "Prij.",
+  "@old__picklist_pick_instruction_amount": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_dest_branch": "Cieľová prevádzka",
+  "@old__picklist_pick_instruction_dest_branch": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_floor": "Poschodie",
+  "@old__picklist_pick_instruction_floor": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_hold_item": "Parkovať",
+  "@old__picklist_pick_instruction_hold_item": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_image": "Obrázok",
+  "@old__picklist_pick_instruction_image": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_item_number": "Č. kusu",
+  "@old__picklist_pick_instruction_item_number": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_item_number2": "Č. kusu",
+  "@old__picklist_pick_instruction_item_number2": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_level": "Poschodie",
+  "@old__picklist_pick_instruction_level": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_order_number": "Obj. č.",
+  "@old__picklist_pick_instruction_order_number": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_place": "Miesto",
+  "@old__picklist_pick_instruction_place": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_product": "Artikel EH",
+  "@old__picklist_pick_instruction_product": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_reprint": "Nová tlač",
+  "@old__picklist_pick_instruction_reprint": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_room": "Miestnosť",
+  "@old__picklist_pick_instruction_room": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_row": "Rad",
+  "@old__picklist_pick_instruction_row": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_selling_area": "PREDAJ",
+  "@old__picklist_pick_instruction_selling_area": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_size": "Veľkosť",
+  "@old__picklist_pick_instruction_size": {
+    "type": "text"
+  },
+  "old__picklist_pickin_form": "Naskl. ({value0}/{value1})",
+  "@old__picklist_pickin_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {},
+      "value1": {}
+    }
+  },
+  "old__picklist_pickin_form1": "Naskladnenie",
+  "@old__picklist_pickin_form1": {
+    "type": "text"
+  },
+  "old__picklist_picking_form": "Vytried. ({value0}/{value1})",
+  "@old__picklist_picking_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {},
+      "value1": {}
+    }
+  },
+  "old__picklist_product_change": "Výmena dispo\nProsím, znovu naskenujte miesto.",
+  "@old__picklist_product_change": {
+    "type": "text"
+  },
+  "old__picklist_product_image_form": "Obrázok artiklu EH",
+  "@old__picklist_product_image_form": {
+    "type": "text"
+  },
+  "old__picklist_product_info_form": "Informácie o artikli EH",
+  "@old__picklist_product_info_form": {
+    "type": "text"
+  },
+  "old__picklist_product_info_min_amount": "obj. M",
+  "@old__picklist_product_info_min_amount": {
+    "type": "text"
+  },
+  "old__picklist_product_info_on_selling": "vo VK",
+  "@old__picklist_product_info_on_selling": {
+    "type": "text"
+  },
+  "old__picklist_product_info_product": "Artikel EH:",
+  "@old__picklist_product_info_product": {
+    "type": "text"
+  },
+  "old__picklist_product_info_size": "Veľkosť",
+  "@old__picklist_product_info_size": {
+    "type": "text"
+  },
+  "old__picklist_product_info_sum": "Spolu",
+  "@old__picklist_product_info_sum": {
+    "type": "text"
+  },
+  "old__picklist_redprices_form": "Znížené ceny",
+  "@old__picklist_redprices_form": {
+    "type": "text"
+  },
+  "old__picklist_scan_location_first": "Najprv, prosím, naskenujte miesto.",
+  "@old__picklist_scan_location_first": {
+    "type": "text"
+  },
+  "old__picklist_settings_form": "Nastavenia ({value0})",
+  "@old__picklist_settings_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_stock_arrival_form": "Príjem tovaru (LaLi)",
+  "@old__picklist_stock_arrival_form": {
+    "type": "text"
+  },
+  "old__picklist_timeout": "Prestávka\nProsím, znovu naskenujte miesto.",
+  "@old__picklist_timeout": {
+    "type": "text"
+  },
+  "old__picklist_transport_form": "Preprava ({value0})",
+  "@old__picklist_transport_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_ware_transfer_form": "Cieľ prepravy tovaru",
+  "@old__picklist_ware_transfer_form": {
+    "type": "text"
+  },
+  "old__product_column": "Artikel EH",
+  "@old__product_column": {
+    "type": "text"
+  },
+  "old__product_has_differnt_redprices": "Artikel EH má veľkosti s rôznymi informáciami o cene. Chcete napriek tomu vytlačiť zníženú cenu?",
+  "@old__product_has_differnt_redprices": {
+    "type": "text"
+  },
+  "old__product_stock_type": "Druh:",
+  "@old__product_stock_type": {
+    "type": "text"
+  },
+  "old__productvariation_not_for_picking": "Artikel EH/veľkosť nie je určená na vytriedenie z tohto miesta",
+  "@old__productvariation_not_for_picking": {
+    "type": "text"
+  },
+  "old__program_restart_needed": "Program musel byť ukončený pre vykonané zmeny.",
+  "@old__program_restart_needed": {
+    "type": "text"
+  },
+  "old__redprice_column": "Znížená cena",
+  "@old__redprice_column": {
+    "type": "text"
+  },
+  "old__redprices_identically": "Znížené ceny identické",
+  "@old__redprices_identically": {
+    "type": "text"
+  },
+  "old__scan_dhl_parcel": "Balík DHL Paket prijatý\nProsím, naskenujte balíky",
+  "@old__scan_dhl_parcel": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level": "Je potrebné skenovať na hlbších úrovniach!",
+  "@old__scan_on_lower_level": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level_2": "Je potrebné skenovať na úrovní nakladacích zoznamov",
+  "@old__scan_on_lower_level_2": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level_3": "Je potrebné skenovať na úrovní dodacích listov",
+  "@old__scan_on_lower_level_3": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level_4": "Je potrebné skenovať na úrovní kusov",
+  "@old__scan_on_lower_level_4": {
+    "type": "text"
+  },
+  "old__set_as_missing_item": "Chcete skutočne kus zarezervovať ako chýbajúci kus?",
+  "@old__set_as_missing_item": {
+    "type": "text"
+  },
+  "old__shipping_order_column": "Zákazka na špedíciu",
+  "@old__shipping_order_column": {
+    "type": "text"
+  },
+  "old__shipping_order_items_commited": "Bolo potvrdených {value0} kusov, ale je potrebné skenovať aj na hlbších úrovniach!",
+  "@old__shipping_order_items_commited": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__shipping_order_unknown": "Táto zákazka na špedíciu je už naskenovaná alebo je neznáma.",
+  "@old__shipping_order_unknown": {
+    "type": "text"
+  },
+  "old__size_column": "Veľkosť",
+  "@old__size_column": {
+    "type": "text"
+  },
+  "old__stock_arrival_delivery_note_form": "Príjem tovaru (LS)",
+  "@old__stock_arrival_delivery_note_form": {
+    "type": "text"
+  },
+  "old__stock_arrival_item_form": "Príjem tovaru (kus)",
+  "@old__stock_arrival_item_form": {
+    "type": "text"
+  },
+  "old__stock_arrival_item_scanned_unknown": "Tento kus už bol naskenovaný, je neznámy alebo patrí k inému dodaciemu listu",
+  "@old__stock_arrival_item_scanned_unknown": {
+    "type": "text"
+  },
+  "old__stock_arrival_shipping_order_form": "Príjem tovaru (Spedi)",
+  "@old__stock_arrival_shipping_order_form": {
+    "type": "text"
+  },
+  "old__stock_type_column": "HL",
+  "@old__stock_type_column": {
+    "type": "text"
+  },
+  "old__storage_address_not_set": "Adresa skladu ešte nebola nastavená!",
+  "@old__storage_address_not_set": {
+    "type": "text"
+  },
+  "old__synchronizing_date": "Synchronizovať dátum",
+  "@old__synchronizing_date": {
+    "type": "text"
+  },
+  "old__version_text": "Verzia:",
+  "@old__version_text": {
+    "type": "text"
+  },
+  "old__wrong_product": "Nesprávny artikel EH",
+  "@old__wrong_product": {
+    "type": "text"
+  },
+  "old__yes": "Áno",
+  "@old__yes": {
+    "type": "text"
+  },
+  "pick_instruction__amount": "Prij.",
+  "@pick_instruction__amount": {
+    "type": "text"
+  },
+  "pick_instruction__dest_branch": "Cieľová prevádzka",
+  "@pick_instruction__dest_branch": {
+    "type": "text"
+  },
+  "pick_instruction__error_during_save": "Chyba pri ukladaní dát",
+  "@pick_instruction__error_during_save": {
+    "type": "text"
+  },
+  "pick_instruction__error_no_more_data": "Žiadne ďalšie dáta",
+  "@pick_instruction__error_no_more_data": {
+    "type": "text"
+  },
+  "pick_instruction__floor": "Poschodie",
+  "@pick_instruction__floor": {
+    "type": "text"
+  },
+  "pick_instruction__hold_current_item": "Chcete skutočne zaparkovať aktuálnu položku?",
+  "@pick_instruction__hold_current_item": {
+    "type": "text"
+  },
+  "pick_instruction__hold_item": "Parkovať",
+  "@pick_instruction__hold_item": {
+    "type": "text"
+  },
+  "pick_instruction__image": "Obrázok",
+  "@pick_instruction__image": {
+    "type": "text"
+  },
+  "pick_instruction__is_stock_empty_now": "Je miesto\n{value0}\nteraz prázdne?",
+  "@pick_instruction__is_stock_empty_now": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "pick_instruction__item_already_picked": "Kus už bol vytriedený",
+  "@pick_instruction__item_already_picked": {
+    "type": "text"
+  },
+  "pick_instruction__item_doesnt_exists_in_system": "Kus nie je podľa systému k dispozícii",
+  "@pick_instruction__item_doesnt_exists_in_system": {
+    "type": "text"
+  },
+  "pick_instruction__item_has_wrong_size": "Kus má nesprávnu veľkosť",
+  "@pick_instruction__item_has_wrong_size": {
+    "type": "text"
+  },
+  "pick_instruction__item_invalid_place": "Tento kus nie je podľa systému na tomto mieste.\nChcete ho napriek tomu vytriediť?",
+  "@pick_instruction__item_invalid_place": {
+    "type": "text"
+  },
+  "pick_instruction__item_number": "Č. kusu",
+  "@pick_instruction__item_number": {
+    "type": "text"
+  },
+  "pick_instruction__item_number2": "Č. kusu",
+  "@pick_instruction__item_number2": {
+    "type": "text"
+  },
+  "pick_instruction__level": "Poschodie",
+  "@pick_instruction__level": {
+    "type": "text"
+  },
+  "pick_instruction__no_manual_input": "Nie je povolené žiadne manuálne zadanie ani sken baliaceho ústrižku. Je potrebná štandardná cena",
+  "@pick_instruction__no_manual_input": {
+    "type": "text"
+  },
+  "pick_instruction__no_more_items_hold": "Parkovanie nie je možné. Bol dosiahnutý maximálny počet.",
+  "@pick_instruction__no_more_items_hold": {
+    "type": "text"
+  },
+  "pick_instruction__picking_complete": "Vytriedenie je kompletne ukončené. Prosím, preneste dáta na dátové miesto zásoby cez základné menu pokladne.",
+  "@pick_instruction__picking_complete": {
+    "type": "text"
+  },
+  "pick_instruction__place": "Miesto",
+  "@pick_instruction__place": {
+    "type": "text"
+  },
+  "pick_instruction__product_has_sizes_with_different_redprices_print_anyway": "Artikel EH má veľkosti s rôznymi informáciami o cene. Chcete napriek tomu vytlačiť zníženú cenu?",
+  "@pick_instruction__product_has_sizes_with_different_redprices_print_anyway": {
+    "type": "text"
+  },
+  "pick_instruction__product_variation_not_for_picking": "Artikel EH/veľkosť nie je určená na vytriedenie z tohto miesta",
+  "@pick_instruction__product_variation_not_for_picking": {
+    "type": "text"
+  },
+  "pick_instruction__reprint": "Nová tlač",
+  "@pick_instruction__reprint": {
+    "type": "text"
+  },
+  "pick_instruction__room": "Miestnosť",
+  "@pick_instruction__room": {
+    "type": "text"
+  },
+  "pick_instruction__row": "Rad",
+  "@pick_instruction__row": {
+    "type": "text"
+  },
+  "pick_instruction__selling_area": "PREDAJ",
+  "@pick_instruction__selling_area": {
+    "type": "text"
+  },
+  "pick_instruction__set_as_missing_item": "Chcete skutočne kus zarezervovať ako chýbajúci kus?",
+  "@pick_instruction__set_as_missing_item": {
+    "type": "text"
+  },
+  "pick_instruction__wrong_product": "Nesprávny artikel EH",
+  "@pick_instruction__wrong_product": {
+    "type": "text"
+  },
+  "red_prices_old__no_pricecode_availalbe": "Kód ceny k novej zníženej cene nebolo možné zistiť.",
+  "@red_prices_old__no_pricecode_availalbe": {
+    "type": "text"
+  },
+  "red_prices_old__no_redprice_info_available": "K dispozícii nie sú žiadne informácie o zníženej cene",
+  "@red_prices_old__no_redprice_info_available": {
+    "type": "text"
+  },
+  "stock_arrival__all_shipping_orders_scanned": "Boli naskenované všetky zákazky na špedíciu.",
+  "@stock_arrival__all_shipping_orders_scanned": {
+    "type": "text"
+  },
+  "stock_arrival__correction_delivery_2": "Korekčné dodacie listy obsahujú\nProsím, naskenujte na úrovni kusu",
+  "@stock_arrival__correction_delivery_2": {
+    "type": "text"
+  },
+  "stock_arrival__invalid_barcode_scanned_2": "Zákazka na špedíciu \"{value0}\" nie je k dispozícii alebo už bola naskenovaná",
+  "@stock_arrival__invalid_barcode_scanned_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_3": "Nakladací zoznam \"{value0}\" nie je k dispozícii alebo už bol naskenovaný",
+  "@stock_arrival__invalid_barcode_scanned_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_4": "Dodací list \"{value0}\" nie je k dispozícii alebo už bol naskenovaný",
+  "@stock_arrival__invalid_barcode_scanned_4": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_5": "Kus \"{value0}\" nie je k dispozícii alebo už bol naskenovaný",
+  "@stock_arrival__invalid_barcode_scanned_5": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_6": "Balík \"{value0}\" nie je k dispozícii alebo už bol naskenovaný",
+  "@stock_arrival__invalid_barcode_scanned_6": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__scan_dhl_parcel": "Balík DHL Paket prijatý\nProsím, naskenujte balíky",
+  "@stock_arrival__scan_dhl_parcel": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level": "Je potrebné skenovať na hlbších úrovniach!",
+  "@stock_arrival__scan_on_lower_level": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level_2": "Je potrebné skenovať na úrovní nakladacích zoznamov",
+  "@stock_arrival__scan_on_lower_level_2": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level_3": "Je potrebné skenovať na úrovní dodacích listov",
+  "@stock_arrival__scan_on_lower_level_3": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level_4": "Je potrebné skenovať na úrovní kusov",
+  "@stock_arrival__scan_on_lower_level_4": {
+    "type": "text"
+  },
+  "stocktaking__amount_not_reached": "Zadaný počet kusov nebol dosiahnutý!",
+  "@stocktaking__amount_not_reached": {
+    "type": "text"
+  },
+  "stocktaking__amount_of_storage_locations_reached": "Zadaný počet kusov dosiahnutý",
+  "@stocktaking__amount_of_storage_locations_reached": {
+    "type": "text"
+  },
+  "stocktaking__ask_force_closing": "Chcete skutočne uzavrieť definovaný kruh?",
+  "@stocktaking__ask_force_closing": {
+    "type": "text"
+  },
+  "stocktaking__employee_number": "Osobné č.:",
+  "@stocktaking__employee_number": {
+    "type": "text"
+  },
+  "stocktaking__exit_impossible": "Definovaný kruh nie je uzavretý! Ukončenie nie je možné!",
+  "@stocktaking__exit_impossible": {
+    "type": "text"
+  },
+  "stocktaking__invalid_amount_of_storage_locations": "Zadaný neplatný počet miest",
+  "@stocktaking__invalid_amount_of_storage_locations": {
+    "type": "text"
+  },
+  "stocktaking__invalid_record_forecast": "Neplatné zadanie počtu kusov odovzdané!",
+  "@stocktaking__invalid_record_forecast": {
+    "type": "text"
+  },
+  "stocktaking__inventory_area": "Definovaný okruh:",
+  "@stocktaking__inventory_area": {
+    "type": "text"
+  },
+  "stocktaking__target_amount_reached": "Dosiahnutý zadaný počet kusov",
+  "@stocktaking__target_amount_reached": {
+    "type": "text"
+  },
+  "stocktaking__updated_existing_record_selling_area": "Artikel už bol k dispozícii. Starý záznam odstránený.",
+  "@stocktaking__updated_existing_record_selling_area": {
+    "type": "text"
+  },
+  "warentransport__picklist_maximum_amount_of_items_reached": "Bol dosiahnutá maximálny počet. Prosím, načítajte zariadenie.",
+  "@warentransport__picklist_maximum_amount_of_items_reached": {
+    "type": "text"
+  }
+}

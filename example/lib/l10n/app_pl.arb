@@ -1,0 +1,1510 @@
+{
+  "@@locale": "pl",
+  "datatransfer__device_could_not_be_registered": "Nie można zarejestrować urządzenia!",
+  "@datatransfer__device_could_not_be_registered": {
+    "type": "text"
+  },
+  "datatransfer__device_has_been_registered": "Urządzenie zostało zarejestrowane!",
+  "@datatransfer__device_has_been_registered": {
+    "type": "text"
+  },
+  "dispohz__product_not_in_file": "Brak Dispo w danych HZ!",
+  "@dispohz__product_not_in_file": {
+    "type": "text"
+  },
+  "duplicator__please_scan_old_price": "Zeskanuj starą cenę!",
+  "@duplicator__please_scan_old_price": {
+    "type": "text"
+  },
+  "duplicator__please_scan_red_price": "Zeskanuj cenę wyprzedażową!",
+  "@duplicator__please_scan_red_price": {
+    "type": "text"
+  },
+  "duplicator__red_price_too_high": "Cena wyprzedażowa jest za wysoka!",
+  "@duplicator__red_price_too_high": {
+    "type": "text"
+  },
+  "general__amount_short": "Licz.",
+  "@general__amount_short": {
+    "type": "text"
+  },
+  "general__invalid_barcode": "Nieprawidłowy kod kreskowy",
+  "@general__invalid_barcode": {
+    "type": "text"
+  },
+  "general__invalid_barcode_scanned": "Błędnie zeskanowany kod kreskowy\n{value0}",
+  "@general__invalid_barcode_scanned": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "general__invalid_checkdigit": "Nieprawidłowa cyfra kontrolna",
+  "@general__invalid_checkdigit": {
+    "type": "text"
+  },
+  "general__invalid_country": "Błędny kraj",
+  "@general__invalid_country": {
+    "type": "text"
+  },
+  "general__invalid_ean13": "Nieprawidłowy EAN13",
+  "@general__invalid_ean13": {
+    "type": "text"
+  },
+  "general__invalid_ean8": "Nieprawidłowy EAN8",
+  "@general__invalid_ean8": {
+    "type": "text"
+  },
+  "general__invalid_employee_number": "Nieprawidłowy identyfikator",
+  "@general__invalid_employee_number": {
+    "type": "text"
+  },
+  "general__invalid_input": "Nieprawidłowy wpis",
+  "@general__invalid_input": {
+    "type": "text"
+  },
+  "general__invalid_item_number": "Nieprawidłowy numer rzeczy",
+  "@general__invalid_item_number": {
+    "type": "text"
+  },
+  "general__item_number_short": "Nr. rzeczy",
+  "@general__item_number_short": {
+    "type": "text"
+  },
+  "general__next": "Dalej",
+  "@general__next": {
+    "type": "text"
+  },
+  "general__no": "Nie",
+  "@general__no": {
+    "type": "text"
+  },
+  "general__no_base_data": "Na urządzeniu nie ma danych inwentaryzacyjnych!",
+  "@general__no_base_data": {
+    "type": "text"
+  },
+  "general__ok": "OK",
+  "@general__ok": {
+    "type": "text"
+  },
+  "general__order_number": "Nr. zamówienia",
+  "@general__order_number": {
+    "type": "text"
+  },
+  "general__please_scan_label": "Zeskanuj etykietę",
+  "@general__please_scan_label": {
+    "type": "text"
+  },
+  "general__product": "Artykuł EH",
+  "@general__product": {
+    "type": "text"
+  },
+  "general__quantity": "Ilość sztuk",
+  "@general__quantity": {
+    "type": "text"
+  },
+  "general__red_price": "Zredukowana cena sprzedaży",
+  "@general__red_price": {
+    "type": "text"
+  },
+  "general__redprices_identically": "Obniżone ceny identyczne",
+  "@general__redprices_identically": {
+    "type": "text"
+  },
+  "general__size": "Rozmiar",
+  "@general__size": {
+    "type": "text"
+  },
+  "general__storage_location": "Składowanie",
+  "@general__storage_location": {
+    "type": "text"
+  },
+  "general__yes": "Tak",
+  "@general__yes": {
+    "type": "text"
+  },
+  "mbinfo__min_amount": "M-bst.",
+  "@mbinfo__min_amount": {
+    "type": "text"
+  },
+  "mbinfo__no_product_info": "Brak informacji o artykule EH",
+  "@mbinfo__no_product_info": {
+    "type": "text"
+  },
+  "mbinfo__on_selling": "w VK",
+  "@mbinfo__on_selling": {
+    "type": "text"
+  },
+  "mbinfo__sum": "łącznie",
+  "@mbinfo__sum": {
+    "type": "text"
+  },
+  "menu__app_data_transfer": "Transfer danych",
+  "@menu__app_data_transfer": {
+    "type": "text"
+  },
+  "menu__app_duplicator": "Powielacz",
+  "@menu__app_duplicator": {
+    "type": "text"
+  },
+  "menu__app_pl07_item_movement": "Załadunek/przeładunek",
+  "@menu__app_pl07_item_movement": {
+    "type": "text"
+  },
+  "menu__app_pl07_missing_items": "Brakujące rzeczy",
+  "@menu__app_pl07_missing_items": {
+    "type": "text"
+  },
+  "menu__app_pl07_pick_instruction": "Sortowanie",
+  "@menu__app_pl07_pick_instruction": {
+    "type": "text"
+  },
+  "menu__app_pl07_red_prices_old": "Obniżone ceny",
+  "@menu__app_pl07_red_prices_old": {
+    "type": "text"
+  },
+  "menu__app_pl07_red_prices_selling_area": "Obniżone ceny VK",
+  "@menu__app_pl07_red_prices_selling_area": {
+    "type": "text"
+  },
+  "menu__app_pl07_stock_arrival_mb_info_product_info": "Info artykuł EH",
+  "@menu__app_pl07_stock_arrival_mb_info_product_info": {
+    "type": "text"
+  },
+  "menu__app_pl07_ware_transfer": "Transport towarów",
+  "@menu__app_pl07_ware_transfer": {
+    "type": "text"
+  },
+  "menu__app_service_point": "Punkt Obsługi",
+  "@menu__app_service_point": {
+    "type": "text"
+  },
+  "menu__app_stocktaking_selling_area": "Inwentaryzacja VK",
+  "@menu__app_stocktaking_selling_area": {
+    "type": "text"
+  },
+  "menu__app_stocktaking_stock": "Inwentaryzacja magazynu",
+  "@menu__app_stocktaking_stock": {
+    "type": "text"
+  },
+  "menu__pl07_stock_arrival": "Wejście towaru",
+  "@menu__pl07_stock_arrival": {
+    "type": "text"
+  },
+  "menu__settings": "Ustawienia",
+  "@menu__settings": {
+    "type": "text"
+  },
+  "menu__stocktaking": "Inwentarz",
+  "@menu__stocktaking": {
+    "type": "text"
+  },
+  "missing_item__item_is_no_missing_item": "Rzecz nie posiada wady według sytemu",
+  "@missing_item__item_is_no_missing_item": {
+    "type": "text"
+  },
+  "missing_item__missing_item_dest_form": "Składowanie wadliwych rzeczy",
+  "@missing_item__missing_item_dest_form": {
+    "type": "text"
+  },
+  "missing_item__reason_1": "Pomiń",
+  "@missing_item__reason_1": {
+    "type": "text"
+  },
+  "missing_item__reason_2": "błędne szyfrowanie",
+  "@missing_item__reason_2": {
+    "type": "text"
+  },
+  "missing_item__reason_3": "nieprawidłowe składowanie",
+  "@missing_item__reason_3": {
+    "type": "text"
+  },
+  "missing_item__reason_4": "w sprzedaży",
+  "@missing_item__reason_4": {
+    "type": "text"
+  },
+  "missing_item__reason_5": "pozostałe",
+  "@missing_item__reason_5": {
+    "type": "text"
+  },
+  "missing_item__reason_form": "Przyczyna braku/wady",
+  "@missing_item__reason_form": {
+    "type": "text"
+  },
+  "missing_item__search_complete": "Wyszukiwanie brakujących rzeczy zostało zakończone. Przenieś dane do miejsca danych inwentaryzacyjnych za pomocą podstawowego menu!",
+  "@missing_item__search_complete": {
+    "type": "text"
+  },
+  "missing_item__search_form": "Brakujące rzeczy ({value0})",
+  "@missing_item__search_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__ad_hoc": "Ad-hoc",
+  "@old__ad_hoc": {
+    "type": "text"
+  },
+  "old__all_delivery_notes_for_loading_list_scanned": "Zeskanowano wszystkie listy przewozowe do tej listy ładunkowej.",
+  "@old__all_delivery_notes_for_loading_list_scanned": {
+    "type": "text"
+  },
+  "old__all_items_for_delivery_note_scanned": "Zeskanowano wszystkie rzeczy do tego listu przewozowego",
+  "@old__all_items_for_delivery_note_scanned": {
+    "type": "text"
+  },
+  "old__all_loading_lists_scanned": "Zeskanowano wszystkie listy ładunkowe.",
+  "@old__all_loading_lists_scanned": {
+    "type": "text"
+  },
+  "old__all_loadng_lsts_for_ship_order_scanned": "Zeskanowano wszystkie listy ładunkowe do tego zlecenia spedycyjnego.",
+  "@old__all_loadng_lsts_for_ship_order_scanned": {
+    "type": "text"
+  },
+  "old__all_shipping_orders_scanned": "Zeskanowane zostały wszystkie zlecenia spedycyjne.",
+  "@old__all_shipping_orders_scanned": {
+    "type": "text"
+  },
+  "old__amount_column": "Licz.",
+  "@old__amount_column": {
+    "type": "text"
+  },
+  "old__application_installing": "{value0} zainstalowano...",
+  "@old__application_installing": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__application_startup": "{value0} rozpoczęty...",
+  "@old__application_startup": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__btn_back": "Wstecz",
+  "@old__btn_back": {
+    "type": "text"
+  },
+  "old__btn_details": "Szczegóły",
+  "@old__btn_details": {
+    "type": "text"
+  },
+  "old__btn_product_info": "Info artykuł EH",
+  "@old__btn_product_info": {
+    "type": "text"
+  },
+  "old__button_next": "Dalej",
+  "@old__button_next": {
+    "type": "text"
+  },
+  "old__cancel": "Przerwij",
+  "@old__cancel": {
+    "type": "text"
+  },
+  "old__checking_database": "Sprawdź bazę danych",
+  "@old__checking_database": {
+    "type": "text"
+  },
+  "old__checking_directories": "Sprawdź katalogi",
+  "@old__checking_directories": {
+    "type": "text"
+  },
+  "old__correction_delivery_1": "Zatrzymaj korekty listów przewozowych \nZeskanuj na powierzchni listu przewozowego",
+  "@old__correction_delivery_1": {
+    "type": "text"
+  },
+  "old__correction_delivery_2": "Zatrzymaj korekty listów przewozowych \nZeskanuj na powierzchni rzeczy",
+  "@old__correction_delivery_2": {
+    "type": "text"
+  },
+  "old__correction_delivery_3": "Zatrzymaj korekty listów przewozowych \nZeskanuj na powierzchni listy załadunkowej",
+  "@old__correction_delivery_3": {
+    "type": "text"
+  },
+  "old__creating_database": "Utwórz nową bazę danych",
+  "@old__creating_database": {
+    "type": "text"
+  },
+  "old__current_storage_address": "Adr.:",
+  "@old__current_storage_address": {
+    "type": "text"
+  },
+  "old__datatransfer_active": "Transmisja danych aktywna",
+  "@old__datatransfer_active": {
+    "type": "text"
+  },
+  "old__date_column": "Data",
+  "@old__date_column": {
+    "type": "text"
+  },
+  "old__delete_old_zip_data": "Usuń stare dane Zip",
+  "@old__delete_old_zip_data": {
+    "type": "text"
+  },
+  "old__delivery_note_column": "LS-Nr.",
+  "@old__delivery_note_column": {
+    "type": "text"
+  },
+  "old__delivery_note_scan_items": "Do tego listu przewozowego muszą zostać zeskanowane pojedyncze rzeczy",
+  "@old__delivery_note_scan_items": {
+    "type": "text"
+  },
+  "old__delivery_note_unknown": "Ten list przewozowy został już zeskanowany, nie został wykryty lub należy do innej listy ładunkowej",
+  "@old__delivery_note_unknown": {
+    "type": "text"
+  },
+  "old__destination_column": "Cel",
+  "@old__destination_column": {
+    "type": "text"
+  },
+  "old__destination_storage_address": "Cel:",
+  "@old__destination_storage_address": {
+    "type": "text"
+  },
+  "old__dispohz_error_counter": "Problemy z wartością liczbową z danych!",
+  "@old__dispohz_error_counter": {
+    "type": "text"
+  },
+  "old__dispohz_form": "Dispo-HZ",
+  "@old__dispohz_form": {
+    "type": "text"
+  },
+  "old__dispohz_invalid_barcode": "Nieprawidłowy kod kreskowy",
+  "@old__dispohz_invalid_barcode": {
+    "type": "text"
+  },
+  "old__dispohz_product_not_in_file": "Brak Dispo w danych HZ!",
+  "@old__dispohz_product_not_in_file": {
+    "type": "text"
+  },
+  "old__dispohz_redprice_identically": "Obniżone ceny identyczne!",
+  "@old__dispohz_redprice_identically": {
+    "type": "text"
+  },
+  "old__dispohz_scan_label": "Zeskanuj etykietę",
+  "@old__dispohz_scan_label": {
+    "type": "text"
+  },
+  "old__dispohz_wrong_country": "Błędny kraj!",
+  "@old__dispohz_wrong_country": {
+    "type": "text"
+  },
+  "old__dupliz_form": "Powielanie",
+  "@old__dupliz_form": {
+    "type": "text"
+  },
+  "old__dupliz_please_scan_old_price": "Zeskanuj starą cenę!",
+  "@old__dupliz_please_scan_old_price": {
+    "type": "text"
+  },
+  "old__dupliz_please_scan_red_price": "Zeskanuj cenę wyprzedażową!",
+  "@old__dupliz_please_scan_red_price": {
+    "type": "text"
+  },
+  "old__dupliz_red_price_to_high": "Cena wyprzedażowa jest za wysoka!",
+  "@old__dupliz_red_price_to_high": {
+    "type": "text"
+  },
+  "old__dupliz_wrong_country": "Błędny kraj!",
+  "@old__dupliz_wrong_country": {
+    "type": "text"
+  },
+  "old__employee_number": "Numer personelu",
+  "@old__employee_number": {
+    "type": "text"
+  },
+  "old__enter_item_number": "Wpisz numer rzeczy:",
+  "@old__enter_item_number": {
+    "type": "text"
+  },
+  "old__enter_item_number_form": "Zarejestruj numer rzeczy",
+  "@old__enter_item_number_form": {
+    "type": "text"
+  },
+  "old__enter_password_to_close": "Podaj hasło do zakończenia programu:",
+  "@old__enter_password_to_close": {
+    "type": "text"
+  },
+  "old__enter_password_to_switch_usb_mode": "Podaj hasło do zmiany USB Mode:",
+  "@old__enter_password_to_switch_usb_mode": {
+    "type": "text"
+  },
+  "old__error_database_communication": "Błąd połączenia z bazą danych\n{value0}",
+  "@old__error_database_communication": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__error_database_generic": "Błąd podczas edycji bazy danych\n{value0}",
+  "@old__error_database_generic": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__error_database_no_script": "Błąd podczas edycji bazy danych\nScrypt do edycji bazy danych jest niedostępny!",
+  "@old__error_database_no_script": {
+    "type": "text"
+  },
+  "old__error_during_save": "Błąd podczas zapisywania danych",
+  "@old__error_during_save": {
+    "type": "text"
+  },
+  "old__error_no_more_data": "Brak danych",
+  "@old__error_no_more_data": {
+    "type": "text"
+  },
+  "old__exporting_old_data": "Eksportuj stare dane",
+  "@old__exporting_old_data": {
+    "type": "text"
+  },
+  "old__extracting_zip_file": "Rozpakuj pliki Zip",
+  "@old__extracting_zip_file": {
+    "type": "text"
+  },
+  "old__getting_data": "Rozpoznaj dane",
+  "@old__getting_data": {
+    "type": "text"
+  },
+  "old__getting_number_of_rows": "Rozpoznaj ilość wierszy",
+  "@old__getting_number_of_rows": {
+    "type": "text"
+  },
+  "old__hold_current_item": "Czy na pewno ma zostać umieszczona aktualna pozycja?",
+  "@old__hold_current_item": {
+    "type": "text"
+  },
+  "old__hz_process_completed": "HZ zostało zakończone. Przenieś dane do miejsca danych inwentaryzacyjnych za pomocą podstawowego menu!",
+  "@old__hz_process_completed": {
+    "type": "text"
+  },
+  "old__image_loading": "Ilustracja załadowana...",
+  "@old__image_loading": {
+    "type": "text"
+  },
+  "old__invalid_barcode_scanned": "Błędnie zeskanowany kod kreskowy\n{value0}",
+  "@old__invalid_barcode_scanned": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_2": "Nie jest dostępne zlecenie spedycyjne \"{value0}\" lub zostało już zeskanowane",
+  "@old__invalid_barcode_scanned_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_3": "Nie jest dostępna lista załadunku \"{value0}\" lub została już zeskanowana",
+  "@old__invalid_barcode_scanned_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_4": "Nie jest dostępny list przewozowy \"{value0}\" lub został już zeskanowany",
+  "@old__invalid_barcode_scanned_4": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_5": "Nie jest dostępna rzecz \"{value0}\" lub została już zeskanowana",
+  "@old__invalid_barcode_scanned_5": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_6": "Nie jest dostępny pakiet \"{value0}\" lub został już zeskanowany",
+  "@old__invalid_barcode_scanned_6": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_country": "Błędny kraj",
+  "@old__invalid_country": {
+    "type": "text"
+  },
+  "old__invalid_employee_number": "Nieprawidłowy identyfikator",
+  "@old__invalid_employee_number": {
+    "type": "text"
+  },
+  "old__invalid_item_number": "Nieprawidłowy numer rzeczy",
+  "@old__invalid_item_number": {
+    "type": "text"
+  },
+  "old__inventur_add_record": "AddRecord () dostarczone nieoczekiwane wartości. Skontaktuj się z pomocą.",
+  "@old__inventur_add_record": {
+    "type": "text"
+  },
+  "old__inventur_amount": "Ilość sztuk:",
+  "@old__inventur_amount": {
+    "type": "text"
+  },
+  "old__inventur_amount_not_reached": "Ilość składowanych sztuk nie została osiągnięta!",
+  "@old__inventur_amount_not_reached": {
+    "type": "text"
+  },
+  "old__inventur_amount_of_items_and_stocks": "Licz. Rzeczy/miejsca:",
+  "@old__inventur_amount_of_items_and_stocks": {
+    "type": "text"
+  },
+  "old__inventur_ask_force_closing": "Czy ma zostać zamknięty obwód strojony?",
+  "@old__inventur_ask_force_closing": {
+    "type": "text"
+  },
+  "old__inventur_ask_force_closing_caption": "Obwód strojony",
+  "@old__inventur_ask_force_closing_caption": {
+    "type": "text"
+  },
+  "old__inventur_button_inventory": "{value0} — Inwentaryzacja VK",
+  "@old__inventur_button_inventory": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_button_inventory_stock": "{value0} — Inwentaryzacja magazynu",
+  "@old__inventur_button_inventory_stock": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_button_settings": "{value0} — Ustawienia",
+  "@old__inventur_button_settings": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_collection_start_failed_1": "Dostępny otwarty obwód strojony! Nie może zostać uruchomiony nowy obwód strojony.",
+  "@old__inventur_collection_start_failed_1": {
+    "type": "text"
+  },
+  "old__inventur_collection_start_failed_2": "Niewystarczające informacje dla nowego obwodu strojonego: {value0}",
+  "@old__inventur_collection_start_failed_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_collection_start_failed_3": "Niewystarczające dane o ilości składowanych sztuk: {value0}",
+  "@old__inventur_collection_start_failed_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_employee_number": "Identyfikator:",
+  "@old__inventur_employee_number": {
+    "type": "text"
+  },
+  "old__inventur_exit_impossible": "Nie zamykaj obwodu strojonego! Zakończenie nie jest możliwe!",
+  "@old__inventur_exit_impossible": {
+    "type": "text"
+  },
+  "old__inventur_form": "Inwentaryzacja",
+  "@old__inventur_form": {
+    "type": "text"
+  },
+  "old__inventur_invalid_abstimmkreise_forecast": "Podano nieprawidłową liczbę składowisk",
+  "@old__inventur_invalid_abstimmkreise_forecast": {
+    "type": "text"
+  },
+  "old__inventur_invalid_article_no": "Przekazano nieprawidłowy numer rzeczy!",
+  "@old__inventur_invalid_article_no": {
+    "type": "text"
+  },
+  "old__inventur_invalid_barcode": "Nieprawidłowy kod kreskowy",
+  "@old__inventur_invalid_barcode": {
+    "type": "text"
+  },
+  "old__inventur_invalid_blackprice": "Przekazano nieprawidłową czarną cenę!",
+  "@old__inventur_invalid_blackprice": {
+    "type": "text"
+  },
+  "old__inventur_invalid_checkdigit": "Nieprawidłowa cyfra kontrolna",
+  "@old__inventur_invalid_checkdigit": {
+    "type": "text"
+  },
+  "old__inventur_invalid_collection_id": "Przekazano nieprawidłowy obwód strojony!",
+  "@old__inventur_invalid_collection_id": {
+    "type": "text"
+  },
+  "old__inventur_invalid_dispo_no": "Przekazano nieprawidłowy numer Dispo!",
+  "@old__inventur_invalid_dispo_no": {
+    "type": "text"
+  },
+  "old__inventur_invalid_ean13": "Nieprawidłowy EAN13!",
+  "@old__inventur_invalid_ean13": {
+    "type": "text"
+  },
+  "old__inventur_invalid_ean8": "Nieprawidłowy EAN8!",
+  "@old__inventur_invalid_ean8": {
+    "type": "text"
+  },
+  "old__inventur_invalid_employee_number": "Nieprawidłowy identyfikator",
+  "@old__inventur_invalid_employee_number": {
+    "type": "text"
+  },
+  "old__inventur_invalid_input": "Nieprawidłowy wpis",
+  "@old__inventur_invalid_input": {
+    "type": "text"
+  },
+  "old__inventur_invalid_label_code": "Przekazano nieprawidłowy wiersz etykiety: {value0}",
+  "@old__inventur_invalid_label_code": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_invalid_personal_id": "Przekazano nieprawidłowy identyfikator!",
+  "@old__inventur_invalid_personal_id": {
+    "type": "text"
+  },
+  "old__inventur_invalid_pick_stock": "Nieprawidłowe składowanie",
+  "@old__inventur_invalid_pick_stock": {
+    "type": "text"
+  },
+  "old__inventur_invalid_record_forecast": "Przekazano nieprawidłową ilość składowanych sztuk!",
+  "@old__inventur_invalid_record_forecast": {
+    "type": "text"
+  },
+  "old__inventur_invalid_redprice": "Przekazano nieprawidłową cenę wyprzedaży!",
+  "@old__inventur_invalid_redprice": {
+    "type": "text"
+  },
+  "old__inventur_invalid_serial": "Przekazano nieprawidłowy numer seryjny MDE!",
+  "@old__inventur_invalid_serial": {
+    "type": "text"
+  },
+  "old__inventur_invalid_ware_group_no": "Przekazano nieprawidłową grupę towarów!",
+  "@old__inventur_invalid_ware_group_no": {
+    "type": "text"
+  },
+  "old__inventur_inventory_area": "Obwód strojony:",
+  "@old__inventur_inventory_area": {
+    "type": "text"
+  },
+  "old__inventur_inventory_complete": "Ilość składowanych sztuk została osiągnięta",
+  "@old__inventur_inventory_complete": {
+    "type": "text"
+  },
+  "old__inventur_inventory_sale_form": "Inwentaryzacja VK",
+  "@old__inventur_inventory_sale_form": {
+    "type": "text"
+  },
+  "old__inventur_inventory_stock_form": "Inwentaryzacja magazynu",
+  "@old__inventur_inventory_stock_form": {
+    "type": "text"
+  },
+  "old__inventur_numeric_input_only": "Konieczne wprowadzenie numeryczne!",
+  "@old__inventur_numeric_input_only": {
+    "type": "text"
+  },
+  "old__inventur_pick_stock_amount_reached": "Wyczerpano normy składowania",
+  "@old__inventur_pick_stock_amount_reached": {
+    "type": "text"
+  },
+  "old__inventur_red_price": "Zredukowana cena sprzedaży:",
+  "@old__inventur_red_price": {
+    "type": "text"
+  },
+  "old__inventur_storage_location": "Składowanie:",
+  "@old__inventur_storage_location": {
+    "type": "text"
+  },
+  "old__inventur_updated_existing_record": "Artykuł był już dostępny. Usuń stare wpisy.",
+  "@old__inventur_updated_existing_record": {
+    "type": "text"
+  },
+  "old__is_stock_empty": "Czy magazyn\n{value0}\njest teraz pusty?",
+  "@old__is_stock_empty": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__item_already_picked": "Rzecz została już przesortowana",
+  "@old__item_already_picked": {
+    "type": "text"
+  },
+  "old__item_doesnt_exists_in_system": "Rzecz nie jest dostępna zgodnie z systemem.",
+  "@old__item_doesnt_exists_in_system": {
+    "type": "text"
+  },
+  "old__item_has_wrong_size": "Rzecz ma nieprawidłowy rozmiar",
+  "@old__item_has_wrong_size": {
+    "type": "text"
+  },
+  "old__item_invalid_place": "Ta rzecz według systemu nie znajduje się w tym magazynie.\nSortować pomimo tego?",
+  "@old__item_invalid_place": {
+    "type": "text"
+  },
+  "old__item_is_no_missing_item": "Rzecz nie posiada wady według sytemu",
+  "@old__item_is_no_missing_item": {
+    "type": "text"
+  },
+  "old__item_number_column": "Nr. rzeczy",
+  "@old__item_number_column": {
+    "type": "text"
+  },
+  "old__loading_items": "Załaduj rzeczy",
+  "@old__loading_items": {
+    "type": "text"
+  },
+  "old__loading_list_column": "Lista ładunkowa",
+  "@old__loading_list_column": {
+    "type": "text"
+  },
+  "old__loading_list_scan_delivery_note": "Do tej listy ładunkowej muszą zostać zeskanowane pojedyncze listy przewozowe.",
+  "@old__loading_list_scan_delivery_note": {
+    "type": "text"
+  },
+  "old__loading_list_unknown": "Ta lista ładunkowa została już zeskanowana lub nie została wykryta.",
+  "@old__loading_list_unknown": {
+    "type": "text"
+  },
+  "old__loading_missing_items": "Załaduj wadliwe rzeczy",
+  "@old__loading_missing_items": {
+    "type": "text"
+  },
+  "old__loading_pick_instruction": "Załaduj sortowanie",
+  "@old__loading_pick_instruction": {
+    "type": "text"
+  },
+  "old__loading_redprice_items": "Załaduj rzeczy z wyprzedaży VK",
+  "@old__loading_redprice_items": {
+    "type": "text"
+  },
+  "old__loading_redprices": "Załaduj wyprzedaże VK",
+  "@old__loading_redprices": {
+    "type": "text"
+  },
+  "old__loading_stock": "Załaduj stan magazynowy",
+  "@old__loading_stock": {
+    "type": "text"
+  },
+  "old__loading_stock_arrival_data": "Dane WE zostały załadowane",
+  "@old__loading_stock_arrival_data": {
+    "type": "text"
+  },
+  "old__memory_adjustment": "Dopasowanie pamięci",
+  "@old__memory_adjustment": {
+    "type": "text"
+  },
+  "old__missing_item_reason_1": "{value0} — Pomiń",
+  "@old__missing_item_reason_1": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_2": "{value0} — błędne szyfrowanie",
+  "@old__missing_item_reason_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_3": "{value0} — nieprawidłowe składowanie",
+  "@old__missing_item_reason_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_4": "{value0} — w sprzedaży",
+  "@old__missing_item_reason_4": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_5": "{value0} — pozostałe",
+  "@old__missing_item_reason_5": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_form": "Przyczyna braku/wady",
+  "@old__missing_item_reason_form": {
+    "type": "text"
+  },
+  "old__missing_item_search_complete": "Wyszukiwanie brakujących rzeczy zostało zakończone. Przenieś dane do miejsca danych inwentaryzacyjnych za pomocą podstawowego menu!",
+  "@old__missing_item_search_complete": {
+    "type": "text"
+  },
+  "old__missing_item_search_form": "Brakujące rzeczy ({value0})",
+  "@old__missing_item_search_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__no": "Nie",
+  "@old__no": {
+    "type": "text"
+  },
+  "old__no_applications_are_installed": "Nie zainstalowano żadnych aplikacji. Należy przejść do miejsca danych inwentaryzacyjnych i rozpocząć instalację przez ładowanie danych HZ.",
+  "@old__no_applications_are_installed": {
+    "type": "text"
+  },
+  "old__no_base_data": "Na urządzeniu nie ma danych inwentaryzacyjnych!",
+  "@old__no_base_data": {
+    "type": "text"
+  },
+  "old__no_hz_info_for_scanned_item": "Brak informacji HZ o tej rzeczy",
+  "@old__no_hz_info_for_scanned_item": {
+    "type": "text"
+  },
+  "old__no_image_available": "Brak ilustracji",
+  "@old__no_image_available": {
+    "type": "text"
+  },
+  "old__no_manual_input": "Brak ręcznego wpisu lub skanu paczki. Wymagana jest czarna cena.",
+  "@old__no_manual_input": {
+    "type": "text"
+  },
+  "old__no_more_items_hold": "Umieszczenie nie jest możliwe. Maksymalna ilość została osiągnięta.",
+  "@old__no_more_items_hold": {
+    "type": "text"
+  },
+  "old__no_pricecode_availalbe": "Nie można było określić kodu ceny dla nowej obniżonej ceny.",
+  "@old__no_pricecode_availalbe": {
+    "type": "text"
+  },
+  "old__no_printer_choosen_continue": "Nie wybrano drukarki. Kontynuować mimo to?",
+  "@old__no_printer_choosen_continue": {
+    "type": "text"
+  },
+  "old__no_redprice_info_available": "Brak informacji o obniżonej cenie",
+  "@old__no_redprice_info_available": {
+    "type": "text"
+  },
+  "old__no_storage_addresses": "Nie znaleziono dostępnych adresów magazynowania dla wybranego sklepu. Załaduj najpierw urządzenie z danymi inwentaryzacyjnymi.",
+  "@old__no_storage_addresses": {
+    "type": "text"
+  },
+  "old__ok": "OK",
+  "@old__ok": {
+    "type": "text"
+  },
+  "old__onyl_different_storage_addresses": "Transport towarów możliwy jest wyłącznie między 2 rożnymi adresami magazynów.",
+  "@old__onyl_different_storage_addresses": {
+    "type": "text"
+  },
+  "old__pick_stock_location_column": "Składowanie",
+  "@old__pick_stock_location_column": {
+    "type": "text"
+  },
+  "old__picking_complete": "Sortowanie zostało zakończone. Przenieś dane do miejsca danych inwentaryzacyjnych za pomocą podstawowego menu.",
+  "@old__picking_complete": {
+    "type": "text"
+  },
+  "old__picklist_btn_load": "Załaduj",
+  "@old__picklist_btn_load": {
+    "type": "text"
+  },
+  "old__picklist_exception_form": "Niewykryty błąd ({value0}/{value1})",
+  "@old__picklist_exception_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {},
+      "value1": {}
+    }
+  },
+  "old__picklist_hold_items_form": "Umieszczone pozycje",
+  "@old__picklist_hold_items_form": {
+    "type": "text"
+  },
+  "old__picklist_hz_sale_form": "HZ VK ({value0})",
+  "@old__picklist_hz_sale_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_login_form": "Rejestracja ({value0})",
+  "@old__picklist_login_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_maximum_amount_of_items_reached": "Maksymalna ilość osiągnięta. Odczytaj dane z urządzenia.",
+  "@old__picklist_maximum_amount_of_items_reached": {
+    "type": "text"
+  },
+  "old__picklist_menu_form": "Wybór ({value0})",
+  "@old__picklist_menu_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_menuitem_align_printer": "Ustawienie drukarki",
+  "@old__picklist_menuitem_align_printer": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_back": "Wstecz",
+  "@old__picklist_menuitem_back": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_choose_printer": "Wybierz drukarkę",
+  "@old__picklist_menuitem_choose_printer": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_device_settings": "Ustawienia urządzenia",
+  "@old__picklist_menuitem_device_settings": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_exit": "Zakończ",
+  "@old__picklist_menuitem_exit": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_item_movement": "Załadunek/przeładunek",
+  "@old__picklist_menuitem_item_movement": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_missing_items": "Brakujące rzeczy",
+  "@old__picklist_menuitem_missing_items": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_pick_instruction": "Sortowanie",
+  "@old__picklist_menuitem_pick_instruction": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_product_info": "Info artykuł EH",
+  "@old__picklist_menuitem_product_info": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_red_prices": "Obniżone ceny",
+  "@old__picklist_menuitem_red_prices": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_red_prices_selling": "Obniżone ceny VK",
+  "@old__picklist_menuitem_red_prices_selling": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_settings": "Ustawienia",
+  "@old__picklist_menuitem_settings": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_stock_arrival": "Wejście towaru",
+  "@old__picklist_menuitem_stock_arrival": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_ware_transfer": "Transport towarów",
+  "@old__picklist_menuitem_ware_transfer": {
+    "type": "text"
+  },
+  "old__picklist_missing_item_dest_form": "Składowanie wadliwych rzeczy",
+  "@old__picklist_missing_item_dest_form": {
+    "type": "text"
+  },
+  "old__picklist_no_product_info": "Brak informacji o artykule EH",
+  "@old__picklist_no_product_info": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_amount": "An.",
+  "@old__picklist_pick_instruction_amount": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_dest_branch": "Sklep docelowy",
+  "@old__picklist_pick_instruction_dest_branch": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_floor": "Piętro",
+  "@old__picklist_pick_instruction_floor": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_hold_item": "Wstrzymaj",
+  "@old__picklist_pick_instruction_hold_item": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_image": "Ilustracja",
+  "@old__picklist_pick_instruction_image": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_item_number": "Nr. rzeczy",
+  "@old__picklist_pick_instruction_item_number": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_item_number2": "Nr. rzeczy",
+  "@old__picklist_pick_instruction_item_number2": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_level": "Kondygnacja",
+  "@old__picklist_pick_instruction_level": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_order_number": "Nr. zamówienia",
+  "@old__picklist_pick_instruction_order_number": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_place": "Składowanie",
+  "@old__picklist_pick_instruction_place": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_product": "Artykuł EH",
+  "@old__picklist_pick_instruction_product": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_reprint": "Nowy wydruk",
+  "@old__picklist_pick_instruction_reprint": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_room": "Pomieszczenie",
+  "@old__picklist_pick_instruction_room": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_row": "Rząd",
+  "@old__picklist_pick_instruction_row": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_selling_area": "SPRZEDAŻ",
+  "@old__picklist_pick_instruction_selling_area": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_size": "Rozmiar",
+  "@old__picklist_pick_instruction_size": {
+    "type": "text"
+  },
+  "old__picklist_pickin_form": "Magaz. ({value0}/{value1})",
+  "@old__picklist_pickin_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {},
+      "value1": {}
+    }
+  },
+  "old__picklist_pickin_form1": "Magazynowanie",
+  "@old__picklist_pickin_form1": {
+    "type": "text"
+  },
+  "old__picklist_picking_form": "Sortowanie ({value0}/{value1})",
+  "@old__picklist_picking_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {},
+      "value1": {}
+    }
+  },
+  "old__picklist_product_change": "Zmiana Dispo\nZeskanuj ponownie składowanie.",
+  "@old__picklist_product_change": {
+    "type": "text"
+  },
+  "old__picklist_product_image_form": "Ilustracja artykułu EH",
+  "@old__picklist_product_image_form": {
+    "type": "text"
+  },
+  "old__picklist_product_info_form": "Info artykuł EH",
+  "@old__picklist_product_info_form": {
+    "type": "text"
+  },
+  "old__picklist_product_info_min_amount": "M-bst.",
+  "@old__picklist_product_info_min_amount": {
+    "type": "text"
+  },
+  "old__picklist_product_info_on_selling": "w VK",
+  "@old__picklist_product_info_on_selling": {
+    "type": "text"
+  },
+  "old__picklist_product_info_product": "Artykuł EH:",
+  "@old__picklist_product_info_product": {
+    "type": "text"
+  },
+  "old__picklist_product_info_size": "Rozmiar",
+  "@old__picklist_product_info_size": {
+    "type": "text"
+  },
+  "old__picklist_product_info_sum": "łącznie",
+  "@old__picklist_product_info_sum": {
+    "type": "text"
+  },
+  "old__picklist_redprices_form": "Obniżone ceny",
+  "@old__picklist_redprices_form": {
+    "type": "text"
+  },
+  "old__picklist_scan_location_first": "Zeskanuj najpierw składowanie.",
+  "@old__picklist_scan_location_first": {
+    "type": "text"
+  },
+  "old__picklist_settings_form": "Ustawienia ({value0})",
+  "@old__picklist_settings_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_stock_arrival_form": "Wejście towaru (LaLi)",
+  "@old__picklist_stock_arrival_form": {
+    "type": "text"
+  },
+  "old__picklist_timeout": "Timeout\nZeskanuj ponownie składowanie.",
+  "@old__picklist_timeout": {
+    "type": "text"
+  },
+  "old__picklist_transport_form": "Transport ({value0})",
+  "@old__picklist_transport_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_ware_transfer_form": "Cel transportu towaru",
+  "@old__picklist_ware_transfer_form": {
+    "type": "text"
+  },
+  "old__product_column": "Artykuł EH",
+  "@old__product_column": {
+    "type": "text"
+  },
+  "old__product_has_differnt_redprices": "Artykuł EH posiada rozmiary w rożnych cenach. Czy mimo tego ma zostać wydrukowana zredukowana cena sprzedaży?",
+  "@old__product_has_differnt_redprices": {
+    "type": "text"
+  },
+  "old__product_stock_type": "Art:",
+  "@old__product_stock_type": {
+    "type": "text"
+  },
+  "old__productvariation_not_for_picking": "Artykuł EH/rozmiar nie jest przewidziany do sortowania w tym magazynie",
+  "@old__productvariation_not_for_picking": {
+    "type": "text"
+  },
+  "old__program_restart_needed": "Program musi zostać zamknięty po wprowadzeniu zmian.",
+  "@old__program_restart_needed": {
+    "type": "text"
+  },
+  "old__redprice_column": "Zredukowana cena sprzedaży",
+  "@old__redprice_column": {
+    "type": "text"
+  },
+  "old__redprices_identically": "Obniżone ceny identyczne",
+  "@old__redprices_identically": {
+    "type": "text"
+  },
+  "old__scan_dhl_parcel": "Zachowaj pakiet DHL\nZeskanuj pakiety",
+  "@old__scan_dhl_parcel": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level": "Należy zeskanować na głębszej płaszczyźnie!",
+  "@old__scan_on_lower_level": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level_2": "Należy zeskanować na powierzchni listy załadunkowej",
+  "@old__scan_on_lower_level_2": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level_3": "Należy zeskanować na powierzchni listu przewozowego",
+  "@old__scan_on_lower_level_3": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level_4": "Należy zeskanować na powierzchni rzeczy",
+  "@old__scan_on_lower_level_4": {
+    "type": "text"
+  },
+  "old__set_as_missing_item": "Czy na pewno chcesz zaksięgować rzecz jako wadliwą?",
+  "@old__set_as_missing_item": {
+    "type": "text"
+  },
+  "old__shipping_order_column": "Zlecenie spedycyjne",
+  "@old__shipping_order_column": {
+    "type": "text"
+  },
+  "old__shipping_order_items_commited": "Rzeczy {value0} zostały pokwitowane ale muszą jeszcze zostać zeskanowane na głębszej płaszczyźnie!",
+  "@old__shipping_order_items_commited": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__shipping_order_unknown": "To zlecenie spedycyjne została już zeskanowane lub nie zostało wykryte.",
+  "@old__shipping_order_unknown": {
+    "type": "text"
+  },
+  "old__size_column": "Rozmiar",
+  "@old__size_column": {
+    "type": "text"
+  },
+  "old__stock_arrival_delivery_note_form": "Wejście towaru (LS)",
+  "@old__stock_arrival_delivery_note_form": {
+    "type": "text"
+  },
+  "old__stock_arrival_item_form": "Wejście towaru (rzecz)",
+  "@old__stock_arrival_item_form": {
+    "type": "text"
+  },
+  "old__stock_arrival_item_scanned_unknown": "Ta rzecz została już zeskanowana, nie została wykryta lub należy do innego listu przewozowego",
+  "@old__stock_arrival_item_scanned_unknown": {
+    "type": "text"
+  },
+  "old__stock_arrival_shipping_order_form": "Wejście towaru (Spedi)",
+  "@old__stock_arrival_shipping_order_form": {
+    "type": "text"
+  },
+  "old__stock_type_column": "HL",
+  "@old__stock_type_column": {
+    "type": "text"
+  },
+  "old__storage_address_not_set": "Nie został jeszcze ustawiony adres magazynu!",
+  "@old__storage_address_not_set": {
+    "type": "text"
+  },
+  "old__synchronizing_date": "Zsynchronizuj datę",
+  "@old__synchronizing_date": {
+    "type": "text"
+  },
+  "old__version_text": "Wersja:",
+  "@old__version_text": {
+    "type": "text"
+  },
+  "old__wrong_product": "Wadliwy artykuł EH",
+  "@old__wrong_product": {
+    "type": "text"
+  },
+  "old__yes": "Tak",
+  "@old__yes": {
+    "type": "text"
+  },
+  "pick_instruction__amount": "An.",
+  "@pick_instruction__amount": {
+    "type": "text"
+  },
+  "pick_instruction__dest_branch": "Sklep docelowy",
+  "@pick_instruction__dest_branch": {
+    "type": "text"
+  },
+  "pick_instruction__error_during_save": "Błąd podczas zapisywania danych",
+  "@pick_instruction__error_during_save": {
+    "type": "text"
+  },
+  "pick_instruction__error_no_more_data": "Brak danych",
+  "@pick_instruction__error_no_more_data": {
+    "type": "text"
+  },
+  "pick_instruction__floor": "Piętro",
+  "@pick_instruction__floor": {
+    "type": "text"
+  },
+  "pick_instruction__hold_current_item": "Czy na pewno ma zostać umieszczona aktualna pozycja?",
+  "@pick_instruction__hold_current_item": {
+    "type": "text"
+  },
+  "pick_instruction__hold_item": "Wstrzymaj",
+  "@pick_instruction__hold_item": {
+    "type": "text"
+  },
+  "pick_instruction__image": "Ilustracja",
+  "@pick_instruction__image": {
+    "type": "text"
+  },
+  "pick_instruction__is_stock_empty_now": "Czy magazyn\n{value0}\njest teraz pusty?",
+  "@pick_instruction__is_stock_empty_now": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "pick_instruction__item_already_picked": "Rzecz została już przesortowana",
+  "@pick_instruction__item_already_picked": {
+    "type": "text"
+  },
+  "pick_instruction__item_doesnt_exists_in_system": "Rzecz nie jest dostępna zgodnie z systemem.",
+  "@pick_instruction__item_doesnt_exists_in_system": {
+    "type": "text"
+  },
+  "pick_instruction__item_has_wrong_size": "Rzecz ma nieprawidłowy rozmiar",
+  "@pick_instruction__item_has_wrong_size": {
+    "type": "text"
+  },
+  "pick_instruction__item_invalid_place": "Ta rzecz według systemu nie znajduje się w tym magazynie.\nSortować pomimo tego?",
+  "@pick_instruction__item_invalid_place": {
+    "type": "text"
+  },
+  "pick_instruction__item_number": "Nr. rzeczy",
+  "@pick_instruction__item_number": {
+    "type": "text"
+  },
+  "pick_instruction__item_number2": "Nr. rzeczy",
+  "@pick_instruction__item_number2": {
+    "type": "text"
+  },
+  "pick_instruction__level": "Kondygnacja",
+  "@pick_instruction__level": {
+    "type": "text"
+  },
+  "pick_instruction__no_manual_input": "Brak ręcznego wpisu lub skanu paczki. Wymagana jest czarna cena.",
+  "@pick_instruction__no_manual_input": {
+    "type": "text"
+  },
+  "pick_instruction__no_more_items_hold": "Umieszczenie nie jest możliwe. Maksymalna ilość została osiągnięta.",
+  "@pick_instruction__no_more_items_hold": {
+    "type": "text"
+  },
+  "pick_instruction__picking_complete": "Sortowanie zostało zakończone. Przenieś dane do miejsca danych inwentaryzacyjnych za pomocą podstawowego menu.",
+  "@pick_instruction__picking_complete": {
+    "type": "text"
+  },
+  "pick_instruction__place": "Składowanie",
+  "@pick_instruction__place": {
+    "type": "text"
+  },
+  "pick_instruction__product_has_sizes_with_different_redprices_print_anyway": "Artykuł EH posiada rozmiary w rożnych cenach. Czy mimo tego ma zostać wydrukowana zredukowana cena sprzedaży?",
+  "@pick_instruction__product_has_sizes_with_different_redprices_print_anyway": {
+    "type": "text"
+  },
+  "pick_instruction__product_variation_not_for_picking": "Artykuł EH/rozmiar nie jest przewidziany do sortowania w tym magazynie",
+  "@pick_instruction__product_variation_not_for_picking": {
+    "type": "text"
+  },
+  "pick_instruction__reprint": "Nowy wydruk",
+  "@pick_instruction__reprint": {
+    "type": "text"
+  },
+  "pick_instruction__room": "Pomieszczenie",
+  "@pick_instruction__room": {
+    "type": "text"
+  },
+  "pick_instruction__row": "Rząd",
+  "@pick_instruction__row": {
+    "type": "text"
+  },
+  "pick_instruction__selling_area": "SPRZEDAŻ",
+  "@pick_instruction__selling_area": {
+    "type": "text"
+  },
+  "pick_instruction__set_as_missing_item": "Czy na pewno chcesz zaksięgować rzecz jako wadliwą?",
+  "@pick_instruction__set_as_missing_item": {
+    "type": "text"
+  },
+  "pick_instruction__wrong_product": "Wadliwy artykuł EH",
+  "@pick_instruction__wrong_product": {
+    "type": "text"
+  },
+  "red_prices_old__no_pricecode_availalbe": "Nie można było określić kodu ceny dla nowej obniżonej ceny.",
+  "@red_prices_old__no_pricecode_availalbe": {
+    "type": "text"
+  },
+  "red_prices_old__no_redprice_info_available": "Brak informacji o obniżonej cenie",
+  "@red_prices_old__no_redprice_info_available": {
+    "type": "text"
+  },
+  "stock_arrival__all_shipping_orders_scanned": "Zeskanowane zostały wszystkie zlecenia spedycyjne.",
+  "@stock_arrival__all_shipping_orders_scanned": {
+    "type": "text"
+  },
+  "stock_arrival__correction_delivery_2": "Zatrzymaj korekty listów przewozowych \nZeskanuj na powierzchni rzeczy",
+  "@stock_arrival__correction_delivery_2": {
+    "type": "text"
+  },
+  "stock_arrival__invalid_barcode_scanned_2": "Nie jest dostępne zlecenie spedycyjne \"{value0}\" lub zostało już zeskanowane",
+  "@stock_arrival__invalid_barcode_scanned_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_3": "Nie jest dostępna lista załadunku \"{value0}\" lub została już zeskanowana",
+  "@stock_arrival__invalid_barcode_scanned_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_4": "Nie jest dostępny list przewozowy \"{value0}\" lub został już zeskanowany",
+  "@stock_arrival__invalid_barcode_scanned_4": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_5": "Nie jest dostępna rzecz \"{value0}\" lub została już zeskanowana",
+  "@stock_arrival__invalid_barcode_scanned_5": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_6": "Nie jest dostępny pakiet \"{value0}\" lub został już zeskanowany",
+  "@stock_arrival__invalid_barcode_scanned_6": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__scan_dhl_parcel": "Zachowaj pakiet DHL\nZeskanuj pakiety",
+  "@stock_arrival__scan_dhl_parcel": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level": "Należy zeskanować na głębszej płaszczyźnie!",
+  "@stock_arrival__scan_on_lower_level": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level_2": "Należy zeskanować na powierzchni listy załadunkowej",
+  "@stock_arrival__scan_on_lower_level_2": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level_3": "Należy zeskanować na powierzchni listu przewozowego",
+  "@stock_arrival__scan_on_lower_level_3": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level_4": "Należy zeskanować na powierzchni rzeczy",
+  "@stock_arrival__scan_on_lower_level_4": {
+    "type": "text"
+  },
+  "stocktaking__amount_not_reached": "Ilość składowanych sztuk nie została osiągnięta!",
+  "@stocktaking__amount_not_reached": {
+    "type": "text"
+  },
+  "stocktaking__amount_of_storage_locations_reached": "Wyczerpano normy składowania",
+  "@stocktaking__amount_of_storage_locations_reached": {
+    "type": "text"
+  },
+  "stocktaking__ask_force_closing": "Czy ma zostać zamknięty obwód strojony?",
+  "@stocktaking__ask_force_closing": {
+    "type": "text"
+  },
+  "stocktaking__employee_number": "Identyfikator:",
+  "@stocktaking__employee_number": {
+    "type": "text"
+  },
+  "stocktaking__exit_impossible": "Nie zamykaj obwodu strojonego! Zakończenie nie jest możliwe!",
+  "@stocktaking__exit_impossible": {
+    "type": "text"
+  },
+  "stocktaking__invalid_amount_of_storage_locations": "Podano nieprawidłową liczbę składowisk",
+  "@stocktaking__invalid_amount_of_storage_locations": {
+    "type": "text"
+  },
+  "stocktaking__invalid_record_forecast": "Przekazano nieprawidłową ilość składowanych sztuk!",
+  "@stocktaking__invalid_record_forecast": {
+    "type": "text"
+  },
+  "stocktaking__inventory_area": "Obwód strojony:",
+  "@stocktaking__inventory_area": {
+    "type": "text"
+  },
+  "stocktaking__target_amount_reached": "Ilość składowanych sztuk została osiągnięta",
+  "@stocktaking__target_amount_reached": {
+    "type": "text"
+  },
+  "stocktaking__updated_existing_record_selling_area": "Artykuł był już dostępny. Usuń stare wpisy.",
+  "@stocktaking__updated_existing_record_selling_area": {
+    "type": "text"
+  },
+  "warentransport__picklist_maximum_amount_of_items_reached": "Maksymalna ilość osiągnięta. Odczytaj dane z urządzenia.",
+  "@warentransport__picklist_maximum_amount_of_items_reached": {
+    "type": "text"
+  }
+}

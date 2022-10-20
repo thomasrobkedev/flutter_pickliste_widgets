@@ -1,0 +1,1510 @@
+{
+  "@@locale": "ro",
+  "datatransfer__device_could_not_be_registered": "Dispozitivul nu a putut fi înregistrat!",
+  "@datatransfer__device_could_not_be_registered": {
+    "type": "text"
+  },
+  "datatransfer__device_has_been_registered": "Dispozitivul a fost înregistrat!",
+  "@datatransfer__device_has_been_registered": {
+    "type": "text"
+  },
+  "dispohz__product_not_in_file": "Produsul nu există în fișierul de reducere!",
+  "@dispohz__product_not_in_file": {
+    "type": "text"
+  },
+  "duplicator__please_scan_old_price": "Vă rugăm scanați prețul vechi!",
+  "@duplicator__please_scan_old_price": {
+    "type": "text"
+  },
+  "duplicator__please_scan_red_price": "Vă rugăm scanați prețul redus!",
+  "@duplicator__please_scan_red_price": {
+    "type": "text"
+  },
+  "duplicator__red_price_too_high": "Prețul redus este prea ridicat!",
+  "@duplicator__red_price_too_high": {
+    "type": "text"
+  },
+  "general__amount_short": "Număr",
+  "@general__amount_short": {
+    "type": "text"
+  },
+  "general__invalid_barcode": "Cod de bare nevalabil",
+  "@general__invalid_barcode": {
+    "type": "text"
+  },
+  "general__invalid_barcode_scanned": "Cod de bare scanat greșit\n{value0}",
+  "@general__invalid_barcode_scanned": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "general__invalid_checkdigit": "Cod de verificare incorect",
+  "@general__invalid_checkdigit": {
+    "type": "text"
+  },
+  "general__invalid_country": "Țară greșită",
+  "@general__invalid_country": {
+    "type": "text"
+  },
+  "general__invalid_ean13": "EAN13 nevalabil",
+  "@general__invalid_ean13": {
+    "type": "text"
+  },
+  "general__invalid_ean8": "EAN8 nevalabil",
+  "@general__invalid_ean8": {
+    "type": "text"
+  },
+  "general__invalid_employee_number": "Număr personal nevalabil",
+  "@general__invalid_employee_number": {
+    "type": "text"
+  },
+  "general__invalid_input": "Inserare nevalabilă",
+  "@general__invalid_input": {
+    "type": "text"
+  },
+  "general__invalid_item_number": "Număr articol nevalabil",
+  "@general__invalid_item_number": {
+    "type": "text"
+  },
+  "general__item_number_short": "Nr. articole",
+  "@general__item_number_short": {
+    "type": "text"
+  },
+  "general__next": "Mai departe",
+  "@general__next": {
+    "type": "text"
+  },
+  "general__no": "Nu",
+  "@general__no": {
+    "type": "text"
+  },
+  "general__no_base_data": "Nu există date referitoare la stocuri pe aparat!",
+  "@general__no_base_data": {
+    "type": "text"
+  },
+  "general__ok": "OK",
+  "@general__ok": {
+    "type": "text"
+  },
+  "general__order_number": "Nr. comandă",
+  "@general__order_number": {
+    "type": "text"
+  },
+  "general__please_scan_label": "Vă rugăm scanați eticheta",
+  "@general__please_scan_label": {
+    "type": "text"
+  },
+  "general__product": "Articol",
+  "@general__product": {
+    "type": "text"
+  },
+  "general__quantity": "Număr bucăți",
+  "@general__quantity": {
+    "type": "text"
+  },
+  "general__red_price": "Preț redus",
+  "@general__red_price": {
+    "type": "text"
+  },
+  "general__redprices_identically": "Prețuri reduse identice",
+  "@general__redprices_identically": {
+    "type": "text"
+  },
+  "general__size": "Mărime",
+  "@general__size": {
+    "type": "text"
+  },
+  "general__storage_location": "Loc de amplasare",
+  "@general__storage_location": {
+    "type": "text"
+  },
+  "general__yes": "Da",
+  "@general__yes": {
+    "type": "text"
+  },
+  "mbinfo__min_amount": "Număr minim de bucăți",
+  "@mbinfo__min_amount": {
+    "type": "text"
+  },
+  "mbinfo__no_product_info": "Nu există info articol",
+  "@mbinfo__no_product_info": {
+    "type": "text"
+  },
+  "mbinfo__on_selling": "la vânzare",
+  "@mbinfo__on_selling": {
+    "type": "text"
+  },
+  "mbinfo__sum": "Total",
+  "@mbinfo__sum": {
+    "type": "text"
+  },
+  "menu__app_data_transfer": "Transfer de date",
+  "@menu__app_data_transfer": {
+    "type": "text"
+  },
+  "menu__app_duplicator": "Duplicator",
+  "@menu__app_duplicator": {
+    "type": "text"
+  },
+  "menu__app_pl07_item_movement": "Preluare în depozit/redistribuire",
+  "@menu__app_pl07_item_movement": {
+    "type": "text"
+  },
+  "menu__app_pl07_missing_items": "Articole lipsă",
+  "@menu__app_pl07_missing_items": {
+    "type": "text"
+  },
+  "menu__app_pl07_pick_instruction": "Sortare",
+  "@menu__app_pl07_pick_instruction": {
+    "type": "text"
+  },
+  "menu__app_pl07_red_prices_old": "Prețuri reduse",
+  "@menu__app_pl07_red_prices_old": {
+    "type": "text"
+  },
+  "menu__app_pl07_red_prices_selling_area": "Prețuri reduse",
+  "@menu__app_pl07_red_prices_selling_area": {
+    "type": "text"
+  },
+  "menu__app_pl07_stock_arrival_mb_info_product_info": "Info articol",
+  "@menu__app_pl07_stock_arrival_mb_info_product_info": {
+    "type": "text"
+  },
+  "menu__app_pl07_ware_transfer": "Transport marfă",
+  "@menu__app_pl07_ware_transfer": {
+    "type": "text"
+  },
+  "menu__app_service_point": "Punct de service",
+  "@menu__app_service_point": {
+    "type": "text"
+  },
+  "menu__app_stocktaking_selling_area": "Inventar vânzare",
+  "@menu__app_stocktaking_selling_area": {
+    "type": "text"
+  },
+  "menu__app_stocktaking_stock": "Inventar depozit",
+  "@menu__app_stocktaking_stock": {
+    "type": "text"
+  },
+  "menu__pl07_stock_arrival": "Intrarea mărfii",
+  "@menu__pl07_stock_arrival": {
+    "type": "text"
+  },
+  "menu__settings": "Setări",
+  "@menu__settings": {
+    "type": "text"
+  },
+  "menu__stocktaking": "Inventar",
+  "@menu__stocktaking": {
+    "type": "text"
+  },
+  "missing_item__item_is_no_missing_item": "Conform sistemului, articolul nu este defect",
+  "@missing_item__item_is_no_missing_item": {
+    "type": "text"
+  },
+  "missing_item__missing_item_dest_form": "Articole lipsă loc de amplasare țintă",
+  "@missing_item__missing_item_dest_form": {
+    "type": "text"
+  },
+  "missing_item__reason_1": "Trecut cu vederea",
+  "@missing_item__reason_1": {
+    "type": "text"
+  },
+  "missing_item__reason_2": "Criptare incorectă",
+  "@missing_item__reason_2": {
+    "type": "text"
+  },
+  "missing_item__reason_3": "Loc de amplasare incorect",
+  "@missing_item__reason_3": {
+    "type": "text"
+  },
+  "missing_item__reason_4": "La vânzare",
+  "@missing_item__reason_4": {
+    "type": "text"
+  },
+  "missing_item__reason_5": "Altele",
+  "@missing_item__reason_5": {
+    "type": "text"
+  },
+  "missing_item__reason_form": "Motiv pentru articol cu defect",
+  "@missing_item__reason_form": {
+    "type": "text"
+  },
+  "missing_item__search_complete": "Căutarea articolelor lipsă este finalizată. Vă rugăm să transferați datele către locul cu datele pentru stocuri din meniul de bază casă!",
+  "@missing_item__search_complete": {
+    "type": "text"
+  },
+  "missing_item__search_form": "Articole lipsă ({value0})",
+  "@missing_item__search_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__ad_hoc": "Ad-hoc",
+  "@old__ad_hoc": {
+    "type": "text"
+  },
+  "old__all_delivery_notes_for_loading_list_scanned": "Au fost scanate toate avizele de livrare pentru această listă de încărcare.",
+  "@old__all_delivery_notes_for_loading_list_scanned": {
+    "type": "text"
+  },
+  "old__all_items_for_delivery_note_scanned": "Au fost scanate toate listele de încărcare pentru acest aviz de livrare",
+  "@old__all_items_for_delivery_note_scanned": {
+    "type": "text"
+  },
+  "old__all_loading_lists_scanned": "Au fost scanate toate listele de încărcare.",
+  "@old__all_loading_lists_scanned": {
+    "type": "text"
+  },
+  "old__all_loadng_lsts_for_ship_order_scanned": "Au fost scanate toate listele de încărcare pentru această comandă de expediere",
+  "@old__all_loadng_lsts_for_ship_order_scanned": {
+    "type": "text"
+  },
+  "old__all_shipping_orders_scanned": "Au fost scanate toate comenzile de expediere.",
+  "@old__all_shipping_orders_scanned": {
+    "type": "text"
+  },
+  "old__amount_column": "Număr",
+  "@old__amount_column": {
+    "type": "text"
+  },
+  "old__application_installing": "se instalează {value0} ...",
+  "@old__application_installing": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__application_startup": "{value0} este inițiată ...",
+  "@old__application_startup": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__btn_back": "Înapoi",
+  "@old__btn_back": {
+    "type": "text"
+  },
+  "old__btn_details": "Detalii",
+  "@old__btn_details": {
+    "type": "text"
+  },
+  "old__btn_product_info": "Info articol",
+  "@old__btn_product_info": {
+    "type": "text"
+  },
+  "old__button_next": "Mai departe",
+  "@old__button_next": {
+    "type": "text"
+  },
+  "old__cancel": "Întrerupere",
+  "@old__cancel": {
+    "type": "text"
+  },
+  "old__checking_database": "Verificare bază de date",
+  "@old__checking_database": {
+    "type": "text"
+  },
+  "old__checking_directories": "Verificare registre",
+  "@old__checking_directories": {
+    "type": "text"
+  },
+  "old__correction_delivery_1": "Aviz de livrare corectat conține\n Vă rugăm scanați la nivelul avizului de livrare",
+  "@old__correction_delivery_1": {
+    "type": "text"
+  },
+  "old__correction_delivery_2": "Aviz de livrare corectat\n Vă rugăm scanați la nivelul articolelor",
+  "@old__correction_delivery_2": {
+    "type": "text"
+  },
+  "old__correction_delivery_3": "Avizul de livrare corectat conține\n Vă rugăm scanați la nivelul avizului de livrare",
+  "@old__correction_delivery_3": {
+    "type": "text"
+  },
+  "old__creating_database": "Înregistrare nouă bază de date",
+  "@old__creating_database": {
+    "type": "text"
+  },
+  "old__current_storage_address": "Adr.:",
+  "@old__current_storage_address": {
+    "type": "text"
+  },
+  "old__datatransfer_active": "Transfer de date activ",
+  "@old__datatransfer_active": {
+    "type": "text"
+  },
+  "old__date_column": "Dată",
+  "@old__date_column": {
+    "type": "text"
+  },
+  "old__delete_old_zip_data": "Ștergere date zip vechi",
+  "@old__delete_old_zip_data": {
+    "type": "text"
+  },
+  "old__delivery_note_column": "Nr. aviz de livrare",
+  "@old__delivery_note_column": {
+    "type": "text"
+  },
+  "old__delivery_note_scan_items": "Pentru acest aviz de livrare articolele trebuie scanate individual",
+  "@old__delivery_note_scan_items": {
+    "type": "text"
+  },
+  "old__delivery_note_unknown": "Acest aviz de livrare a fost deja scanat, este necunoscut sau figurează pe o altă listă de încărcare.",
+  "@old__delivery_note_unknown": {
+    "type": "text"
+  },
+  "old__destination_column": "Dest.",
+  "@old__destination_column": {
+    "type": "text"
+  },
+  "old__destination_storage_address": "Dest.:",
+  "@old__destination_storage_address": {
+    "type": "text"
+  },
+  "old__dispohz_error_counter": "Probleme cu valoarea contorului din date!",
+  "@old__dispohz_error_counter": {
+    "type": "text"
+  },
+  "old__dispohz_form": "Reducere articol",
+  "@old__dispohz_form": {
+    "type": "text"
+  },
+  "old__dispohz_invalid_barcode": "Cod de bare nevalabil",
+  "@old__dispohz_invalid_barcode": {
+    "type": "text"
+  },
+  "old__dispohz_product_not_in_file": "Produsul nu există în fișierul de reducere!",
+  "@old__dispohz_product_not_in_file": {
+    "type": "text"
+  },
+  "old__dispohz_redprice_identically": "Prețuri reduse identice!",
+  "@old__dispohz_redprice_identically": {
+    "type": "text"
+  },
+  "old__dispohz_scan_label": "Vă rugăm scanați eticheta",
+  "@old__dispohz_scan_label": {
+    "type": "text"
+  },
+  "old__dispohz_wrong_country": "Țară greșită!",
+  "@old__dispohz_wrong_country": {
+    "type": "text"
+  },
+  "old__dupliz_form": "Dublare",
+  "@old__dupliz_form": {
+    "type": "text"
+  },
+  "old__dupliz_please_scan_old_price": "Vă rugăm scanați prețul vechi!",
+  "@old__dupliz_please_scan_old_price": {
+    "type": "text"
+  },
+  "old__dupliz_please_scan_red_price": "Vă rugăm scanați prețul redus!",
+  "@old__dupliz_please_scan_red_price": {
+    "type": "text"
+  },
+  "old__dupliz_red_price_to_high": "Prețul redus este prea ridicat!",
+  "@old__dupliz_red_price_to_high": {
+    "type": "text"
+  },
+  "old__dupliz_wrong_country": "Țară greșită!",
+  "@old__dupliz_wrong_country": {
+    "type": "text"
+  },
+  "old__employee_number": "Număr personal",
+  "@old__employee_number": {
+    "type": "text"
+  },
+  "old__enter_item_number": "Vă rugăm să inserați un număr de articole:",
+  "@old__enter_item_number": {
+    "type": "text"
+  },
+  "old__enter_item_number_form": "Determinare număr articole",
+  "@old__enter_item_number_form": {
+    "type": "text"
+  },
+  "old__enter_password_to_close": "Vă rugăm introduceți parola pentru finalizarea programului:",
+  "@old__enter_password_to_close": {
+    "type": "text"
+  },
+  "old__enter_password_to_switch_usb_mode": "Vă rugăm introduceți parola pentru schimbarea modului USB:",
+  "@old__enter_password_to_switch_usb_mode": {
+    "type": "text"
+  },
+  "old__error_database_communication": "Eroare la comunicarea cu baza de date \n{value0}",
+  "@old__error_database_communication": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__error_database_generic": "Eroare la crearea bazei de date \n{value0}",
+  "@old__error_database_generic": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__error_database_no_script": "Eroare la crearea bazei de date\n Scriptul pentru crearea bazei de date nu este disponibil!",
+  "@old__error_database_no_script": {
+    "type": "text"
+  },
+  "old__error_during_save": "Eroare la memorarea datelor",
+  "@old__error_during_save": {
+    "type": "text"
+  },
+  "old__error_no_more_data": "Nu există alte date",
+  "@old__error_no_more_data": {
+    "type": "text"
+  },
+  "old__exporting_old_data": "Exportare date vechi",
+  "@old__exporting_old_data": {
+    "type": "text"
+  },
+  "old__extracting_zip_file": "Dezarhivare fișier zip",
+  "@old__extracting_zip_file": {
+    "type": "text"
+  },
+  "old__getting_data": "Determinare date",
+  "@old__getting_data": {
+    "type": "text"
+  },
+  "old__getting_number_of_rows": "Determinare număr rânduri",
+  "@old__getting_number_of_rows": {
+    "type": "text"
+  },
+  "old__hold_current_item": "Doriți într-adevăr să păstrați poziția actuală?",
+  "@old__hold_current_item": {
+    "type": "text"
+  },
+  "old__hz_process_completed": "Procesul de reducere este finalizat. Vă rugăm să transferați datele către locul cu datele pentru stocuri din meniul de bază casă!",
+  "@old__hz_process_completed": {
+    "type": "text"
+  },
+  "old__image_loading": "Se încarcă imaginea ...",
+  "@old__image_loading": {
+    "type": "text"
+  },
+  "old__invalid_barcode_scanned": "Cod de bare scanat greșit\n{value0}",
+  "@old__invalid_barcode_scanned": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_2": "Comanda de expediere \"{value0}\" nu există sau a fost deja scanată",
+  "@old__invalid_barcode_scanned_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_3": "Lista de încărcare \"{value0}\" nu există sau a fost deja scanată",
+  "@old__invalid_barcode_scanned_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_4": "Avizul de livrare \"{value0}\" nu există sau a fost deja scanat",
+  "@old__invalid_barcode_scanned_4": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_5": "Articolul \"{value0}\" nu există sau a fost deja scanat",
+  "@old__invalid_barcode_scanned_5": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_barcode_scanned_6": "Pachetul \"{value0}\" nu există sau a fost deja scanat",
+  "@old__invalid_barcode_scanned_6": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__invalid_country": "Țară greșită",
+  "@old__invalid_country": {
+    "type": "text"
+  },
+  "old__invalid_employee_number": "Număr personal invalid",
+  "@old__invalid_employee_number": {
+    "type": "text"
+  },
+  "old__invalid_item_number": "Număr articol nevalabil",
+  "@old__invalid_item_number": {
+    "type": "text"
+  },
+  "old__inventur_add_record": "AddRecord() a redat o valoare neașteptată. Vă rugăm contactați departamentul de asistență tehnică.",
+  "@old__inventur_add_record": {
+    "type": "text"
+  },
+  "old__inventur_amount": "Număr bucăți:",
+  "@old__inventur_amount": {
+    "type": "text"
+  },
+  "old__inventur_amount_not_reached": "Numărul de bucăți definit nu a fost atins!",
+  "@old__inventur_amount_not_reached": {
+    "type": "text"
+  },
+  "old__inventur_amount_of_items_and_stocks": "Număr Articole/locuri:",
+  "@old__inventur_amount_of_items_and_stocks": {
+    "type": "text"
+  },
+  "old__inventur_ask_force_closing": "Doriți să închideți circuitul de acord?",
+  "@old__inventur_ask_force_closing": {
+    "type": "text"
+  },
+  "old__inventur_ask_force_closing_caption": "Circuit de acord",
+  "@old__inventur_ask_force_closing_caption": {
+    "type": "text"
+  },
+  "old__inventur_button_inventory": "{value0} - Inventar vânzare",
+  "@old__inventur_button_inventory": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_button_inventory_stock": "{value0} - Inventar depozit",
+  "@old__inventur_button_inventory_stock": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_button_settings": "{value0} - Setări",
+  "@old__inventur_button_settings": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_collection_start_failed_1": "Circuit de acord deschis! Noul circuit de acord nu poate fi pornit.",
+  "@old__inventur_collection_start_failed_1": {
+    "type": "text"
+  },
+  "old__inventur_collection_start_failed_2": "Informații insuficiente pentru noul circuit e acord:  {value0}",
+  "@old__inventur_collection_start_failed_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_collection_start_failed_3": "Introducere nevalabilă pentru numărul de bucăți definit: {value0}",
+  "@old__inventur_collection_start_failed_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_employee_number": "Nr. personal:",
+  "@old__inventur_employee_number": {
+    "type": "text"
+  },
+  "old__inventur_exit_impossible": "Circuitul de acord nu a fost încheiat! Nu este posibilă finalizarea!",
+  "@old__inventur_exit_impossible": {
+    "type": "text"
+  },
+  "old__inventur_form": "Inventar",
+  "@old__inventur_form": {
+    "type": "text"
+  },
+  "old__inventur_invalid_abstimmkreise_forecast": "S-a introdus un număr nevalabil pentru locuri de amplasare",
+  "@old__inventur_invalid_abstimmkreise_forecast": {
+    "type": "text"
+  },
+  "old__inventur_invalid_article_no": "Redare număr articole nevalabil!",
+  "@old__inventur_invalid_article_no": {
+    "type": "text"
+  },
+  "old__inventur_invalid_barcode": "Cod de bare nevalabil",
+  "@old__inventur_invalid_barcode": {
+    "type": "text"
+  },
+  "old__inventur_invalid_blackprice": "Redare preț normal nevalabil!",
+  "@old__inventur_invalid_blackprice": {
+    "type": "text"
+  },
+  "old__inventur_invalid_checkdigit": "Cod de verificare incorect",
+  "@old__inventur_invalid_checkdigit": {
+    "type": "text"
+  },
+  "old__inventur_invalid_collection_id": "Redare circuit de acord nevalabil!",
+  "@old__inventur_invalid_collection_id": {
+    "type": "text"
+  },
+  "old__inventur_invalid_dispo_no": "Redare număr articol nevalabil!",
+  "@old__inventur_invalid_dispo_no": {
+    "type": "text"
+  },
+  "old__inventur_invalid_ean13": "EAN13 nevalabil!",
+  "@old__inventur_invalid_ean13": {
+    "type": "text"
+  },
+  "old__inventur_invalid_ean8": "EAN8 nevalabil!",
+  "@old__inventur_invalid_ean8": {
+    "type": "text"
+  },
+  "old__inventur_invalid_employee_number": "Număr personal nevalabil",
+  "@old__inventur_invalid_employee_number": {
+    "type": "text"
+  },
+  "old__inventur_invalid_input": "Inserare nevalabilă",
+  "@old__inventur_invalid_input": {
+    "type": "text"
+  },
+  "old__inventur_invalid_label_code": "Redare rânduri etichete invalide: {value0}",
+  "@old__inventur_invalid_label_code": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__inventur_invalid_personal_id": "Redare număr personal nevalabil!",
+  "@old__inventur_invalid_personal_id": {
+    "type": "text"
+  },
+  "old__inventur_invalid_pick_stock": "Loc de amplasare nevalabil",
+  "@old__inventur_invalid_pick_stock": {
+    "type": "text"
+  },
+  "old__inventur_invalid_record_forecast": "Redare obiectiv număr de bucăți nevalabil!",
+  "@old__inventur_invalid_record_forecast": {
+    "type": "text"
+  },
+  "old__inventur_invalid_redprice": "Redare preț redus nevalabil!",
+  "@old__inventur_invalid_redprice": {
+    "type": "text"
+  },
+  "old__inventur_invalid_serial": "Redare număr serie dispozitiv mobil de colectare a datelor nevalabil!",
+  "@old__inventur_invalid_serial": {
+    "type": "text"
+  },
+  "old__inventur_invalid_ware_group_no": "Redare grupă de mărfuri nevalabilă!",
+  "@old__inventur_invalid_ware_group_no": {
+    "type": "text"
+  },
+  "old__inventur_inventory_area": "Circuit de acord:",
+  "@old__inventur_inventory_area": {
+    "type": "text"
+  },
+  "old__inventur_inventory_complete": "S-a atins obiectivul pentru numărul de bucăți",
+  "@old__inventur_inventory_complete": {
+    "type": "text"
+  },
+  "old__inventur_inventory_sale_form": "Inventar vânzare",
+  "@old__inventur_inventory_sale_form": {
+    "type": "text"
+  },
+  "old__inventur_inventory_stock_form": "Inventar depozit",
+  "@old__inventur_inventory_stock_form": {
+    "type": "text"
+  },
+  "old__inventur_numeric_input_only": "Este necesară introducerea numerică!",
+  "@old__inventur_numeric_input_only": {
+    "type": "text"
+  },
+  "old__inventur_pick_stock_amount_reached": "S-a atins obiectivul pentru locul de amplasare",
+  "@old__inventur_pick_stock_amount_reached": {
+    "type": "text"
+  },
+  "old__inventur_red_price": "Preț redus:",
+  "@old__inventur_red_price": {
+    "type": "text"
+  },
+  "old__inventur_storage_location": "Loc de amplasare:",
+  "@old__inventur_storage_location": {
+    "type": "text"
+  },
+  "old__inventur_updated_existing_record": "Articolul era deja disponibil. Ștergere înregistrare veche.",
+  "@old__inventur_updated_existing_record": {
+    "type": "text"
+  },
+  "old__is_stock_empty": "Locul de amplasare\n{value0}\n este gol acum?",
+  "@old__is_stock_empty": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__item_already_picked": "Articolul a fost deja sortat",
+  "@old__item_already_picked": {
+    "type": "text"
+  },
+  "old__item_doesnt_exists_in_system": "Conform sistemului, piesa nu este disponibilă",
+  "@old__item_doesnt_exists_in_system": {
+    "type": "text"
+  },
+  "old__item_has_wrong_size": "Articolul are mărimea greșită",
+  "@old__item_has_wrong_size": {
+    "type": "text"
+  },
+  "old__item_invalid_place": "Conform sistemului acest articol nu se află în acest loc de amplasare.\n Efectuați totuși sortarea?",
+  "@old__item_invalid_place": {
+    "type": "text"
+  },
+  "old__item_is_no_missing_item": "Conform sistemului, articolul nu este defect",
+  "@old__item_is_no_missing_item": {
+    "type": "text"
+  },
+  "old__item_number_column": "Nr. piese",
+  "@old__item_number_column": {
+    "type": "text"
+  },
+  "old__loading_items": "Încarcă articole",
+  "@old__loading_items": {
+    "type": "text"
+  },
+  "old__loading_list_column": "Listă de încărcare",
+  "@old__loading_list_column": {
+    "type": "text"
+  },
+  "old__loading_list_scan_delivery_note": "Pentru această listă de încărcare avizele de livrare trebuie scanate individual.",
+  "@old__loading_list_scan_delivery_note": {
+    "type": "text"
+  },
+  "old__loading_list_unknown": "Această listă de încărcare a fost deja scanată sau este necunoscută.",
+  "@old__loading_list_unknown": {
+    "type": "text"
+  },
+  "old__loading_missing_items": "Încarcă articole lipsă",
+  "@old__loading_missing_items": {
+    "type": "text"
+  },
+  "old__loading_pick_instruction": "Încarcă sortări",
+  "@old__loading_pick_instruction": {
+    "type": "text"
+  },
+  "old__loading_redprice_items": "Încarcă articole reduse",
+  "@old__loading_redprice_items": {
+    "type": "text"
+  },
+  "old__loading_redprices": "Încarcă prețuri reduse",
+  "@old__loading_redprices": {
+    "type": "text"
+  },
+  "old__loading_stock": "Încarcă stocuri depozit",
+  "@old__loading_stock": {
+    "type": "text"
+  },
+  "old__loading_stock_arrival_data": "Datele intrare marfă sunt încărcate",
+  "@old__loading_stock_arrival_data": {
+    "type": "text"
+  },
+  "old__memory_adjustment": "Adaptare memorie",
+  "@old__memory_adjustment": {
+    "type": "text"
+  },
+  "old__missing_item_reason_1": "{value0} - Trecut cu vederea",
+  "@old__missing_item_reason_1": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_2": "{value0} - Criptare incorectă",
+  "@old__missing_item_reason_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_3": "{value0} - Loc de amplasare incorect",
+  "@old__missing_item_reason_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_4": "{value0} - La vânzare",
+  "@old__missing_item_reason_4": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_5": "{value0} - Altele",
+  "@old__missing_item_reason_5": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__missing_item_reason_form": "Motiv pentru articol cu defect",
+  "@old__missing_item_reason_form": {
+    "type": "text"
+  },
+  "old__missing_item_search_complete": "Căutarea articolelor lipsă este finalizată. Vă rugăm să transferați datele către locul cu datele pentru stocuri din meniul de bază casă!",
+  "@old__missing_item_search_complete": {
+    "type": "text"
+  },
+  "old__missing_item_search_form": "Articole lipsă ({value0})",
+  "@old__missing_item_search_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__no": "Nu",
+  "@old__no": {
+    "type": "text"
+  },
+  "old__no_applications_are_installed": "Nu sunt instalate aplicații. Vă rugăm să mergeți în locul cu datele stocurilor și inițiați instalarea prin încărcarea fișierului de reducere.",
+  "@old__no_applications_are_installed": {
+    "type": "text"
+  },
+  "old__no_base_data": "Nu există date referitoare la stocuri pe aparat!",
+  "@old__no_base_data": {
+    "type": "text"
+  },
+  "old__no_hz_info_for_scanned_item": "Nu există info reducere pentru acest articol",
+  "@old__no_hz_info_for_scanned_item": {
+    "type": "text"
+  },
+  "old__no_image_available": "Nu există nicio imagine",
+  "@old__no_image_available": {
+    "type": "text"
+  },
+  "old__no_manual_input": "Nu este permisă introducerea manuală sau scanarea secțiunii mesei de ambalare. Este necesar prețul normal.",
+  "@old__no_manual_input": {
+    "type": "text"
+  },
+  "old__no_more_items_hold": "Păstrarea nu este posibilă. A fost atins numărul maxim.",
+  "@old__no_more_items_hold": {
+    "type": "text"
+  },
+  "old__no_pricecode_availalbe": "Codul de preț pentru noul preț redus nu a putut fi determinat.",
+  "@old__no_pricecode_availalbe": {
+    "type": "text"
+  },
+  "old__no_printer_choosen_continue": "Nu a fost încă aleasă o imprimantă. Doriți totuși să continuați?",
+  "@old__no_printer_choosen_continue": {
+    "type": "text"
+  },
+  "old__no_redprice_info_available": "Nu există info preț redus",
+  "@old__no_redprice_info_available": {
+    "type": "text"
+  },
+  "old__no_storage_addresses": "Adresele depozitelor disponibile în cadrul firmei dumneavoastră nu sunt cunoscute. Vă rugăm încărcați aparatul mai întâi cu datele stocului.",
+  "@old__no_storage_addresses": {
+    "type": "text"
+  },
+  "old__ok": "OK",
+  "@old__ok": {
+    "type": "text"
+  },
+  "old__onyl_different_storage_addresses": "Un transport de marfă este posibil doar între 2 adrese de depozit diferite.",
+  "@old__onyl_different_storage_addresses": {
+    "type": "text"
+  },
+  "old__pick_stock_location_column": "Loc de amplasare",
+  "@old__pick_stock_location_column": {
+    "type": "text"
+  },
+  "old__picking_complete": "Sortarea este finalizată. Vă rugăm să transferați datele către locul cu datele pentru stocuri din meniul de bază casă.",
+  "@old__picking_complete": {
+    "type": "text"
+  },
+  "old__picklist_btn_load": "Încărcare",
+  "@old__picklist_btn_load": {
+    "type": "text"
+  },
+  "old__picklist_exception_form": "Eroare netratată ({value0}/{value1})",
+  "@old__picklist_exception_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {},
+      "value1": {}
+    }
+  },
+  "old__picklist_hold_items_form": "Poziții păstrate",
+  "@old__picklist_hold_items_form": {
+    "type": "text"
+  },
+  "old__picklist_hz_sale_form": "Reducere vânzare ({value0})",
+  "@old__picklist_hz_sale_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_login_form": "Logare ({value0})",
+  "@old__picklist_login_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_maximum_amount_of_items_reached": "Numărul maxim a fost atins. Vă rugăm citiți datele de pe aparat.",
+  "@old__picklist_maximum_amount_of_items_reached": {
+    "type": "text"
+  },
+  "old__picklist_menu_form": "Opțiune ({value0})",
+  "@old__picklist_menu_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_menuitem_align_printer": "Imprimantă dispunere",
+  "@old__picklist_menuitem_align_printer": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_back": "Înapoi",
+  "@old__picklist_menuitem_back": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_choose_printer": "Alegere imprimantă",
+  "@old__picklist_menuitem_choose_printer": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_device_settings": "Setări aparate",
+  "@old__picklist_menuitem_device_settings": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_exit": "Finalizare",
+  "@old__picklist_menuitem_exit": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_item_movement": "Preluare în depozit/redistribuire",
+  "@old__picklist_menuitem_item_movement": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_missing_items": "Articole lipsă",
+  "@old__picklist_menuitem_missing_items": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_pick_instruction": "Sortare",
+  "@old__picklist_menuitem_pick_instruction": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_product_info": "Info articol",
+  "@old__picklist_menuitem_product_info": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_red_prices": "Prețuri reduse",
+  "@old__picklist_menuitem_red_prices": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_red_prices_selling": "Prețuri reduse",
+  "@old__picklist_menuitem_red_prices_selling": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_settings": "Setări",
+  "@old__picklist_menuitem_settings": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_stock_arrival": "Intrarea mărfii",
+  "@old__picklist_menuitem_stock_arrival": {
+    "type": "text"
+  },
+  "old__picklist_menuitem_ware_transfer": "Transport marfă",
+  "@old__picklist_menuitem_ware_transfer": {
+    "type": "text"
+  },
+  "old__picklist_missing_item_dest_form": "Articole lipsă loc de amplasare țintă",
+  "@old__picklist_missing_item_dest_form": {
+    "type": "text"
+  },
+  "old__picklist_no_product_info": "Nu există info articol",
+  "@old__picklist_no_product_info": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_amount": "Număr",
+  "@old__picklist_pick_instruction_amount": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_dest_branch": "Unitate țintă",
+  "@old__picklist_pick_instruction_dest_branch": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_floor": "Nivel",
+  "@old__picklist_pick_instruction_floor": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_hold_item": "Suspendare",
+  "@old__picklist_pick_instruction_hold_item": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_image": "Imagine",
+  "@old__picklist_pick_instruction_image": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_item_number": "Nr. articole",
+  "@old__picklist_pick_instruction_item_number": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_item_number2": "Nr. articole",
+  "@old__picklist_pick_instruction_item_number2": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_level": "Etaj",
+  "@old__picklist_pick_instruction_level": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_order_number": "Nr. comandă",
+  "@old__picklist_pick_instruction_order_number": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_place": "Loc de amplasare",
+  "@old__picklist_pick_instruction_place": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_product": "Articol",
+  "@old__picklist_pick_instruction_product": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_reprint": "Imprimare nouă",
+  "@old__picklist_pick_instruction_reprint": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_room": "Spațiu",
+  "@old__picklist_pick_instruction_room": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_row": "Rând",
+  "@old__picklist_pick_instruction_row": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_selling_area": "VÂNZARE",
+  "@old__picklist_pick_instruction_selling_area": {
+    "type": "text"
+  },
+  "old__picklist_pick_instruction_size": "Mărime",
+  "@old__picklist_pick_instruction_size": {
+    "type": "text"
+  },
+  "old__picklist_pickin_form": "Prel. ({value0}/{value1})",
+  "@old__picklist_pickin_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {},
+      "value1": {}
+    }
+  },
+  "old__picklist_pickin_form1": "Preluare în depozit",
+  "@old__picklist_pickin_form1": {
+    "type": "text"
+  },
+  "old__picklist_picking_form": "Sort. ({value0}/{value1})",
+  "@old__picklist_picking_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {},
+      "value1": {}
+    }
+  },
+  "old__picklist_product_change": "Schimbare produs\n Vă rugăm scanați din nou locul de amplasare.",
+  "@old__picklist_product_change": {
+    "type": "text"
+  },
+  "old__picklist_product_image_form": "Imagine articol",
+  "@old__picklist_product_image_form": {
+    "type": "text"
+  },
+  "old__picklist_product_info_form": "Info articol",
+  "@old__picklist_product_info_form": {
+    "type": "text"
+  },
+  "old__picklist_product_info_min_amount": "Număr minim de bucăți",
+  "@old__picklist_product_info_min_amount": {
+    "type": "text"
+  },
+  "old__picklist_product_info_on_selling": "la vânzare",
+  "@old__picklist_product_info_on_selling": {
+    "type": "text"
+  },
+  "old__picklist_product_info_product": "Articol:",
+  "@old__picklist_product_info_product": {
+    "type": "text"
+  },
+  "old__picklist_product_info_size": "Mărime",
+  "@old__picklist_product_info_size": {
+    "type": "text"
+  },
+  "old__picklist_product_info_sum": "Total",
+  "@old__picklist_product_info_sum": {
+    "type": "text"
+  },
+  "old__picklist_redprices_form": "Prețuri reduse",
+  "@old__picklist_redprices_form": {
+    "type": "text"
+  },
+  "old__picklist_scan_location_first": "Scanați mai întâi locul de amplasare.",
+  "@old__picklist_scan_location_first": {
+    "type": "text"
+  },
+  "old__picklist_settings_form": "Setări ({value0})",
+  "@old__picklist_settings_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_stock_arrival_form": "Intrare marfă (LaLi)",
+  "@old__picklist_stock_arrival_form": {
+    "type": "text"
+  },
+  "old__picklist_timeout": "Timeout\n Vă rugăm scanați din nou locul de amplasare.",
+  "@old__picklist_timeout": {
+    "type": "text"
+  },
+  "old__picklist_transport_form": "Transport ({value0})",
+  "@old__picklist_transport_form": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__picklist_ware_transfer_form": "Transport marfă Destinație",
+  "@old__picklist_ware_transfer_form": {
+    "type": "text"
+  },
+  "old__product_column": "Articol",
+  "@old__product_column": {
+    "type": "text"
+  },
+  "old__product_has_differnt_redprices": "Articolul are mărimi cu informații diferite referitoare la preț. Doriți totuși să continuați imprimarea prețului redus?",
+  "@old__product_has_differnt_redprices": {
+    "type": "text"
+  },
+  "old__product_stock_type": "Tip:",
+  "@old__product_stock_type": {
+    "type": "text"
+  },
+  "old__productvariation_not_for_picking": "Articol/mărime nu este prevăzut/ă pentru sortarea din acest loc de amplasare",
+  "@old__productvariation_not_for_picking": {
+    "type": "text"
+  },
+  "old__program_restart_needed": "Ca urmare a modificărilor efectuate, programul trebuie închis.",
+  "@old__program_restart_needed": {
+    "type": "text"
+  },
+  "old__redprice_column": "Preț redus",
+  "@old__redprice_column": {
+    "type": "text"
+  },
+  "old__redprices_identically": "Prețuri reduse identice",
+  "@old__redprices_identically": {
+    "type": "text"
+  },
+  "old__scan_dhl_parcel": "Conține pachet DHL\nVă rugăm scanați pachetele",
+  "@old__scan_dhl_parcel": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level": "Trebuie scanat la un nivel mai jos!",
+  "@old__scan_on_lower_level": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level_2": "Trebuie scanat la nivelul listelor de încărcare",
+  "@old__scan_on_lower_level_2": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level_3": "Trebuie scanat la nivelul avizului de livrare",
+  "@old__scan_on_lower_level_3": {
+    "type": "text"
+  },
+  "old__scan_on_lower_level_4": "Trebuie scanat la nivelul articolelor",
+  "@old__scan_on_lower_level_4": {
+    "type": "text"
+  },
+  "old__set_as_missing_item": "Doriți într-adevăr să înregistrați articolul ca defect?",
+  "@old__set_as_missing_item": {
+    "type": "text"
+  },
+  "old__shipping_order_column": "Comandă de expediere",
+  "@old__shipping_order_column": {
+    "type": "text"
+  },
+  "old__shipping_order_items_commited": "Au fost confirmate {value0} articole, dar trebuie scanat și la un nivel mai jos!",
+  "@old__shipping_order_items_commited": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "old__shipping_order_unknown": "Această comandă de expediere a fost deja scanată sau este necunoscută.",
+  "@old__shipping_order_unknown": {
+    "type": "text"
+  },
+  "old__size_column": "Mărime",
+  "@old__size_column": {
+    "type": "text"
+  },
+  "old__stock_arrival_delivery_note_form": "Intrare marfă (LS)",
+  "@old__stock_arrival_delivery_note_form": {
+    "type": "text"
+  },
+  "old__stock_arrival_item_form": "Intrare marfă (articol)",
+  "@old__stock_arrival_item_form": {
+    "type": "text"
+  },
+  "old__stock_arrival_item_scanned_unknown": "Acest articol a fost deja scanat, este necunoscut sau figurează pe un alt aviz de livrare.",
+  "@old__stock_arrival_item_scanned_unknown": {
+    "type": "text"
+  },
+  "old__stock_arrival_shipping_order_form": "Intrare marfă (transport)",
+  "@old__stock_arrival_shipping_order_form": {
+    "type": "text"
+  },
+  "old__stock_type_column": "HL",
+  "@old__stock_type_column": {
+    "type": "text"
+  },
+  "old__storage_address_not_set": "Adresa depozitului nu a fost încă introdusă!",
+  "@old__storage_address_not_set": {
+    "type": "text"
+  },
+  "old__synchronizing_date": "Sincronizare dată",
+  "@old__synchronizing_date": {
+    "type": "text"
+  },
+  "old__version_text": "Versiune:",
+  "@old__version_text": {
+    "type": "text"
+  },
+  "old__wrong_product": "Articol greșit",
+  "@old__wrong_product": {
+    "type": "text"
+  },
+  "old__yes": "Da",
+  "@old__yes": {
+    "type": "text"
+  },
+  "pick_instruction__amount": "Număr",
+  "@pick_instruction__amount": {
+    "type": "text"
+  },
+  "pick_instruction__dest_branch": "Unitate țintă",
+  "@pick_instruction__dest_branch": {
+    "type": "text"
+  },
+  "pick_instruction__error_during_save": "Eroare la memorarea datelor",
+  "@pick_instruction__error_during_save": {
+    "type": "text"
+  },
+  "pick_instruction__error_no_more_data": "Nu există alte date",
+  "@pick_instruction__error_no_more_data": {
+    "type": "text"
+  },
+  "pick_instruction__floor": "Nivel",
+  "@pick_instruction__floor": {
+    "type": "text"
+  },
+  "pick_instruction__hold_current_item": "Doriți într-adevăr să păstrați poziția actuală?",
+  "@pick_instruction__hold_current_item": {
+    "type": "text"
+  },
+  "pick_instruction__hold_item": "Suspendare",
+  "@pick_instruction__hold_item": {
+    "type": "text"
+  },
+  "pick_instruction__image": "Imagine",
+  "@pick_instruction__image": {
+    "type": "text"
+  },
+  "pick_instruction__is_stock_empty_now": "Locul de amplasare\n{value0}\n este gol acum?",
+  "@pick_instruction__is_stock_empty_now": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "pick_instruction__item_already_picked": "Articolul a fost deja sortat",
+  "@pick_instruction__item_already_picked": {
+    "type": "text"
+  },
+  "pick_instruction__item_doesnt_exists_in_system": "Conform sistemului, piesa nu este disponibilă",
+  "@pick_instruction__item_doesnt_exists_in_system": {
+    "type": "text"
+  },
+  "pick_instruction__item_has_wrong_size": "Articolul are mărimea greșită",
+  "@pick_instruction__item_has_wrong_size": {
+    "type": "text"
+  },
+  "pick_instruction__item_invalid_place": "Conform sistemului acest articol nu se află în acest loc de amplasare.\n Efectuați totuși sortarea?",
+  "@pick_instruction__item_invalid_place": {
+    "type": "text"
+  },
+  "pick_instruction__item_number": "Nr. articole",
+  "@pick_instruction__item_number": {
+    "type": "text"
+  },
+  "pick_instruction__item_number2": "Nr. articole",
+  "@pick_instruction__item_number2": {
+    "type": "text"
+  },
+  "pick_instruction__level": "Etaj",
+  "@pick_instruction__level": {
+    "type": "text"
+  },
+  "pick_instruction__no_manual_input": "Nu este permisă introducerea manuală sau scanarea secțiunii mesei de ambalare. Este necesar prețul normal.",
+  "@pick_instruction__no_manual_input": {
+    "type": "text"
+  },
+  "pick_instruction__no_more_items_hold": "Păstrarea nu este posibilă. A fost atins numărul maxim.",
+  "@pick_instruction__no_more_items_hold": {
+    "type": "text"
+  },
+  "pick_instruction__picking_complete": "Sortarea este finalizată. Vă rugăm să transferați datele către locul cu datele pentru stocuri din meniul de bază casă.",
+  "@pick_instruction__picking_complete": {
+    "type": "text"
+  },
+  "pick_instruction__place": "Loc de amplasare",
+  "@pick_instruction__place": {
+    "type": "text"
+  },
+  "pick_instruction__product_has_sizes_with_different_redprices_print_anyway": "Articolul are mărimi cu informații diferite referitoare la preț. Doriți totuși să continuați imprimarea prețului redus?",
+  "@pick_instruction__product_has_sizes_with_different_redprices_print_anyway": {
+    "type": "text"
+  },
+  "pick_instruction__product_variation_not_for_picking": "Articol/mărime nu este prevăzut/ă pentru sortarea din acest loc de amplasare",
+  "@pick_instruction__product_variation_not_for_picking": {
+    "type": "text"
+  },
+  "pick_instruction__reprint": "Imprimare nouă",
+  "@pick_instruction__reprint": {
+    "type": "text"
+  },
+  "pick_instruction__room": "Spațiu",
+  "@pick_instruction__room": {
+    "type": "text"
+  },
+  "pick_instruction__row": "Rând",
+  "@pick_instruction__row": {
+    "type": "text"
+  },
+  "pick_instruction__selling_area": "VÂNZARE",
+  "@pick_instruction__selling_area": {
+    "type": "text"
+  },
+  "pick_instruction__set_as_missing_item": "Doriți într-adevăr să înregistrați articolul ca defect?",
+  "@pick_instruction__set_as_missing_item": {
+    "type": "text"
+  },
+  "pick_instruction__wrong_product": "Articol greșit",
+  "@pick_instruction__wrong_product": {
+    "type": "text"
+  },
+  "red_prices_old__no_pricecode_availalbe": "Codul de preț pentru noul preț redus nu a putut fi determinat.",
+  "@red_prices_old__no_pricecode_availalbe": {
+    "type": "text"
+  },
+  "red_prices_old__no_redprice_info_available": "Nu există info preț redus",
+  "@red_prices_old__no_redprice_info_available": {
+    "type": "text"
+  },
+  "stock_arrival__all_shipping_orders_scanned": "Au fost scanate toate comenzile de expediere.",
+  "@stock_arrival__all_shipping_orders_scanned": {
+    "type": "text"
+  },
+  "stock_arrival__correction_delivery_2": "Aviz de livrare corectat\n Vă rugăm scanați la nivelul articolelor",
+  "@stock_arrival__correction_delivery_2": {
+    "type": "text"
+  },
+  "stock_arrival__invalid_barcode_scanned_2": "Comanda de expediere \"{value0}\" nu există sau a fost deja scanată",
+  "@stock_arrival__invalid_barcode_scanned_2": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_3": "Lista de încărcare \"{value0}\" nu există sau a fost deja scanată",
+  "@stock_arrival__invalid_barcode_scanned_3": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_4": "Avizul de livrare \"{value0}\" nu există sau a fost deja scanat",
+  "@stock_arrival__invalid_barcode_scanned_4": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_5": "Articolul \"{value0}\" nu există sau a fost deja scanat",
+  "@stock_arrival__invalid_barcode_scanned_5": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__invalid_barcode_scanned_6": "Pachetul \"{value0}\" nu există sau a fost deja scanat",
+  "@stock_arrival__invalid_barcode_scanned_6": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__scan_dhl_parcel": "Conține pachet DHL\nVă rugăm scanați pachetele",
+  "@stock_arrival__scan_dhl_parcel": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level": "Trebuie scanat la un nivel mai jos!",
+  "@stock_arrival__scan_on_lower_level": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level_2": "Trebuie scanat la nivelul listelor de încărcare",
+  "@stock_arrival__scan_on_lower_level_2": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level_3": "Trebuie scanat la nivelul avizului de livrare",
+  "@stock_arrival__scan_on_lower_level_3": {
+    "type": "text"
+  },
+  "stock_arrival__scan_on_lower_level_4": "Trebuie scanat la nivelul articolelor",
+  "@stock_arrival__scan_on_lower_level_4": {
+    "type": "text"
+  },
+  "stocktaking__amount_not_reached": "Numărul de bucăți definit nu a fost atins!",
+  "@stocktaking__amount_not_reached": {
+    "type": "text"
+  },
+  "stocktaking__amount_of_storage_locations_reached": "S-a atins obiectivul pentru locul de amplasare",
+  "@stocktaking__amount_of_storage_locations_reached": {
+    "type": "text"
+  },
+  "stocktaking__ask_force_closing": "Doriți să închideți circuitul de acord?",
+  "@stocktaking__ask_force_closing": {
+    "type": "text"
+  },
+  "stocktaking__employee_number": "Nr. personal:",
+  "@stocktaking__employee_number": {
+    "type": "text"
+  },
+  "stocktaking__exit_impossible": "Circuitul de acord nu a fost încheiat! Nu este posibilă finalizarea!",
+  "@stocktaking__exit_impossible": {
+    "type": "text"
+  },
+  "stocktaking__invalid_amount_of_storage_locations": "S-a introdus un număr nevalabil pentru locuri de amplasare",
+  "@stocktaking__invalid_amount_of_storage_locations": {
+    "type": "text"
+  },
+  "stocktaking__invalid_record_forecast": "Redare obiectiv număr de bucăți nevalabil!",
+  "@stocktaking__invalid_record_forecast": {
+    "type": "text"
+  },
+  "stocktaking__inventory_area": "Circuit de acord:",
+  "@stocktaking__inventory_area": {
+    "type": "text"
+  },
+  "stocktaking__target_amount_reached": "S-a atins obiectivul pentru numărul de bucăți",
+  "@stocktaking__target_amount_reached": {
+    "type": "text"
+  },
+  "stocktaking__updated_existing_record_selling_area": "Articolul era deja disponibil. Ștergere înregistrare veche.",
+  "@stocktaking__updated_existing_record_selling_area": {
+    "type": "text"
+  },
+  "warentransport__picklist_maximum_amount_of_items_reached": "Numărul maxim a fost atins. Vă rugăm citiți datele de pe aparat.",
+  "@warentransport__picklist_maximum_amount_of_items_reached": {
+    "type": "text"
+  }
+}

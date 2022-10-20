@@ -21,7 +21,7 @@ class _FormPageState extends State<FormPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Playground')),
-      backgroundColor: const Color(kMenuBackgroundColor),
+      backgroundColor: const Color(PicklisteThemeConstants.kMenuBackgroundColor),
       body: GestureDetector(
         onTap: (() {
           focusNode.unfocus();

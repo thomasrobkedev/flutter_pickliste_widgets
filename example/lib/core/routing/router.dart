@@ -53,6 +53,7 @@ final router = GoRouter(
           child: PicklisteDiagnosticsPage(
             getItems: () => getItems(),
             houseNumberURL: getHouseNumberURL(withPic: true),
+            toastText: 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait
           ),
         );
       },

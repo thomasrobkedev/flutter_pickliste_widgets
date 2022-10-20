@@ -28,7 +28,7 @@ class PicklisteSwitch extends StatelessWidget {
         child: SwitchListTile(
           key: testKey,
           contentPadding: const EdgeInsets.only(left: 8),
-          title: Text(title, style: TextStyle(color: enabled ? Colors.black : const Color(kLabelColor), fontSize: kFontSizeDefault)),
+          title: Text(title, style: TextStyle(color: enabled ? Colors.black : const Color(PicklisteThemeConstants.kLabelColor), fontSize: PicklisteThemeConstants.kFontSizeDefault)),
           value: value,
           onChanged: enabled ? onChanged : null,
           dense: true,

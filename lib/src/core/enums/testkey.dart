@@ -1,6 +1,6 @@
 // ignore_for_file: constant_identifier_names
 
-enum Testkey {
+enum PicklisteTestkey {
   diagnostics_page,
   diagnostics_toast,
 
@@ -11,7 +11,7 @@ enum Testkey {
   flushForm_error,
 }
 
-extension TestkeyExtension on Testkey {
+extension TestkeyExtension on PicklisteTestkey {
   String get enabled => toString();
   String get disabled => '${toString()}--disabled';
   String get active => '${toString()}--active';

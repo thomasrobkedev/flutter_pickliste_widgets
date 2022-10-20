@@ -24,7 +24,7 @@ class PicklisteIntroContainer extends StatelessWidget {
             text,
             key: testKey,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: kFontSizeMedium),
+            style: const TextStyle(fontSize: PicklisteThemeConstants.kFontSizeMedium),
           ),
         );
 
@@ -34,8 +34,8 @@ class PicklisteIntroContainer extends StatelessWidget {
       width: double.infinity,
       padding: padding ?? const EdgeInsets.all(16),
       decoration: const BoxDecoration(
-        color: Color(kMenuBackgroundColor),
-        border: Border(bottom: BorderSide(color: Color(kContainerBorderColor))),
+        color: Color(PicklisteThemeConstants.kMenuBackgroundColor),
+        border: Border(bottom: BorderSide(color: Color(PicklisteThemeConstants.kContainerBorderColor))),
       ),
       child: child,
     );

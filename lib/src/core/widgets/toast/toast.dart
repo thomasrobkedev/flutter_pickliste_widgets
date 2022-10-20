@@ -95,15 +95,15 @@ class _PicklisteToastState extends State<PicklisteToast> {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
         color: widget.color,
-        border: const Border(bottom: BorderSide(color: Color(kContainerBorderColor))),
+        border: const Border(bottom: BorderSide(color: Color(PicklisteThemeConstants.kContainerBorderColor))),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          _text(widget.textLarge, kFontSizeLarge, '_large'),
-          _text(widget.textMedium, kFontSizeMedium, '_medium'),
-          _text(widget.textDefault, kFontSizeDefault, '_default'),
+          _text(widget.textLarge, PicklisteThemeConstants.kFontSizeLarge, '_large'),
+          _text(widget.textMedium, PicklisteThemeConstants.kFontSizeMedium, '_medium'),
+          _text(widget.textDefault, PicklisteThemeConstants.kFontSizeDefault, '_default'),
         ],
       ),
     );

@@ -15,11 +15,13 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
   static const routeName = '/pickliste/diagnostics';
   final PicklisteDiagnosticsItems Function() getItems;
   final String houseNumberURL;
+  final String toastText;
 
   const PicklisteDiagnosticsPage({
     Key? key,
     required this.getItems,
     required this.houseNumberURL,
+    required this.toastText,
   }) : super(key: key);
 
   @override
@@ -31,7 +33,7 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
           return WillPopScope(
             onWillPop: () async => state.isFinished,
             child: Scaffold(
-              key: ValueKey(Testkey.diagnostics_page.toString()),
+              key: ValueKey(PicklisteTestkey.diagnostics_page.toString()),
               appBar: AppBar(title: const Text('Diagnose')), // AppLocalizations.of(context)!.menu__app_settings_diagnostics
               body: _body(context, state),
               backgroundColor: Colors.white,
@@ -67,10 +69,10 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
     };
 
     return PicklisteToast(
-      textLarge: 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait,
+      textLarge: toastText, // 'Bitte warten', // AppLocalizations.of(context)!.general__please_wait,
       color: const Color.fromARGB(255, 255, 175, 0),
       autoTimeout: state.isFinished ? 1000 : null,
-      testKey: ValueKey(Testkey.diagnostics_toast.toString()),
+      testKey: ValueKey(PicklisteTestkey.diagnostics_toast.toString()),
       child: InteractiveViewer(
         panEnabled: false,
         minScale: 0.5,

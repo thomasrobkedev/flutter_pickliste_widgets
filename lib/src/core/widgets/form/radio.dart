@@ -32,7 +32,7 @@ class PicklisteRadio<T> extends StatelessWidget {
           contentPadding: const EdgeInsets.only(left: 8),
           title: Container(
             transform: Matrix4.translationValues(-8, 0, 0),
-            child: Text(title, style: TextStyle(color: enabled ? Colors.black : const Color(kLabelColor), fontSize: kFontSizeDefault)),
+            child: Text(title, style: TextStyle(color: enabled ? Colors.black : const Color(PicklisteThemeConstants.kLabelColor), fontSize: PicklisteThemeConstants.kFontSizeDefault)),
           ),
           value: value,
           groupValue: groupValue,

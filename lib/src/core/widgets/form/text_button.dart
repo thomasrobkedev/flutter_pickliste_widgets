@@ -69,12 +69,12 @@ class PicklisteTextButton extends StatelessWidget {
       return Colors.white;
     }
 
-    return enabled ? Colors.black : const Color(kLabelColor);
+    return enabled ? Colors.black : const Color(PicklisteThemeConstants.kLabelColor);
   }
 
   Color _getBackgroundColor(BuildContext context) {
     if (primary) {
-      return const Color(kThemePrimaryColor).withOpacity(enabled ? 1 : 0.5);
+      return const Color(PicklisteThemeConstants.kThemePrimaryColor).withOpacity(enabled ? 1 : 0.5);
     }
 
     if (danger) {
@@ -92,7 +92,7 @@ class PicklisteTextButton extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(
           fontWeight: FontWeight.normal,
-          fontSize: kFontSizeDefault,
+          fontSize: PicklisteThemeConstants.kFontSizeDefault,
           color: _getColor(),
         ),
       ),

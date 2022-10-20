@@ -9,15 +9,15 @@ class PicklisteThemeCreator {
       fontFamily: 'Roboto',
       visualDensity: VisualDensity.adaptivePlatformDensity,
       appBarTheme: const AppBarTheme(centerTitle: true, systemOverlayStyle: SystemUiOverlayStyle.light, toolbarHeight: 50),
-      scaffoldBackgroundColor: const Color(kThemeBackgroundColor),
-      dividerTheme: const DividerThemeData(space: 0, color: Color(kDividerColor), indent: 0, thickness: 0.5),
+      scaffoldBackgroundColor: const Color(PicklisteThemeConstants.kThemeBackgroundColor),
+      dividerTheme: const DividerThemeData(space: 0, color: Color(PicklisteThemeConstants.kDividerColor), indent: 0, thickness: 0.5),
       primarySwatch: primarySwatch,
-      textSelectionTheme: TextSelectionThemeData(selectionColor: const Color(kThemePrimaryColor).withOpacity(0.2)),
+      textSelectionTheme: TextSelectionThemeData(selectionColor: const Color(PicklisteThemeConstants.kThemePrimaryColor).withOpacity(0.2)),
       textTheme: const TextTheme(
-        headline1: TextStyle(fontSize: kFontSizeLarge, fontWeight: FontWeight.normal, color: Colors.white),
-        caption: TextStyle(fontSize: kFontSizeMedium, color: Color(kTileTextColor), fontWeight: FontWeight.w300),
-        bodyText1: TextStyle(fontSize: kFontSizeDefault),
-        bodyText2: TextStyle(fontSize: kFontSizeDefault),
+        headline1: TextStyle(fontSize: PicklisteThemeConstants.kFontSizeLarge, fontWeight: FontWeight.normal, color: Colors.white),
+        caption: TextStyle(fontSize: PicklisteThemeConstants.kFontSizeMedium, color: Color(PicklisteThemeConstants.kTileTextColor), fontWeight: FontWeight.w300),
+        bodyText1: TextStyle(fontSize: PicklisteThemeConstants.kFontSizeDefault),
+        bodyText2: TextStyle(fontSize: PicklisteThemeConstants.kFontSizeDefault),
       ),
     );
   }
@@ -34,9 +34,9 @@ class PicklisteThemeCreator {
 
   static TextStyle get tableData {
     return const TextStyle(
-      color: Color(kMonoSpaceColor),
+      color: Color(PicklisteThemeConstants.kMonoSpaceColor),
       fontFamily: 'RobotoMono',
-      fontSize: kFontSizeDefault - 1,
+      fontSize: PicklisteThemeConstants.kFontSizeDefault - 1,
     );
   }
 
@@ -46,19 +46,19 @@ class PicklisteThemeCreator {
 
   static TextStyle get logging {
     return const TextStyle(
-      color: Color(kMonoSpaceColor),
+      color: Color(PicklisteThemeConstants.kMonoSpaceColor),
       fontFamily: 'RobotoMono',
-      fontSize: kFontSizeSmall - 2,
+      fontSize: PicklisteThemeConstants.kFontSizeSmall - 2,
     );
   }
 
   static MaterialColor get primarySwatch {
-    final r = const Color(kThemePrimaryColor).red;
-    final g = const Color(kThemePrimaryColor).green;
-    final b = const Color(kThemePrimaryColor).blue;
+    final r = const Color(PicklisteThemeConstants.kThemePrimaryColor).red;
+    final g = const Color(PicklisteThemeConstants.kThemePrimaryColor).green;
+    final b = const Color(PicklisteThemeConstants.kThemePrimaryColor).blue;
 
     return MaterialColor(
-      kThemePrimaryColor,
+      PicklisteThemeConstants.kThemePrimaryColor,
       {50: -0.9, 100: -0.8, 200: -0.6, 300: -0.4, 400: -0.2, 500: 0, 600: 0.1, 700: 0.2, 800: 0.3, 900: 0.4}.map(
         (shade, shadeFactor) => MapEntry(
           shade,

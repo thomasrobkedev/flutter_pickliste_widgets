@@ -11,9 +11,9 @@ class PicklisteFlushForm<T> extends StatefulWidget {
   final BuildContext context;
   final String introText;
   final String labelText;
-  final String? okText;
-  final String? cancelText;
-  final String? failText;
+  final String okText;
+  final String cancelText;
+  final String failText;
   final bool password;
   final TextInputType? keyboardType;
   final List<TextInputFormatter>? inputFormatters;
@@ -24,9 +24,9 @@ class PicklisteFlushForm<T> extends StatefulWidget {
     required this.context,
     required this.introText,
     required this.labelText,
-    this.okText,
-    this.cancelText,
-    this.failText,
+    required this.okText,
+    required this.cancelText,
+    required this.failText,
     this.password = false,
     this.keyboardType = TextInputType.text,
     this.inputFormatters,
@@ -94,7 +94,7 @@ class _PicklisteFlushFormState<T> extends State<PicklisteFlushForm<T>> {
                 labelText: widget.labelText,
                 onFieldSubmitted: (String _) => submit(context),
                 onTapSelectAll: false,
-                testKey: ValueKey(Testkey.flushForm_input.toString()),
+                testKey: ValueKey(PicklisteTestkey.flushForm_input.toString()),
               ),
               Visibility(
                 visible: !isValid,
@@ -102,16 +102,16 @@ class _PicklisteFlushFormState<T> extends State<PicklisteFlushForm<T>> {
                   width: double.infinity,
                   padding: const EdgeInsets.only(left: 16),
                   child: Text(
-                    key: ValueKey(Testkey.flushForm_error.toString()),
-                    widget.failText ?? 'Ungültige Eingabe', // AppLocalizations.of(context)!.general__invalid_input,
-                    style: const TextStyle(color: Colors.red, fontSize: kFontSizeSmall),
+                    key: ValueKey(PicklisteTestkey.flushForm_error.toString()),
+                    widget.failText,
+                    style: const TextStyle(color: Colors.red, fontSize: PicklisteThemeConstants.kFontSizeSmall),
                   ),
                 ),
               ),
             ],
           ),
         ),
-        const Divider(color: Color(kContainerBorderColor)),
+        const Divider(color: Color(PicklisteThemeConstants.kContainerBorderColor)),
         SizedBox(
           height: 48,
           child: Row(
@@ -119,19 +119,18 @@ class _PicklisteFlushFormState<T> extends State<PicklisteFlushForm<T>> {
             children: [
               _button(
                 context,
-                caption: widget.okText ?? 'OK', // AppLocalizations.of(context)!.general__ok,
+                caption: widget.okText,
                 primary: true,
                 onPressed: () => submit(context),
-                testKey: ValueKey(Testkey.flushForm_ok.toString()),
+                testKey: ValueKey(PicklisteTestkey.flushForm_ok.toString()),
               ),
-              const VerticalDivider(color: Color(kContainerBorderColor)),
+              const VerticalDivider(color: Color(PicklisteThemeConstants.kContainerBorderColor)),
               _button(
                 context,
-                // TODO: Übersetzung
-                caption: widget.cancelText ?? 'Abbrechen', // AppLocalizations.of(context)!.general__cancel,
+                caption: widget.cancelText,
                 primary: false,
                 onPressed: () => close(context, null),
-                testKey: ValueKey(Testkey.flushForm_cancel.toString()),
+                testKey: ValueKey(PicklisteTestkey.flushForm_cancel.toString()),
               ),
             ],
           ),
@@ -153,7 +152,7 @@ class _PicklisteFlushFormState<T> extends State<PicklisteFlushForm<T>> {
         onPressed: onPressed,
         style: TextButton.styleFrom(
           foregroundColor: primary ? Colors.white : Colors.black,
-          textStyle: const TextStyle(fontSize: kFontSizeDefault),
+          textStyle: const TextStyle(fontSize: PicklisteThemeConstants.kFontSizeDefault),
           backgroundColor: primary ? Theme.of(context).primaryColor : Colors.white,
           shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
           side: BorderSide.none,

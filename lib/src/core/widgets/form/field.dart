@@ -21,9 +21,9 @@ class PicklisteField extends StatelessWidget {
       alignment: Alignment.center,
       margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: enabled ? const Color(kTileBackgroundColor) : Colors.transparent,
+        color: enabled ? const Color(PicklisteThemeConstants.kTileBackgroundColor) : Colors.transparent,
         borderRadius: BorderRadius.circular(6),
-        border: Border.all(color: const Color(kTileBorderColor)),
+        border: Border.all(color: const Color(PicklisteThemeConstants.kTileBorderColor)),
       ),
       child: Stack(
         alignment: Alignment.bottomLeft,

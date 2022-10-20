@@ -14,7 +14,7 @@ extension ListDivided on Iterable {
               visible: entry.key < entries.length - (withLastLine ? 0 : 1),
               child: Divider(
                 height: 0,
-                color: const Color(kDividerColor),
+                color: const Color(PicklisteThemeConstants.kDividerColor),
                 indent: indent,
                 endIndent: endIndent,
                 thickness: 0.5,

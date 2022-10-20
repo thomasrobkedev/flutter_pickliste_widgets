@@ -16,7 +16,7 @@ class _FlushPageState extends State<FlushPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: const Text('Flush-Form')),
-      backgroundColor: const Color(kMenuBackgroundColor),
+      backgroundColor: const Color(PicklisteThemeConstants.kMenuBackgroundColor),
       body: SingleChildScrollView(
         child: Container(
           padding: const EdgeInsets.all(8),
@@ -30,6 +30,9 @@ class _FlushPageState extends State<FlushPage> {
                     context: context,
                     introText: 'Bitte Passwort eingeben', // AppLocalizations.of(context)!.general__please_enter_password,
                     labelText: 'Passwort', // AppLocalizations.of(context)!.general__password,
+                    okText: 'OK', // AppLocalizations.of(context)!.general__ok,
+                    cancelText: 'Abbrechen', // AppLocalizations.of(context)!.general__cancel,
+                    failText: 'Falsches Passwort', // AppLocalizations.of(context)!.general__wrong_password,
                     password: true,
                     isValid: (String value) => value == 'dev',
                     getSuccessReturnValue: (String _) => true,
@@ -47,8 +50,11 @@ class _FlushPageState extends State<FlushPage> {
                 onPressed: () async {
                   final result = await PicklisteFlushForm<String>(
                     context: context,
-                    introText: 'Bitte Artikelnummer eingeben',
-                    labelText: 'Artikelnummer', // AppLocalizations.of(context)!.general__product_number,
+                    introText: 'Manuelle Eingabe der Auslagerungs-Nr.', // AppLocalizations.of(context)!.elbw_incoming__manual_input_of_outgoing_number,
+                    labelText: 'Auslagerungs-Nr.', // AppLocalizations.of(context)!.elbw_incoming__outgoing_number_short,
+                    okText: 'OK', // AppLocalizations.of(context)!.general__ok,
+                    cancelText: 'Abbrechen', // AppLocalizations.of(context)!.general__cancel,
+                    failText: 'Manuelle Eingabe stimmt nicht mit Barcode überein.', // AppLocalizations.of(context)!.elbw_incoming__manual_input_missmatch,
                     isValid: (String value) => value == '79',
                     getSuccessReturnValue: (String value) => value,
                     keyboardType: TextInputType.number,

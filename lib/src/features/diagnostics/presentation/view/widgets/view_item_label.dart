@@ -18,7 +18,7 @@ class PicklisteDiagnosticsViewItemLabel extends StatelessWidget {
     return Text(
       label,
       key: ValueKey('${item.testKexPrefix}_label'),
-      style: const TextStyle(fontSize: kFontSizeSmall, fontWeight: FontWeight.bold),
+      style: const TextStyle(fontSize: PicklisteThemeConstants.kFontSizeSmall, fontWeight: FontWeight.bold),
     );
   }
 }

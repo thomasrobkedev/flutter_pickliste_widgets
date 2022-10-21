@@ -59,7 +59,7 @@ class PicklisteTextButton extends StatelessWidget {
               ),
               Visibility(
                 visible: icon == null && iconData != null,
-                child: SizedBox(width: 32, child: Icon(iconData, color: _getColor(), size: 20)),
+                child: SizedBox(width: 32, child: Icon(iconData, color: _getColor(), size: 24)),
               ),
               Flexible(child: _buildText(caption)),
             ],

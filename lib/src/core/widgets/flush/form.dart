@@ -72,7 +72,7 @@ class _PicklisteFlushFormState<T> extends State<PicklisteFlushForm<T>> {
   Widget build(BuildContext context) {
     return PicklisteFlushContainer(
       context: context,
-      testKey: const ValueKey('flush-form'),
+      testKey: ValueKey(PicklisteTestkey.flushForm.toString()),
       child: _content(context),
     );
   }

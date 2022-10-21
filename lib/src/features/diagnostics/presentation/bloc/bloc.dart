@@ -1,5 +1,3 @@
-import 'dart:async';
-
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../domain/models/item.dart';
@@ -31,12 +29,12 @@ class PicklisteDiagnosticsBloc extends Bloc<PicklisteDiagnosticsEvent, Pickliste
     on<PicklisteDiagnosticsItemUpdated>(_onItemUpdated);
   }
 
-  Future<void> initialize(PicklisteDiagnosticsItems items) async {
+  void initialize(PicklisteDiagnosticsItems items) {
     _saveItems(items);
     add(PicklisteDiagnosticsInitialized());
   }
 
-  Future<void> _onInitialized(PicklisteDiagnosticsInitialized event, Emitter<PicklisteDiagnosticsState> emit) async {
+  void _onInitialized(PicklisteDiagnosticsInitialized event, Emitter<PicklisteDiagnosticsState> emit) {
     emit(
       state.copyWith(
         status: _Status.initialized,
@@ -46,7 +44,7 @@ class PicklisteDiagnosticsBloc extends Bloc<PicklisteDiagnosticsEvent, Pickliste
     _getValues(this);
   }
 
-  Future<void> _onItemUpdated(PicklisteDiagnosticsItemUpdated event, Emitter<PicklisteDiagnosticsState> emit) async {
+  void _onItemUpdated(PicklisteDiagnosticsItemUpdated event, Emitter<PicklisteDiagnosticsState> emit) {
     _updateItem(event.item, event.state, event.value);
     emit(
       state.copyWith(

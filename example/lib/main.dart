@@ -3,15 +3,25 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 
 import 'core/routing/router.dart';
+import 'core/utils/environment.dart';
 import 'injector.dart';
 
-void main() async {
-  await initializeDependencies();
-  runApp(const MyApp());
+void main([List<String> args = const []]) {
+  Dependencies().init();
+  injector.get<Environment>().isTestingEnviroment = args.contains('TEST') || const String.fromEnvironment('TEST') == '1';
+
+  runApp(MyApp(isTestingEnvironment: injector.get<Environment>().isTestingEnviroment, key: UniqueKey()));
+}
+
+void startOrRestart() {
+  main(['TEST']);
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  final bool isTestingEnvironment;
+
+  const MyApp({this.isTestingEnvironment = false, super.key});
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(

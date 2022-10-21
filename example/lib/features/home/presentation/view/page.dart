@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../core/enums/testkey.dart';
 import '../../../../core/extensions/build_context.dart';
 
 class HomePage extends StatefulWidget {
@@ -15,13 +16,13 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('Flutter Pickliste Widgets'),
-      ),
+      key: ValueKey(Testkey.home_page.toString()),
+      appBar: AppBar(title: const Text('Flutter Pickliste Widgets')),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
             ListTile(
+              key: ValueKey(Testkey.home_menuCounter.toString()),
               title: const Text('Flutter Demo'),
               leading: const FlutterLogo(),
               trailing: const Icon(Icons.navigate_next),

@@ -12,6 +12,7 @@ export 'src/core/widgets/form/switch.dart';
 export 'src/core/widgets/form/text_button.dart';
 export 'src/core/widgets/form/text_field.dart';
 export 'src/core/widgets/toast/toast.dart';
+export 'src/features/diagnostics/data/repository.dart';
 export 'src/features/diagnostics/domain/models/item.dart';
 export 'src/features/diagnostics/domain/models/items.dart';
 export 'src/features/diagnostics/domain/use_cases/get_date_time.dart';

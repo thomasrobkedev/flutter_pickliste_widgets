@@ -9,6 +9,7 @@ import '../../features/diagnostics/domain/use_cases/get_items.dart';
 import '../../features/flush/presentation/view/page.dart';
 import '../../features/form/presentation/view/page.dart';
 import '../../features/home/presentation/view/page.dart';
+import '../../injector.dart';
 
 final router = GoRouter(
   debugLogDiagnostics: true,
@@ -45,17 +46,16 @@ final router = GoRouter(
     GoRoute(
       path: '/diagnostics',
       pageBuilder: (context, state) {
-        // use cases (TODO: via injector rein reichen)
-        final getItems = DiagnosticsUseCaseGetItems();
+        final getItems = DiagnosticsUseCaseGetItems(injector(), injector(), injector());
         final getHouseNumberURL = DiagnosticsUseCaseGetHouseNumberURL();
 
         return CupertinoPage<void>(
           key: state.pageKey,
           child: PicklisteDiagnosticsPage(
-            title: 'Diagnose',
+            title: context.loc.menu__app_settings_diagnostics,
             toastText: context.loc.general__please_wait,
             infoText: context.loc.diagnostic__instructions,
-            getItems: () => getItems(),
+            items: getItems(),
             houseNumberURL: getHouseNumberURL(withPic: true),
           ),
         );

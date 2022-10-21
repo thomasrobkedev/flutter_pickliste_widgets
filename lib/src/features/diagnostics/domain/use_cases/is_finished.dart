@@ -1,7 +1,11 @@
 import '../../data/repository.dart';
 
 class PicklisteDiagnosticsUseCaseIsFinished {
+  final PicklisteDiagnosticsRepository _repository;
+
+  PicklisteDiagnosticsUseCaseIsFinished(this._repository);
+
   bool call() {
-    return PicklisteDiagnosticsRepository().fetchAll().isFinished;
+    return _repository.fetchAll().isFinished;
   }
 }

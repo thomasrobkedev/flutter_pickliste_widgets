@@ -7,47 +7,46 @@ import '../../domain/models/items.dart';
 import '../../domain/use_cases/get_items.dart';
 import '../../domain/use_cases/get_values.dart';
 import '../../domain/use_cases/is_finished.dart';
-import '../../domain/use_cases/set_items.dart';
+import '../../domain/use_cases/save_items.dart';
 import '../../domain/use_cases/update_item.dart';
 
 part 'events.dart';
 part 'state.dart';
 
 class PicklisteDiagnosticsBloc extends Bloc<PicklisteDiagnosticsEvent, PicklisteDiagnosticsState> {
-  final PicklisteDiagnosticsItems Function() getItems;
-  final String houseNumberURL;
+  final PicklisteDiagnosticsUseCaseGetItems _getItems;
+  final PicklisteDiagnosticsUseCaseSaveItems _saveItems;
+  final PicklisteDiagnosticsUseCaseUpdateItem _updateItem;
+  final PicklisteDiagnosticsUseCaseGetValues _getValues;
+  final PicklisteDiagnosticsUseCaseIsFinished _isFinished;
 
-  // use cases (TODO: via injector rein reichen)
-  final _getItems = PicklisteDiagnosticsUseCaseGetItems();
-  final _setItems = PicklisteDiagnosticsUseCaseSetItems();
-  final _updateItem = PicklisteDiagnosticsUseCaseUpdateItem();
-  final _isFinished = PicklisteDiagnosticsUseCaseIsFinished();
-  late final PicklisteDiagnosticsUseCaseGetValues _getValues;
-
-  PicklisteDiagnosticsBloc(this.getItems, this.houseNumberURL) : super(PicklisteDiagnosticsState()) {
-    on<PicklisteDiagnosticsInitialized>(_onPicklisteDiagnosticsInitialized);
-    on<PicklisteDiagnosticsItemUpdated>(_onPicklisteDiagnosticsItemUpdated);
-
-    _getValues = PicklisteDiagnosticsUseCaseGetValues(this);
-    _initialize();
+  PicklisteDiagnosticsBloc(
+    this._getItems,
+    this._saveItems,
+    this._updateItem,
+    this._getValues,
+    this._isFinished,
+  ) : super(PicklisteDiagnosticsState()) {
+    on<PicklisteDiagnosticsInitialized>(_onInitialized);
+    on<PicklisteDiagnosticsItemUpdated>(_onItemUpdated);
   }
 
-  void _initialize() async {
-    _setItems(getItems());
+  Future<void> initialize(PicklisteDiagnosticsItems items) async {
+    _saveItems(items);
     add(PicklisteDiagnosticsInitialized());
   }
 
-  Future<void> _onPicklisteDiagnosticsInitialized(PicklisteDiagnosticsInitialized event, Emitter<PicklisteDiagnosticsState> emit) async {
+  Future<void> _onInitialized(PicklisteDiagnosticsInitialized event, Emitter<PicklisteDiagnosticsState> emit) async {
     emit(
       state.copyWith(
         status: _Status.initialized,
         items: _getItems(),
       ),
     );
-    _getValues();
+    _getValues(this);
   }
 
-  Future<void> _onPicklisteDiagnosticsItemUpdated(PicklisteDiagnosticsItemUpdated event, Emitter<PicklisteDiagnosticsState> emit) async {
+  Future<void> _onItemUpdated(PicklisteDiagnosticsItemUpdated event, Emitter<PicklisteDiagnosticsState> emit) async {
     _updateItem(event.item, event.state, event.value);
     emit(
       state.copyWith(

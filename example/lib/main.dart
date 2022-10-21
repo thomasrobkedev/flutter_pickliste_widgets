@@ -3,8 +3,10 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 
 import 'core/routing/router.dart';
+import 'injector.dart';
 
-void main() {
+void main() async {
+  await initializeDependencies();
   runApp(const MyApp());
 }
 

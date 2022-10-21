@@ -8,6 +8,7 @@ import '../../../../core/widgets/misc/intro_container.dart';
 import '../../../../core/widgets/toast/toast.dart';
 import '../../domain/models/item.dart';
 import '../../domain/models/items.dart';
+import '../../injector.dart';
 import '../bloc/bloc.dart';
 import 'widgets/view_item.dart';
 
@@ -15,22 +16,24 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
   final String title;
   final String toastText;
   final String infoText;
-  final PicklisteDiagnosticsItems Function() getItems;
+  final PicklisteDiagnosticsItems items;
   final String houseNumberURL;
 
-  const PicklisteDiagnosticsPage({
+  PicklisteDiagnosticsPage({
     Key? key,
     required this.title,
     required this.toastText,
     required this.infoText,
-    required this.getItems,
+    required this.items,
     required this.houseNumberURL,
-  }) : super(key: key);
+  }) : super(key: key) {
+    initializePicklisteDianosticsDependencies();
+  }
 
   @override
   Widget build(BuildContext context) {
     return BlocProvider(
-      create: (context) => PicklisteDiagnosticsBloc(getItems, houseNumberURL),
+      create: (context) => PicklisteDiagnosticsBloc(injector(), injector(), injector(), injector(), injector())..initialize(items),
       child: BlocBuilder<PicklisteDiagnosticsBloc, PicklisteDiagnosticsState>(
         builder: (context, state) {
           return WillPopScope(

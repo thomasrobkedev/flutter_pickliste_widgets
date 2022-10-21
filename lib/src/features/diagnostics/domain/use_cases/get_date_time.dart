@@ -4,6 +4,6 @@ class PicklisteDiagnosticsUseCaseGetDateTime {
     final match = RegExp(r'^(-)?(\d+)(?::00|(:\d+))').firstMatch(DateTime.now().timeZoneOffset.toString());
     final timezone = match == null ? '' : (match.group(1) ?? '+') + match.group(2).toString() + (match.group(3) ?? 'h');
 
-    return '$iso8601 $timezone';
+    return Future.value('$iso8601 $timezone');
   }
 }

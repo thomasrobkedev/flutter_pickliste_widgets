@@ -3,21 +3,21 @@ import '../../presentation/bloc/bloc.dart';
 import '../models/item.dart';
 
 class PicklisteDiagnosticsUseCaseGetValues {
-  final PicklisteDiagnosticsBloc bloc;
+  final PicklisteDiagnosticsRepository _repository;
 
-  PicklisteDiagnosticsUseCaseGetValues(this.bloc);
+  PicklisteDiagnosticsUseCaseGetValues(this._repository);
 
-  void call() {
-    final items = PicklisteDiagnosticsRepository().fetchAll();
+  void call(PicklisteDiagnosticsBloc bloc) {
+    final items = _repository.fetchAll();
 
     for (var item in items.props) {
       if (item.getValue != null) {
-        _getValue(item, item.getValue!);
+        _getValue(bloc, item, item.getValue!);
       }
     }
   }
 
-  Future<void> _getValue(PicklisteDiagnosticsItem item, Future<String?> Function() getValue) async {
+  Future<void> _getValue(PicklisteDiagnosticsBloc bloc, PicklisteDiagnosticsItem item, Future<String?> Function() getValue) async {
     try {
       final value = await getValue().timeout(const Duration(seconds: 10));
       bloc.add(PicklisteDiagnosticsItemUpdated(item, PicklisteDiagnosticsItemState.success, value.toString()));

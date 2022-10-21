@@ -5,15 +5,16 @@ import 'package:package_info_plus/package_info_plus.dart';
 import 'get_house_number_url.dart';
 
 class DiagnosticsUseCaseGetItems {
+  final PicklisteDiagnosticsUseCaseGetDateTime _getDateTime;
+  final PicklisteDiagnosticsUseCaseGetHttp _getHttp;
+  final DiagnosticsUseCaseGetHouseNumberURL _getHouseNumberURL;
+
+  DiagnosticsUseCaseGetItems(this._getDateTime, this._getHttp, this._getHouseNumberURL);
+
   PicklisteDiagnosticsItems call() {
     final items = PicklisteDiagnosticsItems();
 
-    // use cases (TODO: via injector rein reichen)
-    final getDateTime = PicklisteDiagnosticsUseCaseGetDateTime();
-    final getHttp = PicklisteDiagnosticsUseCaseGetHttp();
-    final getHouseNumberURL = DiagnosticsUseCaseGetHouseNumberURL();
-
-    items.dateTime.getValue = () => getDateTime();
+    items.dateTime.getValue = () => _getDateTime();
     items.versionBuild.getValue = () => _getVersionBuild();
     items.house.getValue = () => Future.value('471');
     items.houseDevice.getValue = () => Future.value('471 / 1');
@@ -26,9 +27,9 @@ class DiagnosticsUseCaseGetItems {
     items.dns1.getValue = () => Future.value('192.168.1.1');
     items.dns2.getValue = () => Future.value('192.168.1.2');
     items.routes.getValue = () => Future.value('Destination -> Gateway\nfe80:: -> ::\n:: -> fe80::2\n');
-    items.httpPuC.getValue = () => getHttp('https://www.peek-cloppenburg.de');
-    items.httpHousePic.getValue = () => getHttp(getHouseNumberURL(withPic: true));
-    items.httpHouse.getValue = () => getHttp(getHouseNumberURL(withPic: false));
+    items.httpPuC.getValue = () => _getHttp('https://www.peek-cloppenburg.de');
+    items.httpHousePic.getValue = () => _getHttp(_getHouseNumberURL(withPic: true));
+    items.httpHouse.getValue = () => _getHttp(_getHouseNumberURL(withPic: false));
 
     return items;
   }

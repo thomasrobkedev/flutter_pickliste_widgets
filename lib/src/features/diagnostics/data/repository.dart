@@ -2,12 +2,6 @@ import '../domain/models/item.dart';
 import '../domain/models/items.dart';
 
 class PicklisteDiagnosticsRepository {
-  static PicklisteDiagnosticsRepository _instance = PicklisteDiagnosticsRepository._internal();
-  factory PicklisteDiagnosticsRepository() => _instance;
-  PicklisteDiagnosticsRepository._internal() {
-    _instance = this;
-  }
-
   late PicklisteDiagnosticsItems _items;
 
   void setItems(PicklisteDiagnosticsItems items) => _items = items;

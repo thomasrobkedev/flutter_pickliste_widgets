@@ -13,6 +13,8 @@ class FlushPage extends StatefulWidget {
 
 class _FlushPageState extends State<FlushPage> {
   final textEditingController = TextEditingController();
+  bool passwordValid = false;
+  String outgoingNumber = '';
 
   @override
   Widget build(BuildContext context) {
@@ -27,6 +29,7 @@ class _FlushPageState extends State<FlushPage> {
               PicklisteTextButton(
                 testKey: const ValueKey('flush-form-button-bool'),
                 caption: 'Passwort (bool)',
+                icon: passwordValid ? const Icon(Icons.check, color: Colors.green, size: 24) : null,
                 onPressed: () async {
                   final result = await PicklisteFlushForm<bool>(
                     context: context,
@@ -43,12 +46,16 @@ class _FlushPageState extends State<FlushPage> {
                       LengthLimitingTextInputFormatter(16),
                     ],
                   ).show();
-                  setState(() => textEditingController.text = result == true ? 'valid' : '---');
+
+                  if (result != null) {
+                    setState(() => passwordValid = true);
+                  }
                 },
               ),
               PicklisteTextButton(
                 testKey: const ValueKey('flush-form-button-string'),
                 caption: 'Artikelnummer (String)',
+                number: outgoingNumber,
                 onPressed: () async {
                   final result = await PicklisteFlushForm<String>(
                     context: context,
@@ -57,7 +64,7 @@ class _FlushPageState extends State<FlushPage> {
                     okText: context.loc.general__ok,
                     cancelText: context.loc.general__cancel,
                     failText: context.loc.elbw_incoming__manual_input_missmatch,
-                    isValid: (String value) => value == '79',
+                    isValid: (String _) => true,
                     getSuccessReturnValue: (String value) => value,
                     keyboardType: TextInputType.number,
                     inputFormatters: [
@@ -65,16 +72,11 @@ class _FlushPageState extends State<FlushPage> {
                       FilteringTextInputFormatter.allow(RegExp(r'[0-9]')),
                     ],
                   ).show();
-                  setState(() => textEditingController.text = result ?? '---');
+
+                  if (result != null) {
+                    setState(() => outgoingNumber = result);
+                  }
                 },
-              ),
-              PicklisteTextField(
-                enabled: false,
-                labelText: 'Rückgabewert',
-                testKey: const ValueKey('flush-form-return-value'),
-                controller: textEditingController,
-                keyboardType: TextInputType.text,
-                onFieldSubmitted: (value) => setState(() {}),
               ),
             ],
           ),

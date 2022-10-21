@@ -49,7 +49,7 @@ class _FormPageState extends State<FormPage> {
                   caption: 'Reset Playground',
                   primary: true,
                   enabled: !isReset,
-                  icon: Icons.restore,
+                  iconData: Icons.restore,
                   onPressed: () => setState(
                     () {
                       focusNode.unfocus();

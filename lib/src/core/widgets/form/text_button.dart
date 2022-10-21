@@ -6,13 +6,14 @@ import 'field.dart';
 class PicklisteTextButton extends StatelessWidget {
   final ValueKey<String>? testKey;
   final String caption;
-  final int? number;
+  final dynamic number;
   final bool enabled;
   final bool primary;
   final bool danger;
   final bool loading;
   final Function()? onPressed;
-  final IconData? icon;
+  final Icon? icon;
+  final IconData? iconData;
 
   const PicklisteTextButton({
     Key? key,
@@ -25,6 +26,7 @@ class PicklisteTextButton extends StatelessWidget {
     this.loading = false,
     this.onPressed,
     this.icon,
+    this.iconData,
   }) : super(key: key);
 
   @override
@@ -40,7 +42,6 @@ class PicklisteTextButton extends StatelessWidget {
           style: TextButton.styleFrom(
             padding: EdgeInsets.fromLTRB(number == null ? 8 : 0, 0, 8, 0),
             backgroundColor: _getBackgroundColor(context),
-            // shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
           ),
           child: Row(
             children: [
@@ -54,7 +55,11 @@ class PicklisteTextButton extends StatelessWidget {
               ),
               Visibility(
                 visible: icon != null,
-                child: SizedBox(width: 32, child: Icon(icon, color: _getColor(), size: 20)),
+                child: SizedBox(width: 32, child: icon),
+              ),
+              Visibility(
+                visible: icon == null && iconData != null,
+                child: SizedBox(width: 32, child: Icon(iconData, color: _getColor(), size: 20)),
               ),
               Flexible(child: _buildText(caption)),
             ],

@@ -356,7 +356,7 @@
   "@general__euro": {
     "type": "text"
   },
-  "general__first_time_setup": "Ersteinrichtung\nBitte pflegen Sie Geräte- und Hausnummer in den Grundeinstellungen. Beladen Sie das Gerät anschließend mit Daten.",
+  "general__first_time_setup": "Ersteinrichtung\n\nBitte pflegen Sie Geräte- und Hausnummer in den Grundeinstellungen. Beladen Sie das Gerät anschließend mit Daten.",
   "@general__first_time_setup": {
     "type": "text"
   },

@@ -3,7 +3,7 @@ import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../core/enums/testkey.dart';
-import '../../../../core/extensions/build_context.dart';
+import '../../../../core/utils/translations.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -22,26 +22,28 @@ class _HomePageState extends State<HomePage> {
         child: Column(
           children: <Widget>[
             ListTile(
-              key: ValueKey(Testkey.home_menuCounter.toString()),
               title: const Text('Flutter Demo'),
               leading: const FlutterLogo(),
               trailing: const Icon(Icons.navigate_next),
               onTap: () => context.push('/counter'),
             ),
             ListTile(
+              key: ValueKey(Testkey.home_menuFlushForm.toString()),
               title: const Text('FlushForm'),
               leading: const Icon(Icons.slideshow),
               trailing: const Icon(Icons.navigate_next),
-              onTap: () => context.push('/flush'),
+              onTap: () => context.push('/flush-form'),
             ),
             ListTile(
+              key: ValueKey(Testkey.home_menuFormElements.toString()),
               title: const Text('Formular Elemente'),
               leading: const Icon(Icons.slideshow),
               trailing: const Icon(Icons.navigate_next),
-              onTap: () => context.push('/form'),
+              onTap: () => context.push('/form-elements'),
             ),
             ListTile(
-              title: Text(context.loc.menu__app_settings_diagnostics),
+              key: ValueKey(Testkey.home_menuDiagnostics.toString()),
+              title: Text(T()().menu__app_settings_diagnostics),
               leading: const Icon(Icons.query_stats),
               trailing: const Icon(Icons.navigate_next),
               onTap: () => context.push('/diagnostics'),

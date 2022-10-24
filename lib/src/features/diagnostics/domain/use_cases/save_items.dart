@@ -6,7 +6,7 @@ class PicklisteDiagnosticsUseCaseSaveItems {
 
   PicklisteDiagnosticsUseCaseSaveItems(this._repository);
 
-  void call(PicklisteDiagnosticsItems items) {
-    _repository.setItems(items);
+  Future<void> call(PicklisteDiagnosticsItems items) async {
+    await _repository.setItems(items);
   }
 }

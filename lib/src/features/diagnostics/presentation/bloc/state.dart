@@ -1,26 +1,27 @@
-part of 'bloc.dart';
+import 'package:equatable/equatable.dart';
+import 'package:flutter/material.dart';
 
-enum _Status { initializing, initialized, finished }
+import '../../domain/models/items.dart';
 
-class PicklisteDiagnosticsState {
-  final _Status status;
+@immutable
+abstract class PicklisteDiagnosticsState extends Equatable {
+  @override
+  List<Object> get props => [];
+}
+
+class PicklisteDiagnosticsLoading extends PicklisteDiagnosticsState {}
+
+class PicklisteDiagnosticsPending extends PicklisteDiagnosticsState {
   final PicklisteDiagnosticsItems items;
 
-  PicklisteDiagnosticsState([
-    this.status = _Status.initializing,
-    PicklisteDiagnosticsItems? items,
-  ]) : items = items ?? PicklisteDiagnosticsItems();
+  PicklisteDiagnosticsPending(this.items);
 
-  PicklisteDiagnosticsState copyWith({
-    _Status? status,
-    PicklisteDiagnosticsItems? items,
-  }) {
-    return PicklisteDiagnosticsState(
-      status ?? this.status,
-      items ?? this.items,
-    );
-  }
+  @override
+  List<Object> get props => [items, DateTime.now()];
+}
 
-  bool get isLoading => status == _Status.initializing;
-  bool get isFinished => status == _Status.finished;
+class PicklisteDiagnosticsFinished extends PicklisteDiagnosticsState {
+  final PicklisteDiagnosticsItems items;
+
+  PicklisteDiagnosticsFinished(this.items);
 }

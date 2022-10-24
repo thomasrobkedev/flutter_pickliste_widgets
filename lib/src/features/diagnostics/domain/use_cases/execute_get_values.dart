@@ -1,23 +1,24 @@
 import '../../data/repository.dart';
 import '../../presentation/bloc/bloc.dart';
+import '../../presentation/bloc/event.dart';
 import '../models/item.dart';
 
-class PicklisteDiagnosticsUseCaseGetValues {
+class PicklisteDiagnosticsUseCaseExecuteGetValues {
   final PicklisteDiagnosticsRepository _repository;
 
-  PicklisteDiagnosticsUseCaseGetValues(this._repository);
+  PicklisteDiagnosticsUseCaseExecuteGetValues(this._repository);
 
-  void call(PicklisteDiagnosticsBloc bloc) {
-    final items = _repository.fetchAll();
+  Future<void> call(PicklisteDiagnosticsBloc bloc) async {
+    final items = await _repository.fetchAll();
 
     for (var item in items.props) {
       if (item.getValue != null) {
-        _getValue(bloc, item, item.getValue!);
+        _execute(bloc, item, item.getValue!);
       }
     }
   }
 
-  Future<void> _getValue(PicklisteDiagnosticsBloc bloc, PicklisteDiagnosticsItem item, Future<String?> Function() getValue) async {
+  Future<void> _execute(PicklisteDiagnosticsBloc bloc, PicklisteDiagnosticsItem item, Future<String?> Function() getValue) async {
     try {
       final value = await getValue().timeout(const Duration(seconds: 10));
       bloc.add(PicklisteDiagnosticsItemUpdated(item, PicklisteDiagnosticsItemState.success, value.toString()));

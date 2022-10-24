@@ -1,4 +1,4 @@
-part of '../main_test.dart';
+// part of '../main_test.dart';
 
 class Test {
   final int? _enabled;
@@ -17,7 +17,7 @@ class Group {
     _execute(_enabled);
   }
 
-  void _execute(int? enabled) {
+  Future<void> _execute(int? enabled) async {
     for (var item in _tests) {
       if (item is Group) {
         item._execute(item._enabled ?? enabled);
@@ -27,7 +27,7 @@ class Group {
       if (item is Test) {
         if ((item._enabled ?? enabled ?? 1) > 0) {
           try {
-            item._func();
+            await item._func();
           } catch (_) {
             // scanner.stop();
             // printer.stop();

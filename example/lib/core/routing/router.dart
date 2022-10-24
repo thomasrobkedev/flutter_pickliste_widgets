@@ -2,14 +2,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../core/extensions/build_context.dart';
 import '../../features/counter/presentation/view/page.dart';
 import '../../features/diagnostics/domain/use_cases/get_house_number_url.dart';
 import '../../features/diagnostics/domain/use_cases/get_items.dart';
 import '../../features/flush/presentation/view/page.dart';
 import '../../features/form/presentation/view/page.dart';
 import '../../features/home/presentation/view/page.dart';
-import '../../injector.dart';
+import '../utils/translations.dart';
 
 final router = GoRouter(
   debugLogDiagnostics: true,
@@ -30,14 +29,14 @@ final router = GoRouter(
       ),
     ),
     GoRoute(
-      path: '/form',
+      path: '/form-elements',
       pageBuilder: (context, state) => CupertinoPage<void>(
         key: state.pageKey,
         child: const FormPage(),
       ),
     ),
     GoRoute(
-      path: '/flush',
+      path: '/flush-form',
       pageBuilder: (context, state) => CupertinoPage<void>(
         key: state.pageKey,
         child: const FlushPage(),
@@ -46,15 +45,15 @@ final router = GoRouter(
     GoRoute(
       path: '/diagnostics',
       pageBuilder: (context, state) {
-        final getItems = DiagnosticsUseCaseGetItems(injector(), injector(), injector());
+        final getItems = DiagnosticsUseCaseGetItems();
         final getHouseNumberURL = DiagnosticsUseCaseGetHouseNumberURL();
 
         return CupertinoPage<void>(
           key: state.pageKey,
           child: PicklisteDiagnosticsPage(
-            title: context.loc.menu__app_settings_diagnostics,
-            toastText: context.loc.general__please_wait,
-            infoText: context.loc.diagnostic__instructions,
+            title: T()().menu__app_settings_diagnostics,
+            toastText: T()().general__please_wait,
+            infoText: T()().diagnostic__instructions,
             items: getItems(),
             houseNumberURL: getHouseNumberURL(withPic: true),
           ),

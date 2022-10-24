@@ -2,7 +2,15 @@
 
 enum Testkey {
   home_page,
-  home_menuCounter,
+  home_menuFlushForm,
+  home_menuFormElements,
+  home_menuDiagnostics,
+
+  flushForm_page,
+
+  formElements_page,
+
+  diagnostics_page,
 
   flushForm,
   flushForm_ok,

@@ -10,15 +10,10 @@ Future<void> startupApp(WidgetTester activeTester) async {
   await tester.pumpAndSettle();
 }
 
-String header(dynamic instance, [String? suffix]) {
-  return '\n${'-' * 60}\n${instance.runtimeType.toString()}${suffix == null ? '' : ' / $suffix'}';
+String description(dynamic instance, String text) {
+  // ignore: prefer_interpolation_to_compose_strings
+  return '\n' + ('_' * 60) + '\n' + instance.runtimeType.toString() + (text == '' ? '' : ' / $text') + '\n' + ('‾' * 60);
 }
-
-/// Requires the app to be in the main menu
-Future<void> resetToBaseData() async {}
-
-/// Requires the app to be in the main menu
-Future<void> resetToAllData() async {}
 
 /// tap + long press
 /// --------------------------------------------------
@@ -26,22 +21,22 @@ Future<void> resetToAllData() async {}
 Future<void> tap(dynamic testkey) async {
   await tester.ensureVisible(_find(testkey));
   await tester.tap(_find(testkey));
-  await _waitForLoadingBarToGetInactive();
+  await tester.pumpAndSettle();
 }
 
 Future<void> tapAndExpect(dynamic tapTestkey, dynamic expectTestkey) async {
   await tap(tapTestkey);
-  expect(find.byKey(ValueKey(_tts(expectTestkey))), findsWidgets);
+  expect(_find(expectTestkey), findsWidgets);
 }
 
 Future<void> tapAndExpectText(dynamic tapTestkey, String expectText) async {
   await tap(tapTestkey);
-  expect(find.textContaining(expectText), findsWidgets);
+  expect(_findText(expectText), findsWidgets);
 }
 
 Future<void> tapOnText(String text) async {
   await tester.tap(find.widgetWithText(IndexedSemantics, text));
-  await _waitForLoadingBarToGetInactive();
+  await tester.pumpAndSettle();
 }
 
 Future<void> tapOnScreenTopLeftCorner() async {
@@ -50,42 +45,42 @@ Future<void> tapOnScreenTopLeftCorner() async {
 }
 
 Future<void> longPress(dynamic longPressTestkey) async {
-  await tester.longPress(find.byKey(ValueKey(_tts(longPressTestkey))));
-  await _waitForLoadingBarToGetInactive();
+  await tester.longPress(_find(longPressTestkey));
+  await tester.pumpAndSettle();
 }
 
 Future<void> longPressAndExpect(dynamic longPressTestkey, dynamic expectTestkey) async {
   await longPress(longPressTestkey);
-  expect(find.byKey(ValueKey(_tts(expectTestkey))), findsWidgets);
+  expect(_find(expectTestkey), findsWidgets);
 }
 
 Future<void> longPressAndExpectText(dynamic longPressTestkey, String expectText) async {
   await longPress(longPressTestkey);
-  expect(find.textContaining(expectText), findsWidgets);
+  expect(_findText(expectText), findsWidgets);
 }
 
 /// text input
 /// --------------------------------------------------
 
 Future<void> enterText(dynamic inputTestkey, String inputText) async {
-  await tester.enterText(find.byKey(ValueKey(_tts(inputTestkey))), inputText);
+  await tester.enterText(_find(inputTestkey), inputText);
   await tester.pumpAndSettle();
 }
 
 Future<void> enterTextAndSubmit(dynamic inputTestkey, String inputText) async {
   await enterText(inputTestkey, inputText);
   await tester.testTextInput.receiveAction(TextInputAction.done);
-  await _waitForLoadingBarToGetInactive();
+  await tester.pumpAndSettle();
 }
 
 Future<void> enterTextAndSubmitAndExpect(dynamic inputTestkey, String inputText, dynamic expectTestkey) async {
   await enterTextAndSubmit(inputTestkey, inputText);
-  expect(find.byKey(ValueKey(_tts(expectTestkey))), findsWidgets);
+  expect(_find(expectTestkey), findsWidgets);
 }
 
 Future<void> enterTextAndSubmitAndExpectText(dynamic inputTestkey, String inputText, String expectText) async {
   await enterTextAndSubmit(inputTestkey, inputText);
-  expect(find.textContaining(expectText), findsWidgets);
+  expect(_findText(expectText), findsWidgets);
 }
 
 Future<void> deleteText(dynamic inputTestkey, int characterCount) async {
@@ -100,7 +95,7 @@ Future<void> deleteText(dynamic inputTestkey, int characterCount) async {
 /// --------------------------------------------------
 
 Future<void> equalsString(dynamic inputTestkey, String text) async {
-  final w = tester.widget(find.byKey(ValueKey(_tts(inputTestkey))));
+  final w = tester.widget(_find(inputTestkey).first);
 
   if (w is TextFormField) {
     return expect(w.controller!.text, text);
@@ -112,7 +107,7 @@ Future<void> equalsString(dynamic inputTestkey, String text) async {
 }
 
 Future<void> hintEqualsString(dynamic inputTestkey, String text) async {
-  final w = tester.widget(find.byKey(ValueKey(_tts(inputTestkey))));
+  final w = tester.widget(_find(inputTestkey));
 
   if (w is PicklisteTextField) {
     return expect(w.hint, text);
@@ -125,7 +120,7 @@ Future<void> hintEqualsString(dynamic inputTestkey, String text) async {
 
 Future<void> checkObscuredPassword(dynamic inputTestkey, bool expectedResult) async {
   final passwordTextFormField = find.descendant(
-    of: find.byKey(ValueKey(_tts(inputTestkey))),
+    of: _find(inputTestkey),
     matching: find.byType(EditableText),
   );
   final input = tester.widget<EditableText>(passwordTextFormField);
@@ -163,15 +158,9 @@ Future<void> goBack() async {
   await tester.pumpAndSettle();
 }
 
-Future<void> leavePageAndResetApp() async {
-  await goHome();
-  await resetToAllData();
-}
-
 Future<void> goHome() async {
   while (find.byType(BackButton).evaluate().isNotEmpty) {
-    await tester.tap(find.byType(BackButton));
-    await tester.pumpAndSettle();
+    await goBack();
   }
 
   expect(find.byType(HomePage), findsOneWidget);
@@ -180,13 +169,12 @@ Future<void> goHome() async {
 /// util
 /// --------------------------------------------------
 
-/// Converts a Testkey or String into a String
-String _tts(dynamic testkeyOrString) {
-  return testkeyOrString is Testkey ? testkeyOrString.toString() : testkeyOrString;
+Finder _find(dynamic testkey) {
+  return find.byKey(ValueKey(testkey.toString()));
 }
 
-Finder _find(dynamic testkeyOrString) {
-  return find.byKey(ValueKey(testkeyOrString.toString()));
+Finder _findText(Pattern expectText) {
+  return find.textContaining(expectText);
 }
 
 Future<void> wait(int seconds) async {
@@ -203,14 +191,8 @@ Future<void> scroll(dynamic testkey, double delta) async {
   await tester.pumpAndSettle();
 }
 
-Future<void> _waitForLoadingBarToGetInactive() async {
-  for (var i = 0; i < 5; i++) {
-    await tester.pumpAndSettle(const Duration(milliseconds: 100));
-  }
-}
-
 Future<String> getTextFromField(dynamic inputTestkey) async {
-  final w = tester.widget(find.byKey(ValueKey(_tts(inputTestkey))));
+  final w = tester.widget(_find(inputTestkey));
   if (w is TextFormField) {
     return w.controller!.text;
   } else if (w is Text) {

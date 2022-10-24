@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 
 import '../../../domain/models/item.dart';
 
-class PicklisteDiagnosticsViewItemErrorMessage extends StatelessWidget {
+class PicklisteDiagnosticsItemErrorMessage extends StatelessWidget {
   final PicklisteDiagnosticsItem item;
 
-  const PicklisteDiagnosticsViewItemErrorMessage({
+  const PicklisteDiagnosticsItemErrorMessage({
     Key? key,
     required this.item,
   }) : super(key: key);

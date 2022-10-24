@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 
-import '../../../../core/extensions/build_context.dart';
+import '../../../../core/utils/translations.dart';
 
 class FlushPage extends StatefulWidget {
   const FlushPage({super.key});
@@ -12,9 +12,7 @@ class FlushPage extends StatefulWidget {
 }
 
 class _FlushPageState extends State<FlushPage> {
-  final textEditingController = TextEditingController();
-  bool passwordValid = false;
-  String outgoingNumber = '';
+  final flushFormTextfield = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -28,18 +26,17 @@ class _FlushPageState extends State<FlushPage> {
             children: [
               PicklisteTextButton(
                 testKey: const ValueKey('flush-form-button-bool'),
-                caption: 'Passwort (bool)',
-                icon: passwordValid ? const Icon(Icons.check, color: Colors.green, size: 24) : null,
+                caption: '${T()().general__password} (bool)',
                 onPressed: () async {
                   final result = await PicklisteFlushForm<bool>(
                     context: context,
-                    introText: context.loc.general__please_enter_password,
-                    labelText: context.loc.general__password,
-                    okText: context.loc.general__ok,
-                    cancelText: context.loc.general__cancel,
-                    failText: context.loc.general__wrong_password,
+                    introText: T()().general__please_enter_password,
+                    labelText: T()().general__password,
+                    okText: T()().general__ok,
+                    cancelText: T()().general__cancel,
+                    failText: T()().general__wrong_password,
                     password: true,
-                    isValid: (String value) => value == 'dev',
+                    isValid: (String value) => value == 'test123',
                     getSuccessReturnValue: (String _) => true,
                     keyboardType: TextInputType.visiblePassword,
                     inputFormatters: [
@@ -47,24 +44,21 @@ class _FlushPageState extends State<FlushPage> {
                     ],
                   ).show();
 
-                  if (result != null) {
-                    setState(() => passwordValid = true);
-                  }
+                  setState(() => flushFormTextfield.text = result == true ? 'valid' : '---');
                 },
               ),
               PicklisteTextButton(
                 testKey: const ValueKey('flush-form-button-string'),
-                caption: 'Artikelnummer (String)',
-                number: outgoingNumber,
+                caption: '${T()().elbw_incoming__outgoing_number_short} (String)',
                 onPressed: () async {
                   final result = await PicklisteFlushForm<String>(
                     context: context,
-                    introText: context.loc.elbw_incoming__manual_input_of_outgoing_number,
-                    labelText: context.loc.elbw_incoming__outgoing_number_short,
-                    okText: context.loc.general__ok,
-                    cancelText: context.loc.general__cancel,
-                    failText: context.loc.elbw_incoming__manual_input_missmatch,
-                    isValid: (String _) => true,
+                    introText: T()().elbw_incoming__manual_input_of_outgoing_number,
+                    labelText: T()().elbw_incoming__outgoing_number_short,
+                    okText: T()().general__ok,
+                    cancelText: T()().general__cancel,
+                    failText: T()().elbw_incoming__manual_input_missmatch,
+                    isValid: (String value) => value == '79',
                     getSuccessReturnValue: (String value) => value,
                     keyboardType: TextInputType.number,
                     inputFormatters: [
@@ -73,10 +67,16 @@ class _FlushPageState extends State<FlushPage> {
                     ],
                   ).show();
 
-                  if (result != null) {
-                    setState(() => outgoingNumber = result);
-                  }
+                  setState(() => flushFormTextfield.text = result ?? '---');
                 },
+              ),
+              PicklisteTextField(
+                enabled: false,
+                labelText: 'Rückgabewert',
+                testKey: const ValueKey('flush-form-return-value'),
+                controller: flushFormTextfield,
+                keyboardType: TextInputType.text,
+                onFieldSubmitted: (value) => setState(() {}),
               ),
             ],
           ),

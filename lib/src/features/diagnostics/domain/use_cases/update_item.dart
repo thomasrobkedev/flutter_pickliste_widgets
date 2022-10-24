@@ -6,7 +6,7 @@ class PicklisteDiagnosticsUseCaseUpdateItem {
 
   PicklisteDiagnosticsUseCaseUpdateItem(this._repository);
 
-  void call(PicklisteDiagnosticsItem item, PicklisteDiagnosticsItemState state, String value) {
-    _repository.updateItem(item, state: state, value: value);
+  Future<void> call(PicklisteDiagnosticsItem item, PicklisteDiagnosticsItemState state, String value) async {
+    await _repository.updateItem(item, state: state, value: value);
   }
 }

@@ -6,7 +6,7 @@ class PicklisteDiagnosticsUseCaseGetItems {
 
   PicklisteDiagnosticsUseCaseGetItems(this._repository);
 
-  PicklisteDiagnosticsItems call() {
-    return _repository.fetchAll();
+  Future<PicklisteDiagnosticsItems> call() async {
+    return await _repository.fetchAll();
   }
 }

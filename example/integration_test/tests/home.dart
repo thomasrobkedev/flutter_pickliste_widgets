@@ -5,11 +5,10 @@ import '../main_test.dart';
 
 class Home {
   void call() {
-    testWidgets(header(this), (tester) async {
+    testWidgets(description(this, ''), (tester) async {
       await startupApp(tester);
 
       await exists(Testkey.home_page);
-      await tap(Testkey.home_menuCounter);
 
       await goHome();
     });

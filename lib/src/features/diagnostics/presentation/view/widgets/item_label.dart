@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import '../../../../../core/theme/theme_const.dart';
 import '../../../domain/models/item.dart';
 
-class PicklisteDiagnosticsViewItemLabel extends StatelessWidget {
+class PicklisteDiagnosticsItemLabel extends StatelessWidget {
   final PicklisteDiagnosticsItem item;
   final String label;
 
-  const PicklisteDiagnosticsViewItemLabel({
+  const PicklisteDiagnosticsItemLabel({
     Key? key,
     required this.item,
     required this.label,

@@ -1,4 +1,7 @@
-part of 'main_test.dart';
+import '_classes/test.dart';
+import 'tests/diagnostics.dart';
+import 'tests/flush_form.dart';
+import 'tests/home.dart';
 
 typedef Root = Group;
 
@@ -8,4 +11,6 @@ typedef Root = Group;
 
 final tests = Root(1, [
   Test(null, Home()),
+  Test(null, FlushForm()),
+  Test(null, Diagnostics()),
 ]);

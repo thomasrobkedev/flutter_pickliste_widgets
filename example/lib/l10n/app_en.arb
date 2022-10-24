@@ -170,7 +170,7 @@
   "@general__euro": {
     "type": "text"
   },
-  "general__first_time_setup": "Initial setup\nPlease set device and house number in the basic settings. Then load the device with data.",
+  "general__first_time_setup": "Initial setup\n\nPlease set device and house number in the basic settings. Then upload data to the device.",
   "@general__first_time_setup": {
     "type": "text"
   },

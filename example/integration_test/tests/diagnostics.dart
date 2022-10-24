@@ -2,7 +2,7 @@ import 'package:example/core/enums/testkey.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../main_test.dart';
+import '../functions.dart';
 
 class Diagnostics {
   void call() {

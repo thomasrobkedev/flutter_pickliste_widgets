@@ -3,7 +3,7 @@ import 'package:example/core/utils/translations.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import '../main_test.dart';
+import '../functions.dart';
 
 class FlushForm {
   void call() {

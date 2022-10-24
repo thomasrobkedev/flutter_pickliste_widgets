@@ -15,7 +15,7 @@ class DependencyInjection {
     }
 
     // Übersetzungen initalisieren
-    T(MyApp.scaffoldMessengerKey);
+    T().init(MyApp.scaffoldMessengerKey);
 
     // Environment
     di.registerSingleton<Environment>(Environment());

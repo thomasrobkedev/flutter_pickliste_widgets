@@ -24,7 +24,7 @@ class FlushForm {
         PicklisteTestkey.flushForm,
       );
       await tap(PicklisteTestkey.flushForm_cancel);
-      await notExists('Bitte Passwort eingeben');
+      await notExists(T()().general__please_enter_password);
       await equalsString('flush-form-return-value', '---');
 
       // User klickt auf Password button, User gibt falsche Password ein. Dann klickt auf OK
@@ -53,7 +53,7 @@ class FlushForm {
       // Die Flushform verschwindet.
       await tapAndExpect('flush-form-button-bool', PicklisteTestkey.flushForm);
       await enterTextAndSubmit(PicklisteTestkey.flushForm_input, 'test123');
-      await notExists('Bitte Passwort eingeben');
+      await notExists(T()().general__please_enter_password);
       await equalsString('flush-form-return-value', 'valid');
 
       // User klickt auf password button, User gibt Password ein und klickt auf 'togglePasswordVisibility'
@@ -73,8 +73,9 @@ class FlushForm {
       // User klickt auf 'Product number' button, dann klickt auf Abbrechen. Die Flushform verschwindet.
       // wir kommen auf vorherige Seite
       await tapAndExpect('flush-form-button-string', PicklisteTestkey.flushForm);
+      await hasText(T()().elbw_incoming__manual_input_of_outgoing_number);
       await tap(PicklisteTestkey.flushForm_cancel);
-      await notExists('Bitte Artikelnummer eingeben');
+      await notExists(PicklisteTestkey.flushForm);
       await equalsString('flush-form-return-value', '---');
 
       // User klickt auf 'Product number' button, User gibt falsche Artikelnummer ein. Dann klickt auf OK
@@ -102,8 +103,9 @@ class FlushForm {
       // User klickt auf 'Product number' button, User gibt richtige Artikelnummer ein and submit.
       // Die Flushform verschwindet.
       await tapAndExpect('flush-form-button-string', PicklisteTestkey.flushForm);
+      await hasText(T()().elbw_incoming__manual_input_of_outgoing_number);
       await enterTextAndSubmit(PicklisteTestkey.flushForm_input, '79');
-      await notExists('Bitte Artikelnummer eingeben');
+      await notExists(PicklisteTestkey.flushForm);
       await equalsString('flush-form-return-value', '79');
 
       await goHome();

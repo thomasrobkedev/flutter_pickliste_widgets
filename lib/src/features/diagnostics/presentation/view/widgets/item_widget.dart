@@ -9,11 +9,13 @@ import 'item_value.dart';
 class PicklisteDiagnosticsItemWidget extends StatelessWidget {
   final String label;
   final PicklisteDiagnosticsItem item;
+  final bool isRoutes;
 
   const PicklisteDiagnosticsItemWidget({
     Key? key,
     required this.label,
     required this.item,
+    required this.isRoutes,
   }) : super(key: key);
 
   @override
@@ -27,10 +29,10 @@ class PicklisteDiagnosticsItemWidget extends StatelessWidget {
             children: [
               PicklisteDiagnosticsItemIcon(item: item),
               PicklisteDiagnosticsItemLabel(item: item, label: label),
-              const Spacer(),
+              const SizedBox(width: 16),
               Visibility(
                 visible: item.state != PicklisteDiagnosticsItemState.fail && item.value.isNotEmpty,
-                child: PicklisteDiagnosticsItemValue(item: item),
+                child: PicklisteDiagnosticsItemValue(item: item, isRoutes: isRoutes),
               ),
             ],
           ),

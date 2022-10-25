@@ -1,6 +1,6 @@
 name: flutter_pickliste_widgets
 description: Eine Sammlung von Flutter-Widgets und -Code.
-version: 0.0.5+6
+version: 0.0.5+12
 homepage:
 
 environment:
@@ -8,6 +8,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  ansicolor: ^2.0.1
   dio: ^4.0.6
   equatable: ^2.0.5
   flutter:

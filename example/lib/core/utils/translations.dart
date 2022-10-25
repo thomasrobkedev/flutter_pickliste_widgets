@@ -9,7 +9,7 @@ class T {
   T._internal();
   factory T() => _instance;
 
-  void init(key) => _instance._key = key;
+  void init(GlobalKey<ScaffoldMessengerState> key) => _instance._key = key;
 
   /// [call()] ist die default Methode jedes Dart Objects - und somit auch jeder Dart Klasse.
   /// Darum sind die folgenden Aufrufe identisch [T().call()] = [T()()]

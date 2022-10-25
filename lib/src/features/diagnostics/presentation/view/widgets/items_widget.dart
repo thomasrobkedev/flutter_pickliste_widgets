@@ -67,7 +67,13 @@ class PicklisteDiagnosticsItemsWidget extends StatelessWidget {
               child: Column(
                 children: items.props //
                     .where((item) => item.getValue != null)
-                    .map((item) => PicklisteDiagnosticsItemWidget(label: labels[item]!, item: item))
+                    .map(
+                      (item) => PicklisteDiagnosticsItemWidget(
+                        label: labels[item]!,
+                        item: item,
+                        isRoutes: item == items.routes,
+                      ),
+                    )
                     .toListDivided(),
               ),
             ),

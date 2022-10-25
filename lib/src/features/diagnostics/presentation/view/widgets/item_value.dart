@@ -1,23 +1,50 @@
 import 'package:flutter/material.dart';
 
+import '../../../../../core/theme/theme_const.dart';
 import '../../../domain/models/item.dart';
 
 class PicklisteDiagnosticsItemValue extends StatelessWidget {
   final PicklisteDiagnosticsItem item;
+  final bool isRoutes;
 
   const PicklisteDiagnosticsItemValue({
     Key? key,
     required this.item,
+    required this.isRoutes,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
-      padding: const EdgeInsets.only(left: 16),
-      child: Text(
-        item.value.split('\n').where((str) => str.trim() != '').join('\n'),
-        key: ValueKey('${item.testKexPrefix}_value'),
-        style: const TextStyle(color: Colors.black87),
+    if (!isRoutes) {
+      return Expanded(
+        child: Text(
+          item.value,
+          textAlign: TextAlign.right,
+          key: ValueKey('${item.testKexPrefix}_value'),
+        ),
+      );
+    }
+
+    final routes = item.value.split('\n').where((str) => str.trim() != '');
+    final destinations = routes.map((route) => route.split('->')[0].trim());
+    final gateways = routes.map((route) => route.split('->')[1].trim());
+
+    return Expanded(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: [
+          Text(
+            destinations.join('\n'),
+            textAlign: TextAlign.right,
+          ),
+          Text(
+            destinations.map((_) => '  ➔  ').join('\n'),
+            style: const TextStyle(fontSize: PicklisteThemeConstants.kFontSizeSmall),
+          ),
+          Text(
+            gateways.join('\n'),
+          ),
+        ],
       ),
     );
   }

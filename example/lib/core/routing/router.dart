@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
+import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../features/counter/presentation/view/page.dart';
@@ -45,7 +46,8 @@ final router = GoRouter(
     GoRoute(
       path: '/diagnostics',
       pageBuilder: (context, state) {
-        final getItems = DiagnosticsUseCaseGetItems();
+        final di = GetIt.instance;
+        final getItems = DiagnosticsUseCaseGetItems(di(), di(), di());
         final getHouseNumberURL = DiagnosticsUseCaseGetHouseNumberURL();
 
         return CupertinoPage<void>(

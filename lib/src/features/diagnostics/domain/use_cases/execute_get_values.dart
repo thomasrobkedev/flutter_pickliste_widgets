@@ -4,9 +4,7 @@ import '../../presentation/bloc/event.dart';
 import '../models/item.dart';
 
 class PicklisteDiagnosticsUseCaseExecuteGetValues {
-  final PicklisteDiagnosticsRepository _repository;
-
-  PicklisteDiagnosticsUseCaseExecuteGetValues(this._repository);
+  final _repository = PicklisteDiagnosticsRepository();
 
   Future<void> call(PicklisteDiagnosticsBloc bloc) async {
     final items = await _repository.fetchAll();
@@ -19,6 +17,8 @@ class PicklisteDiagnosticsUseCaseExecuteGetValues {
   }
 
   Future<void> _execute(PicklisteDiagnosticsBloc bloc, PicklisteDiagnosticsItem item, Future<String?> Function() getValue) async {
+    await _repository.updateItem(item, state: PicklisteDiagnosticsItemState.pending, value: '');
+
     try {
       final value = await getValue().timeout(const Duration(seconds: 10));
       bloc.add(PicklisteDiagnosticsItemUpdated(item, PicklisteDiagnosticsItemState.success, value.toString()));

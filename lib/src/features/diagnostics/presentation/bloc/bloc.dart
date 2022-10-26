@@ -9,19 +9,13 @@ import 'event.dart';
 import 'state.dart';
 
 class PicklisteDiagnosticsBloc extends Bloc<PicklisteDiagnosticsEvent, PicklisteDiagnosticsState> {
-  final PicklisteDiagnosticsUseCaseGetItems _getItems;
-  final PicklisteDiagnosticsUseCaseSaveItems _saveItems;
-  final PicklisteDiagnosticsUseCaseUpdateItem _updateItem;
-  final PicklisteDiagnosticsUseCaseExecuteGetValues _executeGetValues;
-  final PicklisteDiagnosticsUseCaseIsFinished _isFinished;
+  final _getItems = PicklisteDiagnosticsUseCaseGetItems();
+  final _saveItems = PicklisteDiagnosticsUseCaseSaveItems();
+  final _updateItem = PicklisteDiagnosticsUseCaseUpdateItem();
+  final _executeGetValues = PicklisteDiagnosticsUseCaseExecuteGetValues();
+  final _isFinished = PicklisteDiagnosticsUseCaseIsFinished();
 
-  PicklisteDiagnosticsBloc(
-    this._getItems,
-    this._saveItems,
-    this._updateItem,
-    this._executeGetValues,
-    this._isFinished,
-  ) : super(PicklisteDiagnosticsLoading()) {
+  PicklisteDiagnosticsBloc() : super(PicklisteDiagnosticsLoading()) {
     on<PicklisteDiagnosticsInitialize>(_onInitialize);
     on<PicklisteDiagnosticsItemUpdated>(_onItemUpdated);
   }

@@ -4,6 +4,10 @@ import '../domain/models/items.dart';
 class PicklisteDiagnosticsRepository {
   late PicklisteDiagnosticsItems _items;
 
+  static final PicklisteDiagnosticsRepository _instance = PicklisteDiagnosticsRepository._internal();
+  PicklisteDiagnosticsRepository._internal();
+  factory PicklisteDiagnosticsRepository() => _instance;
+
   Future<void> setItems(PicklisteDiagnosticsItems items) async => _items = items;
 
   Future<PicklisteDiagnosticsItems> fetchAll() async => _items;

@@ -16,5 +16,5 @@ export 'src/core/widgets/toast/toast.dart';
 export 'src/features/diagnostics/data/repository.dart';
 export 'src/features/diagnostics/domain/models/item.dart';
 export 'src/features/diagnostics/domain/models/items.dart';
-export 'src/features/diagnostics/domain/use_cases/get_date_time.dart';
+export 'src/features/diagnostics/domain/use_cases/date_time.dart';
 export 'src/features/diagnostics/presentation/view/pages/page.dart';

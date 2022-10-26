@@ -1,4 +1,4 @@
-class PicklisteDiagnosticsUseCaseGetDateTime {
+class PicklisteDiagnosticsUseCaseDateTime {
   Future<String> call() async {
     final iso8601 = DateTime.now().toIso8601String().substring(0, 19).replaceAll('T', ' ');
     final match = RegExp(r'^(-)?(\d+)(?::00|(:\d+))').firstMatch(DateTime.now().timeZoneOffset.toString());

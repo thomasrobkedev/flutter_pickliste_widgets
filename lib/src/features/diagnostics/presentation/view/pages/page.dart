@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:get_it/get_it.dart';
 
 import '../../../../../core/enums/testkey.dart';
 import '../../../../../core/widgets/loading_spinner.dart';
-import '../../../../../dependency_injection.dart';
 import '../../../domain/models/items.dart';
 import '../../bloc/bloc.dart';
 import '../../bloc/event.dart';
@@ -18,23 +16,19 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
   final PicklisteDiagnosticsItems items;
   final String houseNumberURL;
 
-  PicklisteDiagnosticsPage({
+  const PicklisteDiagnosticsPage({
     Key? key,
     required this.title,
     required this.toastText,
     required this.infoText,
     required this.items,
     required this.houseNumberURL,
-  }) : super(key: key) {
-    PicklisteDependencyInjection().init();
-  }
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final di = GetIt.instance;
-
     return BlocProvider(
-      create: (context) => PicklisteDiagnosticsBloc(di(), di(), di(), di(), di())..add(PicklisteDiagnosticsInitialize(items)),
+      create: (context) => PicklisteDiagnosticsBloc()..add(PicklisteDiagnosticsInitialize(items)),
       child: BlocBuilder<PicklisteDiagnosticsBloc, PicklisteDiagnosticsState>(
         builder: (context, state) {
           return WillPopScope(

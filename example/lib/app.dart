@@ -40,7 +40,7 @@ class _MyAppState extends State<MyApp> {
         scaffoldMessengerKey: MyApp.scaffoldMessengerKey,
         supportedLocales: const [
           Locale('de', 'DE'),
-          Locale('en', 'US'),
+          Locale('en', 'GB'),
           Locale('hr', 'HR'),
           Locale('hu', 'HU'),
           Locale('nl', 'NL'),
@@ -55,7 +55,7 @@ class _MyAppState extends State<MyApp> {
           Locale('lt', 'LT'),
           //   const Locale('et', 'EE'),  // keine Original Übersetzungen vorhanden
         ],
-        locale: widget.isTestingEnvironment ? const Locale('de', 'DE') : const Locale('de', 'DE'), // _locale,
+        locale: widget.isTestingEnvironment ? const Locale('de', 'DE') : const Locale('en', 'GB'), // _locale,
       ),
     );
   }

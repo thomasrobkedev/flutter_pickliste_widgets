@@ -2,9 +2,7 @@ import '../../data/repository.dart';
 import '../models/item.dart';
 
 class PicklisteDiagnosticsUseCaseIsFinished {
-  final PicklisteDiagnosticsRepository _repository;
-
-  PicklisteDiagnosticsUseCaseIsFinished(this._repository);
+  final _repository = PicklisteDiagnosticsRepository();
 
   Future<bool> call() async {
     final items = await _repository.fetchAll();

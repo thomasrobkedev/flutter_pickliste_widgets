@@ -7,15 +7,15 @@ import 'item_label.dart';
 import 'item_value.dart';
 
 class PicklisteDiagnosticsItemWidget extends StatelessWidget {
-  final String label;
   final PicklisteDiagnosticsItem item;
   final bool isRoutes;
+  final Future<String> houseNumberURL;
 
   const PicklisteDiagnosticsItemWidget({
     Key? key,
-    required this.label,
     required this.item,
     required this.isRoutes,
+    required this.houseNumberURL,
   }) : super(key: key);
 
   @override
@@ -28,7 +28,7 @@ class PicklisteDiagnosticsItemWidget extends StatelessWidget {
           Row(
             children: [
               PicklisteDiagnosticsItemIcon(item: item),
-              PicklisteDiagnosticsItemLabel(item: item, label: label),
+              PicklisteDiagnosticsItemLabel(item: item, houseNumberURL: houseNumberURL),
               const SizedBox(width: 16),
               Visibility(
                 visible: item.state != PicklisteDiagnosticsItemState.fail && item.value.isNotEmpty,

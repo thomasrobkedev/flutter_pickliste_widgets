@@ -28,8 +28,8 @@ class DiagnosticsUseCaseGetItems {
     items.dns2.getValue = () => Future.value('192.168.1.2');
     items.routes.getValue = () => Future.value('Destination -> Gateway\nfe80:: -> ::\n:: -> fe80::2\n');
     items.httpPuC.getValue = () => _http('http://www.peek-cloppenburg.de');
-    items.httpHousePic.getValue = () => _http(_getHouseNumberURL(withPic: true));
-    items.httpHouse.getValue = () => _http(_getHouseNumberURL(withPic: false));
+    items.httpHousePic.getValue = () async => _http(await _getHouseNumberURL(withPic: true));
+    items.httpHouse.getValue = () async => _http(await _getHouseNumberURL(withPic: false));
 
     return items;
   }

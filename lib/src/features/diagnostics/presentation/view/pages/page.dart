@@ -14,7 +14,7 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
   final String toastText;
   final String infoText;
   final PicklisteDiagnosticsItems items;
-  final String houseNumberURL;
+  final Future<String> houseNumberURL;
 
   const PicklisteDiagnosticsPage({
     Key? key,

@@ -36,13 +36,15 @@ class PicklisteDiagnosticsItemValue extends StatelessWidget {
           Text(
             destinations.join('\n'),
             textAlign: TextAlign.right,
+            style: const TextStyle(height: 1.2),
           ),
           Text(
             destinations.map((_) => '  ➔  ').join('\n'),
-            style: const TextStyle(fontSize: PicklisteThemeConstants.kFontSizeSmall),
+            style: const TextStyle(height: 1.2 * PicklisteThemeConstants.kFontSizeDefault / PicklisteThemeConstants.kFontSizeSmall, fontSize: PicklisteThemeConstants.kFontSizeSmall),
           ),
           Text(
             gateways.join('\n'),
+            style: const TextStyle(height: 1.2),
           ),
         ],
       ),

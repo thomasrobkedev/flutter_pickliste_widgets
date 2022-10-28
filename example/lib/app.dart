@@ -5,6 +5,7 @@ import 'package:get_it/get_it.dart';
 import 'core/routing/router.dart';
 import 'core/theme/app_theme.dart';
 import 'core/utils/environment.dart';
+import 'core/utils/translations.dart';
 import 'dependency_injection.dart';
 
 class MyApp extends StatefulWidget {
@@ -26,11 +27,24 @@ class MyApp extends StatefulWidget {
 class _MyAppState extends State<MyApp> {
   Locale? _locale;
   Locale? get locale => _locale;
-  set locale(Locale? locale) => setState(() => _locale = locale);
+  setLocale(Locale? locale) {
+    setState(() => _locale = locale);
+    T().saveLocale(locale);
+  }
 
-  ThemeMode _themeMode = ThemeMode.system;
-  ThemeMode get themeMode => _themeMode;
-  set themeMode(ThemeMode themeMode) => setState(() => _themeMode = themeMode);
+  ThemeMode? _themeMode;
+  ThemeMode get themeMode => _themeMode ?? ThemeMode.system;
+  setThemeMode(ThemeMode themeMode) {
+    setState(() => _themeMode = themeMode);
+    AppTheme().saveMode(themeMode);
+  }
+
+  @override
+  void initState() {
+    T().getSavedLocale().then((locale) => setLocale(locale));
+    AppTheme().getSavedMode().then((themeMode) => setThemeMode(themeMode));
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -40,7 +54,7 @@ class _MyAppState extends State<MyApp> {
       title: 'Pickliste Flutter Widgets',
       theme: appTheme.light,
       darkTheme: appTheme.dark,
-      themeMode: _themeMode,
+      themeMode: _themeMode ?? ThemeMode.system,
       routeInformationProvider: Routing.router.routeInformationProvider,
       routeInformationParser: Routing.router.routeInformationParser,
       routerDelegate: Routing.router.routerDelegate,

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 // import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
@@ -6,6 +8,7 @@ import '../../../../app.dart';
 import '../../../../core/enums/testkey.dart';
 import '../../../../core/extensions/list_divided.dart';
 import '../../../../core/extensions/string.dart';
+import '../../../../core/theme/app_theme.dart';
 import '../../../../core/utils/translations.dart';
 import '../../../flush/presentation/view/page.dart';
 import '../../../form/presentation/view/page.dart';
@@ -57,7 +60,10 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   Text(T()().settings__language),
-                  Text(T().currentLanguage, style: const TextStyle(color: Colors.grey)),
+                  Text(
+                    T().currentLanguage + (T().currentLanguageCode == null ? ' (${Platform.localeName.substring(0, 2)})' : ''),
+                    style: const TextStyle(color: Colors.grey),
+                  ),
                 ],
               ),
               leading: const Icon(Icons.language),
@@ -70,7 +76,10 @@ class HomePage extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   const Text('Theme'),
-                  Text(MyApp.of(context).themeMode.name.ucFirst, style: const TextStyle(color: Colors.grey)),
+                  Text(
+                    MyApp.of(context).themeMode.name.ucFirst + (MyApp.of(context).themeMode == ThemeMode.system ? ' (${AppTheme().getBrightness(context)})' : ''),
+                    style: const TextStyle(color: Colors.grey),
+                  ),
                 ],
               ),
               leading: const Icon(Icons.colorize),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../app.dart';
 
@@ -16,7 +17,21 @@ class T {
   AppLocalizations call() => AppLocalizations.of(_key.currentContext!)!;
 
   void switchLanguage(BuildContext context, String? languageCode) {
-    MyApp.of(context).locale = languageCode == null ? null : Locale.fromSubtags(languageCode: languageCode);
+    MyApp.of(context).setLocale(languageCode == null ? null : Locale.fromSubtags(languageCode: languageCode));
+  }
+
+  Future<Locale?> getSavedLocale() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final languageCode = prefs.getString('languageCode');
+      return languageCode == 'null' ? null : Locale.fromSubtags(languageCode: languageCode!);
+    } catch (_) {
+      return null;
+    }
+  }
+
+  Future<void> saveLocale(Locale? locale) async {
+    (await SharedPreferences.getInstance()).setString('languageCode', locale?.languageCode ?? 'null');
   }
 
   String? get currentLanguageCode => MyApp.of(_key.currentContext!).locale?.languageCode;

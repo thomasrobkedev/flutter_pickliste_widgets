@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:shared_preferences/shared_preferences.dart';
+
+import '../extensions/string.dart';
 
 class AppTheme {
   // Light Mode
@@ -32,5 +35,23 @@ class AppTheme {
       //   primaryColor: currentPrimaryColor,
       //   scaffoldBackgroundColor: isLightMode ? scaffoldColor : scaffoldColorDark,
     );
+  }
+
+  String getBrightness(BuildContext context) {
+    return MediaQuery.of(context).platformBrightness.name.ucFirst;
+  }
+
+  Future<ThemeMode> getSavedMode() async {
+    try {
+      final prefs = await SharedPreferences.getInstance();
+      final themeModeString = prefs.getString('themeMode');
+      return ThemeMode.values.firstWhere((value) => value.toString() == themeModeString, orElse: () => ThemeMode.system);
+    } catch (_) {
+      return ThemeMode.system;
+    }
+  }
+
+  Future<void> saveMode(ThemeMode themeMode) async {
+    (await SharedPreferences.getInstance()).setString('themeMode', themeMode.toString());
   }
 }

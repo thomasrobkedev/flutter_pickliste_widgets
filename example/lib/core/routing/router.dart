@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
@@ -12,6 +14,7 @@ import '../../features/flush/presentation/view/page.dart';
 import '../../features/form/presentation/view/page.dart';
 import '../../features/home/presentation/view/page.dart';
 import '../extensions/string.dart';
+import '../theme/app_theme.dart';
 import '../utils/translations.dart';
 import '../widgets/dropdown/dropdown.dart';
 import '../widgets/dropdown/item.dart';
@@ -82,7 +85,11 @@ class Routing {
               title: T()().settings__language,
               callback: (languageCode) => T().switchLanguage(context, languageCode),
               items: [
-                DropdownItem<String?>(title: Text(T().getLanguage(null)), value: null, selected: T().currentLanguageCode == null),
+                DropdownItem<String?>(
+                  title: Text('${T().getLanguage(null)} (${Platform.localeName.substring(0, 2)})'),
+                  value: null,
+                  selected: T().currentLanguageCode == null,
+                ),
                 ...MyApp.supportedLocales.map(
                   (languageCode) => DropdownItem<String?>(
                     title: Text(T().getLanguage(languageCode)),
@@ -103,11 +110,11 @@ class Routing {
             fullscreenDialog: true,
             child: Dropdown<ThemeMode>(
               title: T()().settings__language,
-              callback: (themeMode) => MyApp.of(context).themeMode = themeMode,
+              callback: (themeMode) => MyApp.of(context).setThemeMode(themeMode),
               items: [ThemeMode.system, ThemeMode.light, ThemeMode.dark]
                   .map(
                     (themeMode) => DropdownItem<ThemeMode>(
-                      title: Text(themeMode.name.ucFirst),
+                      title: Text(themeMode.name.ucFirst + (themeMode == ThemeMode.system ? ' (${AppTheme().getBrightness(context)})' : '')),
                       value: themeMode,
                       selected: MyApp.of(context).themeMode == themeMode,
                     ),

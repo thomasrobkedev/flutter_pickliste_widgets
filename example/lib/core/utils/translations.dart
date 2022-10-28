@@ -13,14 +13,14 @@ class T {
 
   void init(GlobalKey<ScaffoldMessengerState> key) => _instance._key = key;
 
+  AppLocalizations call() => AppLocalizations.of(_key.currentContext!)!;
+
   void switchLanguage(BuildContext context, String? languageCode) {
     MyApp.of(context).locale = languageCode == null ? null : Locale.fromSubtags(languageCode: languageCode);
   }
 
-  AppLocalizations call() => AppLocalizations.of(_key.currentContext!)!;
-
-  String? get languageCode => MyApp.of(_key.currentContext!).locale?.languageCode;
-  String get currentLanguage => getLanguage(languageCode);
+  String? get currentLanguageCode => MyApp.of(_key.currentContext!).locale?.languageCode;
+  String get currentLanguage => getLanguage(currentLanguageCode);
 
   String getLanguage(String? languageCode) {
     switch (languageCode) {

@@ -82,12 +82,12 @@ class Routing {
               title: T()().settings__language,
               callback: (languageCode) => T().switchLanguage(context, languageCode),
               items: [
-                DropdownItem<String?>(title: Text(T().getLanguage(null)), value: null, selected: T().languageCode == null),
+                DropdownItem<String?>(title: Text(T().getLanguage(null)), value: null, selected: T().currentLanguageCode == null),
                 ...MyApp.supportedLocales.map(
                   (languageCode) => DropdownItem<String?>(
                     title: Text(T().getLanguage(languageCode)),
                     value: languageCode,
-                    selected: T().languageCode == languageCode,
+                    selected: T().currentLanguageCode == languageCode,
                     enabled: !['sr', 'et'].contains(languageCode),
                   ),
                 ),

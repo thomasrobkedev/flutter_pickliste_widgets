@@ -73,7 +73,7 @@ class HomePage extends StatelessWidget {
                   Text(MyApp.of(context).themeMode.name.ucFirst, style: const TextStyle(color: Colors.grey)),
                 ],
               ),
-              leading: const Icon(Icons.language),
+              leading: const Icon(Icons.colorize),
               trailing: const Icon(Icons.navigate_next),
               onTap: () => context.push(HomePage.themeModeRouteName),
             ),

@@ -22,9 +22,9 @@ extension ListDivided on Iterable {
     return entries
         .expand<Widget>(
           (entry) => [
-            Visibility(visible: entry.key == 0 && topLine, child: divider()),
+            Visibility(visible: entry.key > 0 || topLine, child: divider()),
             entry.value,
-            Visibility(visible: entry.key < entries.length - (bottomLine ? 0 : 1), child: divider()),
+            Visibility(visible: bottomLine, child: divider()),
           ],
         )
         .toList();

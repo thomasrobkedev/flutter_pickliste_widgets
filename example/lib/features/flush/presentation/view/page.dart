@@ -5,6 +5,8 @@ import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import '../../../../core/utils/translations.dart';
 
 class FlushPage extends StatefulWidget {
+  static const routeName = '/flush-form';
+
   const FlushPage({super.key});
 
   @override

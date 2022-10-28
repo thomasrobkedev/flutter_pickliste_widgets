@@ -1,18 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
+// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
 
+import '../../../../app.dart';
 import '../../../../core/enums/testkey.dart';
+import '../../../../core/extensions/list_divided.dart';
+import '../../../../core/extensions/string.dart';
 import '../../../../core/utils/translations.dart';
+import '../../../flush/presentation/view/page.dart';
+import '../../../form/presentation/view/page.dart';
 
-class HomePage extends StatefulWidget {
+class HomePage extends StatelessWidget {
+  static const diagnosticsRouteName = '/diagnostics';
+  static const languageRouteName = '/language';
+  static const themeModeRouteName = '/theme-mode';
+
   const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePageState();
-}
-
-class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -32,23 +35,49 @@ class _HomePageState extends State<HomePage> {
               title: const Text('FlushForm'),
               leading: const Icon(Icons.slideshow),
               trailing: const Icon(Icons.navigate_next),
-              onTap: () => context.push('/flush-form'),
+              onTap: () => context.push(FlushPage.routeName),
             ),
             ListTile(
               key: ValueKey(Testkey.home_menuFormElements.toString()),
               title: const Text('Formular Elemente'),
               leading: const Icon(Icons.slideshow),
               trailing: const Icon(Icons.navigate_next),
-              onTap: () => context.push('/form-elements'),
+              onTap: () => context.push(FormPage.routeName),
             ),
             ListTile(
               key: ValueKey(Testkey.home_menuDiagnostics.toString()),
               title: Text(T()().menu__app_settings_diagnostics),
               leading: const Icon(Icons.query_stats),
               trailing: const Icon(Icons.navigate_next),
-              onTap: () => context.push('/diagnostics'),
+              onTap: () => context.push(HomePage.diagnosticsRouteName, extra: T()().menu__app_settings_diagnostics),
             ),
-          ].toListDivided(withLastLine: true, indent: 16),
+            ListTile(
+              key: ValueKey(Testkey.home_menuLanguage.toString()),
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(T()().settings__language),
+                  Text(T().currentLanguage, style: const TextStyle(color: Colors.grey)),
+                ],
+              ),
+              leading: const Icon(Icons.language),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () => context.push(HomePage.languageRouteName),
+            ),
+            ListTile(
+              key: ValueKey(Testkey.home_menuTheme.toString()),
+              title: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  const Text('Theme'),
+                  Text(MyApp.of(context).themeMode.name.ucFirst, style: const TextStyle(color: Colors.grey)),
+                ],
+              ),
+              leading: const Icon(Icons.language),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () => context.push(HomePage.themeModeRouteName),
+            ),
+          ].toListDivided(),
         ),
       ),
     );

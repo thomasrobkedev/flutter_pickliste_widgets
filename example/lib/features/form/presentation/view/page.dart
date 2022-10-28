@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 
 class FormPage extends StatefulWidget {
+  static const routeName = '/form-elements';
   const FormPage({super.key});
 
   @override

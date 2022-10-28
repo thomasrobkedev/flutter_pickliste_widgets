@@ -20,7 +20,6 @@ class PicklisteDiagnosticsItems extends Equatable {
   final httpHousePic = PicklisteDiagnosticsItem('httpHousePic');
   final httpHouse = PicklisteDiagnosticsItem('httpHouse');
 
-  /// Legt auch die Reihenfolge fest, in der die items in der page angezeigt werden
   @override
   List<PicklisteDiagnosticsItem> get props => [
         dateTime,
@@ -32,12 +31,12 @@ class PicklisteDiagnosticsItems extends Equatable {
         ip,
         wifiName,
         wifiSignalStrength,
+        dns1,
+        dns2,
+        routes,
+        defaultGateway,
         httpPuC,
         httpHousePic,
         httpHouse,
-        dns1,
-        dns2,
-        defaultGateway,
-        routes,
       ];
 }

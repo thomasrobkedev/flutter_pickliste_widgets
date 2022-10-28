@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:get_it/get_it.dart';
 
 import 'core/routing/router.dart';
+import 'core/theme/app_theme.dart';
 import 'core/utils/environment.dart';
 import 'dependency_injection.dart';
 
@@ -18,45 +18,36 @@ class MyApp extends StatefulWidget {
 
   @override
   State<MyApp> createState() => _MyAppState();
+
+  static _MyAppState of(BuildContext context) => context.findAncestorStateOfType<_MyAppState>()!;
+  static const List<String> supportedLocales = ['de', 'en', 'hr', 'hu', 'nl', 'pl', 'sk', 'cs', 'bg', 'sl', 'ro', 'sr', 'lv', 'lt', 'et'];
 }
 
 class _MyAppState extends State<MyApp> {
+  Locale? _locale;
+  Locale? get locale => _locale;
+  set locale(Locale? locale) => setState(() => _locale = locale);
+
+  ThemeMode _themeMode = ThemeMode.system;
+  ThemeMode get themeMode => _themeMode;
+  set themeMode(ThemeMode themeMode) => setState(() => _themeMode = themeMode);
+
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        final currentFocus = FocusScope.of(context);
-        if (!currentFocus.hasPrimaryFocus) {
-          currentFocus.unfocus();
-        }
-      },
-      child: MaterialApp.router(
-        title: 'Pickliste Flutter Widgets',
-        theme: PicklisteThemeCreator.create(),
-        routeInformationProvider: router.routeInformationProvider,
-        routeInformationParser: router.routeInformationParser,
-        routerDelegate: router.routerDelegate,
-        localizationsDelegates: AppLocalizations.localizationsDelegates,
-        scaffoldMessengerKey: MyApp.scaffoldMessengerKey,
-        supportedLocales: const [
-          Locale('de', 'DE'),
-          Locale('en', 'GB'),
-          Locale('hr', 'HR'),
-          Locale('hu', 'HU'),
-          Locale('nl', 'NL'),
-          Locale('pl', 'PL'),
-          Locale('sk', 'SK'),
-          Locale('cs', 'CZ'),
-          Locale('bg', 'BG'),
-          Locale('sl', 'SI'),
-          Locale('ro', 'RO'),
-          //   const Locale('sr', 'RS'),  // keine Original Übersetzungen vorhanden
-          Locale('lv', 'LV'),
-          Locale('lt', 'LT'),
-          //   const Locale('et', 'EE'),  // keine Original Übersetzungen vorhanden
-        ],
-        locale: widget.isTestingEnvironment ? const Locale('de', 'DE') : const Locale('en', 'GB'), // _locale,
-      ),
+    final appTheme = AppTheme();
+
+    return MaterialApp.router(
+      title: 'Pickliste Flutter Widgets',
+      theme: appTheme.light,
+      darkTheme: appTheme.dark,
+      themeMode: _themeMode,
+      routeInformationProvider: Routing.router.routeInformationProvider,
+      routeInformationParser: Routing.router.routeInformationParser,
+      routerDelegate: Routing.router.routerDelegate,
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      scaffoldMessengerKey: MyApp.scaffoldMessengerKey,
+      supportedLocales: MyApp.supportedLocales.map((languageCode) => Locale(languageCode)),
+      locale: widget.isTestingEnvironment ? const Locale('de') : _locale,
     );
   }
 }

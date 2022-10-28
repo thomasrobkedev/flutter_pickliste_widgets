@@ -4,6 +4,7 @@ import '../../../../../core/enums/testkey.dart';
 import '../../../../../core/extensions/list_divided.dart';
 import '../../../../../core/widgets/misc/intro_container.dart';
 import '../../../../../core/widgets/toast/toast.dart';
+import '../../../domain/models/item.dart';
 import '../../../domain/models/items.dart';
 import 'item_widget.dart';
 
@@ -27,6 +28,42 @@ class PicklisteDiagnosticsItemsWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final sortOrder = <PicklisteDiagnosticsItem>[
+      items.dateTime,
+      items.versionBuild,
+      items.house,
+      items.houseDevice,
+      items.mac,
+      items.serial,
+      items.ip,
+      items.wifiName,
+      items.wifiSignalStrength,
+      items.httpPuC,
+      items.httpHousePic,
+      items.httpHouse,
+      items.dns1,
+      items.dns2,
+      items.defaultGateway,
+      items.routes,
+    ];
+
+    final props = items.props
+      ..where((item) => item.getValue != null)
+      ..sort(
+        (a, b) {
+          if (sortOrder.contains(a) && sortOrder.contains(b)) {
+            return sortOrder.indexOf(a).compareTo(sortOrder.indexOf(b));
+          }
+          if (sortOrder.contains(a) && sortOrder.contains(b)) {
+            return -1;
+          }
+          if (sortOrder.contains(b)) {
+            return 1;
+          }
+          return 0;
+        },
+      );
+
     return PicklisteToast(
       textLarge: toastText,
       color: const Color.fromARGB(255, 255, 175, 0),
@@ -45,8 +82,7 @@ class PicklisteDiagnosticsItemsWidget extends StatelessWidget {
             Container(
               padding: const EdgeInsets.fromLTRB(12, 8, 0, 8),
               child: Column(
-                children: items.props //
-                    .where((item) => item.getValue != null)
+                children: props
                     .map(
                       (item) => PicklisteDiagnosticsItemWidget(
                         item: item,

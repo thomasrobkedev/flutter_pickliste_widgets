@@ -10,9 +10,8 @@ class PicklisteToast extends StatefulWidget {
   final String? textMedium;
   final String? textDefault;
   final Color color;
-  final bool active;
-  final int animationDuration;
-  final int animationReverseDuration;
+  final int duration;
+  final int showDelay;
   final int? autoTimeout;
   final bool scrollView;
   final Widget child;
@@ -23,9 +22,8 @@ class PicklisteToast extends StatefulWidget {
     this.textMedium,
     this.textDefault,
     required this.color,
-    this.active = true,
-    this.animationDuration = 350,
-    this.animationReverseDuration = 350,
+    this.duration = 350,
+    this.showDelay = 100,
     this.autoTimeout,
     this.testKey,
     this.scrollView = true,
@@ -37,21 +35,23 @@ class PicklisteToast extends StatefulWidget {
 }
 
 class _PicklisteToastState extends State<PicklisteToast> {
-  bool _hideByTimeout = false;
-  Timer? timer;
+  int _step = 0;
+  Timer? _timer;
 
   @override
   void dispose() {
-    timer?.cancel();
+    _timer?.cancel();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    final isVisible = widget.active && !_hideByTimeout;
-
-    if (widget.autoTimeout != null && !_hideByTimeout) {
-      timer = Timer(Duration(milliseconds: widget.autoTimeout!), () => setState(() => _hideByTimeout = true));
+    if (_step == 0) {
+      /// slide in
+      Future.delayed(Duration(milliseconds: widget.showDelay), (() => setState(() => _step = 1)));
+    } else if (_step == 1 && widget.autoTimeout != null) {
+      /// slide out
+      _timer = Timer(Duration(milliseconds: widget.autoTimeout!), () => setState(() => _step = 2));
     }
 
     return Stack(
@@ -65,9 +65,9 @@ class _PicklisteToastState extends State<PicklisteToast> {
         Column(
           children: [
             AnimatedSlide(
-              offset: isVisible ? Offset.zero : const Offset(0, -1),
-              duration: Duration(milliseconds: widget.animationReverseDuration),
-              child: _container(testKey: widget.testKey == null ? null : ValueKey(widget.testKey!.value + (isVisible ? '--active' : '--inactive'))),
+              offset: _step == 1 ? Offset.zero : const Offset(0, -1),
+              duration: Duration(milliseconds: widget.duration),
+              child: _container(testKey: widget.testKey == null ? null : ValueKey(widget.testKey!.value + (_step == 1 ? '--active' : '--inactive'))),
             ),
           ],
         ),
@@ -79,8 +79,8 @@ class _PicklisteToastState extends State<PicklisteToast> {
     return Column(
       children: [
         AnimatedSize(
-          duration: Duration(milliseconds: widget.animationReverseDuration),
-          child: _container(height: widget.active && !_hideByTimeout ? null : 0),
+          duration: Duration(milliseconds: widget.duration),
+          child: _container(height: _step == 1 ? null : 0),
         ),
         widget.child,
       ],

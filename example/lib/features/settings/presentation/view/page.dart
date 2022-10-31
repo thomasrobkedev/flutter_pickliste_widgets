@@ -1,7 +1,6 @@
 import 'dart:io';
 
 import 'package:flutter/material.dart';
-// import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../app.dart';
@@ -45,23 +44,26 @@ class SettingsPage extends StatelessWidget {
               onTap: () {
                 context.push(
                   '$routeName/${SettingsPage.languageRouteName}',
-                  extra: AppDropdown<String?>(
-                    title: T()().settings__language,
-                    callback: (languageCode) => T().switchLanguage(context, languageCode),
-                    items: [
-                      AppDropdownItem<String?>(
-                        title: Text('${T().getLanguage(null)} (${Platform.localeName.substring(0, 2)})'),
-                        value: null,
-                        selected: T().currentLanguageCode == null,
-                      ),
-                      ...MyApp.supportedLocales.map(
-                        (languageCode) => AppDropdownItem<String?>(
-                          title: Text(T().getLanguage(languageCode)),
-                          value: languageCode,
-                          selected: T().currentLanguageCode == languageCode,
+                  extra: MaterialPage(
+                    fullscreenDialog: true,
+                    child: AppDropdown<String?>(
+                      title: T()().settings__language,
+                      callback: (languageCode) => T().switchLanguage(context, languageCode),
+                      items: [
+                        AppDropdownItem<String?>(
+                          title: Text('${T().getLanguage(null)} (${Platform.localeName.substring(0, 2)})'),
+                          value: null,
+                          selected: T().currentLanguageCode == null,
                         ),
-                      ),
-                    ],
+                        ...MyApp.supportedLocales.map(
+                          (languageCode) => AppDropdownItem<String?>(
+                            title: Text(T().getLanguage(languageCode)),
+                            value: languageCode,
+                            selected: T().currentLanguageCode == languageCode,
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 );
               },
@@ -82,18 +84,21 @@ class SettingsPage extends StatelessWidget {
               trailing: const Icon(Icons.navigate_next),
               onTap: () => context.push(
                 '$routeName/${SettingsPage.themeModeRouteName}',
-                extra: AppDropdown<ThemeMode>(
-                  title: 'Theme',
-                  callback: (themeMode) => AppTheme().setMode(context, themeMode),
-                  items: [ThemeMode.system, ThemeMode.light, ThemeMode.dark]
-                      .map(
-                        (themeMode) => AppDropdownItem<ThemeMode>(
-                          title: Text(themeMode.name.ucFirst + (themeMode == ThemeMode.system ? ' (${AppTheme().getBrightness(context)})' : '')),
-                          value: themeMode,
-                          selected: MyApp.of(context).themeMode == themeMode,
-                        ),
-                      )
-                      .toList(),
+                extra: MaterialPage(
+                  fullscreenDialog: true,
+                  child: AppDropdown<ThemeMode>(
+                    title: 'Theme',
+                    callback: (themeMode) => AppTheme().setMode(context, themeMode),
+                    items: [ThemeMode.system, ThemeMode.light, ThemeMode.dark]
+                        .map(
+                          (themeMode) => AppDropdownItem<ThemeMode>(
+                            title: Text(themeMode.name.ucFirst + (themeMode == ThemeMode.system ? ' (${AppTheme().getBrightness(context)})' : '')),
+                            value: themeMode,
+                            selected: MyApp.of(context).themeMode == themeMode,
+                          ),
+                        )
+                        .toList(),
+                  ),
                 ),
               ),
             ),

@@ -46,11 +46,11 @@ class Routing {
         routes: [
           GoRoute(
             path: SettingsPage.languageRouteName,
-            builder: (context, state) => state.extra as Widget,
+            pageBuilder: (context, state) => state.extra as Page,
           ),
           GoRoute(
             path: SettingsPage.themeModeRouteName,
-            builder: (context, state) => state.extra as Widget,
+            pageBuilder: (context, state) => state.extra as Page,
           ),
         ],
       ),

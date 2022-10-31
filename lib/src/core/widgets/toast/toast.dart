@@ -10,6 +10,7 @@ class PicklisteToast extends StatefulWidget {
   final String? textMedium;
   final String? textDefault;
   final Color color;
+  final bool active;
   final int duration;
   final int showDelay;
   final int? autoTimeout;
@@ -22,6 +23,7 @@ class PicklisteToast extends StatefulWidget {
     this.textMedium,
     this.textDefault,
     required this.color,
+    this.active = true,
     this.duration = 350,
     this.showDelay = 100,
     this.autoTimeout,
@@ -46,12 +48,14 @@ class _PicklisteToastState extends State<PicklisteToast> {
 
   @override
   Widget build(BuildContext context) {
-    if (_step == 0) {
-      /// slide in
-      Future.delayed(Duration(milliseconds: widget.showDelay), (() => setState(() => _step = 1)));
-    } else if (_step == 1 && widget.autoTimeout != null) {
-      /// slide out
-      _timer = Timer(Duration(milliseconds: widget.autoTimeout!), () => setState(() => _step = 2));
+    if (widget.active) {
+      if (_step == 0) {
+        /// slide in
+        Future.delayed(Duration(milliseconds: widget.showDelay), (() => setState(() => _step = 1)));
+      } else if (_step == 1 && widget.autoTimeout != null) {
+        /// slide out
+        _timer = Timer(Duration(milliseconds: widget.autoTimeout!), () => setState(() => _step = 2));
+      }
     }
 
     return Stack(

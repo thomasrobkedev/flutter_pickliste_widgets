@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 
+import '../../../../core/enums/testkey.dart';
 import '../../../../core/utils/translations.dart';
 
 class FlushPage extends StatefulWidget {
@@ -19,6 +20,7 @@ class _FlushPageState extends State<FlushPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      key: ValueKey(Testkey.flushForm_page.toString()),
       appBar: AppBar(title: const Text('Flush-Form')),
       backgroundColor: const Color(PicklisteThemeConstants.kMenuBackgroundColor),
       body: SingleChildScrollView(

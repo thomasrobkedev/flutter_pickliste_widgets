@@ -32,8 +32,11 @@ class _MyAppState extends State<MyApp> {
 
   @override
   void initState() {
-    AppTheme().getSavedMode().then((themeMode) => this.themeMode = themeMode);
-    T().getSavedLocale().then((locale) => this.locale = locale);
+    Future.wait([
+      AppTheme().getSavedMode().then((themeMode) => _themeMode = themeMode),
+      T().getSavedLocale().then((locale) => _locale = locale),
+    ]).then((value) => setState(() {}));
+
     super.initState();
   }
 

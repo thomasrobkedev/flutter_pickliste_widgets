@@ -27,7 +27,7 @@ class PalPage extends StatelessWidget {
           children: <Widget>[
             ListTile(
               key: ValueKey(Testkey.pal_menuFlushForm.toString()),
-              title: const Text('FlushForm'),
+              title: const Text('Flush-Form'),
               leading: const Icon(Icons.slideshow),
               trailing: const Icon(Icons.navigate_next),
               onTap: () => context.push('$routeName/${FlushPage.routeName}'),

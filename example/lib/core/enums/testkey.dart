@@ -18,8 +18,6 @@ enum Testkey {
 
   formElements_page,
 
-  diagnostics_page,
-
   language_page,
   language_item_,
   language_item_icon_,

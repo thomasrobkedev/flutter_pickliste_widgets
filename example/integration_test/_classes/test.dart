@@ -15,7 +15,7 @@ class Group {
     _execute(_enabled);
   }
 
-  Future<void> _execute(int? enabled) async {
+  void _execute(int? enabled) {
     for (var item in _tests) {
       if (item is Group) {
         item._execute(item._enabled ?? enabled);
@@ -25,7 +25,7 @@ class Group {
       if (item is Test) {
         if ((item._enabled ?? enabled ?? 1) > 0) {
           try {
-            await item._func();
+            item._func();
           } catch (_) {
             // scanner.stop();
             // printer.stop();

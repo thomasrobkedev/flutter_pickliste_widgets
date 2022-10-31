@@ -8,9 +8,8 @@ import 'dependency_injection.dart';
 
 class MyApp extends StatefulWidget {
   static GlobalKey<ScaffoldMessengerState> scaffoldMessengerKey = GlobalKey<ScaffoldMessengerState>();
-  final bool isTestingEnvironment;
 
-  MyApp({this.isTestingEnvironment = false, super.key}) {
+  MyApp({super.key}) {
     DependencyInjection().init();
   }
 
@@ -35,7 +34,7 @@ class _MyAppState extends State<MyApp> {
     Future.wait([
       AppTheme().getSavedMode().then((themeMode) => _themeMode = themeMode),
       T().getSavedLocale().then((locale) => _locale = locale),
-    ]).then((value) => setState(() {}));
+    ]).then((_) => setState(() {}));
 
     super.initState();
   }

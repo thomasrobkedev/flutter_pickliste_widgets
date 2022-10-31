@@ -1,4 +1,5 @@
 import 'package:example/core/enums/testkey.dart';
+import 'package:example/core/utils/translations.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 
@@ -17,7 +18,7 @@ class Diagnostics {
       /// Nach max. 10 Sekunden werden alle noch laufenden async items abgebrochen. 1 weitere Sekunde später geht der Toast weg - mit einer Animation von 350 ms
       /// 10 + 1 + 0,350 < 12
       await exists(PicklisteTestkey.diagnostics_toast.active);
-      await equalsString(PicklisteTestkey.diagnostics_toast.append('_large'), 'Bitte warten');
+      await equalsString(PicklisteTestkey.diagnostics_toast.append('_large'), T()().general__please_wait);
       await wait(12);
       await exists(PicklisteTestkey.diagnostics_toast.inactive);
 

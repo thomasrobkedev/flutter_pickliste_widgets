@@ -21,7 +21,7 @@ class PalPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: ValueKey(Testkey.pal_page.toString()),
-      appBar: AppBar(title: const Text('PAL Tests')),
+      appBar: AppBar(title: const Text('PAL Show Cases')),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[

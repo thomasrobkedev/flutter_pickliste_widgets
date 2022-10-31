@@ -24,7 +24,7 @@ class Routing {
       ),
       GoRoute(
         path: PalPage.routeName,
-        builder: (context, state) => Theme(data: PicklisteThemeCreator.create(), child: const PalPage()),
+        builder: (context, state) => const PalPage(),
         routes: [
           GoRoute(
             path: FormPage.routeName,

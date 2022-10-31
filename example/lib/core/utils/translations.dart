@@ -28,14 +28,15 @@ class T {
   Future<Locale?> getSavedLocale() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      var languageCode = prefs.getString('languageCode') ?? 'null';
+      var languageCode = prefs.getString('languageCode');
 
-      if (languageCode == 'null') {
+      if (languageCode == null) {
         return null;
       }
 
       if (!MyApp.supportedLocales.contains(languageCode)) {
         languageCode = MyApp.supportedLocales.first;
+        _saveLanguageCode(languageCode);
       }
 
       return Locale.fromSubtags(languageCode: languageCode);

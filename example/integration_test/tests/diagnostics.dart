@@ -10,7 +10,8 @@ class Diagnostics {
       await startupApp(tester);
 
       await exists(Testkey.home_page);
-      await tap(Testkey.home_menuDiagnostics);
+      await tapAndExpect(Testkey.home_menuPAL, Testkey.pal_page);
+      await tapAndExpect(Testkey.pal_menuDiagnostics, Testkey.diagnostics_page);
 
       /// Beim Laden der Seite ist der "Bitte warten" Toast gleich sichtbar
       /// Nach max. 10 Sekunden werden alle noch laufenden async items abgebrochen. 1 weitere Sekunde später geht der Toast weg - mit einer Animation von 350 ms

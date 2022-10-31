@@ -2,11 +2,17 @@
 
 enum Testkey {
   home_page,
-  home_menuFlushForm,
-  home_menuFormElements,
-  home_menuDiagnostics,
-  home_menuLanguage,
-  home_menuTheme,
+  home_menuPAL,
+  home_menuSettings,
+
+  pal_page,
+  pal_menuFlushForm,
+  pal_menuFormElements,
+  pal_menuDiagnostics,
+
+  settings_page,
+  settings_menuLanguage,
+  settings_menuTheme,
 
   flushForm_page,
 
@@ -29,8 +35,8 @@ enum Testkey {
   flushForm_error,
 
   dropdown,
-  dropdown_item_,
-  dropdown_item_icon_,
+  dropdown_item,
+  dropdown_item_icon,
 }
 
 extension TestkeyExtension on Testkey {
@@ -50,4 +56,7 @@ extension TestkeyExtension on Testkey {
   String isRed(bool isRed) => isRed ? red : toString();
 
   String append(dynamic suffix) => toString() + suffix.toString();
+  String appendWithUnderscore(dynamic suffix) => '${toString()}_$suffix';
+  String appendWithModifier(dynamic modifier) => '${toString()}--$modifier';
+  String appendWithUnderscoreAndModifier(dynamic suffix, dynamic modifier) => '${toString()}_$suffix--$modifier';
 }

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-extension ListDivided on Iterable {
+extension AppListDivided on Iterable {
   List<Widget> toListDivided({
     double indent = 16.0,
     double endIndent = 0.0,
@@ -12,10 +12,8 @@ extension ListDivided on Iterable {
     Widget divider() {
       return Divider(
         height: 0,
-        // color: const Color(PicklisteThemeConstants.kDividerColor),
         indent: indent,
         endIndent: endIndent,
-        thickness: 0.5,
       );
     }
 

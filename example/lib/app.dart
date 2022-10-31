@@ -1,10 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:get_it/get_it.dart';
 
 import 'core/routing/router.dart';
 import 'core/theme/app_theme.dart';
-import 'core/utils/environment.dart';
 import 'core/utils/translations.dart';
 import 'dependency_injection.dart';
 
@@ -14,7 +12,6 @@ class MyApp extends StatefulWidget {
 
   MyApp({this.isTestingEnvironment = false, super.key}) {
     DependencyInjection().init();
-    GetIt.I.get<Environment>().isTestingEnviroment = isTestingEnvironment;
   }
 
   @override
@@ -25,24 +22,18 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  Locale? _locale;
-  Locale? get locale => _locale;
-  setLocale(Locale? locale) {
-    setState(() => _locale = locale);
-    T().saveLocale(locale);
-  }
-
   ThemeMode? _themeMode;
   ThemeMode get themeMode => _themeMode ?? ThemeMode.system;
-  setThemeMode(ThemeMode themeMode) {
-    setState(() => _themeMode = themeMode);
-    AppTheme().saveMode(themeMode);
-  }
+  set themeMode(ThemeMode themeMode) => setState(() => _themeMode = themeMode);
+
+  Locale? _locale;
+  Locale? get locale => _locale;
+  set locale(Locale? locale) => setState(() => _locale = locale);
 
   @override
   void initState() {
-    T().getSavedLocale().then((locale) => setLocale(locale));
-    AppTheme().getSavedMode().then((themeMode) => setThemeMode(themeMode));
+    AppTheme().getSavedMode().then((themeMode) => this.themeMode = themeMode);
+    T().getSavedLocale().then((locale) => this.locale = locale);
     super.initState();
   }
 
@@ -50,18 +41,22 @@ class _MyAppState extends State<MyApp> {
   Widget build(BuildContext context) {
     final appTheme = AppTheme();
 
+    if (_themeMode == null) {
+      return const MaterialApp();
+    }
+
     return MaterialApp.router(
       title: 'Pickliste Flutter Widgets',
       theme: appTheme.light,
       darkTheme: appTheme.dark,
-      themeMode: _themeMode ?? ThemeMode.system,
+      themeMode: themeMode,
+      locale: locale,
+      supportedLocales: MyApp.supportedLocales.map((languageCode) => Locale(languageCode)),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
       routeInformationProvider: Routing.router.routeInformationProvider,
       routeInformationParser: Routing.router.routeInformationParser,
       routerDelegate: Routing.router.routerDelegate,
-      localizationsDelegates: AppLocalizations.localizationsDelegates,
       scaffoldMessengerKey: MyApp.scaffoldMessengerKey,
-      supportedLocales: MyApp.supportedLocales.map((languageCode) => Locale(languageCode)),
-      locale: widget.isTestingEnvironment ? const Locale('de') : _locale,
     );
   }
 }

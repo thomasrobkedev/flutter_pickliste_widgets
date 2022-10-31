@@ -9,29 +9,39 @@ class T {
 
   /// singleton
   static final T _instance = T._internal();
-  T._internal();
   factory T() => _instance;
+  T._internal();
 
   void init(GlobalKey<ScaffoldMessengerState> key) => _instance._key = key;
 
   AppLocalizations call() => AppLocalizations.of(_key.currentContext!)!;
 
   void switchLanguage(BuildContext context, String? languageCode) {
-    MyApp.of(context).setLocale(languageCode == null ? null : Locale.fromSubtags(languageCode: languageCode));
+    MyApp.of(context).locale = languageCode == null ? null : Locale.fromSubtags(languageCode: languageCode);
+    _saveLanguageCode(languageCode);
+  }
+
+  Future<void> _saveLanguageCode(String? languageCode) async {
+    (await SharedPreferences.getInstance()).setString('languageCode', languageCode ?? 'null');
   }
 
   Future<Locale?> getSavedLocale() async {
     try {
       final prefs = await SharedPreferences.getInstance();
-      final languageCode = prefs.getString('languageCode');
-      return languageCode == 'null' ? null : Locale.fromSubtags(languageCode: languageCode!);
+      var languageCode = prefs.getString('languageCode') ?? 'null';
+
+      if (languageCode == 'null') {
+        return null;
+      }
+
+      if (!MyApp.supportedLocales.contains(languageCode)) {
+        languageCode = MyApp.supportedLocales.first;
+      }
+
+      return Locale.fromSubtags(languageCode: languageCode);
     } catch (_) {
       return null;
     }
-  }
-
-  Future<void> saveLocale(Locale? locale) async {
-    (await SharedPreferences.getInstance()).setString('languageCode', locale?.languageCode ?? 'null');
   }
 
   String? get currentLanguageCode => MyApp.of(_key.currentContext!).locale?.languageCode;

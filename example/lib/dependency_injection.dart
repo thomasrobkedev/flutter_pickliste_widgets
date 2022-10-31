@@ -2,7 +2,6 @@ import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:get_it/get_it.dart';
 
 import 'app.dart';
-import 'core/utils/environment.dart';
 import 'core/utils/translations.dart';
 import 'features/diagnostics/domain/use_cases/get_house_number_url.dart';
 
@@ -10,7 +9,7 @@ class DependencyInjection {
   final di = GetIt.instance;
 
   void init() {
-    /// Mehrfach-Ausführung durch die Integrationstests verhindern
+    /// Mehrfach-Ausführung bei den Integrationstests verhindern
     if (di.isRegistered<DependencyInjection>()) {
       return;
     } else {
@@ -19,9 +18,6 @@ class DependencyInjection {
 
     // Übersetzungen initalisieren
     T().init(MyApp.scaffoldMessengerKey);
-
-    // Environment
-    di.registerSingleton<Environment>(Environment());
 
     // use cases
     di.registerSingleton<DiagnosticsUseCaseGetHouseNumberURL>(DiagnosticsUseCaseGetHouseNumberURL());

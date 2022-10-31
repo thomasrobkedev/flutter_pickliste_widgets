@@ -4,14 +4,14 @@ import '../../../../core/enums/testkey.dart';
 import '../../../../core/extensions/list_divided.dart';
 import 'item.dart';
 
-class Dropdown<T> extends StatefulWidget {
+class AppDropdown<T> extends StatefulWidget {
   final String title;
-  final List<DropdownItem> items;
+  final List<AppDropdownItem> items;
   final Function(dynamic) callback;
   final String? doneText;
   final bool multiple;
 
-  const Dropdown({
+  const AppDropdown({
     super.key,
     required this.title,
     required this.items,
@@ -21,10 +21,10 @@ class Dropdown<T> extends StatefulWidget {
   });
 
   @override
-  State<Dropdown<T>> createState() => _DropdownState<T>();
+  State<AppDropdown<T>> createState() => _AppDropdownState<T>();
 }
 
-class _DropdownState<T> extends State<Dropdown<T>> {
+class _AppDropdownState<T> extends State<AppDropdown<T>> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -48,22 +48,22 @@ class _DropdownState<T> extends State<Dropdown<T>> {
         child: Column(
           children: widget.items
               .map(
-                (DropdownItem item) => ListTile(
-                  key: ValueKey(Testkey.dropdown_item_.append(item.value)),
+                (AppDropdownItem item) => ListTile(
+                  key: ValueKey(Testkey.dropdown_item.appendWithUnderscoreAndModifier(item.value, item.selected)),
                   title: item.title,
                   selected: item.selected,
                   enabled: item.enabled,
                   trailing: item.selected
                       ? Icon(
                           Icons.check,
-                          key: ValueKey(Testkey.dropdown_item_icon_.append(item.value)),
+                          key: ValueKey(Testkey.dropdown_item_icon.appendWithUnderscore(item.value)),
                         )
                       : null,
                   onTap: () {
                     if (widget.multiple) {
                       setState(() => item.selected = !item.selected);
                     } else {
-                      widget.callback(item.value);
+                      widget.callback(item.value as T);
                       Navigator.pop(context);
                     }
                   },

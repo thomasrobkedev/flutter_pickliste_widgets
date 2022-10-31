@@ -2,26 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../app.dart';
 import '../extensions/string.dart';
 
 class AppTheme {
-  // Light Mode
-//   final Color primaryColor = Colors.black;
-//   final Color scaffoldColor = const Color(0xfff8f8f8);
-//   final Color headlineColor = const Color(0xff333333);
-
-  // Dark Mode
-//   final Color primaryColorDark = Colors.white;
-//   final Color scaffoldColorDark = const Color(0xff2a2a2a);
-//   final Color headlineColorDark = const Color(0xffcdcdcd);
-
   ThemeData get light => _buildTheme(isLightMode: true);
   ThemeData get dark => _buildTheme(isLightMode: false);
 
   ThemeData _buildTheme({bool isLightMode = true}) {
     final base = isLightMode ? ThemeData.light() : ThemeData.dark();
-    // final currentPrimaryColor = isLightMode ? primaryColor : primaryColorDark;
-    // final currentHeadlineColor = isLightMode ? headlineColor : headlineColorDark;
 
     return base.copyWith(
       useMaterial3: true,
@@ -29,16 +18,30 @@ class AppTheme {
         centerTitle: true,
         systemOverlayStyle: isLightMode ? SystemUiOverlayStyle.dark : SystemUiOverlayStyle.light,
         backgroundColor: Colors.transparent,
-        shape: Border(bottom: BorderSide(color: Colors.grey.withOpacity(.2))),
-        // foregroundColor: currentPrimaryColor,
+        shape: Border(bottom: BorderSide(color: base.dividerColor)),
       ),
-      //   primaryColor: currentPrimaryColor,
-      //   scaffoldBackgroundColor: isLightMode ? scaffoldColor : scaffoldColorDark,
+      pageTransitionsTheme: PageTransitionsTheme(
+        builders: {for (var targetPlatform in TargetPlatform.values) targetPlatform: const CupertinoPageTransitionsBuilder()},
+      ),
     );
   }
 
   String getBrightness(BuildContext context) {
     return MediaQuery.of(context).platformBrightness.name.ucFirst;
+  }
+
+  bool isLightMode(BuildContext context) {
+    final name = MyApp.of(context).themeMode == ThemeMode.system ? MediaQuery.of(context).platformBrightness.name : MyApp.of(context).themeMode.name;
+    return name == ThemeMode.light.name;
+  }
+
+  void setMode(BuildContext context, ThemeMode themeMode) {
+    MyApp.of(context).themeMode = themeMode;
+    _saveMode(themeMode);
+  }
+
+  Future<void> _saveMode(ThemeMode themeMode) async {
+    (await SharedPreferences.getInstance()).setString('themeMode', themeMode.toString());
   }
 
   Future<ThemeMode> getSavedMode() async {
@@ -49,9 +52,5 @@ class AppTheme {
     } catch (_) {
       return ThemeMode.system;
     }
-  }
-
-  Future<void> saveMode(ThemeMode themeMode) async {
-    (await SharedPreferences.getInstance()).setString('themeMode', themeMode.toString());
   }
 }

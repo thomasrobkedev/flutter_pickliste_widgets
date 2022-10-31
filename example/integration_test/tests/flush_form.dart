@@ -11,10 +11,11 @@ class FlushForm {
       await startupApp(tester);
 
       await exists(Testkey.home_page);
-      await tap(Testkey.home_menuFlushForm);
+      await tapAndExpect(Testkey.home_menuPAL, Testkey.pal_page);
+      await tapAndExpect(Testkey.pal_menuFlushForm, Testkey.flushForm_page);
 
       /// --------------------------------------------------------------------------------------------------------------
-      /// wir prüfen das Feld AppFlushForm - Password.
+      /// wir prüfen das Feld PicklisteFlushForm - Password.
       /// --------------------------------------------------------------------------------------------------------------
 
       // User klickt auf password button, dann klickt auf Abbrechen. Die Flushform verschwindet.
@@ -67,7 +68,7 @@ class FlushForm {
       await equalsString('flush-form-return-value', '---');
 
       /// --------------------------------------------------------------------------------------------------------------
-      /// wir prüfen das Feld AppFlushForm - Product number.
+      /// wir prüfen das Feld PicklisteFlushForm - Product number.
       /// --------------------------------------------------------------------------------------------------------------
 
       // User klickt auf 'Product number' button, dann klickt auf Abbrechen. Die Flushform verschwindet.

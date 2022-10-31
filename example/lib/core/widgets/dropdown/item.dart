@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 
-class DropdownItem<T> {
+class AppDropdownItem<T> {
   final Widget? title;
   final Widget? subtitle;
   final T value;
   bool selected;
   bool enabled;
 
-  DropdownItem({
+  AppDropdownItem({
     this.title,
     this.subtitle,
     required this.value,

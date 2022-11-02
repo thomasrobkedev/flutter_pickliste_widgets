@@ -39,6 +39,14 @@ class PalPage extends StatelessWidget {
               trailing: const Icon(Icons.navigate_next),
               onTap: () => context.push('$routeName/${FormPage.routeName}'),
             ),
+            // *** WIP ***
+            // ListTile(
+            //   key: ValueKey(Testkey.pal_menuToast.toString()),
+            //   title: const Text('Toast'),
+            //   leading: const Icon(Icons.slideshow),
+            //   trailing: const Icon(Icons.navigate_next),
+            //   onTap: () => context.push('$routeName/${ToastPage.routeName}'),
+            // ),
             ListTile(
               key: ValueKey(Testkey.pal_menuDiagnostics.toString()),
               title: Text(T()().menu__app_settings_diagnostics),

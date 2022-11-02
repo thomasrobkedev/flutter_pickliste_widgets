@@ -8,6 +8,7 @@ import '../../features/form/presentation/view/page.dart';
 import '../../features/home/presentation/view/page.dart';
 import '../../features/pal/presentation/view/page.dart';
 import '../../features/settings/presentation/view/page.dart';
+import '../../features/toast/presentation/view/page.dart';
 
 class Routing {
   static final router = GoRouter(
@@ -27,12 +28,16 @@ class Routing {
         builder: (context, state) => const PalPage(),
         routes: [
           GoRoute(
+            path: FlushPage.routeName,
+            builder: (context, state) => Theme(data: PicklisteThemeCreator.create(), child: const FlushPage()),
+          ),
+          GoRoute(
             path: FormPage.routeName,
             builder: (context, state) => Theme(data: PicklisteThemeCreator.create(), child: const FormPage()),
           ),
           GoRoute(
-            path: FlushPage.routeName,
-            builder: (context, state) => Theme(data: PicklisteThemeCreator.create(), child: const FlushPage()),
+            path: ToastPage.routeName,
+            builder: (context, state) => Theme(data: PicklisteThemeCreator.create(), child: const ToastPage()),
           ),
           GoRoute(
             path: PalPage.diagnosticsRouteName,

@@ -8,6 +8,7 @@ enum Testkey {
   pal_page,
   pal_menuFlushForm,
   pal_menuFormElements,
+  pal_menuToast,
   pal_menuDiagnostics,
 
   settings_page,
@@ -17,6 +18,13 @@ enum Testkey {
   flushForm_page,
 
   formElements_page,
+
+  toast_page,
+  toast_toast,
+  toast_active,
+  toast_animationDuration,
+  toast_startAnimation,
+  toast_autoTimeout,
 
   language_page,
   language_item_,

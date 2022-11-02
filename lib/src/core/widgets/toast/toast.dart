@@ -11,10 +11,9 @@ class PicklisteToast extends StatefulWidget {
   final String? textDefault;
   final Color color;
   final bool active;
-  final int duration;
-  final int showDelay;
+  final int animationDuration;
+  final bool startAnimation;
   final int? autoTimeout;
-  final bool scrollView;
   final Widget child;
 
   const PicklisteToast({
@@ -24,11 +23,10 @@ class PicklisteToast extends StatefulWidget {
     this.textDefault,
     required this.color,
     this.active = true,
-    this.duration = 350,
-    this.showDelay = 100,
+    this.animationDuration = 350,
+    this.startAnimation = false,
     this.autoTimeout,
     this.testKey,
-    this.scrollView = true,
     required this.child,
   }) : super(key: key);
 
@@ -50,27 +48,35 @@ class _PicklisteToastState extends State<PicklisteToast> {
   Widget build(BuildContext context) {
     if (widget.active) {
       if (_step == 0) {
-        /// slide in
-        Future.delayed(Duration(milliseconds: widget.showDelay), (() => setState(() => _step = 1)));
+        if (widget.startAnimation) {
+          WidgetsBinding.instance.addPostFrameCallback((_) => setState(() => _step = 1));
+        } else {
+          setState(() => _step = 1);
+        }
       } else if (_step == 1 && widget.autoTimeout != null) {
-        /// slide out
         _timer = Timer(Duration(milliseconds: widget.autoTimeout!), () => setState(() => _step = 2));
       }
     }
 
     return Stack(
-      alignment: Alignment.topCenter,
       children: [
-        Positioned.fill(
-          child: widget.scrollView //
-              ? SingleChildScrollView(child: _content())
-              : _content(),
+        Column(
+          children: [
+            // placeholder: schiebt den content der Seite nach unten, um Platz für den Toast zu schaffen
+            AnimatedSize(
+              duration: Duration(milliseconds: widget.animationDuration),
+              child: _container(height: _step == 1 ? null : 0),
+            ),
+            // content der Seite
+            Expanded(child: widget.child),
+          ],
         ),
         Column(
           children: [
+            // Toast
             AnimatedSlide(
               offset: _step == 1 ? Offset.zero : const Offset(0, -1),
-              duration: Duration(milliseconds: widget.duration),
+              duration: Duration(milliseconds: widget.animationDuration),
               child: _container(testKey: widget.testKey == null ? null : ValueKey(widget.testKey!.value + (_step == 1 ? '--active' : '--inactive'))),
             ),
           ],
@@ -79,19 +85,7 @@ class _PicklisteToastState extends State<PicklisteToast> {
     );
   }
 
-  Widget _content() {
-    return Column(
-      children: [
-        AnimatedSize(
-          duration: Duration(milliseconds: widget.duration),
-          child: _container(height: _step == 1 ? null : 0),
-        ),
-        widget.child,
-      ],
-    );
-  }
-
-  Container _container({double? height, ValueKey<String>? testKey}) {
+  Widget _container({double? height, ValueKey<String>? testKey}) {
     return Container(
       key: testKey,
       width: double.infinity,

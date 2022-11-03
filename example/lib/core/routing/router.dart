@@ -2,13 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../features/counter/presentation/view/page.dart';
+import '../../features/counter/presentation/view/pages/page.dart';
 import '../../features/flush/presentation/view/page.dart';
-import '../../features/form/presentation/view/page.dart';
-import '../../features/home/presentation/view/page.dart';
-import '../../features/pal/presentation/view/page.dart';
-import '../../features/settings/presentation/view/page.dart';
-import '../../features/toast/presentation/view/page.dart';
+import '../../features/form/presentation/view/pages/page.dart';
+import '../../features/home/presentation/view/pages/page.dart';
+import '../../features/pal/presentation/view/pages/page.dart';
+import '../../features/settings/presentation/view/pages/page.dart';
+import '../../features/toast/presentation/view/pages/page.dart';
 
 class Routing {
   static final router = GoRouter(
@@ -20,7 +20,7 @@ class Routing {
         builder: (context, state) => HomePage(key: state.pageKey),
       ),
       GoRoute(
-        path: '/counter',
+        path: HomePage.counterRouteName,
         builder: (context, state) => const CounterPage(title: 'Counter'),
       ),
       GoRoute(
@@ -37,7 +37,7 @@ class Routing {
           ),
           GoRoute(
             path: ToastPage.routeName,
-            builder: (context, state) => Theme(data: PicklisteThemeCreator.create(), child: const ToastPage()),
+            builder: (context, state) => Theme(data: PicklisteThemeCreator.create(), child: ToastPage()),
           ),
           GoRoute(
             path: PalPage.diagnosticsRouteName,

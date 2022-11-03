@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-import '../../theme/theme_const.dart';
+import '../../theme/global_theme.dart';
 import 'field.dart';
 
 class PicklisteTextField extends StatefulWidget {
@@ -57,14 +57,14 @@ class _PicklisteTextFieldState extends State<PicklisteTextField> {
         textInputAction: TextInputAction.next,
         inputFormatters: widget.inputFormatters,
         readOnly: widget.readOnly,
-        style: TextStyle(color: widget.enabled ? Colors.black : const Color(PicklisteThemeConstants.kLabelColor), fontSize: PicklisteThemeConstants.kFontSizeDefault),
+        style: TextStyle(color: widget.enabled ? Colors.black : const Color(PicklisteThemeCreator.kLabelColor), fontSize: PicklisteThemeCreator.kFontSizeDefault),
         decoration: InputDecoration(
           hintText: widget.hint,
           isDense: true,
           contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
           border: InputBorder.none,
           labelText: widget.labelText.replaceAll(':', ''),
-          labelStyle: const TextStyle(color: Color(PicklisteThemeConstants.kLabelColor), fontSize: PicklisteThemeConstants.kFontSizeDefault),
+          labelStyle: const TextStyle(color: Color(PicklisteThemeCreator.kLabelColor), fontSize: PicklisteThemeCreator.kFontSizeDefault),
           floatingLabelBehavior: FloatingLabelBehavior.always,
           enabled: widget.enabled,
           suffixIconConstraints: const BoxConstraints(maxHeight: 24),

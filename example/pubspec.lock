@@ -93,7 +93,7 @@ packages:
     source: hosted
     version: "4.0.6"
   equatable:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: equatable
       url: "https://pub.dartlang.org"
@@ -126,7 +126,7 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_bloc:
-    dependency: transitive
+    dependency: "direct main"
     description:
       name: flutter_bloc
       url: "https://pub.dartlang.org"
@@ -155,7 +155,7 @@ packages:
       path: ".."
       relative: true
     source: path
-    version: "1.0.0+16"
+    version: "1.0.1+17"
   flutter_test:
     dependency: "direct dev"
     description: flutter
@@ -315,7 +315,7 @@ packages:
       name: path_provider_android
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.0.20"
+    version: "2.0.21"
   path_provider_ios:
     dependency: transitive
     description:
@@ -357,7 +357,7 @@ packages:
       name: petitparser
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.0"
+    version: "5.1.0"
   platform:
     dependency: transitive
     description:

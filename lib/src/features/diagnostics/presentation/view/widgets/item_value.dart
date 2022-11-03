@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/theme/theme_const.dart';
+import '../../../../../core/theme/global_theme.dart';
 import '../../../domain/models/item.dart';
 
 class PicklisteDiagnosticsItemValue extends StatelessWidget {
@@ -40,7 +40,7 @@ class PicklisteDiagnosticsItemValue extends StatelessWidget {
           ),
           Text(
             destinations.map((_) => '  ➔  ').join('\n'),
-            style: const TextStyle(height: 1.2 * PicklisteThemeConstants.kFontSizeDefault / PicklisteThemeConstants.kFontSizeSmall, fontSize: PicklisteThemeConstants.kFontSizeSmall),
+            style: const TextStyle(height: 1.2 * PicklisteThemeCreator.kFontSizeDefault / PicklisteThemeCreator.kFontSizeSmall, fontSize: PicklisteThemeCreator.kFontSizeSmall),
           ),
           Text(
             gateways.join('\n'),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/theme_const.dart';
+import '../../theme/global_theme.dart';
 
 class PicklisteIntroContainer extends StatelessWidget {
   final ValueKey<String>? testKey;
@@ -24,7 +24,7 @@ class PicklisteIntroContainer extends StatelessWidget {
             text,
             key: testKey,
             textAlign: TextAlign.center,
-            style: const TextStyle(fontSize: PicklisteThemeConstants.kFontSizeMedium),
+            style: const TextStyle(fontSize: PicklisteThemeCreator.kFontSizeMedium),
           ),
         );
 
@@ -34,8 +34,8 @@ class PicklisteIntroContainer extends StatelessWidget {
       width: double.infinity,
       padding: padding ?? const EdgeInsets.all(16),
       decoration: const BoxDecoration(
-        color: Color(PicklisteThemeConstants.kMenuBackgroundColor),
-        border: Border(bottom: BorderSide(color: Color(PicklisteThemeConstants.kContainerBorderColor))),
+        color: Color(PicklisteThemeCreator.kMenuBackgroundColor),
+        border: Border(bottom: BorderSide(color: Color(PicklisteThemeCreator.kContainerBorderColor))),
       ),
       child: child,
     );

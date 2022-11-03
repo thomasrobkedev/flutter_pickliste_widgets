@@ -5,16 +5,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../app.dart';
 
 class T {
-  late final GlobalKey<ScaffoldMessengerState> _key;
+  GlobalKey<ScaffoldMessengerState>? _key;
 
   /// singleton
   static final T _instance = T._internal();
   factory T() => _instance;
   T._internal();
 
-  void init(GlobalKey<ScaffoldMessengerState> key) => _instance._key = key;
-
-  AppLocalizations call() => AppLocalizations.of(_key.currentContext!)!;
+  void init(GlobalKey<ScaffoldMessengerState> key) => _instance._key ??= key;
+  AppLocalizations call() => AppLocalizations.of(_context)!;
+  BuildContext get _context => _key!.currentContext!;
 
   void switchLanguage(BuildContext context, String? languageCode) {
     MyApp.of(context).locale = languageCode == null ? null : Locale.fromSubtags(languageCode: languageCode);
@@ -45,7 +45,7 @@ class T {
     }
   }
 
-  String? get currentLanguageCode => MyApp.of(_key.currentContext!).locale?.languageCode;
+  String? get currentLanguageCode => MyApp.of(_context).locale?.languageCode;
   String get currentLanguage => getLanguage(currentLanguageCode);
 
   String getLanguage(String? languageCode) {

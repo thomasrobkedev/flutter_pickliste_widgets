@@ -3,13 +3,14 @@ import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart' hide L
 import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../core/enums/testkey.dart';
-import '../../../../core/extensions/list_divided.dart';
-import '../../../../core/utils/translations.dart';
-import '../../../diagnostics/domain/use_cases/get_house_number_url.dart';
-import '../../../diagnostics/domain/use_cases/get_items.dart';
-import '../../../flush/presentation/view/page.dart';
-import '../../../form/presentation/view/page.dart';
+import '../../../../../core/enums/testkey.dart';
+import '../../../../../core/extensions/list_divided.dart';
+import '../../../../../core/utils/translations.dart';
+import '../../../../diagnostics/domain/use_cases/get_house_number_url.dart';
+import '../../../../diagnostics/domain/use_cases/get_items.dart';
+import '../../../../flush/presentation/view/page.dart';
+import '../../../../form/presentation/view/pages/page.dart';
+import '../../../../toast/presentation/view/pages/page.dart';
 
 class PalPage extends StatelessWidget {
   static const routeName = '/pal';
@@ -21,7 +22,7 @@ class PalPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       key: ValueKey(Testkey.pal_page.toString()),
-      appBar: AppBar(title: const Text('PAL Show Cases')),
+      appBar: AppBar(title: const Text('PAL + PLL')),
       body: SingleChildScrollView(
         child: Column(
           children: <Widget>[
@@ -39,14 +40,13 @@ class PalPage extends StatelessWidget {
               trailing: const Icon(Icons.navigate_next),
               onTap: () => context.push('$routeName/${FormPage.routeName}'),
             ),
-            // *** WIP ***
-            // ListTile(
-            //   key: ValueKey(Testkey.pal_menuToast.toString()),
-            //   title: const Text('Toast'),
-            //   leading: const Icon(Icons.slideshow),
-            //   trailing: const Icon(Icons.navigate_next),
-            //   onTap: () => context.push('$routeName/${ToastPage.routeName}'),
-            // ),
+            ListTile(
+              key: ValueKey(Testkey.pal_menuToast.toString()),
+              title: const Text('Toast'),
+              leading: const Icon(Icons.slideshow),
+              trailing: const Icon(Icons.navigate_next),
+              onTap: () => context.push('$routeName/${ToastPage.routeName}'),
+            ),
             ListTile(
               key: ValueKey(Testkey.pal_menuDiagnostics.toString()),
               title: Text(T()().menu__app_settings_diagnostics),

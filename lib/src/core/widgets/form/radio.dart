@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/theme_const.dart';
+import '../../theme/global_theme.dart';
 import 'field.dart';
 
 class PicklisteRadio<T> extends StatelessWidget {
@@ -32,7 +32,7 @@ class PicklisteRadio<T> extends StatelessWidget {
           contentPadding: const EdgeInsets.only(left: 8),
           title: Container(
             transform: Matrix4.translationValues(-8, 0, 0),
-            child: Text(title, style: TextStyle(color: enabled ? Colors.black : const Color(PicklisteThemeConstants.kLabelColor), fontSize: PicklisteThemeConstants.kFontSizeDefault)),
+            child: Text(title, style: TextStyle(color: enabled ? Colors.black : const Color(PicklisteThemeCreator.kLabelColor), fontSize: PicklisteThemeCreator.kFontSizeDefault)),
           ),
           value: value,
           groupValue: groupValue,

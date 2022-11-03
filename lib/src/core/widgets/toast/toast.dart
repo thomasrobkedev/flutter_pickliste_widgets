@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:flutter/material.dart';
 
-import '../../theme/theme_const.dart';
+import '../../theme/global_theme.dart';
 
 class PicklisteToast extends StatefulWidget {
   final ValueKey<String>? testKey;
@@ -53,8 +53,11 @@ class _PicklisteToastState extends State<PicklisteToast> {
         } else {
           setState(() => _step = 1);
         }
-      } else if (_step == 1 && widget.autoTimeout != null) {
-        _timer = Timer(Duration(milliseconds: widget.autoTimeout!), () => setState(() => _step = 2));
+      }
+
+      if (_step == 1 && widget.autoTimeout != null) {
+        final timeout = widget.autoTimeout! + (widget.startAnimation ? widget.animationDuration : 0);
+        _timer = Timer(Duration(milliseconds: timeout), () => setState(() => _step = 2));
       }
     }
 
@@ -93,15 +96,15 @@ class _PicklisteToastState extends State<PicklisteToast> {
       padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
       decoration: BoxDecoration(
         color: widget.color,
-        border: const Border(bottom: BorderSide(color: Color(PicklisteThemeConstants.kContainerBorderColor))),
+        border: const Border(bottom: BorderSide(color: Color(PicklisteThemeCreator.kContainerBorderColor))),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          _text(widget.textLarge, PicklisteThemeConstants.kFontSizeLarge, '_large'),
-          _text(widget.textMedium, PicklisteThemeConstants.kFontSizeMedium, '_medium'),
-          _text(widget.textDefault, PicklisteThemeConstants.kFontSizeDefault, '_default'),
+          _text(widget.textLarge, PicklisteThemeCreator.kFontSizeLarge, '_large'),
+          _text(widget.textMedium, PicklisteThemeCreator.kFontSizeMedium, '_medium'),
+          _text(widget.textDefault, PicklisteThemeCreator.kFontSizeDefault, '_default'),
         ],
       ),
     );

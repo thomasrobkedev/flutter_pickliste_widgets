@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
 import '../../enums/testkey.dart';
-import '../../theme/theme_const.dart';
+import '../../theme/global_theme.dart';
 import '../form/text_field.dart';
 import '../misc/intro_container.dart';
 import 'container.dart';
@@ -104,14 +104,14 @@ class _PicklisteFlushFormState<T> extends State<PicklisteFlushForm<T>> {
                   child: Text(
                     key: ValueKey(PicklisteTestkey.flushForm_error.toString()),
                     widget.failText,
-                    style: const TextStyle(color: Colors.red, fontSize: PicklisteThemeConstants.kFontSizeSmall),
+                    style: const TextStyle(color: Colors.red, fontSize: PicklisteThemeCreator.kFontSizeSmall),
                   ),
                 ),
               ),
             ],
           ),
         ),
-        const Divider(color: Color(PicklisteThemeConstants.kContainerBorderColor)),
+        const Divider(color: Color(PicklisteThemeCreator.kContainerBorderColor)),
         SizedBox(
           height: 48,
           child: Row(
@@ -124,7 +124,7 @@ class _PicklisteFlushFormState<T> extends State<PicklisteFlushForm<T>> {
                 onPressed: () => submit(context),
                 testKey: ValueKey(PicklisteTestkey.flushForm_ok.toString()),
               ),
-              const VerticalDivider(color: Color(PicklisteThemeConstants.kContainerBorderColor)),
+              const VerticalDivider(color: Color(PicklisteThemeCreator.kContainerBorderColor)),
               _button(
                 context,
                 caption: widget.cancelText,
@@ -152,7 +152,7 @@ class _PicklisteFlushFormState<T> extends State<PicklisteFlushForm<T>> {
         onPressed: onPressed,
         style: TextButton.styleFrom(
           foregroundColor: primary ? Colors.white : Colors.black,
-          textStyle: const TextStyle(fontSize: PicklisteThemeConstants.kFontSizeDefault),
+          textStyle: const TextStyle(fontSize: PicklisteThemeCreator.kFontSizeDefault),
           backgroundColor: primary ? Theme.of(context).primaryColor : Colors.white,
           shape: const RoundedRectangleBorder(borderRadius: BorderRadius.zero),
           side: BorderSide.none,

@@ -25,6 +25,8 @@ enum Testkey {
   toast_animationDuration,
   toast_startAnimation,
   toast_autoTimeout,
+  toast_submit,
+  toast_reset,
 
   language_page,
   language_item_,

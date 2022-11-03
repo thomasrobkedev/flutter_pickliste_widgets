@@ -3,14 +3,14 @@ import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../../../app.dart';
-import '../../../../core/enums/testkey.dart';
-import '../../../../core/extensions/list_divided.dart';
-import '../../../../core/extensions/string.dart';
-import '../../../../core/theme/app_theme.dart';
-import '../../../../core/utils/translations.dart';
-import '../../../../core/widgets/dropdown/dropdown.dart';
-import '../../../../core/widgets/dropdown/item.dart';
+import '../../../../../app.dart';
+import '../../../../../core/enums/testkey.dart';
+import '../../../../../core/extensions/list_divided.dart';
+import '../../../../../core/extensions/string.dart';
+import '../../../../../core/theme/app_theme.dart';
+import '../../../../../core/utils/translations.dart';
+import '../../../../../core/widgets/dropdown/dropdown.dart';
+import '../../../../../core/widgets/dropdown/item.dart';
 
 class SettingsPage extends StatelessWidget {
   static const routeName = '/settings';

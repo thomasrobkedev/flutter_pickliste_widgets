@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/theme_const.dart';
+import '../../theme/global_theme.dart';
 import 'field.dart';
 
 class PicklisteCheckbox extends StatelessWidget {
@@ -28,7 +28,7 @@ class PicklisteCheckbox extends StatelessWidget {
         child: CheckboxListTile(
           key: testKey,
           contentPadding: const EdgeInsets.only(left: 8),
-          title: Text(title, style: TextStyle(color: enabled ? Colors.black : const Color(PicklisteThemeConstants.kLabelColor), fontSize: PicklisteThemeConstants.kFontSizeDefault)),
+          title: Text(title, style: TextStyle(color: enabled ? Colors.black : const Color(PicklisteThemeCreator.kLabelColor), fontSize: PicklisteThemeCreator.kFontSizeDefault)),
           value: value,
           onChanged: enabled ? onChanged : null,
           dense: true,

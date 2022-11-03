@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../theme/theme_const.dart';
+import '../theme/global_theme.dart';
 
 extension ListDivided on Iterable {
   List<Widget> toListDivided({double indent = 0.0, double endIndent = 0.0, bool withLastLine = false}) {
@@ -14,7 +14,7 @@ extension ListDivided on Iterable {
               visible: entry.key < entries.length - (withLastLine ? 0 : 1),
               child: Divider(
                 height: 0,
-                color: const Color(PicklisteThemeConstants.kDividerColor),
+                color: const Color(PicklisteThemeCreator.kDividerColor),
                 indent: indent,
                 endIndent: endIndent,
                 thickness: 0.5,

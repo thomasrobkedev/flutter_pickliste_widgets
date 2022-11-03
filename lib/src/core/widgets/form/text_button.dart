@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/theme_const.dart';
+import '../../theme/global_theme.dart';
 import 'field.dart';
 
 class PicklisteTextButton extends StatelessWidget {
@@ -74,12 +74,12 @@ class PicklisteTextButton extends StatelessWidget {
       return Colors.white;
     }
 
-    return enabled ? Colors.black : const Color(PicklisteThemeConstants.kLabelColor);
+    return enabled ? Colors.black : const Color(PicklisteThemeCreator.kLabelColor);
   }
 
   Color _getBackgroundColor(BuildContext context) {
     if (primary) {
-      return const Color(PicklisteThemeConstants.kThemePrimaryColor).withOpacity(enabled ? 1 : 0.5);
+      return const Color(PicklisteThemeCreator.kThemePrimaryColor).withOpacity(enabled ? 1 : 0.5);
     }
 
     if (danger) {
@@ -97,7 +97,7 @@ class PicklisteTextButton extends StatelessWidget {
         textAlign: TextAlign.center,
         style: TextStyle(
           fontWeight: FontWeight.normal,
-          fontSize: PicklisteThemeConstants.kFontSizeDefault,
+          fontSize: PicklisteThemeCreator.kFontSizeDefault,
           color: _getColor(),
         ),
       ),

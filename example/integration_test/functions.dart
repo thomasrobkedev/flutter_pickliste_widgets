@@ -1,4 +1,4 @@
-import 'package:example/features/home/presentation/view/page.dart';
+import 'package:example/features/home/presentation/view/pages/page.dart';
 import 'package:example/main_test.dart' as app;
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';

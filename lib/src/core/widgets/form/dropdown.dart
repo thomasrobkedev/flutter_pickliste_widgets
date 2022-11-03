@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/theme_const.dart';
+import '../../theme/global_theme.dart';
 import 'field.dart';
 
 class PicklisteDropdown<T> extends StatelessWidget {
@@ -35,13 +35,13 @@ class PicklisteDropdown<T> extends StatelessWidget {
           value: value,
           onChanged: enabled ? onChanged : null,
           focusNode: focusNode,
-          style: const TextStyle(color: Colors.black, fontSize: PicklisteThemeConstants.kFontSizeDefault),
+          style: const TextStyle(color: Colors.black, fontSize: PicklisteThemeCreator.kFontSizeDefault),
           decoration: InputDecoration(
             isDense: true,
             contentPadding: const EdgeInsets.symmetric(horizontal: 8, vertical: 0),
             border: InputBorder.none,
             labelText: labelText.replaceAll(':', ''),
-            labelStyle: const TextStyle(color: Color(PicklisteThemeConstants.kLabelColor), fontSize: PicklisteThemeConstants.kFontSizeDefault),
+            labelStyle: const TextStyle(color: Color(PicklisteThemeCreator.kLabelColor), fontSize: PicklisteThemeCreator.kFontSizeDefault),
             floatingLabelBehavior: FloatingLabelBehavior.always,
             enabled: enabled,
           ),

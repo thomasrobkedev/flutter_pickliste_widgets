@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../../../../core/theme/theme_const.dart';
+import '../../../../../core/theme/global_theme.dart';
 import '../../../domain/models/item.dart';
 
 class PicklisteDiagnosticsItemLabel extends StatelessWidget {
@@ -18,7 +18,7 @@ class PicklisteDiagnosticsItemLabel extends StatelessWidget {
     return Text(
       label,
       key: ValueKey('${item.testKexPrefix}_label'),
-      style: const TextStyle(fontSize: PicklisteThemeConstants.kFontSizeSmall, fontWeight: FontWeight.bold),
+      style: const TextStyle(fontSize: PicklisteThemeCreator.kFontSizeSmall, fontWeight: FontWeight.bold),
     );
   }
 }

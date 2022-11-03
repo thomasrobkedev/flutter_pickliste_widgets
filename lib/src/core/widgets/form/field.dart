@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import '../../theme/theme_const.dart';
+import '../../theme/global_theme.dart';
 
 class PicklisteField extends StatelessWidget {
   final Widget child;
@@ -21,9 +21,9 @@ class PicklisteField extends StatelessWidget {
       alignment: Alignment.center,
       margin: const EdgeInsets.all(8),
       decoration: BoxDecoration(
-        color: enabled ? const Color(PicklisteThemeConstants.kTileBackgroundColor) : Colors.transparent,
+        color: enabled ? const Color(PicklisteThemeCreator.kTileBackgroundColor) : Colors.transparent,
         borderRadius: BorderRadius.circular(6),
-        border: Border.all(color: const Color(PicklisteThemeConstants.kTileBorderColor)),
+        border: Border.all(color: const Color(PicklisteThemeCreator.kTileBorderColor)),
       ),
       child: Stack(
         alignment: Alignment.bottomLeft,

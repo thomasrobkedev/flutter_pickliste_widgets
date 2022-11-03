@@ -1,32 +1,51 @@
-# Builds
-run:
-	cd example && flutter run
+.DEFAULT_GOAL := help
 
-# Format & Lint
-format:
-	flutter format . --line-length 999
+help:
+	@dart tools/make.dart 'help'
 
-lint:
-	flutter analyze
 
-# Testing
-int-test:
-	cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart --keep-app-running
+# ------------------------------------------------------------
+run: ## Startet die App
+	@cd example && flutter run
 
-int-test-watch:
-	cd example && flutter run integration_test/main_test.dart
 
-test:
-	flutter test
+# ------------------------------------------------------------
+format: ## Formatiert alle Files. (https://docs.flutter.dev/development/tools/formatting)
+	@flutter format . --line-length 999
+
+fix: ## Bereinigt alle Files. z.B. unnötige import, fehlende const, etc. (https://dart.dev/tools/dart-fix)
+	@dart fix --apply
+
+format-fix: format fix ## make format + make fix
+
+lint: ## Analysiert den Code und zeigt (Formatierungs-)Probleme unter Berücksichtigung von analysis_options.yaml
+	@flutter analyze
+
+
+# ------------------------------------------------------------
+int-test: ## Führt die Integrationstests EINMALIG aus.
+	@cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart --keep-app-running
+
+int-test-watch: ## Führt die Integrationstests aus und wartet dann auf [SHIFT + R] für einen erneuten Lauf. 
+	@cd example && flutter run integration_test/main_test.dart
+
+test: ## Führt die Unit-Tests aus. Genauer: alle Dateien mit folgendem Muster: /test/**_test.dart
+	@flutter test
 .PHONY: test
 
-# Clean project
-clean:
-	flutter clean
-	flutter pub get
 
-# Localization
-translate:
-	cd example && flutter gen-l10n
-phrasepull:
-	dart tools/phrasepull.dart
+# ------------------------------------------------------------
+clean: ## Bereinigt den Projekt-Cache. Löscht die temporären Projekt-Ordner und -Dateien (z.B. .dart_tools) und erstellt diese neu
+	@flutter clean
+	@flutter pub get
+	@cd example && flutter clean
+	@cd example && flutter pub get
+	@flutter analyze
+
+
+# ------------------------------------------------------------
+translate: ## Kompiliert die ARB-Dateien zu dart Dateien, die Flutter bei Übersetzungen ausführt
+	@cd example && flutter gen-l10n
+
+phrasepull: ## Lädt die Sprachdateien von phrase.com und speichert sie als ARB Dateien ab.
+	@dart tools/make.dart 'phrasepull'

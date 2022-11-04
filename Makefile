@@ -19,13 +19,13 @@ lint: ## Analysiert den Code und zeigt (Formatierungs-)Probleme unter Berücksic
 
 
 # ------------------------------------------------------------
-int-test: ## Führt die Integrationstests EINMALIG aus.
+tests: ## Führt die Integrationstests EINMALIG aus.
 	@cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart --keep-app-running
 
-int-test-watch: ## Führt die Integrationstests aus und wartet dann auf [SHIFT + R] für einen erneuten Lauf. 
+tests-watch: ## Führt die Integrationstests aus und wartet dann auf [SHIFT + R] für einen erneuten Lauf. 
 	@cd example && flutter run integration_test/main_test.dart
 
-test: ## Führt die Unit-Tests aus. Genauer: alle Dateien mit folgendem Muster: /test/**_test.dart
+unit-tests: ## Führt die Unit-Tests aus. Genauer: alle Dateien mit folgendem Muster: /test/**_test.dart
 	@flutter test
 .PHONY: test
 

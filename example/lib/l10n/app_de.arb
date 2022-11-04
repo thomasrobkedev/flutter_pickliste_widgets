@@ -213,6 +213,10 @@
   "@dispohz__product_not_in_file": {
     "type": "text"
   },
+  "dispohz__red_price_is_higher_than_black_price": "Der Rotpreis ist höher als der Schwarzpreis. Es wird kein Etikett gedruckt.",
+  "@dispohz__red_price_is_higher_than_black_price": {
+    "type": "text"
+  },
   "duplicator__please_scan_old_price": "Bitte alten Preis scannen!",
   "@duplicator__please_scan_old_price": {
     "type": "text"

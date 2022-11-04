@@ -66,41 +66,58 @@ class ToastPage extends StatelessWidget {
         padding: const EdgeInsets.all(8),
         child: Column(
           children: [
-            PicklisteSwitch(
-              testKey: ValueKey(Testkey.toast_active.toString()),
-              title: 'Aktiv',
-              value: data.active,
-              onChanged: (value) => _bloc.add(ToastPageRefreshEvent(data, active: value!)),
-            ),
-            PicklisteSwitch(
-              testKey: ValueKey(Testkey.toast_startAnimation.toString()),
-              title: 'Start-Animation',
-              value: data.startAnimation,
-              onChanged: (value) => _bloc.add(ToastPageRefreshEvent(data, startAnimation: value!)),
-            ),
-            PicklisteTextField(
-              labelText: 'Animations-Dauer [ms]',
-              testKey: ValueKey(Testkey.toast_animationDuration.toString()),
-              controller: _animationDurationController,
-              keyboardType: TextInputType.number,
-              inputFormatters: [
-                FilteringTextInputFormatter.allow(RegExp(r'\d{1,4}')),
-                LengthLimitingTextInputFormatter(4),
-              ],
-            ),
-            PicklisteTextField(
-              labelText: 'Auto-Timeout [ms] (0 = deaktiviert)',
-              testKey: ValueKey(Testkey.toast_animationDuration.toString()),
-              controller: _autoTimeoutController,
-              keyboardType: TextInputType.number,
-              inputFormatters: [
-                FilteringTextInputFormatter.allow(RegExp(r'\d{1,4}')),
-                LengthLimitingTextInputFormatter(4),
-              ],
-            ),
-            Row(
+            PicklisteResponsiveRow(
               children: [
-                Expanded(
+                PicklisteResponsiveCol(
+                  md: 1,
+                  child: PicklisteSwitch(
+                    testKey: ValueKey(Testkey.toast_active.toString()),
+                    title: 'Aktiv',
+                    value: data.active,
+                    onChanged: (value) => _bloc.add(ToastPageRefreshEvent(data, active: value!)),
+                  ),
+                ),
+                PicklisteResponsiveCol(
+                  md: 1,
+                  child: PicklisteSwitch(
+                    testKey: ValueKey(Testkey.toast_startAnimation.toString()),
+                    title: 'Start-Animation',
+                    value: data.startAnimation,
+                    onChanged: (value) => _bloc.add(ToastPageRefreshEvent(data, startAnimation: value!)),
+                  ),
+                ),
+                PicklisteResponsiveCol(
+                  md: 1,
+                  child: PicklisteTextField(
+                    labelText: 'Animations-Dauer [ms]',
+                    testKey: ValueKey(Testkey.toast_animationDuration.toString()),
+                    controller: _animationDurationController,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(RegExp(r'\d{1,4}')),
+                      LengthLimitingTextInputFormatter(4),
+                    ],
+                  ),
+                ),
+                PicklisteResponsiveCol(
+                  md: 1,
+                  child: PicklisteTextField(
+                    labelText: 'Auto-Timeout [ms] (0 = deaktiviert)',
+                    testKey: ValueKey(Testkey.toast_animationDuration.toString()),
+                    controller: _autoTimeoutController,
+                    keyboardType: TextInputType.number,
+                    inputFormatters: [
+                      FilteringTextInputFormatter.allow(RegExp(r'\d{1,4}')),
+                      LengthLimitingTextInputFormatter(4),
+                    ],
+                  ),
+                ),
+              ],
+            ),
+            PicklisteResponsiveRow(
+              children: [
+                PicklisteResponsiveCol(
+                  sm: 1 / 2,
                   child: PicklisteTextButton(
                     testKey: ValueKey(Testkey.toast_submit.toString()),
                     caption: 'Submit',
@@ -117,7 +134,8 @@ class ToastPage extends StatelessWidget {
                     ),
                   ),
                 ),
-                Expanded(
+                PicklisteResponsiveCol(
+                  sm: 1 / 2,
                   child: PicklisteTextButton(
                     testKey: ValueKey(Testkey.toast_reset.toString()),
                     caption: 'Reset',

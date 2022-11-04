@@ -1,19 +1,27 @@
+import '../../domain/models/data.dart';
+
 abstract class ToastEvent {}
 
-class ToastSubmit extends ToastEvent {
-  final bool active;
-  final bool startAnimation;
-  final int animationDuration;
-  final int autoTimeout;
-  final bool submitted;
+class ToastSubmitEvent extends ToastEvent {
+  final ToastData data;
 
-  ToastSubmit({
-    required this.active,
-    required this.startAnimation,
-    required this.animationDuration,
-    required this.autoTimeout,
-    required this.submitted,
+  ToastSubmitEvent(this.data);
+}
+
+class ToastPageRefreshEvent extends ToastEvent {
+  final ToastData data;
+  final bool? active;
+  final bool? startAnimation;
+  final int? animationDuration;
+  final int? autoTimeout;
+
+  ToastPageRefreshEvent(
+    this.data, {
+    this.active,
+    this.startAnimation,
+    this.animationDuration,
+    this.autoTimeout,
   });
 }
 
-class ToastReset extends ToastEvent {}
+class ToastResetEvent extends ToastEvent {}

@@ -1,27 +1,28 @@
 import 'package:equatable/equatable.dart';
 import 'package:flutter/material.dart';
 
+import '../../domain/models/data.dart';
+
 @immutable
 abstract class ToastState extends Equatable {
   @override
   List<Object> get props => [];
 }
 
-class ToastData extends ToastState {
-  final bool active;
-  final bool startAnimation;
-  final int animationDuration;
-  final int autoTimeout;
-  final bool submitted;
+class ToastSubmit extends ToastState {
+  final ToastData data;
 
-  ToastData(
-    this.active,
-    this.startAnimation,
-    this.animationDuration,
-    this.autoTimeout,
-    this.submitted,
-  );
+  ToastSubmit(this.data);
 
   @override
-  List<Object> get props => [active, startAnimation, animationDuration, autoTimeout, submitted, DateTime.now()];
+  List<Object> get props => [...data.props, DateTime.now()];
+}
+
+class ToastPageRefresh extends ToastState {
+  final ToastData data;
+
+  ToastPageRefresh(this.data);
+
+  @override
+  List<Object> get props => [...data.props, DateTime.now()];
 }

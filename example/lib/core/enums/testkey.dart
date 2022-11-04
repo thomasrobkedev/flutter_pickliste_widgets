@@ -16,6 +16,9 @@ enum Testkey {
   settings_menuTheme,
 
   flushForm_page,
+  flushForm_buttonBool,
+  flushForm_buttonString,
+  flushForm_returnValue,
 
   formElements_page,
 

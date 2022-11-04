@@ -10,13 +10,9 @@ run: ## Startet die App
 
 
 # ------------------------------------------------------------
-format: ## Formatiert alle Files. (https://docs.flutter.dev/development/tools/formatting)
+format: ## Formatiert und bereinigt alle Files. https://docs.flutter.dev/development/tools/formatting, https://dart.dev/tools/dart-fix
 	@flutter format . --line-length 999
-
-fix: ## Bereinigt alle Files. z.B. unnötige import, fehlende const, etc. (https://dart.dev/tools/dart-fix)
 	@dart fix --apply
-
-format-fix: format fix ## make format + make fix
 
 lint: ## Analysiert den Code und zeigt (Formatierungs-)Probleme unter Berücksichtigung von analysis_options.yaml
 	@flutter analyze

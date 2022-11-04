@@ -1,25 +1,25 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../app.dart';
 import '../extensions/string.dart';
+import 'color_schemes.g.dart';
 
 class AppTheme {
   ThemeData get light => _buildTheme(isLightMode: true);
   ThemeData get dark => _buildTheme(isLightMode: false);
 
   ThemeData _buildTheme({bool isLightMode = true}) {
-    final base = isLightMode ? ThemeData.light() : ThemeData.dark();
+    final base = isLightMode ? ThemeData(colorScheme: lightColorScheme) : ThemeData(colorScheme: darkColorScheme);
 
     return base.copyWith(
       useMaterial3: true,
-      appBarTheme: base.appBarTheme.copyWith(
-        centerTitle: true,
-        systemOverlayStyle: isLightMode ? SystemUiOverlayStyle.dark : SystemUiOverlayStyle.light,
-        backgroundColor: Colors.transparent,
-        shape: Border(bottom: BorderSide(color: base.dividerColor)),
-      ),
+      //   appBarTheme: base.appBarTheme.copyWith(
+      //     centerTitle: true,
+      //     systemOverlayStyle: isLightMode ? SystemUiOverlayStyle.dark : SystemUiOverlayStyle.light,
+      //     backgroundColor: Colors.transparent,
+      //     shape: Border(bottom: BorderSide(color: base.dividerColor)),
+      //   ),
       pageTransitionsTheme: PageTransitionsTheme(
         builders: {for (var targetPlatform in TargetPlatform.values) targetPlatform: const CupertinoPageTransitionsBuilder()},
       ),

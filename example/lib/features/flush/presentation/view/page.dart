@@ -29,7 +29,7 @@ class _FlushPageState extends State<FlushPage> {
           child: Column(
             children: [
               PicklisteTextButton(
-                testKey: const ValueKey('flush-form-button-bool'),
+                testKey: ValueKey(Testkey.flushForm_buttonBool.toString()),
                 caption: '${T()().general__password} (bool)',
                 onPressed: () async {
                   final result = await PicklisteFlushForm<bool>(
@@ -52,7 +52,7 @@ class _FlushPageState extends State<FlushPage> {
                 },
               ),
               PicklisteTextButton(
-                testKey: const ValueKey('flush-form-button-string'),
+                testKey: ValueKey(Testkey.flushForm_buttonString.toString()),
                 caption: '${T()().elbw_incoming__outgoing_number_short} (String)',
                 onPressed: () async {
                   final result = await PicklisteFlushForm<String>(
@@ -77,7 +77,7 @@ class _FlushPageState extends State<FlushPage> {
               PicklisteTextField(
                 enabled: false,
                 labelText: 'Rückgabewert',
-                testKey: const ValueKey('flush-form-return-value'),
+                testKey: ValueKey(Testkey.flushForm_returnValue.toString()),
                 controller: flushFormTextfield,
                 keyboardType: TextInputType.text,
                 onFieldSubmitted: (value) => setState(() {}),

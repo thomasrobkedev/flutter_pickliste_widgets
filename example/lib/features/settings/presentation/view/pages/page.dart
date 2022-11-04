@@ -35,7 +35,7 @@ class SettingsPage extends StatelessWidget {
                   Text(T()().settings__language),
                   Text(
                     T().currentLanguage + (T().currentLanguageCode == null ? ' (${Platform.localeName.substring(0, 2)})' : ''),
-                    style: const TextStyle(color: Colors.grey),
+                    style: TextStyle(color: Theme.of(context).colorScheme.outline),
                   ),
                 ],
               ),
@@ -76,7 +76,7 @@ class SettingsPage extends StatelessWidget {
                   const Text('Theme'),
                   Text(
                     MyApp.of(context).themeMode.name.ucFirst + (MyApp.of(context).themeMode == ThemeMode.system ? ' (${AppTheme().getBrightness(context)})' : ''),
-                    style: const TextStyle(color: Colors.grey),
+                    style: TextStyle(color: Theme.of(context).colorScheme.outline),
                   ),
                 ],
               ),

@@ -40,6 +40,7 @@ class HomePage extends StatelessWidget {
               trailing: const Icon(Icons.navigate_next),
               onTap: () => context.push(SettingsPage.routeName),
             ),
+            ElevatedButton(onPressed: () {}, child: const Text('fjashjk'))
           ].toListDivided(),
         ),
       ),

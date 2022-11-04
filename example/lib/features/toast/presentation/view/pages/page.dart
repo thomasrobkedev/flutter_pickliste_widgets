@@ -5,6 +5,7 @@ import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart';
 
 import '../../../../../core/enums/testkey.dart';
 import '../../../../../core/utils/translations.dart';
+import '../../../domain/models/data.dart';
 import '../../bloc/bloc.dart';
 import '../../bloc/event.dart';
 import '../../bloc/state.dart';
@@ -34,41 +35,31 @@ class ToastPage extends StatelessWidget {
     );
   }
 
-  Widget _body(ToastState toastState) {
-    final state = toastState as ToastData;
-
-    if (state.submitted) {
+  Widget _body(ToastState state) {
+    if (state is ToastSubmit) {
       return PicklisteToast(
         key: ValueKey<String>(DateTime.now().toIso8601String()),
         textLarge: T()().general__please_wait,
         color: const Color.fromARGB(255, 255, 175, 0),
-        active: state.active,
-        startAnimation: state.startAnimation,
-        animationDuration: state.animationDuration,
-        autoTimeout: state.autoTimeout == 0 ? null : state.autoTimeout,
+        active: state.data.active,
+        startAnimation: state.data.startAnimation,
+        animationDuration: state.data.animationDuration,
+        autoTimeout: state.data.autoTimeout == 0 ? null : state.data.autoTimeout,
         testKey: ValueKey(Testkey.toast_toast.toString()),
-        child: _content(state),
+        child: _content(state.data),
       );
     }
 
-    return _content(state);
+    if (state is ToastPageRefresh) {
+      return _content(state.data);
+    }
+
+    return Container();
   }
 
-  void _pageRefresh(ToastData state, {bool? active, bool? startAnimation, int? animationDuration, int? autoTimeout}) {
-    _bloc.add(
-      ToastSubmit(
-        active: active ?? state.active,
-        startAnimation: startAnimation ?? state.startAnimation,
-        animationDuration: animationDuration ?? state.animationDuration,
-        autoTimeout: autoTimeout ?? state.autoTimeout,
-        submitted: false,
-      ),
-    );
-  }
-
-  Widget _content(ToastData state) {
-    _animationDurationController.text = state.animationDuration.toString();
-    _autoTimeoutController.text = state.autoTimeout.toString();
+  Widget _content(ToastData data) {
+    _animationDurationController.text = data.animationDuration.toString();
+    _autoTimeoutController.text = data.autoTimeout.toString();
 
     return SingleChildScrollView(
       child: Container(
@@ -77,15 +68,15 @@ class ToastPage extends StatelessWidget {
           children: [
             PicklisteSwitch(
               testKey: ValueKey(Testkey.toast_active.toString()),
-              title: 'active',
-              value: state.active,
-              onChanged: (value) => _pageRefresh(state, active: value!),
+              title: 'Aktiv',
+              value: data.active,
+              onChanged: (value) => _bloc.add(ToastPageRefreshEvent(data, active: value!)),
             ),
             PicklisteSwitch(
               testKey: ValueKey(Testkey.toast_startAnimation.toString()),
-              title: 'Animation beim Start',
-              value: state.startAnimation,
-              onChanged: (value) => _pageRefresh(state, startAnimation: value!),
+              title: 'Start-Animation',
+              value: data.startAnimation,
+              onChanged: (value) => _bloc.add(ToastPageRefreshEvent(data, startAnimation: value!)),
             ),
             PicklisteTextField(
               labelText: 'Animations-Dauer [ms]',
@@ -107,24 +98,33 @@ class ToastPage extends StatelessWidget {
                 LengthLimitingTextInputFormatter(4),
               ],
             ),
-            PicklisteTextButton(
-              testKey: ValueKey(Testkey.toast_submit.toString()),
-              caption: 'Submit',
-              primary: true,
-              onPressed: () => _bloc.add(
-                ToastSubmit(
-                  active: state.active,
-                  startAnimation: state.startAnimation,
-                  animationDuration: int.parse(_animationDurationController.text),
-                  autoTimeout: int.parse(_autoTimeoutController.text),
-                  submitted: true,
+            Row(
+              children: [
+                Expanded(
+                  child: PicklisteTextButton(
+                    testKey: ValueKey(Testkey.toast_submit.toString()),
+                    caption: 'Submit',
+                    primary: true,
+                    onPressed: () => _bloc.add(
+                      ToastSubmitEvent(
+                        ToastData(
+                          active: data.active,
+                          startAnimation: data.startAnimation,
+                          animationDuration: int.parse(_animationDurationController.text),
+                          autoTimeout: int.parse(_autoTimeoutController.text),
+                        ),
+                      ),
+                    ),
+                  ),
                 ),
-              ),
-            ),
-            PicklisteTextButton(
-              testKey: ValueKey(Testkey.toast_reset.toString()),
-              caption: 'Reset',
-              onPressed: () => _bloc.add(ToastReset()),
+                Expanded(
+                  child: PicklisteTextButton(
+                    testKey: ValueKey(Testkey.toast_reset.toString()),
+                    caption: 'Reset',
+                    onPressed: () => _bloc.add(ToastResetEvent()),
+                  ),
+                ),
+              ],
             ),
           ],
         ),

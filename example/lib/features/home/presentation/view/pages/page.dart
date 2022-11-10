@@ -27,7 +27,7 @@ class HomePage extends StatelessWidget {
             ),
             ListTile(
               key: ValueKey(Testkey.home_menuPAL.toString()),
-              title: const Text('PAL + PLL'),
+              title: const Text('PAL + Launcher'),
               leading: const Icon(Icons.slideshow),
               trailing: const Icon(Icons.navigate_next),
               onTap: () => context.push(PalPage.routeName),

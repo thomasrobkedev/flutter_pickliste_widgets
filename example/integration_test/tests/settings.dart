@@ -19,7 +19,7 @@ class Settings {
       await tapAndExpect(Testkey.settings_menuTheme, Testkey.dropdown);
 
       await tapAndExpect(
-        Testkey.dropdown_item.appendWithUnderscoreAndModifier(ThemeMode.dark, 'false'),
+        Testkey.dropdown_item.appendWithUnderscoreAndModifier(ThemeMode.dark, false),
         Testkey.settings_page,
       );
       await hasText('Dark');
@@ -28,15 +28,15 @@ class Settings {
         Testkey.dropdown_item_icon.appendWithUnderscore(ThemeMode.dark),
       );
       await exists(
-        Testkey.dropdown_item.appendWithUnderscoreAndModifier(ThemeMode.dark, 'true'),
+        Testkey.dropdown_item.appendWithUnderscoreAndModifier(ThemeMode.dark, true),
       );
       await exists(
-        Testkey.dropdown_item.appendWithUnderscoreAndModifier(ThemeMode.light, 'false'),
+        Testkey.dropdown_item.appendWithUnderscoreAndModifier(ThemeMode.light, false),
       );
 
       // reset zur initialen Darstellung (wichtig wenn das wieder gestestet werden soll)
       await tapAndExpect(
-        Testkey.dropdown_item.appendWithUnderscoreAndModifier(ThemeMode.light, 'false'),
+        Testkey.dropdown_item.appendWithUnderscoreAndModifier(ThemeMode.light, false),
         Testkey.settings_page,
       );
       await hasText('Light');
@@ -47,7 +47,7 @@ class Settings {
 
       await tapAndExpect(Testkey.settings_menuLanguage, Testkey.dropdown);
       await tapAndExpect(
-        Testkey.dropdown_item.appendWithUnderscoreAndModifier('sr', 'false'),
+        Testkey.dropdown_item.appendWithUnderscoreAndModifier('sr', false),
         Testkey.settings_page,
       );
       await hasText('Serbisch');
@@ -55,7 +55,7 @@ class Settings {
 
       // wir setzen die Sprache auf English (wichtig wenn das wieder gestestet werden soll)
       await tapAndExpect(
-        Testkey.dropdown_item.appendWithUnderscoreAndModifier('en', 'false'),
+        Testkey.dropdown_item.appendWithUnderscoreAndModifier('en', false),
         Testkey.settings_page,
       );
       await hasText('English');

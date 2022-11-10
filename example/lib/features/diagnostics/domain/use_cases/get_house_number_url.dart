@@ -10,8 +10,8 @@ class DiagnosticsUseCaseGetHouseNumberURL {
   }
 
   /// HouseNumber ist in der MDE-App ein [String]. Im Launcher hingegen ein [Future<String>].
-  /// Darum verlangt die Page ein Future. Das wird hier simluiert.
+  /// Darum verlangt die Page ein Future. Das wird hier simuliert.
   Future<String> _houseNumber() async {
-    return await Future.delayed(const Duration(milliseconds: 500), (() => '471'));
+    return await Future.delayed(const Duration(milliseconds: 500), () => '471');
   }
 }

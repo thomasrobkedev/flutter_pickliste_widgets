@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_pickliste_widgets/flutter_pickliste_widgets.dart' hide ListDivided;
-import 'package:get_it/get_it.dart';
 import 'package:go_router/go_router.dart';
 
 import '../../../../../core/enums/testkey.dart';
@@ -16,7 +15,10 @@ class PalPage extends StatelessWidget {
   static const routeName = '/pal';
   static const diagnosticsRouteName = 'diagnostics';
 
-  const PalPage({super.key});
+  final DiagnosticsUseCaseGetItems _getItems;
+  final DiagnosticsUseCaseGetHouseNumberURL _getHouseNumberURL;
+
+  const PalPage(this._getItems, this._getHouseNumberURL, {super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -53,15 +55,12 @@ class PalPage extends StatelessWidget {
               leading: const Icon(Icons.slideshow),
               trailing: const Icon(Icons.navigate_next),
               onTap: () {
-                final di = GetIt.instance;
-                final getItems = DiagnosticsUseCaseGetItems(di(), di(), di());
-                final getHouseNumberURL = DiagnosticsUseCaseGetHouseNumberURL();
                 final page = PicklisteDiagnosticsPage(
                   title: T()().menu__app_settings_diagnostics,
                   toastText: T()().general__please_wait,
                   infoText: T()().diagnostic__instructions,
-                  items: getItems(),
-                  houseNumberURL: getHouseNumberURL(withPic: true),
+                  items: _getItems(),
+                  houseNumberURL: _getHouseNumberURL(withPic: true),
                 );
                 context.push('$routeName/${PalPage.diagnosticsRouteName}', extra: page);
               },

@@ -3,8 +3,10 @@ import 'dart:async';
 class DiagnosticsUseCaseGetHouseNumberURL {
   Future<String> call({required bool withPic}) async {
     final house = await _houseNumber();
+    final houseNumberPadded = house.padLeft(3, '0');
     final pic = withPic ? '_pic' : '';
-    return 'http://h$house$pic.puc/pl07';
+
+    return 'http://h$houseNumberPadded$pic.puc/pl07';
   }
 
   /// HouseNumber ist in der MDE-App ein [String]. Im Launcher hingegen ein [Future<String>].

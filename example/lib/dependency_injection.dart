@@ -4,6 +4,7 @@ import 'package:get_it/get_it.dart';
 import 'app.dart';
 import 'core/utils/translations.dart';
 import 'features/diagnostics/domain/use_cases/get_house_number_url.dart';
+import 'features/diagnostics/domain/use_cases/get_items.dart';
 
 class DependencyInjection {
   final di = GetIt.instance;
@@ -20,10 +21,12 @@ class DependencyInjection {
     T().init(MyApp.scaffoldMessengerKey);
 
     // use cases
-    di.registerSingleton<DiagnosticsUseCaseGetHouseNumberURL>(DiagnosticsUseCaseGetHouseNumberURL());
+    //DiagnosticsUseCaseGetItems
+    di.registerLazySingleton<DiagnosticsUseCaseGetItems>(() => DiagnosticsUseCaseGetItems(di(), di(), di()));
+    di.registerLazySingleton<DiagnosticsUseCaseGetHouseNumberURL>(() => DiagnosticsUseCaseGetHouseNumberURL());
 
     // package use cases
-    di.registerSingleton<PicklisteDiagnosticsUseCaseDateTime>(PicklisteDiagnosticsUseCaseDateTime());
-    di.registerSingleton<PicklisteUseCaseHttp>(PicklisteUseCaseHttp());
+    di.registerLazySingleton<PicklisteDiagnosticsUseCaseDateTime>(() => PicklisteDiagnosticsUseCaseDateTime());
+    di.registerLazySingleton<PicklisteUseCaseHttp>(() => PicklisteUseCaseHttp());
   }
 }

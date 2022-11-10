@@ -209,11 +209,19 @@
   "@diagnostic__instructions": {
     "type": "text"
   },
+  "dispohz__no_price_information_found_for_product": "Für den Artikel sind keine Preisinformationen vorhanden.",
+  "@dispohz__no_price_information_found_for_product": {
+    "type": "text"
+  },
+  "dispohz__no_red_price_found_for_product": "Für den Artikel ist kein Rotpreis hinterlegt.",
+  "@dispohz__no_red_price_found_for_product": {
+    "type": "text"
+  },
   "dispohz__product_not_in_file": "Dispo nicht in Herabzeichnungsdatei vorhanden!",
   "@dispohz__product_not_in_file": {
     "type": "text"
   },
-  "dispohz__red_price_is_higher_than_black_price": "Der Rotpreis ist höher als der Schwarzpreis. Es wird kein Etikett gedruckt.",
+  "dispohz__red_price_is_higher_than_black_price": "Der Rotpreis ist höher als der Schwarzpreis.",
   "@dispohz__red_price_is_higher_than_black_price": {
     "type": "text"
   },

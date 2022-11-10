@@ -56,11 +56,19 @@
   "@diagnostic__instructions": {
     "type": "text"
   },
+  "dispohz__no_price_information_found_for_product": "No price information found for product.",
+  "@dispohz__no_price_information_found_for_product": {
+    "type": "text"
+  },
+  "dispohz__no_red_price_found_for_product": "No red price found for product.",
+  "@dispohz__no_red_price_found_for_product": {
+    "type": "text"
+  },
   "dispohz__product_not_in_file": "Product not in reduction file",
   "@dispohz__product_not_in_file": {
     "type": "text"
   },
-  "dispohz__red_price_is_higher_than_black_price": "Red price is higher than black price. No label will be printed.",
+  "dispohz__red_price_is_higher_than_black_price": "Red price is higher than black price.",
   "@dispohz__red_price_is_higher_than_black_price": {
     "type": "text"
   },

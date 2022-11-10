@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 
 import '../../theme/global_theme.dart';
+import '../responsive/row.dart';
 
 class PicklisteIntroContainer extends StatelessWidget {
   final ValueKey<String>? testKey;
@@ -11,8 +12,17 @@ class PicklisteIntroContainer extends StatelessWidget {
     required this.child,
     this.padding,
     this.testKey,
+    super.key,
+  });
+
+  PicklisteIntroContainer.withResponsiveCols({
+    required List<Widget> children,
     Key? key,
-  }) : super(key: key);
+  }) : this(
+          key: key,
+          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 12),
+          child: PicklisteResponsiveRow(children: children),
+        );
 
   PicklisteIntroContainer.withTextOnly({
     required String text,

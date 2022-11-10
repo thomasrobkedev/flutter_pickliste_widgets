@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../../../../../core/enums/testkey.dart';
-import '../../../../../core/widgets/loading_spinner.dart';
+import '../../../../../core/widgets/misc/loading_spinner.dart';
 import '../../../domain/models/items.dart';
 import '../../bloc/bloc.dart';
 import '../../bloc/event.dart';
@@ -17,13 +17,13 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
   final Future<String> houseNumberURL;
 
   const PicklisteDiagnosticsPage({
-    Key? key,
+    super.key,
     required this.title,
     required this.toastText,
     required this.infoText,
     required this.items,
     required this.houseNumberURL,
-  }) : super(key: key);
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +47,7 @@ class PicklisteDiagnosticsPage extends StatelessWidget {
 
   Widget _body(BuildContext context, PicklisteDiagnosticsState state) {
     if (state is PicklisteDiagnosticsLoading) {
-      return const LoadingSpinner();
+      return const PicklisteLoadingSpinner();
     }
 
     if (state is PicklisteDiagnosticsPending) {

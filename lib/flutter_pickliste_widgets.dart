@@ -13,6 +13,8 @@ export 'src/core/widgets/form/radio.dart';
 export 'src/core/widgets/form/switch.dart';
 export 'src/core/widgets/form/text_button.dart';
 export 'src/core/widgets/form/text_field.dart';
+export 'src/core/widgets/misc/intro_container.dart';
+export 'src/core/widgets/misc/loading_spinner.dart';
 export 'src/core/widgets/responsive/col.dart';
 export 'src/core/widgets/responsive/row.dart';
 export 'src/core/widgets/toast/toast.dart';

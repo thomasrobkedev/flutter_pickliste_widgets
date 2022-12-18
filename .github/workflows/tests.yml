@@ -1,14 +1,11 @@
-# .github/workflows/main.yml
+# .github/workflows/tests.yml
 
-# Name of your workflow.
-name: main
-
-# Trigger the workflow manually or after push a commit
+name: tests
 on: [push, workflow_dispatch]
 
 jobs:
-  windows:
-    runs-on: windows-latest
+  android:
+    runs-on: macos-11
     strategy:
       matrix:
         api-level:
@@ -28,15 +25,19 @@ jobs:
 
       - name: Install Flutter dependencies
         run: |
-             flutter config --enable-windows-desktop
              flutter clean
              flutter pub get
 
       - name: Run integration tests
-        run: cd example; flutter test -d windows integration_test/main_test.dart
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          api-level: ${{ matrix.api-level }}
+          arch: x86_64
+          profile: Nexus 6
+          script: cd example && flutter test integration_test/main_test.dart
 
-  # android:
-  #   runs-on: macos-11
+  # windows:
+  #   runs-on: windows-latest
   #   strategy:
   #     matrix:
   #       api-level:
@@ -56,13 +57,10 @@ jobs:
 
   #     - name: Install Flutter dependencies
   #       run: |
+  #            flutter config --enable-windows-desktop
   #            flutter clean
   #            flutter pub get
 
   #     - name: Run integration tests
-  #       uses: reactivecircus/android-emulator-runner@v2
-  #       with:
-  #         api-level: ${{ matrix.api-level }}
-  #         arch: x86_64
-  #         profile: Nexus 6
-  #         script: cd example && flutter test integration_test/main_test.dart
+  #       run: cd example; flutter test -d windows integration_test/main_test.dart
+

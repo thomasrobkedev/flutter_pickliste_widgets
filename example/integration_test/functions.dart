@@ -13,16 +13,17 @@ Future<void> startupApp(WidgetTester activeTester) async {
 
   app.startOrRestart();
   await tester.pumpAndSettle();
+  await wait(1);
 
   /// Beim ersten build wird nur eine leere MaterialApp gerendert, denn wir warten noch auf [ThemeMode] und [Locale] aus async SharedPrefs.
   /// Wenn die Werte da sind, wird mittels [setState()] ein rebuild ausgelöst und die eigentliche MaterialApp geladen.
   /// Darum müssen wir insgesamt 2x pumpen.
   await tester.pumpAndSettle();
+  await wait(1);
 }
 
 String description(dynamic instance, String text) {
-  // ignore: prefer_interpolation_to_compose_strings
-  return '\n' + ('_' * 60) + '\n' + instance.runtimeType.toString() + (text == '' ? '' : ' / $text') + '\n' + ('‾' * 60);
+  return '${instance.runtimeType}${text == '' ? '' : ' / $text'} '.padRight(80, '-');
 }
 
 /// tap + long press

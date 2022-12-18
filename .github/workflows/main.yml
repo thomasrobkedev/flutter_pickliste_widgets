@@ -29,9 +29,7 @@ jobs:
              flutter clean
              flutter pub get
       - name: Run integration tests
-        with:
-          api-level: ${{ matrix.api-level }}
-          script: cd example; flutter test integration_test/main_test.dart
+        run: cd example; flutter test integration_test/main_test.dart
 
     # runs-on: windows-latest
     # strategy:

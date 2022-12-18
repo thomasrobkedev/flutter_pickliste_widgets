@@ -13,10 +13,11 @@ jobs:
     - uses: actions/checkout@v1
     - uses: subosito/flutter-action@v1
       with:
-        channel: 'beta'
+        flutter-version: '3.3.4'
+        channel: 'stable'
     - run: |
            flutter config --enable-windows-desktop
-           cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart
+           cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart -d windows
 
 # jobs:
 #   drive:

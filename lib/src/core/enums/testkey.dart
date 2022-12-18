@@ -4,6 +4,10 @@ enum PicklisteTestkey {
   diagnostics_page,
   diagnostics_toast,
 
+  flushBar,
+  flushBar_ok,
+  flushBar_cancel,
+
   flushForm,
   flushForm_ok,
   flushForm_cancel,

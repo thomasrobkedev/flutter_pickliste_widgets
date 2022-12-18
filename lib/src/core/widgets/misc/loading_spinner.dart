@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
+import '../../theme/global_theme.dart';
+
 class PicklisteLoadingSpinner extends StatelessWidget {
-  const PicklisteLoadingSpinner({super.key});
+  final Color? color;
+
+  const PicklisteLoadingSpinner({super.key, this.color});
 
   @override
   Widget build(BuildContext context) {
-    return const Center(
-      child: CircularProgressIndicator(),
+    return Center(
+      child: CircularProgressIndicator(
+        color: color ?? const Color(PicklisteThemeCreator.kThemePrimaryColor),
+      ),
     );
   }
 }

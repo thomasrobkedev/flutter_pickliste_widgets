@@ -1,5 +1,6 @@
 library flutter_pickliste_widgets;
 
+export 'src/core/enums/mde_notification_type.dart';
 export 'src/core/enums/testkey.dart';
 export 'src/core/extensions/list_divided.dart';
 export 'src/core/theme/global_theme.dart';
@@ -7,6 +8,9 @@ export 'src/core/use_cases/http.dart';
 export 'src/core/widgets/app_bar/icon_button.dart';
 export 'src/core/widgets/app_bar/text_button.dart';
 export 'src/core/widgets/flush/form.dart';
+export 'src/core/widgets/flush_bar/data.dart';
+export 'src/core/widgets/flush_bar/flush_bar.dart';
+export 'src/core/widgets/flush_bar/type_info.dart';
 export 'src/core/widgets/form/checkbox.dart';
 export 'src/core/widgets/form/dropdown.dart';
 export 'src/core/widgets/form/radio.dart';

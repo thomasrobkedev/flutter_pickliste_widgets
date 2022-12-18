@@ -128,7 +128,7 @@
   "@data_file_handler__product_already_there_with_different_date": {
     "type": "text"
   },
-  "data_file_handler__product_is_best_price_blocked": "Bestpriceware\nAufbau auf der Verkaufsfläche erst zum Stichtag möglich.",
+  "data_file_handler__product_is_best_price_blocked": "Bestpriceware.\nAufbau auf der Verkaufsfläche erst zum Stichtag möglich.",
   "@data_file_handler__product_is_best_price_blocked": {
     "type": "text"
   },
@@ -329,6 +329,10 @@
   "@general__critical_error": {
     "type": "text"
   },
+  "general__destination": "Ziel",
+  "@general__destination": {
+    "type": "text"
+  },
   "general__details": "Details",
   "@general__details": {
     "type": "text"
@@ -350,6 +354,10 @@
   },
   "general__discard_unsaved_changes": "Nicht gespeicherte Änderungen. Wollen Sie diese verwerfen?",
   "@general__discard_unsaved_changes": {
+    "type": "text"
+  },
+  "general__do_you_really_want_to_hold_current_item": "Soll die aktuelle Position wirklich geparkt werden?",
+  "@general__do_you_really_want_to_hold_current_item": {
     "type": "text"
   },
   "general__download_and_install": "Herunterladen und Installieren",
@@ -498,6 +506,10 @@
   "@general__no_elbw_data": {
     "type": "text"
   },
+  "general__no_hz_info_for_this_item": "Keine HZ-Info für dieses Teil!",
+  "@general__no_hz_info_for_this_item": {
+    "type": "text"
+  },
   "general__no_logs_available": "Keine Logs vorhanden",
   "@general__no_logs_available": {
     "type": "text"
@@ -584,6 +596,10 @@
   },
   "general__product": "EH-Artikel",
   "@general__product": {
+    "type": "text"
+  },
+  "general__product_has_different_red_prices": "Der EH-Artikel hat Größen mit unterschiedlichen Preis-Informationen. Soll der Rotpreis trotzdem gedruckt werden?",
+  "@general__product_has_different_red_prices": {
     "type": "text"
   },
   "general__product_not_found": "Artikel {value0} nicht gefunden",
@@ -685,6 +701,10 @@
   "@general__unknown_item": {
     "type": "text"
   },
+  "general__version": "Version",
+  "@general__version": {
+    "type": "text"
+  },
   "general__wrong_password": "Falsches Passwort",
   "@general__wrong_password": {
     "type": "text"
@@ -705,7 +725,7 @@
   "@item_info__security_system": {
     "type": "text"
   },
-  "item_movement__inventory_active_for_stellplatz": "Lagerinventur aktiv. Auf den Stellplatzbereich kann nicht gepickt werden.",
+  "item_movement__inventory_active_for_stellplatz": "Lagerinventur aktiv. Auf dem Stellplatzbereich kann nicht gepickt werden.",
   "@item_movement__inventory_active_for_stellplatz": {
     "type": "text"
   },
@@ -713,7 +733,7 @@
   "@item_movement__max_item_amount": {
     "type": "text"
   },
-  "item_movement__product_number_change": "Dispowechsel\nBitte erneut den Stellplatz scannen.",
+  "item_movement__product_number_change": "Dispowechsel!\nBitte erneut den Stellplatz scannen.",
   "@item_movement__product_number_change": {
     "type": "text"
   },
@@ -721,7 +741,7 @@
   "@item_movement__quick_movement": {
     "type": "text"
   },
-  "item_movement__scan_storage_location_again": "Bitte den Stellplatz erneut scannen.",
+  "item_movement__scan_storage_location_again": "Bitte erneut den Stellplatz scannen.",
   "@item_movement__scan_storage_location_again": {
     "type": "text"
   },
@@ -741,7 +761,7 @@
   "@item_movement__table_header_storage_location": {
     "type": "text"
   },
-  "item_movement__timeout": "Timeout\nBitte den Stellplatz erneut scannen.",
+  "item_movement__timeout": "Timeout!\nBitte erneut den Stellplatz scannen.",
   "@item_movement__timeout": {
     "type": "text"
   },
@@ -944,10 +964,6 @@
   "@menu__app_settings_common": {
     "type": "text"
   },
-  "menu__app_settings_developer": "Entwickler",
-  "@menu__app_settings_developer": {
-    "type": "text"
-  },
   "menu__app_settings_diagnostics": "Diagnose",
   "@menu__app_settings_diagnostics": {
     "type": "text"
@@ -1048,6 +1064,10 @@
   "@missing_item__missing_item_dest_form": {
     "type": "text"
   },
+  "missing_item__missing_item_search_complete": "Die Fehlteilsuche ist vollständig beendet.",
+  "@missing_item__missing_item_search_complete": {
+    "type": "text"
+  },
   "missing_item__please_select_a_reason": "Bitte einen Grund auswählen",
   "@missing_item__please_select_a_reason": {
     "type": "text"
@@ -1072,7 +1092,7 @@
   "@missing_item__reason_5": {
     "type": "text"
   },
-  "missing_item__reason_description": "Das Teil befindet sich im Fehlbestand\nBitte Grund angeben:",
+  "missing_item__reason_description": "Das Teil befindet sich im Fehlbestand.\nBitte Grund angeben:",
   "@missing_item__reason_description": {
     "type": "text"
   },
@@ -1094,1262 +1114,6 @@
     "placeholders": {
       "value0": {}
     }
-  },
-  "old__ad_hoc": "Ad-hoc",
-  "@old__ad_hoc": {
-    "type": "text"
-  },
-  "old__all_delivery_notes_for_loading_list_scanned": "Es wurden alle Lieferscheine zu dieser Ladeliste gescannt.",
-  "@old__all_delivery_notes_for_loading_list_scanned": {
-    "type": "text"
-  },
-  "old__all_items_for_delivery_note_scanned": "Es wurden alle Teile zu diesem Lieferschein gescannt",
-  "@old__all_items_for_delivery_note_scanned": {
-    "type": "text"
-  },
-  "old__all_loading_lists_scanned": "Es wurden alle Ladelisten gescannt.",
-  "@old__all_loading_lists_scanned": {
-    "type": "text"
-  },
-  "old__all_loadng_lsts_for_ship_order_scanned": "Es wurden alle Ladelisten zu diesem Speditionsauftrag gescannt.",
-  "@old__all_loadng_lsts_for_ship_order_scanned": {
-    "type": "text"
-  },
-  "old__all_shipping_orders_scanned": "Es wurden alle Speditionsaufträge gescannt.",
-  "@old__all_shipping_orders_scanned": {
-    "type": "text"
-  },
-  "old__amount_column": "Anz.",
-  "@old__amount_column": {
-    "type": "text"
-  },
-  "old__application_installing": "{value0} wird installiert ...",
-  "@old__application_installing": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__application_startup": "{value0} wird gestartet ...",
-  "@old__application_startup": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__appstart_not_possible_start_transfer": "{value0} gesperrt!\n{value1}-Daten vorhanden. Bitte Gerät auslesen.",
-  "@old__appstart_not_possible_start_transfer": {
-    "type": "text",
-    "placeholders": {
-      "value0": {},
-      "value1": {}
-    }
-  },
-  "old__btn_back": "Zurück",
-  "@old__btn_back": {
-    "type": "text"
-  },
-  "old__btn_details": "Details",
-  "@old__btn_details": {
-    "type": "text"
-  },
-  "old__btn_mb_info": "Erstbest.:",
-  "@old__btn_mb_info": {
-    "type": "text"
-  },
-  "old__btn_product_info": "EH-Artikel Info",
-  "@old__btn_product_info": {
-    "type": "text"
-  },
-  "old__button_next": "Weiter",
-  "@old__button_next": {
-    "type": "text"
-  },
-  "old__cancel": "Abbruch",
-  "@old__cancel": {
-    "type": "text"
-  },
-  "old__checking_database": "Datenbank prüfen",
-  "@old__checking_database": {
-    "type": "text"
-  },
-  "old__checking_directories": "Verzeichnisse prüfen",
-  "@old__checking_directories": {
-    "type": "text"
-  },
-  "old__correction_delivery_1": "Korrekturlieferschein enthalten\nBitte auf Lieferschein-Ebene scannen",
-  "@old__correction_delivery_1": {
-    "type": "text"
-  },
-  "old__correction_delivery_2": "Korrekturlieferschein\nBitte auf Teile-Ebene scannen",
-  "@old__correction_delivery_2": {
-    "type": "text"
-  },
-  "old__correction_delivery_3": "Korrekturlieferschein enthalten\nBitte auf Ladelisten-Ebene scannen",
-  "@old__correction_delivery_3": {
-    "type": "text"
-  },
-  "old__creating_database": "Datenbank neu erstellen",
-  "@old__creating_database": {
-    "type": "text"
-  },
-  "old__current_storage_address": "Adr.:",
-  "@old__current_storage_address": {
-    "type": "text"
-  },
-  "old__datatransfer_active": "Datenübertragung aktiv",
-  "@old__datatransfer_active": {
-    "type": "text"
-  },
-  "old__date_column": "Datum",
-  "@old__date_column": {
-    "type": "text"
-  },
-  "old__delete_old_zip_data": "Alte Zip-Daten löschen",
-  "@old__delete_old_zip_data": {
-    "type": "text"
-  },
-  "old__delivery_note_column": "LS-Nr.",
-  "@old__delivery_note_column": {
-    "type": "text"
-  },
-  "old__delivery_note_scan_items": "Zu diesem Lieferschein müssen die Teile einzeln gescannt werden",
-  "@old__delivery_note_scan_items": {
-    "type": "text"
-  },
-  "old__delivery_note_unknown": "Dieser Lieferschein wurde bereits gescannt, ist unbekannt oder gehört zu einer anderen Ladeliste",
-  "@old__delivery_note_unknown": {
-    "type": "text"
-  },
-  "old__destination_column": "Ziel",
-  "@old__destination_column": {
-    "type": "text"
-  },
-  "old__destination_storage_address": "Ziel:",
-  "@old__destination_storage_address": {
-    "type": "text"
-  },
-  "old__dispohz_error_counter": "Probleme mit Zählerwert aus Daten!",
-  "@old__dispohz_error_counter": {
-    "type": "text"
-  },
-  "old__dispohz_form": "Dispo-HZ",
-  "@old__dispohz_form": {
-    "type": "text"
-  },
-  "old__dispohz_invalid_barcode": "Ungültiger Barcode",
-  "@old__dispohz_invalid_barcode": {
-    "type": "text"
-  },
-  "old__dispohz_product_not_in_file": "Dispo nicht in Herabzeichnungsdatei vorhanden!",
-  "@old__dispohz_product_not_in_file": {
-    "type": "text"
-  },
-  "old__dispohz_redprice_identically": "Rotpreise identisch!",
-  "@old__dispohz_redprice_identically": {
-    "type": "text"
-  },
-  "old__dispohz_scan_label": "Bitte scannen Sie das Etikett",
-  "@old__dispohz_scan_label": {
-    "type": "text"
-  },
-  "old__dispohz_wrong_country": "Falsches Land!",
-  "@old__dispohz_wrong_country": {
-    "type": "text"
-  },
-  "old__dupliz_form": "Duplizierung",
-  "@old__dupliz_form": {
-    "type": "text"
-  },
-  "old__dupliz_please_scan_old_price": "Bitte alten Preis scannen!",
-  "@old__dupliz_please_scan_old_price": {
-    "type": "text"
-  },
-  "old__dupliz_please_scan_red_price": "Bitte Rotpreis scannen!",
-  "@old__dupliz_please_scan_red_price": {
-    "type": "text"
-  },
-  "old__dupliz_red_price_to_high": "Der Rotpreis ist zu hoch !",
-  "@old__dupliz_red_price_to_high": {
-    "type": "text"
-  },
-  "old__dupliz_wrong_country": "Falsches Land!",
-  "@old__dupliz_wrong_country": {
-    "type": "text"
-  },
-  "old__ed_new_column": "Neu",
-  "@old__ed_new_column": {
-    "type": "text"
-  },
-  "old__ed_old_column": "Alt",
-  "@old__ed_old_column": {
-    "type": "text"
-  },
-  "old__ed_process_column": "Vorgang",
-  "@old__ed_process_column": {
-    "type": "text"
-  },
-  "old__ed_row_pickin": "EINLAGERUNG",
-  "@old__ed_row_pickin": {
-    "type": "text"
-  },
-  "old__ed_row_sorting": "NACHSORTIERUNG",
-  "@old__ed_row_sorting": {
-    "type": "text"
-  },
-  "old__ed_row_transport": "TRANSPORT",
-  "@old__ed_row_transport": {
-    "type": "text"
-  },
-  "old__ed_row_we": "WARENEINGANG",
-  "@old__ed_row_we": {
-    "type": "text"
-  },
-  "old__ed_total_column": "Teile",
-  "@old__ed_total_column": {
-    "type": "text"
-  },
-  "old__elbw_handling_units": "Einh.:",
-  "@old__elbw_handling_units": {
-    "type": "text"
-  },
-  "old__elbw_pick_stock": "Ziel:",
-  "@old__elbw_pick_stock": {
-    "type": "text"
-  },
-  "old__elbw_picking_type": "Grund:",
-  "@old__elbw_picking_type": {
-    "type": "text"
-  },
-  "old__employee_number": "Personalnummer",
-  "@old__employee_number": {
-    "type": "text"
-  },
-  "old__enter_item_number": "Bitte geben Sie die Teilenummer ein:",
-  "@old__enter_item_number": {
-    "type": "text"
-  },
-  "old__enter_item_number_form": "Teilenummer erfassen",
-  "@old__enter_item_number_form": {
-    "type": "text"
-  },
-  "old__enter_password_to_close": "Bitte das Passwort zum Beenden des Programms eingeben:",
-  "@old__enter_password_to_close": {
-    "type": "text"
-  },
-  "old__enter_password_to_switch_usb_mode": "Bitte das Passwort zum Wechseln des USB-Mode eingeben:",
-  "@old__enter_password_to_switch_usb_mode": {
-    "type": "text"
-  },
-  "old__error_database_communication": "Fehler bei der Kommunikation mit der Datenbank\n{value0}",
-  "@old__error_database_communication": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__error_database_generic": "Fehler beim Erstellen der Datenbank\n{value0}",
-  "@old__error_database_generic": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__error_database_no_script": "Fehler beim Erstellen der Datenbank\nDas Script zur Erstellung der Datenbank ist nicht vorhanden!",
-  "@old__error_database_no_script": {
-    "type": "text"
-  },
-  "old__error_during_save": "Fehler beim Speichern der Daten",
-  "@old__error_during_save": {
-    "type": "text"
-  },
-  "old__error_no_more_data": "Keine weiteren Daten",
-  "@old__error_no_more_data": {
-    "type": "text"
-  },
-  "old__export_detail_info": "Fenster vor der Datenübertragung mit OK oder Escape schließen",
-  "@old__export_detail_info": {
-    "type": "text"
-  },
-  "old__exporting_old_data": "Alte Daten exportieren",
-  "@old__exporting_old_data": {
-    "type": "text"
-  },
-  "old__extracting_zip_file": "Entpacke Zip-Datei",
-  "@old__extracting_zip_file": {
-    "type": "text"
-  },
-  "old__getting_data": "Daten ermitteln",
-  "@old__getting_data": {
-    "type": "text"
-  },
-  "old__getting_number_of_rows": "Anzahl Zeilen ermitteln",
-  "@old__getting_number_of_rows": {
-    "type": "text"
-  },
-  "old__hold_current_item": "Soll die aktuelle Position wirklich geparkt werden?",
-  "@old__hold_current_item": {
-    "type": "text"
-  },
-  "old__hz_process_completed": "Die Herabzeichnung ist vollständig beendet.",
-  "@old__hz_process_completed": {
-    "type": "text"
-  },
-  "old__image_loading": "Bild wird geladen ...",
-  "@old__image_loading": {
-    "type": "text"
-  },
-  "old__invalid_barcode_scanned": "Falscher Barcode gescannt\n{value0}",
-  "@old__invalid_barcode_scanned": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__invalid_barcode_scanned_2": "Speditionsauftrag \"{value0}\" unbekannt. Bitte unter Wareneingang Avisierung prüfen.",
-  "@old__invalid_barcode_scanned_2": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__invalid_barcode_scanned_3": "Ladeliste \"{value0}\" unbekannt. Bitte unter Wareneingang Avisierung prüfen.",
-  "@old__invalid_barcode_scanned_3": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__invalid_barcode_scanned_4": "Lieferschein \"{value0}\" unbekannt. Bitte unter Wareneingang Avisierung prüfen.",
-  "@old__invalid_barcode_scanned_4": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__invalid_barcode_scanned_5": "Teil \"{value0}\" unbekannt. Bitte unter Wareneingang Avisierung prüfen.",
-  "@old__invalid_barcode_scanned_5": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__invalid_barcode_scanned_6": "Paket \"{value0}\" unbekannt. Bitte unter Wareneingang Avisierung prüfen.",
-  "@old__invalid_barcode_scanned_6": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__invalid_country": "Falsches Land",
-  "@old__invalid_country": {
-    "type": "text"
-  },
-  "old__invalid_employee_number": "Ungültige Personalnummer",
-  "@old__invalid_employee_number": {
-    "type": "text"
-  },
-  "old__invalid_item_number": "Ungültige Teilenummer",
-  "@old__invalid_item_number": {
-    "type": "text"
-  },
-  "old__inventory_please_wait_zip": "Entpacken\n{value0} %",
-  "@old__inventory_please_wait_zip": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__inventur_add_record": "AddRecord() lieferte unerwarteten Wert. Bitte Support kontaktieren.",
-  "@old__inventur_add_record": {
-    "type": "text"
-  },
-  "old__inventur_amount": "Stückzahl:",
-  "@old__inventur_amount": {
-    "type": "text"
-  },
-  "old__inventur_amount_not_reached": "Stückzahlvorgabe nicht erreicht!",
-  "@old__inventur_amount_not_reached": {
-    "type": "text"
-  },
-  "old__inventur_amount_of_items_and_stocks": "Anz. Teile/Plätze:",
-  "@old__inventur_amount_of_items_and_stocks": {
-    "type": "text"
-  },
-  "old__inventur_ask_force_closing": "Soll der Abstimmkreis geschlossen werden?",
-  "@old__inventur_ask_force_closing": {
-    "type": "text"
-  },
-  "old__inventur_ask_force_closing_caption": "Abstimmkreis",
-  "@old__inventur_ask_force_closing_caption": {
-    "type": "text"
-  },
-  "old__inventur_button_inventory": "{value0} - Inventur VK",
-  "@old__inventur_button_inventory": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__inventur_button_inventory_stock": "{value0} - Inventur Lager",
-  "@old__inventur_button_inventory_stock": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__inventur_button_settings": "{value0} - Einstellungen",
-  "@old__inventur_button_settings": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__inventur_collection_start_failed_1": "Offener Abstimmkreis vorhanden! Neuer Abstimmkreis kann nicht gestartet werden.",
-  "@old__inventur_collection_start_failed_1": {
-    "type": "text"
-  },
-  "old__inventur_collection_start_failed_2": "Informationen für neuen Abstimmkreis ungenügend: {value0}",
-  "@old__inventur_collection_start_failed_2": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__inventur_collection_start_failed_3": "Ungültige Angabe für Stückzahlvorgabe: {value0}",
-  "@old__inventur_collection_start_failed_3": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__inventur_employee_number": "Personalnr.:",
-  "@old__inventur_employee_number": {
-    "type": "text"
-  },
-  "old__inventur_exit_impossible": "Abstimmkreis nicht abgeschlossen! Beenden nicht möglich!",
-  "@old__inventur_exit_impossible": {
-    "type": "text"
-  },
-  "old__inventur_form": "Inventur",
-  "@old__inventur_form": {
-    "type": "text"
-  },
-  "old__inventur_invalid_abstimmkreise_forecast": "Ungültige Anzahl Stellplätze angegeben",
-  "@old__inventur_invalid_abstimmkreise_forecast": {
-    "type": "text"
-  },
-  "old__inventur_invalid_article_no": "Ungültige TeileNummer übergeben!",
-  "@old__inventur_invalid_article_no": {
-    "type": "text"
-  },
-  "old__inventur_invalid_barcode": "Ungültiger Barcode",
-  "@old__inventur_invalid_barcode": {
-    "type": "text"
-  },
-  "old__inventur_invalid_blackprice": "Ungültigen Schwarzpreis übergeben!",
-  "@old__inventur_invalid_blackprice": {
-    "type": "text"
-  },
-  "old__inventur_invalid_checkdigit": "Prüfziffer inkorrekt",
-  "@old__inventur_invalid_checkdigit": {
-    "type": "text"
-  },
-  "old__inventur_invalid_collection_id": "Ungültigen Abstimmkreis übergeben!",
-  "@old__inventur_invalid_collection_id": {
-    "type": "text"
-  },
-  "old__inventur_invalid_dispo_no": "Ungültige DispoNummer übergeben!",
-  "@old__inventur_invalid_dispo_no": {
-    "type": "text"
-  },
-  "old__inventur_invalid_ean13": "Ungültiger EAN13 !",
-  "@old__inventur_invalid_ean13": {
-    "type": "text"
-  },
-  "old__inventur_invalid_ean8": "Ungültiger EAN8!",
-  "@old__inventur_invalid_ean8": {
-    "type": "text"
-  },
-  "old__inventur_invalid_employee_number": "Personalnummer ungültig",
-  "@old__inventur_invalid_employee_number": {
-    "type": "text"
-  },
-  "old__inventur_invalid_input": "Ungültige Eingabe",
-  "@old__inventur_invalid_input": {
-    "type": "text"
-  },
-  "old__inventur_invalid_label_code": "Ungültige Etikettenzeile übergeben: {value0}",
-  "@old__inventur_invalid_label_code": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__inventur_invalid_personal_id": "Ungültige Personalnummer übergeben!",
-  "@old__inventur_invalid_personal_id": {
-    "type": "text"
-  },
-  "old__inventur_invalid_pick_stock": "Fehlerhafter Stellplatz",
-  "@old__inventur_invalid_pick_stock": {
-    "type": "text"
-  },
-  "old__inventur_invalid_record_forecast": "Ungültige StückzahlVorgabe übergeben!",
-  "@old__inventur_invalid_record_forecast": {
-    "type": "text"
-  },
-  "old__inventur_invalid_redprice": "Ungültigen Rotpreis übergeben!",
-  "@old__inventur_invalid_redprice": {
-    "type": "text"
-  },
-  "old__inventur_invalid_serial": "Ungültige MDE-Seriennummer übergeben!",
-  "@old__inventur_invalid_serial": {
-    "type": "text"
-  },
-  "old__inventur_invalid_ware_group_no": "Ungültige Warengruppe übergeben!",
-  "@old__inventur_invalid_ware_group_no": {
-    "type": "text"
-  },
-  "old__inventur_inventory_area": "Abstimmkreis:",
-  "@old__inventur_inventory_area": {
-    "type": "text"
-  },
-  "old__inventur_inventory_complete": "Stückzahlvorgabe erreicht",
-  "@old__inventur_inventory_complete": {
-    "type": "text"
-  },
-  "old__inventur_inventory_sale_form": "Inventur VK",
-  "@old__inventur_inventory_sale_form": {
-    "type": "text"
-  },
-  "old__inventur_inventory_stock_form": "Inventur Lager",
-  "@old__inventur_inventory_stock_form": {
-    "type": "text"
-  },
-  "old__inventur_numeric_input_only": "Numerische Eingabe erforderlich!",
-  "@old__inventur_numeric_input_only": {
-    "type": "text"
-  },
-  "old__inventur_pick_stock_amount_reached": "Stellplatzvorgabe erreicht",
-  "@old__inventur_pick_stock_amount_reached": {
-    "type": "text"
-  },
-  "old__inventur_range_not_complete": "Es wurden nur {value0} von {value1} Stellplätzen erfasst. Abstimmkreis trotzdem abschließen?",
-  "@old__inventur_range_not_complete": {
-    "type": "text",
-    "placeholders": {
-      "value0": {},
-      "value1": {}
-    }
-  },
-  "old__inventur_red_price": "Rotpreis:",
-  "@old__inventur_red_price": {
-    "type": "text"
-  },
-  "old__inventur_storage_location": "Stellplatz:",
-  "@old__inventur_storage_location": {
-    "type": "text"
-  },
-  "old__inventur_updated_existing_record": "Artikel war bereits vorhanden. Alter Eintrag entfernt.",
-  "@old__inventur_updated_existing_record": {
-    "type": "text"
-  },
-  "old__is_stock_empty": "Ist der Stellplatz\n{value0}\njetzt leer?",
-  "@old__is_stock_empty": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__item_already_picked": "Das Teil wurde schon absortiert",
-  "@old__item_already_picked": {
-    "type": "text"
-  },
-  "old__item_doesnt_exists_in_system": "Das Teil ist laut System nicht vorhanden",
-  "@old__item_doesnt_exists_in_system": {
-    "type": "text"
-  },
-  "old__item_has_wrong_size": "Das Teil hat die falsche Größe",
-  "@old__item_has_wrong_size": {
-    "type": "text"
-  },
-  "old__item_invalid_place": "Dieses Teil ist lt. System nicht in diesem Stellplatz.\nTrotzdem absortieren?",
-  "@old__item_invalid_place": {
-    "type": "text"
-  },
-  "old__item_is_no_missing_item": "Das Teil ist laut System kein Fehlteil",
-  "@old__item_is_no_missing_item": {
-    "type": "text"
-  },
-  "old__item_number_column": "Teile-Nr.",
-  "@old__item_number_column": {
-    "type": "text"
-  },
-  "old__loading_items": "Lade Teile",
-  "@old__loading_items": {
-    "type": "text"
-  },
-  "old__loading_list_column": "Ladeliste",
-  "@old__loading_list_column": {
-    "type": "text"
-  },
-  "old__loading_list_scan_delivery_note": "Zu dieser Ladeliste müssen die Lieferscheine einzeln gescannt werden.",
-  "@old__loading_list_scan_delivery_note": {
-    "type": "text"
-  },
-  "old__loading_list_unknown": "Diese Ladeliste wurde bereits gescannt oder ist unbekannt.",
-  "@old__loading_list_unknown": {
-    "type": "text"
-  },
-  "old__loading_missing_items": "Lade Fehlteile",
-  "@old__loading_missing_items": {
-    "type": "text"
-  },
-  "old__loading_pick_instruction": "Lade Absortierungen",
-  "@old__loading_pick_instruction": {
-    "type": "text"
-  },
-  "old__loading_redprice_items": "Lade Rotpreis-Teile VK",
-  "@old__loading_redprice_items": {
-    "type": "text"
-  },
-  "old__loading_redprices": "Lade Rotpreise VK",
-  "@old__loading_redprices": {
-    "type": "text"
-  },
-  "old__loading_stock": "Lade Lagerbestand",
-  "@old__loading_stock": {
-    "type": "text"
-  },
-  "old__loading_stock_arrival_data": "WE-Daten werden geladen",
-  "@old__loading_stock_arrival_data": {
-    "type": "text"
-  },
-  "old__manual_input": "Manuelle Eingabe der Auslagerungs-Nr.:",
-  "@old__manual_input": {
-    "type": "text"
-  },
-  "old__memory_adjustment": "Speicheranpassung",
-  "@old__memory_adjustment": {
-    "type": "text"
-  },
-  "old__message_dornroeschen_on_dts": "Lieferschein enthält Dornröschenware!",
-  "@old__message_dornroeschen_on_dts": {
-    "type": "text"
-  },
-  "old__message_dornroeschen_on_dts_with_nr": "Dornröschenware auf Lieferschein-Nr.: ",
-  "@old__message_dornroeschen_on_dts_with_nr": {
-    "type": "text"
-  },
-  "old__message_dornroeschen_on_more_than_5_dts": "Artikel ist Dornröschenware!",
-  "@old__message_dornroeschen_on_more_than_5_dts": {
-    "type": "text"
-  },
-  "old__missing_item_reason_1": "{value0} - Übersehen",
-  "@old__missing_item_reason_1": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__missing_item_reason_2": "{value0} - Verschlüsselung falsch",
-  "@old__missing_item_reason_2": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__missing_item_reason_3": "{value0} - Falscher Stellplatz",
-  "@old__missing_item_reason_3": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__missing_item_reason_4": "{value0} - Im Verkauf",
-  "@old__missing_item_reason_4": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__missing_item_reason_5": "{value0} - Sonstiges",
-  "@old__missing_item_reason_5": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__missing_item_reason_form": "Grund für Fehlteil",
-  "@old__missing_item_reason_form": {
-    "type": "text"
-  },
-  "old__missing_item_search_complete": "Die Fehlteilsuche ist vollständig beendet.",
-  "@old__missing_item_search_complete": {
-    "type": "text"
-  },
-  "old__missing_item_search_form": "Fehlteile ({value0})",
-  "@old__missing_item_search_form": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__no": "Nein",
-  "@old__no": {
-    "type": "text"
-  },
-  "old__no_applications_are_installed": "Es sind keine Anwendungen installiert.",
-  "@old__no_applications_are_installed": {
-    "type": "text"
-  },
-  "old__no_base_data": "Es sind keine Bestandsdaten auf dem Gerät vorhanden!",
-  "@old__no_base_data": {
-    "type": "text"
-  },
-  "old__no_config_data": "Keine Konfigurationsdatei vorhanden. Bitte Bestandsdaten auf das Gerät laden.",
-  "@old__no_config_data": {
-    "type": "text"
-  },
-  "old__no_hz_info_for_scanned_item": "Keine HZ-Info für dieses Teil",
-  "@old__no_hz_info_for_scanned_item": {
-    "type": "text"
-  },
-  "old__no_image_available": "Kein Bild vorhanden",
-  "@old__no_image_available": {
-    "type": "text"
-  },
-  "old__no_manual_input": "Keine manuelle Eingabe oder Scan des Packtischabschnitts erlaubt. Schwarzpreis wird benötigt.",
-  "@old__no_manual_input": {
-    "type": "text"
-  },
-  "old__no_more_items_hold": "Parken nicht möglich. Die maximale Anzahl wurde erreicht.",
-  "@old__no_more_items_hold": {
-    "type": "text"
-  },
-  "old__no_pricecode_availalbe": "Der Preiscode zu dem neuen Rotpreis konnte nicht ermittelt werden.",
-  "@old__no_pricecode_availalbe": {
-    "type": "text"
-  },
-  "old__no_printer_choosen_continue": "Es wurde noch kein Drucker ausgewählt. Trotzdem fortfahren?",
-  "@old__no_printer_choosen_continue": {
-    "type": "text"
-  },
-  "old__no_redprice_info_available": "Keine Rotpreisinfo vorhanden",
-  "@old__no_redprice_info_available": {
-    "type": "text"
-  },
-  "old__no_storage_addresses": "Die in Ihrem Haus vorhanden Lageradressen sind unbekannt. Bitte beladen Sie das Gerät zuerst mit den Bestandsdaten.",
-  "@old__no_storage_addresses": {
-    "type": "text"
-  },
-  "old__ok": "OK",
-  "@old__ok": {
-    "type": "text"
-  },
-  "old__old_base_data": "Die Bestandsdaten sind nicht aktuell und müssen aktualisiert werden!",
-  "@old__old_base_data": {
-    "type": "text"
-  },
-  "old__onyl_different_storage_addresses": "Ein Warentransport ist nur zwischen 2 unterschiedlichen Lageradressen möglich.",
-  "@old__onyl_different_storage_addresses": {
-    "type": "text"
-  },
-  "old__pick_stock_location_column": "Stellplatz",
-  "@old__pick_stock_location_column": {
-    "type": "text"
-  },
-  "old__picking_complete": "Die Absortierung ist vollständig beendet.",
-  "@old__picking_complete": {
-    "type": "text"
-  },
-  "old__picklist_btn_load": "Laden",
-  "@old__picklist_btn_load": {
-    "type": "text"
-  },
-  "old__picklist_elbw_capture_in_form": "Ext. LBW Einl. Erfassung",
-  "@old__picklist_elbw_capture_in_form": {
-    "type": "text"
-  },
-  "old__picklist_elbw_capture_out_form": "Ext. LBW Ausl. Erfassung",
-  "@old__picklist_elbw_capture_out_form": {
-    "type": "text"
-  },
-  "old__picklist_elbw_in_data_form": "Ext. LBW Einl. Daten",
-  "@old__picklist_elbw_in_data_form": {
-    "type": "text"
-  },
-  "old__picklist_elbw_out_data_form": "Ext. LBW Ausl. Daten",
-  "@old__picklist_elbw_out_data_form": {
-    "type": "text"
-  },
-  "old__picklist_exception_form": "Unbehandelter Fehler ({value0}/{value1})",
-  "@old__picklist_exception_form": {
-    "type": "text",
-    "placeholders": {
-      "value0": {},
-      "value1": {}
-    }
-  },
-  "old__picklist_export_details_form": "Export-Details",
-  "@old__picklist_export_details_form": {
-    "type": "text"
-  },
-  "old__picklist_hold_items_form": "Geparkte Positionen",
-  "@old__picklist_hold_items_form": {
-    "type": "text"
-  },
-  "old__picklist_hz_sale_form": "HZ VK ({value0})",
-  "@old__picklist_hz_sale_form": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__picklist_item_info_form": "Teile Info",
-  "@old__picklist_item_info_form": {
-    "type": "text"
-  },
-  "old__picklist_login_form": "Anmeldung ({value0})",
-  "@old__picklist_login_form": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__picklist_maximum_amount_of_items_reached": "Maximale Anzahl erreicht. Bitte lesen Sie das Gerät aus.",
-  "@old__picklist_maximum_amount_of_items_reached": {
-    "type": "text"
-  },
-  "old__picklist_mb_info_form": "Erstbest. Info",
-  "@old__picklist_mb_info_form": {
-    "type": "text"
-  },
-  "old__picklist_menu_form": "Auswahl ({value0})",
-  "@old__picklist_menu_form": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__picklist_menuitem_align_printer": "Drucker Ausrichtung",
-  "@old__picklist_menuitem_align_printer": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_back": "Zurück",
-  "@old__picklist_menuitem_back": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_choose_printer": "Drucker wählen",
-  "@old__picklist_menuitem_choose_printer": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_device_settings": "Geräte-Einstellungen",
-  "@old__picklist_menuitem_device_settings": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_exit": "Beenden",
-  "@old__picklist_menuitem_exit": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_item_info": "Teile Info",
-  "@old__picklist_menuitem_item_info": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_item_movement": "Ein-/Umlagerung",
-  "@old__picklist_menuitem_item_movement": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_mb_info": "Erstbest. Info",
-  "@old__picklist_menuitem_mb_info": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_missing_items": "Fehlteile",
-  "@old__picklist_menuitem_missing_items": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_pick_instruction": "Absortierung",
-  "@old__picklist_menuitem_pick_instruction": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_product_info": "EH-Artikel Info",
-  "@old__picklist_menuitem_product_info": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_red_prices": "Rotpreise",
-  "@old__picklist_menuitem_red_prices": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_red_prices_menu": "Rotpreise Menü",
-  "@old__picklist_menuitem_red_prices_menu": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_red_prices_selling": "Rotpreise VK",
-  "@old__picklist_menuitem_red_prices_selling": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_settings": "Einstellungen",
-  "@old__picklist_menuitem_settings": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_stock_arrival": "Wareneingang",
-  "@old__picklist_menuitem_stock_arrival": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_stock_arrival_scan": "Quittierung Avise",
-  "@old__picklist_menuitem_stock_arrival_scan": {
-    "type": "text"
-  },
-  "old__picklist_menuitem_ware_transfer": "Warentransport",
-  "@old__picklist_menuitem_ware_transfer": {
-    "type": "text"
-  },
-  "old__picklist_missing_item_dest_form": "Fehlteile Zielstellpatz",
-  "@old__picklist_missing_item_dest_form": {
-    "type": "text"
-  },
-  "old__picklist_no_item_info": "Keine Teile-Info vorhanden",
-  "@old__picklist_no_item_info": {
-    "type": "text"
-  },
-  "old__picklist_no_product_info": "EH-Artikel Info nicht vorhanden",
-  "@old__picklist_no_product_info": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_amount": "An.",
-  "@old__picklist_pick_instruction_amount": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_dest_branch": "Zielbetrieb",
-  "@old__picklist_pick_instruction_dest_branch": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_floor": "Stockwerk",
-  "@old__picklist_pick_instruction_floor": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_hold_item": "Parken",
-  "@old__picklist_pick_instruction_hold_item": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_image": "Bild",
-  "@old__picklist_pick_instruction_image": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_item_number": "Teile Nr.",
-  "@old__picklist_pick_instruction_item_number": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_item_number2": "Teile Nr.",
-  "@old__picklist_pick_instruction_item_number2": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_level": "Etage",
-  "@old__picklist_pick_instruction_level": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_order_number": "Bestell-Nr.",
-  "@old__picklist_pick_instruction_order_number": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_place": "Stellplatz",
-  "@old__picklist_pick_instruction_place": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_product": "EH-Artikel",
-  "@old__picklist_pick_instruction_product": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_reprint": "Neudruck",
-  "@old__picklist_pick_instruction_reprint": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_room": "Raum",
-  "@old__picklist_pick_instruction_room": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_row": "Reihe",
-  "@old__picklist_pick_instruction_row": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_selling_area": "VERKAUF",
-  "@old__picklist_pick_instruction_selling_area": {
-    "type": "text"
-  },
-  "old__picklist_pick_instruction_size": "Größe",
-  "@old__picklist_pick_instruction_size": {
-    "type": "text"
-  },
-  "old__picklist_pickin_form": "Einlag. ({value0}/{value1})",
-  "@old__picklist_pickin_form": {
-    "type": "text",
-    "placeholders": {
-      "value0": {},
-      "value1": {}
-    }
-  },
-  "old__picklist_pickin_form1": "Einlagerung",
-  "@old__picklist_pickin_form1": {
-    "type": "text"
-  },
-  "old__picklist_picking_form": "Absort. ({value0}/{value1})",
-  "@old__picklist_picking_form": {
-    "type": "text",
-    "placeholders": {
-      "value0": {},
-      "value1": {}
-    }
-  },
-  "old__picklist_product_change": "Dispowechsel\nBitte erneut den Stellplatz scannen.",
-  "@old__picklist_product_change": {
-    "type": "text"
-  },
-  "old__picklist_product_image_form": "EH-Artikel Bild",
-  "@old__picklist_product_image_form": {
-    "type": "text"
-  },
-  "old__picklist_product_info_form": "EH-Artikel Info",
-  "@old__picklist_product_info_form": {
-    "type": "text"
-  },
-  "old__picklist_product_info_mb": "EB:",
-  "@old__picklist_product_info_mb": {
-    "type": "text"
-  },
-  "old__picklist_product_info_min_amount": "E-bst.",
-  "@old__picklist_product_info_min_amount": {
-    "type": "text"
-  },
-  "old__picklist_product_info_on_selling": "im VK",
-  "@old__picklist_product_info_on_selling": {
-    "type": "text"
-  },
-  "old__picklist_product_info_oneitempersize": "1 Teil pro Größe = {value0} Teil(e)",
-  "@old__picklist_product_info_oneitempersize": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__picklist_product_info_pick": "Absortieren:",
-  "@old__picklist_product_info_pick": {
-    "type": "text"
-  },
-  "old__picklist_product_info_product": "EH-Artikel:",
-  "@old__picklist_product_info_product": {
-    "type": "text"
-  },
-  "old__picklist_product_info_size": "Größe",
-  "@old__picklist_product_info_size": {
-    "type": "text"
-  },
-  "old__picklist_product_info_sum": "Gesamt",
-  "@old__picklist_product_info_sum": {
-    "type": "text"
-  },
-  "old__picklist_product_info_we": "WE:",
-  "@old__picklist_product_info_we": {
-    "type": "text"
-  },
-  "old__picklist_product_info_zeroitempersize": "Dornröschenware - bitte vollständig einpicken",
-  "@old__picklist_product_info_zeroitempersize": {
-    "type": "text"
-  },
-  "old__picklist_redprices_form": "Rotpreise",
-  "@old__picklist_redprices_form": {
-    "type": "text"
-  },
-  "old__picklist_scan_location_first": "Bitte zuerst den Stellplatz scannen.",
-  "@old__picklist_scan_location_first": {
-    "type": "text"
-  },
-  "old__picklist_settings_form": "Einstellungen ({value0})",
-  "@old__picklist_settings_form": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__picklist_stock_arrival_form": "Wareneingang (LaLi)",
-  "@old__picklist_stock_arrival_form": {
-    "type": "text"
-  },
-  "old__picklist_teinfo_article_surveillance": "Sicherungssystem:",
-  "@old__picklist_teinfo_article_surveillance": {
-    "type": "text"
-  },
-  "old__picklist_teinfo_dest_branch": "Ziel-Filiale:",
-  "@old__picklist_teinfo_dest_branch": {
-    "type": "text"
-  },
-  "old__picklist_teinfo_dest_wvz": "Ziel-WVZ:",
-  "@old__picklist_teinfo_dest_wvz": {
-    "type": "text"
-  },
-  "old__picklist_teinfo_item_number": "Teile-Nr.:",
-  "@old__picklist_teinfo_item_number": {
-    "type": "text"
-  },
-  "old__picklist_teinfo_order_number": "Bestellnr.:",
-  "@old__picklist_teinfo_order_number": {
-    "type": "text"
-  },
-  "old__picklist_teinfo_product": "EH-Artikel:",
-  "@old__picklist_teinfo_product": {
-    "type": "text"
-  },
-  "old__picklist_teinfo_security_system": "Sicherung:",
-  "@old__picklist_teinfo_security_system": {
-    "type": "text"
-  },
-  "old__picklist_timeout": "Timeout\nBitte den Stellplatz erneut scannen.",
-  "@old__picklist_timeout": {
-    "type": "text"
-  },
-  "old__picklist_transport_form": "Transport ({value0})",
-  "@old__picklist_transport_form": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__picklist_transport_product_blocked": "Vorsaison- und Bestpriceware kann während der Inventur nicht in die Filiale transportiert werden!",
-  "@old__picklist_transport_product_blocked": {
-    "type": "text"
-  },
-  "old__picklist_ware_transfer_form": "Warentransport Ziel",
-  "@old__picklist_ware_transfer_form": {
-    "type": "text"
-  },
-  "old__pickstock_inventory_not_started": "Lagerinventur für den Stellplatzbereich nicht gestartet. Erfassung nicht möglich.",
-  "@old__pickstock_inventory_not_started": {
-    "type": "text"
-  },
-  "old__pickstock_inventory_started": "Lagerinventur aktiv. Auf den Stellplatzbereich kann nicht gepickt werden.",
-  "@old__pickstock_inventory_started": {
-    "type": "text"
-  },
-  "old__product_column": "EH-Artikel",
-  "@old__product_column": {
-    "type": "text"
-  },
-  "old__product_has_differnt_redprices": "Der EH-Artikel hat Größen mit unterschiedlichen Preis-Informationen. Soll der Rotpreis trotzdem gedruckt werden?",
-  "@old__product_has_differnt_redprices": {
-    "type": "text"
-  },
-  "old__product_stock_type": "Art:",
-  "@old__product_stock_type": {
-    "type": "text"
-  },
-  "old__productvariation_not_for_picking": "EH-Artikel/Größe ist nicht für die Absortierung von diesem Stellplatz vorgesehen",
-  "@old__productvariation_not_for_picking": {
-    "type": "text"
-  },
-  "old__program_restart_needed": "Das Programm muss aufgrund der vorgenommenen Änderungen beendet werden.",
-  "@old__program_restart_needed": {
-    "type": "text"
-  },
-  "old__redprice_column": "Rotpreis",
-  "@old__redprice_column": {
-    "type": "text"
-  },
-  "old__redprices_identically": "Rotpreise identisch",
-  "@old__redprices_identically": {
-    "type": "text"
-  },
-  "old__scan_dhl_parcel": "DHL Paket enthalten\nBitte die Pakete scannen",
-  "@old__scan_dhl_parcel": {
-    "type": "text"
-  },
-  "old__scan_on_lower_level": "Es muss auf tieferer Ebene gescannt werden!",
-  "@old__scan_on_lower_level": {
-    "type": "text"
-  },
-  "old__scan_on_lower_level_2": "Es muss auf Ladelisten-Ebene gescannt werden",
-  "@old__scan_on_lower_level_2": {
-    "type": "text"
-  },
-  "old__scan_on_lower_level_3": "Es muss auf Lieferschein-Ebene gescannt werden",
-  "@old__scan_on_lower_level_3": {
-    "type": "text"
-  },
-  "old__scan_on_lower_level_4": "Es muss auf Teile-Ebene gescannt werden",
-  "@old__scan_on_lower_level_4": {
-    "type": "text"
-  },
-  "old__set_as_missing_item": "Wollen Sie das Teil wirklich als Fehlteil buchen?",
-  "@old__set_as_missing_item": {
-    "type": "text"
-  },
-  "old__shipping_order_column": "Speditionsauftrag",
-  "@old__shipping_order_column": {
-    "type": "text"
-  },
-  "old__shipping_order_items_commited": "Es wurden {value0} Teile quittiert aber es muss noch auf tieferer Ebene gescannt werden!",
-  "@old__shipping_order_items_commited": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__shipping_order_unknown": "Dieser Speditionsauftrag wurde bereits gescannt oder ist unbekannt.",
-  "@old__shipping_order_unknown": {
-    "type": "text"
-  },
-  "old__size_column": "Größe",
-  "@old__size_column": {
-    "type": "text"
-  },
-  "old__stock_arrival_delivery_note_form": "Wareneingang (LS)",
-  "@old__stock_arrival_delivery_note_form": {
-    "type": "text"
-  },
-  "old__stock_arrival_item_form": "Wareneingang (Teil)",
-  "@old__stock_arrival_item_form": {
-    "type": "text"
-  },
-  "old__stock_arrival_item_scanned_unknown": "Dieses Teil wurde bereits gescannt, ist unbekannt oder gehört zu einem anderen Lieferschein",
-  "@old__stock_arrival_item_scanned_unknown": {
-    "type": "text"
-  },
-  "old__stock_arrival_shipping_order_form": "Wareneingang (Spedi)",
-  "@old__stock_arrival_shipping_order_form": {
-    "type": "text"
-  },
-  "old__stock_type_column": "HL",
-  "@old__stock_type_column": {
-    "type": "text"
-  },
-  "old__storage_address_not_set": "Die Lageradresse wurde noch nicht gesetzt!",
-  "@old__storage_address_not_set": {
-    "type": "text"
-  },
-  "old__synchronizing_date": "Datum synchronisieren",
-  "@old__synchronizing_date": {
-    "type": "text"
-  },
-  "old__title_manual_input": "Manuelle Eingabe",
-  "@old__title_manual_input": {
-    "type": "text"
-  },
-  "old__unknown_item_please_reprint": "Erfassung nicht möglich.\nTeil \"{value0}\" nicht im Filialbestand\nBitte über Inventur VK separat inventieren.",
-  "@old__unknown_item_please_reprint": {
-    "type": "text",
-    "placeholders": {
-      "value0": {}
-    }
-  },
-  "old__version_text": "Version:",
-  "@old__version_text": {
-    "type": "text"
-  },
-  "old__wrong_product": "Falscher EH-Artikel",
-  "@old__wrong_product": {
-    "type": "text"
-  },
-  "old__yes": "Ja",
-  "@old__yes": {
-    "type": "text"
   },
   "personal_number__please_scan_or_type_your_personal_number": "Bitte scannen oder geben Sie ihre Personalnummer",
   "@personal_number__please_scan_or_type_your_personal_number": {
@@ -2389,10 +1153,6 @@
   },
   "pick_instruction__floor": "Stockwerk",
   "@pick_instruction__floor": {
-    "type": "text"
-  },
-  "pick_instruction__hold_current_item": "Soll die aktuelle Position wirklich geparkt werden?",
-  "@pick_instruction__hold_current_item": {
     "type": "text"
   },
   "pick_instruction__hold_item": "Parken",
@@ -2518,11 +1278,11 @@
   "@printer__printer_not_ready": {
     "type": "text"
   },
-  "printer__printer_oflline_mb200i": "Der Drucker ist nicht online.\nBitte betätigen Sie die blaue\n'PRINT'-Taste",
+  "printer__printer_oflline_mb200i": "Der Drucker ist nicht online.\nBitte betätigen Sie die blaue\n'PRINT'-Taste.",
   "@printer__printer_oflline_mb200i": {
     "type": "text"
   },
-  "printer__printer_oflline_pw208nx": "Der Drucker ist nicht online.\nBitte betätigen Sie die\n'PLAY|PAUSE'-Taste",
+  "printer__printer_oflline_pw208nx": "Der Drucker ist nicht online.\nBitte betätigen Sie die\n'PLAY|PAUSE'-Taste.",
   "@printer__printer_oflline_pw208nx": {
     "type": "text"
   },
@@ -2536,6 +1296,14 @@
   },
   "red_prices_old__no_redprice_info_available": "Keine Rotpreisinfo vorhanden",
   "@red_prices_old__no_redprice_info_available": {
+    "type": "text"
+  },
+  "red_prices_old__productvariation_not_for_picking": "EH-Artikel/Größe ist nicht für die Absortierung von diesem Stellplatz vorgesehen",
+  "@red_prices_old__productvariation_not_for_picking": {
+    "type": "text"
+  },
+  "red_prices_selling__hz_process_completed": "Die Herabzeichnung ist vollständig beendet.",
+  "@red_prices_selling__hz_process_completed": {
     "type": "text"
   },
   "service_point__please_scan_package_first": "Bitte zuerst das Paket scannen.",
@@ -2743,8 +1511,8 @@
   "@settings__unpair": {
     "type": "text"
   },
-  "settings__use_rs5100_bluetooth_scanner": "Bluetooth Scanner RS5100 benutzen",
-  "@settings__use_rs5100_bluetooth_scanner": {
+  "settings__unpair_all_scanners": "Alle Scanner entkoppeln",
+  "@settings__unpair_all_scanners": {
     "type": "text"
   },
   "stock_arrival__all_shipping_orders_scanned": "Es wurden alle Speditionsaufträge gescannt.",
@@ -2753,6 +1521,10 @@
   },
   "stock_arrival__correction_delivery_2": "Korrekturlieferschein\nBitte auf Teile-Ebene scannen",
   "@stock_arrival__correction_delivery_2": {
+    "type": "text"
+  },
+  "stock_arrival__delivery_ticket_contains_special_offer_goods": "Lieferschein enthält Aktionsware!",
+  "@stock_arrival__delivery_ticket_contains_special_offer_goods": {
     "type": "text"
   },
   "stock_arrival__dornroeschen_on_dts": "Lieferschein enthält Dornröschenware!",
@@ -2822,6 +1594,17 @@
   "@stock_arrival__scan_on_lower_level_4": {
     "type": "text"
   },
+  "stock_arrival__special_offer_goods_on_delivery_tickets_x": "Aktionsware auf Lieferscheinen: {value0}",
+  "@stock_arrival__special_offer_goods_on_delivery_tickets_x": {
+    "type": "text",
+    "placeholders": {
+      "value0": {}
+    }
+  },
+  "stock_arrival__special_offer_goods_on_more_than_5_delivery_tickets": "Aktionsware auf mehr als 5 Lieferscheinen!",
+  "@stock_arrival__special_offer_goods_on_more_than_5_delivery_tickets": {
+    "type": "text"
+  },
   "stock_arrival__want_to_cancel_midway": "Wollen Sie die Bearbeitung mittendrin abbrechen?",
   "@stock_arrival__want_to_cancel_midway": {
     "type": "text"
@@ -2862,7 +1645,7 @@
   "@stocktaking__invalid_amount_of_storage_locations": {
     "type": "text"
   },
-  "stocktaking__invalid_capture_group": "Ungültiger Abstimmkreis",
+  "stocktaking__invalid_capture_group": "Ungültiger Abstimmkreis!",
   "@stocktaking__invalid_capture_group": {
     "type": "text"
   },
@@ -2905,7 +1688,11 @@
   "@stocktaking__stocktaking_not_started": {
     "type": "text"
   },
-  "stocktaking__target_amount_reached": "Stückzahlvorgabe erreicht",
+  "stocktaking__target_amount_exceeded_scan_will_be_ignored": "Stückzahlvorgabe überschritten. Scan wird ignoriert.",
+  "@stocktaking__target_amount_exceeded_scan_will_be_ignored": {
+    "type": "text"
+  },
+  "stocktaking__target_amount_reached": "Stückzahlvorgabe erreicht!",
   "@stocktaking__target_amount_reached": {
     "type": "text"
   },
@@ -2946,28 +1733,12 @@
   "@warentransport__eingabe_destination": {
     "type": "text"
   },
-  "warentransport__eingabe_title": "Warentransport Ziel",
-  "@warentransport__eingabe_title": {
-    "type": "text"
-  },
   "warentransport__eingabe_type": "Typ",
   "@warentransport__eingabe_type": {
     "type": "text"
   },
-  "warentransport__erfassung_table_header_destination": "Ziel",
-  "@warentransport__erfassung_table_header_destination": {
-    "type": "text"
-  },
   "warentransport__erfassung_table_header_h_l": "HL",
   "@warentransport__erfassung_table_header_h_l": {
-    "type": "text"
-  },
-  "warentransport__erfassung_table_header_item_nr": "Teile.Nr",
-  "@warentransport__erfassung_table_header_item_nr": {
-    "type": "text"
-  },
-  "warentransport__erfassung_table_header_product_nr": "EH-Artikel",
-  "@warentransport__erfassung_table_header_product_nr": {
     "type": "text"
   },
   "warentransport__erfassung_title": "Transport ({value0})",
@@ -2989,7 +1760,7 @@
   "@warentransport__preseason_bestprice_blocked_during_inventory": {
     "type": "text"
   },
-  "warentransport__unknown_storage_address_please_load_data": "Aktuelle Lageradresse ist Unbekannt. Bitte beladen Sie das Gerät zuerst mit den Bestandsdaten.",
+  "warentransport__unknown_storage_address_please_load_data": "Aktuelle Lageradresse ist unbekannt. Bitte beladen Sie das Gerät zuerst mit den Bestandsdaten.",
   "@warentransport__unknown_storage_address_please_load_data": {
     "type": "text"
   },

@@ -13,6 +13,8 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '11.x'
+      - uses: actions/setup-node@v3
+        with:
           node-version: '16'
 
       - name: Install and set Flutter version
@@ -28,7 +30,7 @@ jobs:
              flutter pub get
 
       - name: Run tests
-        run: cd example && flutter test integration_test/main_test.dart
+        run: cd example && flutter test integration_test/main_test.dart -d linux
 
   # android:
   #   runs-on: macos-11

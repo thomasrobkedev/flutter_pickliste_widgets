@@ -5,7 +5,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   android:
-    runs-on: ubuntu-latest
+    runs-on: windows-11
     strategy:
       matrix:
         api-level:
@@ -34,7 +34,7 @@ jobs:
           api-level: ${{ matrix.api-level }}
           arch: x86_64
           profile: Nexus 6
-          script: cd example && flutter test integration_test/main_test.dart
+          script: cd example; flutter test integration_test/main_test.dart
 
   # windows:
   #   runs-on: windows-latest

@@ -8,18 +8,16 @@ on: [push, workflow_dispatch]
 
 jobs:
   drive:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
     - uses: actions/checkout@v1
     - uses: subosito/flutter-action@v1
       with:
         channel: 'stable'
-        flutter-version: '3.3.4'
     - run: |
-          flutter clean
-          flutter config --enable-linux-desktop
-          cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart -d linux
-
+           flutter config --enable-windows-desktop
+           flutter clean
+           cd example; flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart -d windows
 
 # jobs:
 #   drive:

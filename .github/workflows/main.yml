@@ -29,7 +29,7 @@ jobs:
              flutter clean
              flutter pub get
       - name: Run integration tests
-        run: cd example; flutter test integration_test/main_test.dart
+        run: cd example; flutter test -d windows integration_test/main_test.dart
 
     # runs-on: windows-latest
     # strategy:

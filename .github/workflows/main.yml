@@ -7,32 +7,8 @@ name: main
 on: [push, workflow_dispatch]
 
 jobs:
-  # windows:
-  #   runs-on: windows-latest
-  #   strategy:
-  #     matrix:
-  #       api-level:
-  #         - 31
-  #     fail-fast: true
-  #   steps:
-  #     - uses: actions/checkout@v3
-  #     - uses: actions/setup-java@v1
-  #       with:
-  #         java-version: '11.x'
-  #     - name: Setup Flutter SDK
-  #       uses: subosito/flutter-action@v2
-  #       with:
-  #         channel: 'stable'
-  #         flutter-version: '3.3.4'
-  #     - name: Install Flutter dependencies
-  #       run: |
-  #            flutter clean
-  #            flutter pub get
-  #     - name: Run integration tests
-  #       run: cd example; flutter test -d windows integration_test/main_test.dart
-
-  android:
-    runs-on: macos-11
+  windows:
+    runs-on: windows-latest
     strategy:
       matrix:
         api-level:
@@ -43,19 +19,50 @@ jobs:
       - uses: actions/setup-java@v1
         with:
           java-version: '11.x'
+
       - name: Setup Flutter SDK
         uses: subosito/flutter-action@v2
         with:
           channel: 'stable'
           flutter-version: '3.3.4'
+
       - name: Install Flutter dependencies
         run: |
+             flutter config --enable-windows-desktop
              flutter clean
              flutter pub get
+
       - name: Run integration tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: ${{ matrix.api-level }}
-          arch: x86_64
-          profile: Nexus 6
-          script: cd example && flutter test integration_test/main_test.dart
+        run: cd example; flutter test -d windows integration_test/main_test.dart
+
+  # android:
+  #   runs-on: macos-11
+  #   strategy:
+  #     matrix:
+  #       api-level:
+  #         - 31
+  #     fail-fast: true
+  #   steps:
+  #     - uses: actions/checkout@v3
+  #     - uses: actions/setup-java@v1
+  #       with:
+  #         java-version: '11.x'
+
+  #     - name: Setup Flutter SDK
+  #       uses: subosito/flutter-action@v2
+  #       with:
+  #         channel: 'stable'
+  #         flutter-version: '3.3.4'
+
+  #     - name: Install Flutter dependencies
+  #       run: |
+  #            flutter clean
+  #            flutter pub get
+
+  #     - name: Run integration tests
+  #       uses: reactivecircus/android-emulator-runner@v2
+  #       with:
+  #         api-level: ${{ matrix.api-level }}
+  #         arch: x86_64
+  #         profile: Nexus 6
+  #         script: cd example && flutter test integration_test/main_test.dart

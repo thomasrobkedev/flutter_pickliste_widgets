@@ -14,10 +14,11 @@ jobs:
     - uses: subosito/flutter-action@v1
       with:
         channel: 'stable'
+        flutter-version: '3.3.4'
     - run: |
            flutter config --enable-windows-desktop
            flutter clean
-           cd example; flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart -d windows
+           cd example; flutter test -d windows integration_test/main_test.dart
 
 # jobs:
 #   drive:

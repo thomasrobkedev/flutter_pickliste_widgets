@@ -5,7 +5,7 @@ on: [push, workflow_dispatch]
 
 jobs:
   android:
-    runs-on: macos-11
+    runs-on: ubuntu-latest
     strategy:
       matrix:
         api-level:

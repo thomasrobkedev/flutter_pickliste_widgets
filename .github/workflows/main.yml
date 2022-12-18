@@ -6,33 +6,53 @@ name: main
 # Trigger the workflow manually or after push a commit
 on: [push, workflow_dispatch]
 
+jobs:
+  drive:
+    runs-on: windows-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: subosito/flutter-action@v1
+      with:
+        channel: 'beta'
+    - run: |
+           flutter config --enable-windows-desktop
+           cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart
+
+# jobs:
+#   drive:
+#     runs-on: ubuntu-latest
+#     steps:
+#     - uses: actions/checkout@v1
+#     - uses: subosito/flutter-action@v1
+#     - run: cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart
+
 # 2 jobs are configured.
 # The first one runs tests on iOS devices.
 # The second runs tests on Android devices
-jobs:
-  android:
-    runs-on: macos-11
-    strategy:
-      matrix:
-        api-level:
-          - 29
-          # you can add more API level if you want to run your tests on different API
-      fail-fast: true
-    steps:
-      - uses: actions/checkout@v3
-      - name: Setup Flutter SDK
-        uses: subosito/flutter-action@v2
-        with:
-          channel: stable
-          # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
-          # flutter-version: '<FLUTTER_VERSION>'
-      - name: Install Flutter dependencies
-        run: flutter pub get
-      - name: Run integration tests
-        # more info on https://github.com/ReactiveCircus/android-emulator-runner
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: ${{ matrix.api-level }}
-          arch: x86_64
-          profile: Nexus 6
-          script: cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart
+# jobs:
+#   android:
+#     runs-on: macos-11
+#     strategy:
+#       matrix:
+#         api-level:
+#           - 29
+#           # you can add more API level if you want to run your tests on different API
+#       fail-fast: true
+#     steps:
+#       - uses: actions/checkout@v3
+#       - name: Setup Flutter SDK
+#         uses: subosito/flutter-action@v2
+#         with:
+#           channel: stable
+#           # instead of "channel: stable", you could be more precise by specifying the exact version of Flutter you're using:
+#           # flutter-version: '<FLUTTER_VERSION>'
+#       - name: Install Flutter dependencies
+#         run: flutter pub get
+#       - name: Run integration tests
+#         # more info on https://github.com/ReactiveCircus/android-emulator-runner
+#         uses: reactivecircus/android-emulator-runner@v2
+#         with:
+#           api-level: ${{ matrix.api-level }}
+#           arch: x86_64
+#           profile: Nexus 6
+#           script: cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart

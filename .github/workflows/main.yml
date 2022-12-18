@@ -7,17 +7,42 @@ name: main
 on: [push, workflow_dispatch]
 
 jobs:
-  drive:
-    runs-on: windows-latest
+  drive_android:
+    runs-on: macos-latest
+    strategy:
+      matrix:
+        api-level: [31]
+        target: [playstore]
     steps:
-    - uses: actions/checkout@v1
-    - uses: subosito/flutter-action@v1
-      with:
-        flutter-version: '3.3.4'
-        channel: 'stable'
-    - run: |
-           flutter config --enable-windows-desktop
-           cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart -d all
+      - uses: actions/checkout@v2
+      - uses: subosito/flutter-action@v1
+        with:
+          flutter-version: '3.3.4'
+          channel: 'stable'
+
+      # Run integration test
+      - name: Run Flutter Driver tests
+        uses: reactivecircus/android-emulator-runner@v2
+        with:
+          target: ${{ matrix.target }}
+          api-level: ${{ matrix.api-level }}
+          arch: x86_64
+          profile: Nexus 6
+          script: cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart
+
+
+# jobs:
+#   drive:
+#     runs-on: windows-latest
+#     steps:
+#     - uses: actions/checkout@v1
+#     - uses: subosito/flutter-action@v1
+#       with:
+#         flutter-version: '3.3.4'
+#         channel: 'stable'
+#     - run: |
+#            flutter config --enable-windows-desktop
+#            cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart -d all
 
 # jobs:
 #   drive:

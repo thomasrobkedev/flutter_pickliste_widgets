@@ -6,9 +6,6 @@ on: [push, workflow_dispatch]
 jobs:
   android:
     runs-on: windows-11
-    strategy:
-      matrix:
-        api-level: 31
     steps:
       - name: checkout
         uses: actions/checkout@v3
@@ -30,7 +27,7 @@ jobs:
       - name: run integration tests
         uses: reactivecircus/android-emulator-runner@v2
         with:
-          api-level: ${{ matrix.api-level }}
+          api-level: 31
           arch: x86_64
           profile: Nexus 6
           script: cd example; flutter test integration_test/main_test.dart

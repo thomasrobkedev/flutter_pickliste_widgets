@@ -279,10 +279,6 @@
   "@general__do_you_really_want_to_hold_current_item": {
     "type": "text"
   },
-  "general__download_and_install": "Download and install",
-  "@general__download_and_install": {
-    "type": "text"
-  },
   "general__edmk_failed_to_init": "Zebra EMDK failed to initialize.",
   "@general__edmk_failed_to_init": {
     "type": "text"
@@ -580,10 +576,6 @@
   "@general__start": {
     "type": "text"
   },
-  "general__start_app": "Start app",
-  "@general__start_app": {
-    "type": "text"
-  },
   "general__storage_location": "Storage ID",
   "@general__storage_location": {
     "type": "text"
@@ -680,8 +672,20 @@
   "@item_movement__unknown_stellplatz": {
     "type": "text"
   },
+  "launcher__all_data_will_be_lost_continue_anyway": "All data will be lost. Continue anyway?",
+  "@launcher__all_data_will_be_lost_continue_anyway": {
+    "type": "text"
+  },
   "launcher__app_title": "Pickliste Launcher",
   "@launcher__app_title": {
+    "type": "text"
+  },
+  "launcher__do_you_want_to_install_the_app": "Do you want to install the app?",
+  "@launcher__do_you_want_to_install_the_app": {
+    "type": "text"
+  },
+  "launcher__do_you_want_to_update_the_app": "Do you want to update the app?",
+  "@launcher__do_you_want_to_update_the_app": {
     "type": "text"
   },
   "launcher__download_of_app_failed": "Failed to download app.",
@@ -704,16 +708,36 @@
   "@launcher__failed_to_install_app": {
     "type": "text"
   },
+  "launcher__install": "Install",
+  "@launcher__install": {
+    "type": "text"
+  },
   "launcher__installing_app": "Installing app...",
   "@launcher__installing_app": {
+    "type": "text"
+  },
+  "launcher__no_installation_present_please_press_install": "No installation of Pickliste app present. Please click on \"Install\".",
+  "@launcher__no_installation_present_please_press_install": {
+    "type": "text"
+  },
+  "launcher__please_provide_a_store_number": "Please provide a store number.",
+  "@launcher__please_provide_a_store_number": {
     "type": "text"
   },
   "launcher__removing_previous_installation": "Removing previous installation...",
   "@launcher__removing_previous_installation": {
     "type": "text"
   },
+  "launcher__start_app": "Start app",
+  "@launcher__start_app": {
+    "type": "text"
+  },
   "launcher__successfully_installed_app": "Successfully installed app!",
   "@launcher__successfully_installed_app": {
+    "type": "text"
+  },
+  "launcher__update": "Update",
+  "@launcher__update": {
     "type": "text"
   },
   "mbinfo__alert_dornroeschen": "Sleeping beauty goods. Please pick completely!",

@@ -1,15 +1,7 @@
 include: package:flutter_lints/flutter.yaml
 
-# Additional information about this file can be found at
-# https://dart.dev/guides/language/analysis-options
-
 analyzer:
   exclude:
-
-  errors:
-    missing_required_param: warning
-    missing_return: warning
-    prefer_double_quotes: error
 
 linter:
   rules:
@@ -17,11 +9,10 @@ linter:
     prefer_final_locals: true
     prefer_relative_imports: true
     omit_local_variable_types: true
-    annotate_overrides: true
-    avoid_empty_else: true
-    avoid_unused_constructor_parameters: true
-    avoid_init_to_null: true
     avoid_dynamic_calls: true
     require_trailing_commas: true
-    library_private_types_in_public_api: false
-
+    always_declare_return_types: true
+    sort_child_properties_last: true
+    unawaited_futures: true
+    unsafe_html: true
+    use_full_hex_values_for_flutter_colors: true

@@ -47,10 +47,10 @@ class PhrasePull {
     }
 
     stdout.writeln('Running flutter gen-l10n...');
-    Process.run('flutter', ['gen-l10n'], runInShell: true, workingDirectory: 'example');
+    await Process.run('flutter', ['gen-l10n'], runInShell: true, workingDirectory: 'example');
 
     stdout.writeln('Running flutter analyze...');
-    Process.run('flutter', ['analyze'], runInShell: true, workingDirectory: 'example');
+    await Process.run('flutter', ['analyze'], runInShell: true, workingDirectory: 'example');
   }
 
   Future<void> _processLocale(String locale) async {

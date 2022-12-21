@@ -1,7 +1,9 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 
-import '../../../../../core/theme/global_theme.dart';
 import '../../../domain/models/item.dart';
+import 'item_value_route.dart';
 
 class PicklisteDiagnosticsItemValue extends StatelessWidget {
   final PicklisteDiagnosticsItem item;
@@ -26,28 +28,28 @@ class PicklisteDiagnosticsItemValue extends StatelessWidget {
     }
 
     final routes = item.value.split('\n').where((str) => str.trim() != '');
-    final destinations = routes.map((route) => route.split('->')[0].trim());
-    final gateways = routes.map((route) => route.split('->')[1].trim());
+    final flexDestination = _maxChars(routes, 0);
+    final flexGateway = _maxChars(routes, 1);
 
     return Expanded(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: [
-          Text(
-            destinations.join('\n'),
-            textAlign: TextAlign.right,
-            style: const TextStyle(height: 1.2),
-          ),
-          Text(
-            destinations.map((_) => '  ➔  ').join('\n'),
-            style: const TextStyle(height: 1.2 * PicklisteThemeCreator.kFontSizeDefault / PicklisteThemeCreator.kFontSizeSmall, fontSize: PicklisteThemeCreator.kFontSizeSmall),
-          ),
-          Text(
-            gateways.join('\n'),
-            style: const TextStyle(height: 1.2),
-          ),
-        ],
+      child: Column(
+        children: routes
+            .map(
+              (route) => PicklisteDiagnosticsItemValueRoute(
+                destination: route.split('->')[0].trim(),
+                gateway: route.split('->')[1].trim(),
+                flexDestination: flexDestination,
+                flexGateway: flexGateway,
+              ),
+            )
+            .toList(),
       ),
     );
+  }
+
+  int _maxChars(Iterable<String> routes, int index) {
+    return routes //
+        .map((route) => route.split('->')[index].trim().replaceAll(':', ''))
+        .fold<int>(0, (p, c) => max(p, c.length));
   }
 }

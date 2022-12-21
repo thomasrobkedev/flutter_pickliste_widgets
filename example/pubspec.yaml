@@ -2,10 +2,11 @@ name: example
 description: Beispiel-App für flutter_pickliste_widgets.
 publish_to: "none"
 
-version: 1.0.6+14
+version: 1.0.7+16
 
 environment:
-  sdk: ">=2.18.2 <3.0.0"
+  sdk: 2.18.2
+  flutter: 3.3.4
 
 dependencies:
   flutter_pickliste_widgets:

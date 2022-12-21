@@ -13,6 +13,15 @@ class DiagnosticsUseCaseGetItems {
 
   PicklisteDiagnosticsItems call() {
     final items = PicklisteDiagnosticsItems();
+    final routes = [
+      'Destination -> Gateway',
+      'fe80:: -> ::',
+      ':: -> fe80::e228:6df:fe100::',
+      '2003:a:43a:a100:: -> fe80::e228:6df:fe100::',
+      '2003:a:43a:a100:: -> ::',
+      '192.168.0.0 -> 0.0.0.0',
+      '0.0.0.0 -> 192.168.0.1',
+    ];
 
     items.dateTime.getValue = () => _dateTime();
     items.versionBuild.getValue = () => _getVersionBuild();
@@ -26,7 +35,7 @@ class DiagnosticsUseCaseGetItems {
     items.defaultGateway.getValue = () => NetworkInfo().getWifiGatewayIP();
     items.dns1.getValue = () => Future.value('192.168.1.1');
     items.dns2.getValue = () => Future.value('192.168.1.2');
-    items.routes.getValue = () => Future.value('Destination -> Gateway\nfe80:: -> ::\n:: -> fe80::2\n');
+    items.routes.getValue = () => Future.value(routes.join('\n'));
     items.httpPuC.getValue = () => _http('http://www.peek-cloppenburg.de');
     items.httpHousePic.getValue = () async => _http(await _getHouseNumberURL(withPic: true));
     items.httpHouse.getValue = () async => _http(await _getHouseNumberURL(withPic: false));

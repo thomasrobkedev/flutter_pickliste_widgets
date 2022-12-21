@@ -20,7 +20,7 @@ lint: ## Analysiert den Code und zeigt (Formatierungs-)Probleme unter Berücksic
 
 # ------------------------------------------------------------
 tests: ## Führt die Integrationstests EINMALIG aus.
-	@cd example && flutter drive --driver=integration_test/driver.dart --target=integration_test/main_test.dart --keep-app-running
+	@cd example && flutter test integration_test/main_test.dart
 
 tests-watch: ## Führt die Integrationstests aus und wartet dann auf [SHIFT + R] für einen erneuten Lauf. 
 	@cd example && flutter run integration_test/main_test.dart

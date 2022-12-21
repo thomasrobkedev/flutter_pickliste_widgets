@@ -1,11 +1,11 @@
 name: flutter_pickliste_widgets
 description: Eine Sammlung von Flutter-Pickliste-Widgets. Anwendung in PAL+Launcher um Code-Verdopplung zu vermeiden
-version: 1.0.7+27
+version: 1.0.8+30
 homepage:
 
 environment:
-  sdk: '>=2.18.2 <3.0.0'
-  flutter: ">=1.17.0"
+  sdk: 2.18.2
+  flutter: 3.3.4
 
 dependencies:
   ansicolor: ^2.0.1

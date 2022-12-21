@@ -360,10 +360,6 @@
   "@general__do_you_really_want_to_hold_current_item": {
     "type": "text"
   },
-  "general__download_and_install": "Herunterladen und Installieren",
-  "@general__download_and_install": {
-    "type": "text"
-  },
   "general__edmk_failed_to_init": "Zebra EMDK konnte nicht initialisiert werden.",
   "@general__edmk_failed_to_init": {
     "type": "text"
@@ -669,10 +665,6 @@
   "@general__start": {
     "type": "text"
   },
-  "general__start_app": "App starten",
-  "@general__start_app": {
-    "type": "text"
-  },
   "general__storage_location": "Stellplatz",
   "@general__storage_location": {
     "type": "text"
@@ -777,8 +769,20 @@
   "@item_movement__unknown_stellplatz": {
     "type": "text"
   },
+  "launcher__all_data_will_be_lost_continue_anyway": "Alle Daten werden gelöscht. Trotzdem weitermachen?",
+  "@launcher__all_data_will_be_lost_continue_anyway": {
+    "type": "text"
+  },
   "launcher__app_title": "Pickliste Launcher",
   "@launcher__app_title": {
+    "type": "text"
+  },
+  "launcher__do_you_want_to_install_the_app": "Wollen Sie die Anwendung installieren?",
+  "@launcher__do_you_want_to_install_the_app": {
+    "type": "text"
+  },
+  "launcher__do_you_want_to_update_the_app": "Wollen Sie die Anwendung updaten?",
+  "@launcher__do_you_want_to_update_the_app": {
     "type": "text"
   },
   "launcher__download_of_app_failed": "Herunterladen der App ist fehlgeschlagen.",
@@ -801,16 +805,36 @@
   "@launcher__failed_to_install_app": {
     "type": "text"
   },
+  "launcher__install": "Installieren",
+  "@launcher__install": {
+    "type": "text"
+  },
   "launcher__installing_app": "App wird installiert...",
   "@launcher__installing_app": {
+    "type": "text"
+  },
+  "launcher__no_installation_present_please_press_install": "Es ist keine Installation der Picklisten-App vorhanden. Bitte klicken Sie auf \"Installieren\".",
+  "@launcher__no_installation_present_please_press_install": {
+    "type": "text"
+  },
+  "launcher__please_provide_a_store_number": "Bitte geben Sie eine Filialnummer an.",
+  "@launcher__please_provide_a_store_number": {
     "type": "text"
   },
   "launcher__removing_previous_installation": "Vorherig Installation wird entfernt...",
   "@launcher__removing_previous_installation": {
     "type": "text"
   },
+  "launcher__start_app": "App starten",
+  "@launcher__start_app": {
+    "type": "text"
+  },
   "launcher__successfully_installed_app": "App wurde erfolgreich installiert!",
   "@launcher__successfully_installed_app": {
+    "type": "text"
+  },
+  "launcher__update": "Updaten",
+  "@launcher__update": {
     "type": "text"
   },
   "mbinfo__alert_dornroeschen": "Dornröschenartikel. Bitte vollständig einpicken!",

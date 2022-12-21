@@ -17,10 +17,8 @@ class Diagnostics {
       /// Beim Laden der Seite ist der "Bitte warten" Toast gleich sichtbar
       /// Nach max. 10 Sekunden werden alle noch laufenden async items abgebrochen. 1 weitere Sekunde später geht der Toast weg - mit einer Animation von 350 ms
       /// 10 + 1 + 0,350 < 12
-      await exists(PicklisteTestkey.diagnostics_toast.active);
       await equalsString(PicklisteTestkey.diagnostics_toast.append('_large'), T()().general__please_wait);
       await wait(12);
-      await exists(PicklisteTestkey.diagnostics_toast.inactive);
 
       // Wir checken hier die Labels.
       await equalsString('pickliste_diagnostics_item_dateTime_label', 'Datum/Zeit');

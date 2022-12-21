@@ -10,8 +10,8 @@ typedef Root = Group;
 ///    0 = skip
 /// null = inherit
 
-final tests = Root(0, [
-  Test(1, Home()),
+final tests = Root(1, [
+  Test(null, Home()),
   Test(null, FlushForm()),
   Test(null, Diagnostics()),
   Test(null, Settings()),

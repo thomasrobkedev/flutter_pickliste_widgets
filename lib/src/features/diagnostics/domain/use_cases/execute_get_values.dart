@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import '../../data/repository.dart';
 import '../../presentation/bloc/bloc.dart';
 import '../../presentation/bloc/event.dart';
@@ -11,7 +13,7 @@ class PicklisteDiagnosticsUseCaseExecuteGetValues {
 
     for (var item in items.props) {
       if (item.getValue != null) {
-        _execute(bloc, item, item.getValue!);
+        unawaited(_execute(bloc, item, item.getValue!));
       }
     }
   }

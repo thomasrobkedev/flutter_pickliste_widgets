@@ -23,7 +23,7 @@ class PicklisteDiagnosticsBloc extends Bloc<PicklisteDiagnosticsEvent, Pickliste
   Future<void> _onInitialize(PicklisteDiagnosticsInitialize event, Emitter<PicklisteDiagnosticsState> emit) async {
     await _saveItems(event.items);
     emit(PicklisteDiagnosticsPending(event.items));
-    _executeGetValues(this);
+    await _executeGetValues(this);
   }
 
   Future<void> _onItemUpdated(PicklisteDiagnosticsItemUpdated event, Emitter<PicklisteDiagnosticsState> emit) async {

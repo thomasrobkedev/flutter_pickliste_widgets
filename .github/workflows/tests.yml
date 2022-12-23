@@ -37,4 +37,5 @@ jobs:
           api-level: ${{ matrix.api-level }}
           arch: x86_64
           profile: Nexus 6
+          emulator-options: -disable-animations false
           script: cd example && flutter test integration_test/main_test.dart
